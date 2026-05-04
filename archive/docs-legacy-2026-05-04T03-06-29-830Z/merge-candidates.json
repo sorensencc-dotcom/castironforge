@@ -1,0 +1,296 @@
+{
+  "summary": {
+    "safe_merge": 37,
+    "manual": 5,
+    "delete_empty": 3
+  },
+  "safe_merge": [
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\README.md-a3fc9b95",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "op": "moved-canonical-source-to-archive-provenance"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ROADMAP.md-fc3ff73c",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\ROADMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "op": "moved-canonical-source-to-archive-provenance"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\v1\\README.md-69e22ff1",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "op": "moved-canonical-source-to-archive-provenance"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\contracts.md-d11d7c36",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\discovery\\docs\\contracts.md",
+      "dest": "C:\\Users\\soren\\docs\\ingestion\\contracts.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\queues.md-ba017fb0",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\discovery\\docs\\queues.md",
+      "dest": "C:\\Users\\soren\\docs\\ingestion\\queues.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\services.md-e937fac1",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\discovery\\docs\\services.md",
+      "dest": "C:\\Users\\soren\\docs\\ingestion\\services.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ADR_001.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ADR_001.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\ADR_001.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ADR_002.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ADR_002.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\ADR_002.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\MODULES.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\MODULES.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\MODULES.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\OSM_ENGINE.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\OSM_ENGINE.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\OSM_ENGINE.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\SWEEPER.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\SWEEPER.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\SWEEPER.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\TESTING.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\TESTING.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\TESTING.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\architecture.md-4b7b40ef",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\architecture.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\architecture.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\commands.md-fed44356",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\commands.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\commands.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\CIC-Business-Development-Log_2026_04_21.md-0c71609a",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\CIC-Business-Development-Log_2026_04_21.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\CIC-Business-Development-Log_2026_04_21.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\CIC-Business-Development-Log_2026_04_26.md-b92789a3",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\CIC-Business-Development-Log_2026_04_26.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\CIC-Business-Development-Log_2026_04_26.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-23_v1.md-92c25465",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-23_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-23_v1.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v1.md-567eb21c",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-24_v1.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v2.md-1de7d679",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v2.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-24_v2.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v3.md-c0175c69",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v3.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-24_v3.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-25_v1.md-2042c5c5",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-25_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-25_v1.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-27_v1.md-3a24fb55",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-27_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-27_v1.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-30_v1.md-3ef12992",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-30_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-30_v1.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-05-03_v1.md-afdcd771",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-05-03_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-05-03_v1.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ingestion.md-2fe6f7aa",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\ingestion.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\ingestion.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\research-engine.md-e5717a76",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\research-engine.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\research-engine.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\architecture.md-2f21aa8d",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\architecture.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\architecture.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\crawler-spec.md-097830aa",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\crawler-spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\crawler-spec.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\operator-console-spec.md-f4c73121",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\operator-console-spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\operator-console-spec.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\outreach-templates.md-0885aeb8",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\outreach-templates.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\outreach-templates.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\runbook.md-3c90510e",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\runbook.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\runbook.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\extension.md-377a4ca9",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\extension.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\extension.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\features.md-d8b25706",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\features.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\features.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\how-it-works.md-ed8ad813",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\how-it-works.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\how-it-works.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\instructions.md-8ef41f3e",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\instructions.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\instructions.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\startup.md-dd364f74",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\startup.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\startup.md",
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\structure.md-df1faaf5",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\structure.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\structure.md",
+      "op": "moved-noncanonical-to-archive"
+    }
+  ],
+  "manual_review": [
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\README.md-existing-69e22ff1.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": null,
+      "destHash": "69e22ff13e03a5c0e186da97d9d622a046b54838",
+      "op": "archived-existing-dest"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\project-brain\\ROADMAP.md-existing-b98fb232.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "srcHash": null,
+      "destHash": "b98fb232a91ef51e46a334ff944a71b7b95c4477",
+      "op": "archived-existing-dest"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\README.md-existing-a3fc9b95.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": null,
+      "destHash": "a3fc9b959a0f77895f7de22bbda7f27a444f0b81",
+      "op": "archived-existing-dest"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\README.md-667d38ba",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "667d38ba6c462d053e335fdd9ba0f88a282896b8",
+      "destHash": "69e22ff13e03a5c0e186da97d9d622a046b54838",
+      "op": "moved-noncanonical-conflict-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\architecture.md-bd0ee501",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\architecture.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\architecture.md",
+      "srcHash": "bd0ee501f2563ca672e8fe9da147df65dcaa821d",
+      "destHash": "2f21aa8d77920e9adfe24bf0a2a40d7db131cb71",
+      "op": "moved-noncanonical-conflict-to-archive"
+    }
+  ],
+  "delete_empty": [
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ARCHITECTURE.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ARCHITECTURE.md",
+      "dest": "C:\\Users\\soren\\docs\\architecture\\ARCHITECTURE.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "destHash": "6537eefdad9410fc82fa1647fcfb8b7444fc8c33",
+      "op": "moved-noncanonical-conflict-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\README.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "destHash": "69e22ff13e03a5c0e186da97d9d622a046b54838",
+      "op": "moved-noncanonical-conflict-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ROADMAP.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ROADMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "destHash": "fc3ff73c96f8f1bdaa7fb039d83dbd65409b1656",
+      "op": "moved-noncanonical-conflict-to-archive"
+    }
+  ]
+}

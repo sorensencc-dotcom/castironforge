@@ -1,0 +1,2983 @@
+{
+  "summary": {
+    "timestamp": "2026-05-04T02:50:09.331Z",
+    "scanned": 520,
+    "actionsCount": 520
+  },
+  "actions": [
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\AI_MODULE_GUIDE.md",
+      "dest": "C:\\Users\\soren\\docs\\multi-agent\\AI_MODULE_GUIDE.md",
+      "srcHash": "d38bd072d41bf24702034823f78c81029b959604"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Bold-webfont.eot"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Bold-webfont.svg",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\fonts\\OpenSans-Bold-webfont.svg",
+      "srcHash": "5a6a63870c020200db4d664aa4c45e021a000749"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Bold-webfont.woff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-BoldItalic-webfont.eot"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-BoldItalic-webfont.svg",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\fonts\\OpenSans-BoldItalic-webfont.svg",
+      "srcHash": "f5afa7aa8284c543aab60526ac6d814df69dc7d1"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-BoldItalic-webfont.woff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Italic-webfont.eot"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Italic-webfont.svg",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\fonts\\OpenSans-Italic-webfont.svg",
+      "srcHash": "9edb8e027cfb6ca4af27caea837f34e4349cddf7"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Italic-webfont.woff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Light-webfont.eot"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Light-webfont.svg",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\fonts\\OpenSans-Light-webfont.svg",
+      "srcHash": "0e1b5e663900cdbb72da8a08f0f7909c8d2c980e"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Light-webfont.woff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-LightItalic-webfont.eot"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-LightItalic-webfont.svg",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\fonts\\OpenSans-LightItalic-webfont.svg",
+      "srcHash": "7fa9bac5f0e338506cda852e84df0fe1927585a7"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-LightItalic-webfont.woff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Regular-webfont.eot"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Regular-webfont.svg",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\fonts\\OpenSans-Regular-webfont.svg",
+      "srcHash": "3ef5f272f68816f72f197f45f420507baf552599"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Regular-webfont.woff"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\global.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\global.html",
+      "srcHash": "900327521a483673ac9534793a71c358adcd41a4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\index.html",
+      "srcHash": "2a6eee45617e9c976910ef02df9c5d8cff9fca95"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\modules_exif_geocode.js.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\modules_exif_geocode.js.html",
+      "srcHash": "e6f2a2e51f48d46d0a2381138c544ead9fc90e47"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\scripts\\linenumber.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\scripts\\linenumber.js",
+      "srcHash": "18c37e1c7f910bd2cfcbbd354af8eb3a7cca3270"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\scripts\\prettify\\Apache-License-2.0.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\scripts\\prettify\\lang-css.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\scripts\\prettify\\lang-css.js",
+      "srcHash": "0a6564da73538b95de1d787c36347f63595891b4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\scripts\\prettify\\prettify.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\scripts\\prettify\\prettify.js",
+      "srcHash": "a4e5934397f97f79b8066984475c90af8a970a36"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\server.cjs.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\api\\server.cjs.html",
+      "srcHash": "d53687b3e9bdbc4ef0e7b94de2076938ad63c3ff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\styles\\jsdoc-default.css"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\styles\\prettify-jsdoc.css"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\styles\\prettify-tomorrow.css"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\API.md",
+      "dest": "C:\\Users\\soren\\docs\\api\\API.md",
+      "srcHash": "4462b2b4d639303e0e97a204c7633ae2bacb5e43"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\ARCHITECTURE.md",
+      "dest": "C:\\Users\\soren\\docs\\architecture\\ARCHITECTURE.md",
+      "srcHash": "6537eefdad9410fc82fa1647fcfb8b7444fc8c33"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\BENCHMARKS.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\BENCHMARKS.md",
+      "srcHash": "ab3d054984604d41c89f099198e391632188535d"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\CHANGELOG_TEMPLATE.md",
+      "dest": "C:\\Users\\soren\\docs\\release\\CHANGELOG_TEMPLATE.md",
+      "srcHash": "514424dc6365626eb8e7a6a3d6606151e72a29b0"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\CODE_OF_CONDUCT.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\CODE_OF_CONDUCT.md",
+      "srcHash": "56fcf9c6d43aa4f581b01f36e54731e56e4960a2"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\CONFIG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\CONFIG.md",
+      "srcHash": "c83a9164859435a5403cdeb655179987ba60da41"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\CONTRIBUTING.md",
+      "dest": "C:\\Users\\soren\\docs\\CONTRIBUTING.md",
+      "srcHash": "1890fee3b7d93e56a7b13420ec1e3a0e98830a7d"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\CONTRIBUTOR_ROLES.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\CONTRIBUTOR_ROLES.md",
+      "srcHash": "168150fa4cb1951592d4decc6506ddf6ba136e23"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\CIC-Business-Development-Log_2026_04_21.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\Daily Logs\\CIC-Business-Development-Log_2026_04_21.md",
+      "srcHash": "0c71609a6687b18c84450d5ab49247d419cca379"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\CIC-Business-Development-Log_2026_04_26.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\Daily Logs\\CIC-Business-Development-Log_2026_04_26.md",
+      "srcHash": "b92789a3baa9adcf41b9b6f2f75f3b11bb5c8142"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\Daily-Business-Development-Log.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\Daily Logs\\Daily-Business-Development-Log.md",
+      "srcHash": "d78f9848263c1e328cfc993a88b2c12a3b2d94a3"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\daily-log-index.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\Daily Logs\\daily-log-index.md",
+      "srcHash": "5471d75dc9a1782e26a672e00d7ec342abbcfce8"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\daily-log-template.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\Daily Logs\\daily-log-template.md",
+      "srcHash": "86092d5ab29c394ceaba54e322e555e85e3464f2"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\new-daily-log.sh"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\scripts\\new-daily-log.ps1"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\scripts\\new-daily-log.sh"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\scripts\\sync-cic-log.ps1"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\scripts\\sync-cic-log.sh"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\scripts\\upgrade-daily-research.ps1"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\setup-cic-cron.sh"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\sync-cic-log.sh"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\sync-log.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\DESIGN_DECISIONS.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\DESIGN_DECISIONS.md",
+      "srcHash": "863decf0bc834d682ecb0607447ae2f6a470b925"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\DEVELOPER_GUIDE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\DEVELOPER_GUIDE.md",
+      "srcHash": "493c6bce333f63b9350eb2cbadea8793b84fbeff"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\DOCS_INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\DOCS_INDEX.md",
+      "srcHash": "27fe5ed575047e679f8000684a548d5c684bb6c6"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\FOLDER_STRUCTURE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\FOLDER_STRUCTURE.md",
+      "srcHash": "a97fbd031841bfee37aca987586b40465b6570d5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\GLOSSARY.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\GLOSSARY.md",
+      "srcHash": "692934495880b0ca3b9d92d10482d96bd735a5ea"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\GOVERNANCE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\GOVERNANCE.md",
+      "srcHash": "92039baa6b13815c58691b0b19d6fa6e9aa57871"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\HISTORY.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\HISTORY.md",
+      "srcHash": "eee29ef9261878687ca8091303eb3162e27cd829"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\INSTALLATION.md",
+      "dest": "C:\\Users\\soren\\docs\\INSTALLATION.md",
+      "srcHash": "325f50ef12d292de9b9b622fe12c6590640cd122"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\ISSUE_TEMPLATE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\ISSUE_TEMPLATE.md",
+      "srcHash": "68ba44d8fcc9747e66ef4edcd91208408afe6a23"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\LICENSE.md",
+      "dest": "C:\\Users\\soren\\docs\\LICENSE.md",
+      "srcHash": "da6f01f9d05b27cb2822a6879ab484570f7e8568"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\MCP_INTEGRATION.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\MCP_INTEGRATION.md",
+      "srcHash": "aafe2cfa39920b19b2b66ed8dfc8b1da0bb75e33"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\MODULES.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\MODULES.md",
+      "srcHash": "e1f4f8aa66cefb8cbb85a20dcec54a50b01ebee0"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\PULL_REQUEST_TEMPLATE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\PULL_REQUEST_TEMPLATE.md",
+      "srcHash": "9edb2e2f68d18fb38be08be2f04b5e25fbc07a4d"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "69e22ff13e03a5c0e186da97d9d622a046b54838"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RELEASE_PROCESS.md",
+      "dest": "C:\\Users\\soren\\docs\\release\\RELEASE_PROCESS.md",
+      "srcHash": "13c6446aa46678120838bc639453c0f4776c0203"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\AI\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\AI\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\API\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\API\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Docs Home.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Docs Home.md",
+      "srcHash": "4c7dcfe23e05d8718243a71f7c7cab95e632df1f"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\INDEX.md",
+      "srcHash": "916569e0aec888a235bc8f5fc71326dd43166fe8"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\ingestion-index.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\ingestion-index.md",
+      "srcHash": "db3003f10e6143b54f2695353e197b585860ce11"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\QA\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\QA\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "srcHash": "9566209cc7fc765a383787202c84b48addbe0dbd"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Roadmaps\\ROADMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "srcHash": "b98fb232a91ef51e46a334ff944a71b7b95c4477"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\search-index.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\search-index.json",
+      "srcHash": "54b246fe9704b3a669902655a86b874eecea6936"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\SITEMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\SITEMAP.md",
+      "srcHash": "ec2da9d00715198ba6f159bb71966fe81d8ddf2f"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\UI\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\UI\\CHANGELOG.md",
+      "srcHash": "41ae558934588672a57fe88224f15659a31d31f1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\version-manifest.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\version-manifest.json",
+      "srcHash": "9424c36774938882af54e3cc33c62b2b6450e15e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": "78c9fd4ad817a811c0159604c5023a3c0b6331ce"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\API\\Docs API Specification.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": "2a3d0deb23897ac15c09da0f24ed467894b20c88"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\BACKUP_POLICY.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": "a7961b0189364b41bb7acb28e3b511ea7d0d962a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Home.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Home.md",
+      "srcHash": "ca261acad2b6e22b2db65f2c986ca0c05dea8292"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": "f3c267d31697bb4870951d6123202f87e36c79d9"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Search Index Generator.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": "79b75155772126619676ac9c5bc4a482a8734c17"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\GOVERNANCE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": "f5a6bec97bac37a832a743abde1422c4ca214656"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\index.html",
+      "srcHash": "d82bf339c49703e0e7463a0fa98d1651bb7e088c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\INDEX.md",
+      "srcHash": "842c390d27f37d113fd78785c3aa57af9be58aea"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": "650da60a4caf310742b758fb74a7b316df85f974"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": "7782c35626285728f58e560717451b4444ecccf4"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Manuals\\Rewrite Labs - Master Instructions Manual (Updated with Outreach Automation).txt"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\mkdocs.yml"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": "714b851e2848c87ec601a182c064ab569c80715a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": "b1f1b402dc6757c5523cd9a91ccf771769acbac6"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Outreach\\Rewrite Labs - Outreach Automation Playbook.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": "1edcb62c30974d3d4c669b4d156f90791211bb34"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": "af4e1295a372fb675e06355bd01197a199cd3c66"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\portal.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\styles.css"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": "26a6c1941f190ac87837a3185ec5de0bec8c6faf"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": "34ec7aa9e53cf6321fb94727c5160fef7e8afb2b"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\search.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": "0730ac5abe56b26029233a9a5cacaca0f1ce4d09"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": "eddf349e32d04d6a27fa6d81cfa8349d659bd22e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "a3fc9b959a0f77895f7de22bbda7f27a444f0b81"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": "557ad0f6f36fac1f1d4574e96afb58e345e5b3e4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": "9c92c7f28c22e256ea19e97acbf9bc5268978253"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": "b86ad067872ed629d5102979b473b252c1dc82ff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\Rewrite Labs - Master Roadmap (Updated with Outreach Automation Track).txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\SITEMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\SITEMAP.md",
+      "srcHash": "88518c7d0f2107da074ed48c7de02c39764abd29"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": "e24927e4f8edf308d77463225f509acc3e7162f4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Operator Console Mock UI.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\version-manifest.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\version-manifest.json",
+      "srcHash": "620b529d0936e543afd1e494ee533b7ba947f616"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\VERSIONING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\VERSIONING.md",
+      "srcHash": "cac03bd0a38ffb3631372bb62eec9245e93f5bac"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": "78c9fd4ad817a811c0159604c5023a3c0b6331ce"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\API\\Docs API Specification.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": "2a3d0deb23897ac15c09da0f24ed467894b20c88"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\BACKUP_POLICY.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": "a7961b0189364b41bb7acb28e3b511ea7d0d962a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Home.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Home.md",
+      "srcHash": "ca261acad2b6e22b2db65f2c986ca0c05dea8292"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": "f3c267d31697bb4870951d6123202f87e36c79d9"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Search Index Generator.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": "79b75155772126619676ac9c5bc4a482a8734c17"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\GOVERNANCE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": "f5a6bec97bac37a832a743abde1422c4ca214656"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\index.html",
+      "srcHash": "d82bf339c49703e0e7463a0fa98d1651bb7e088c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\INDEX.md",
+      "srcHash": "842c390d27f37d113fd78785c3aa57af9be58aea"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": "650da60a4caf310742b758fb74a7b316df85f974"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": "7782c35626285728f58e560717451b4444ecccf4"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Manuals\\Rewrite Labs - Master Instructions Manual (Updated with Outreach Automation).txt"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\mkdocs.yml"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": "714b851e2848c87ec601a182c064ab569c80715a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": "b1f1b402dc6757c5523cd9a91ccf771769acbac6"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Outreach\\Rewrite Labs - Outreach Automation Playbook.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": "1edcb62c30974d3d4c669b4d156f90791211bb34"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": "af4e1295a372fb675e06355bd01197a199cd3c66"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\portal.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\styles.css"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": "26a6c1941f190ac87837a3185ec5de0bec8c6faf"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": "34ec7aa9e53cf6321fb94727c5160fef7e8afb2b"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\search.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": "0730ac5abe56b26029233a9a5cacaca0f1ce4d09"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": "eddf349e32d04d6a27fa6d81cfa8349d659bd22e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "a3fc9b959a0f77895f7de22bbda7f27a444f0b81"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": "557ad0f6f36fac1f1d4574e96afb58e345e5b3e4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": "9c92c7f28c22e256ea19e97acbf9bc5268978253"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": "b86ad067872ed629d5102979b473b252c1dc82ff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\Rewrite Labs - Master Roadmap (Updated with Outreach Automation Track).txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\search-index.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\search-index.json",
+      "srcHash": "831fc6f0bf34fb7e3b1d0a0939bf83e0d3d645a8"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\SITEMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\SITEMAP.md",
+      "srcHash": "88518c7d0f2107da074ed48c7de02c39764abd29"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": "e24927e4f8edf308d77463225f509acc3e7162f4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Operator Console Mock UI.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\version-manifest.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\version-manifest.json",
+      "srcHash": "620b529d0936e543afd1e494ee533b7ba947f616"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\VERSIONING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\VERSIONING.md",
+      "srcHash": "cac03bd0a38ffb3631372bb62eec9245e93f5bac"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": "78c9fd4ad817a811c0159604c5023a3c0b6331ce"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\API\\Docs API Specification.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": "2a3d0deb23897ac15c09da0f24ed467894b20c88"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\BACKUP_POLICY.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": "a7961b0189364b41bb7acb28e3b511ea7d0d962a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Home.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Home.md",
+      "srcHash": "ca261acad2b6e22b2db65f2c986ca0c05dea8292"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": "f3c267d31697bb4870951d6123202f87e36c79d9"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Search Index Generator.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": "79b75155772126619676ac9c5bc4a482a8734c17"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\GOVERNANCE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": "f5a6bec97bac37a832a743abde1422c4ca214656"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\index.html",
+      "srcHash": "d82bf339c49703e0e7463a0fa98d1651bb7e088c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\INDEX.md",
+      "srcHash": "842c390d27f37d113fd78785c3aa57af9be58aea"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": "650da60a4caf310742b758fb74a7b316df85f974"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": "7782c35626285728f58e560717451b4444ecccf4"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Manuals\\Rewrite Labs - Master Instructions Manual (Updated with Outreach Automation).txt"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\mkdocs.yml"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": "714b851e2848c87ec601a182c064ab569c80715a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": "b1f1b402dc6757c5523cd9a91ccf771769acbac6"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Outreach\\Rewrite Labs - Outreach Automation Playbook.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": "1edcb62c30974d3d4c669b4d156f90791211bb34"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": "af4e1295a372fb675e06355bd01197a199cd3c66"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\portal.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\styles.css"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": "26a6c1941f190ac87837a3185ec5de0bec8c6faf"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": "34ec7aa9e53cf6321fb94727c5160fef7e8afb2b"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\search.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": "0730ac5abe56b26029233a9a5cacaca0f1ce4d09"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": "eddf349e32d04d6a27fa6d81cfa8349d659bd22e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "a3fc9b959a0f77895f7de22bbda7f27a444f0b81"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": "557ad0f6f36fac1f1d4574e96afb58e345e5b3e4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": "9c92c7f28c22e256ea19e97acbf9bc5268978253"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": "b86ad067872ed629d5102979b473b252c1dc82ff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\Rewrite Labs - Master Roadmap (Updated with Outreach Automation Track).txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\search-index.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\search-index.json",
+      "srcHash": "831fc6f0bf34fb7e3b1d0a0939bf83e0d3d645a8"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\SITEMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\SITEMAP.md",
+      "srcHash": "88518c7d0f2107da074ed48c7de02c39764abd29"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": "e24927e4f8edf308d77463225f509acc3e7162f4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Operator Console Mock UI.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\version-manifest.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\version-manifest.json",
+      "srcHash": "620b529d0936e543afd1e494ee533b7ba947f616"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\VERSIONING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\VERSIONING.md",
+      "srcHash": "cac03bd0a38ffb3631372bb62eec9245e93f5bac"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": "78c9fd4ad817a811c0159604c5023a3c0b6331ce"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\API\\Docs API Specification.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": "2a3d0deb23897ac15c09da0f24ed467894b20c88"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\BACKUP_POLICY.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": "a7961b0189364b41bb7acb28e3b511ea7d0d962a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Home.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Home.md",
+      "srcHash": "ca261acad2b6e22b2db65f2c986ca0c05dea8292"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": "f3c267d31697bb4870951d6123202f87e36c79d9"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Search Index Generator.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": "79b75155772126619676ac9c5bc4a482a8734c17"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\GOVERNANCE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": "f5a6bec97bac37a832a743abde1422c4ca214656"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\index.html",
+      "srcHash": "d82bf339c49703e0e7463a0fa98d1651bb7e088c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\INDEX.md",
+      "srcHash": "842c390d27f37d113fd78785c3aa57af9be58aea"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": "650da60a4caf310742b758fb74a7b316df85f974"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": "7782c35626285728f58e560717451b4444ecccf4"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Manuals\\Rewrite Labs - Master Instructions Manual (Updated with Outreach Automation).txt"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\mkdocs.yml"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": "714b851e2848c87ec601a182c064ab569c80715a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": "b1f1b402dc6757c5523cd9a91ccf771769acbac6"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Outreach\\Rewrite Labs - Outreach Automation Playbook.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": "1edcb62c30974d3d4c669b4d156f90791211bb34"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": "af4e1295a372fb675e06355bd01197a199cd3c66"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\portal.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\styles.css"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": "26a6c1941f190ac87837a3185ec5de0bec8c6faf"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": "34ec7aa9e53cf6321fb94727c5160fef7e8afb2b"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\search.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": "0730ac5abe56b26029233a9a5cacaca0f1ce4d09"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": "eddf349e32d04d6a27fa6d81cfa8349d659bd22e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "a3fc9b959a0f77895f7de22bbda7f27a444f0b81"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": "557ad0f6f36fac1f1d4574e96afb58e345e5b3e4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": "9c92c7f28c22e256ea19e97acbf9bc5268978253"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": "b86ad067872ed629d5102979b473b252c1dc82ff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\Rewrite Labs - Master Roadmap (Updated with Outreach Automation Track).txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\search-index.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\search-index.json",
+      "srcHash": "831fc6f0bf34fb7e3b1d0a0939bf83e0d3d645a8"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\SITEMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\SITEMAP.md",
+      "srcHash": "88518c7d0f2107da074ed48c7de02c39764abd29"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": "e24927e4f8edf308d77463225f509acc3e7162f4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Operator Console Mock UI.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\version-manifest.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\version-manifest.json",
+      "srcHash": "620b529d0936e543afd1e494ee533b7ba947f616"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\VERSIONING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\VERSIONING.md",
+      "srcHash": "cac03bd0a38ffb3631372bb62eec9245e93f5bac"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\AI\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\AI\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": "78c9fd4ad817a811c0159604c5023a3c0b6331ce"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\API\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\API\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\API\\Docs API Specification.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": "2a3d0deb23897ac15c09da0f24ed467894b20c88"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\BACKUP_POLICY.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": "a7961b0189364b41bb7acb28e3b511ea7d0d962a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Home.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Home.md",
+      "srcHash": "ca261acad2b6e22b2db65f2c986ca0c05dea8292"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": "f3c267d31697bb4870951d6123202f87e36c79d9"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Search Index Generator.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": "79b75155772126619676ac9c5bc4a482a8734c17"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\GOVERNANCE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": "f5a6bec97bac37a832a743abde1422c4ca214656"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\index.html",
+      "srcHash": "d82bf339c49703e0e7463a0fa98d1651bb7e088c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\INDEX.md",
+      "srcHash": "65f0d20b4b1bda0e8a00c3b8cb9f208cb6a4951b"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": "650da60a4caf310742b758fb74a7b316df85f974"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": "3082b2ed011b7752934ac063fd996f6f03ad0fc7"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Manuals\\Rewrite Labs - Master Instructions Manual (Updated with Outreach Automation).txt"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\mkdocs.yml"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": "714b851e2848c87ec601a182c064ab569c80715a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": "e1b61e023787c2e8377c6db67c29b6e2456c729e"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Outreach\\Rewrite Labs - Outreach Automation Playbook.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": "1edcb62c30974d3d4c669b4d156f90791211bb34"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": "af4e1295a372fb675e06355bd01197a199cd3c66"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\portal.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\styles.css"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": "26a6c1941f190ac87837a3185ec5de0bec8c6faf"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": "34ec7aa9e53cf6321fb94727c5160fef7e8afb2b"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\search.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": "0730ac5abe56b26029233a9a5cacaca0f1ce4d09"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\QA\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\QA\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": "eddf349e32d04d6a27fa6d81cfa8349d659bd22e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "a3fc9b959a0f77895f7de22bbda7f27a444f0b81"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": "557ad0f6f36fac1f1d4574e96afb58e345e5b3e4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": "7d5042008a7906e2d15dbe5678f8dd94c6566e1d"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": "b86ad067872ed629d5102979b473b252c1dc82ff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Roadmaps\\Rewrite Labs - Master Roadmap (Updated with Outreach Automation Track).txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\search-index.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\search-index.json",
+      "srcHash": "831fc6f0bf34fb7e3b1d0a0939bf83e0d3d645a8"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\SITEMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\SITEMAP.md",
+      "srcHash": "61f189e841ae9a1db235693446acd6d2cf38f1a6"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\CHANGELOG.md",
+      "srcHash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": "e24927e4f8edf308d77463225f509acc3e7162f4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Operator Console Mock UI.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\version-manifest.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\version-manifest.json",
+      "srcHash": "4935bec0e09ef96934c42c1a108ca63f59e0127c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\VERSIONING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\VERSIONING.md",
+      "srcHash": "cac03bd0a38ffb3631372bb62eec9245e93f5bac"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\AI\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\AI\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": "78c9fd4ad817a811c0159604c5023a3c0b6331ce"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\API\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\API\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\API\\Docs API Specification.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": "2a3d0deb23897ac15c09da0f24ed467894b20c88"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\BACKUP_POLICY.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": "a7961b0189364b41bb7acb28e3b511ea7d0d962a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Home.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Home.md",
+      "srcHash": "ca261acad2b6e22b2db65f2c986ca0c05dea8292"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": "f3c267d31697bb4870951d6123202f87e36c79d9"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Search Index Generator.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": "79b75155772126619676ac9c5bc4a482a8734c17"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\GOVERNANCE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": "f5a6bec97bac37a832a743abde1422c4ca214656"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\index.html",
+      "srcHash": "d82bf339c49703e0e7463a0fa98d1651bb7e088c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\INDEX.md",
+      "srcHash": "f207c0a8cf2ebd0ea4679da975d0ed3c8de63c04"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": "650da60a4caf310742b758fb74a7b316df85f974"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": "6defbefd8f9c8e292a2da69a41d7f278ad2c6e36"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Manuals\\Rewrite Labs - Master Instructions Manual (Updated with Outreach Automation).txt"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\mkdocs.yml"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": "714b851e2848c87ec601a182c064ab569c80715a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": "f5e4be215f338e45ea58c87082d65414730313a1"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Outreach\\Rewrite Labs - Outreach Automation Playbook.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": "1edcb62c30974d3d4c669b4d156f90791211bb34"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": "af4e1295a372fb675e06355bd01197a199cd3c66"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\portal.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\styles.css"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": "26a6c1941f190ac87837a3185ec5de0bec8c6faf"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": "34ec7aa9e53cf6321fb94727c5160fef7e8afb2b"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\search.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": "0730ac5abe56b26029233a9a5cacaca0f1ce4d09"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\QA\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\QA\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": "eddf349e32d04d6a27fa6d81cfa8349d659bd22e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "a3fc9b959a0f77895f7de22bbda7f27a444f0b81"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": "557ad0f6f36fac1f1d4574e96afb58e345e5b3e4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": "67aa07fcf87e47d6646c735171bf9c48c2f2f50c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": "b86ad067872ed629d5102979b473b252c1dc82ff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Roadmaps\\Rewrite Labs - Master Roadmap (Updated with Outreach Automation Track).txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\search-index.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\search-index.json",
+      "srcHash": "5c3fa45080d1e05d8ed00b6952eda73c8f438373"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\SITEMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\SITEMAP.md",
+      "srcHash": "4c12c016112e59592c042f7fa39c983c58bfc714"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\CHANGELOG.md",
+      "srcHash": "ba0140df820f29d05c7ab88c4645187a18f7b03e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": "e24927e4f8edf308d77463225f509acc3e7162f4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Operator Console Mock UI.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\version-manifest.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\version-manifest.json",
+      "srcHash": "00e30510bb8f15d977b9057e4d5062b285f2b4e3"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\VERSIONING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\VERSIONING.md",
+      "srcHash": "cac03bd0a38ffb3631372bb62eec9245e93f5bac"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\AI\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\AI\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": "78c9fd4ad817a811c0159604c5023a3c0b6331ce"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\API\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\API\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\API\\Docs API Specification.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": "2a3d0deb23897ac15c09da0f24ed467894b20c88"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\BACKUP_POLICY.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": "a7961b0189364b41bb7acb28e3b511ea7d0d962a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Home.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Home.md",
+      "srcHash": "4c7dcfe23e05d8718243a71f7c7cab95e632df1f"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": "f3c267d31697bb4870951d6123202f87e36c79d9"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Search Index Generator.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": "79b75155772126619676ac9c5bc4a482a8734c17"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\GOVERNANCE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": "f5a6bec97bac37a832a743abde1422c4ca214656"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\index.html",
+      "srcHash": "d82bf339c49703e0e7463a0fa98d1651bb7e088c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\INDEX.md",
+      "srcHash": "f207c0a8cf2ebd0ea4679da975d0ed3c8de63c04"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ingestion-index.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ingestion-index.md",
+      "srcHash": "db3003f10e6143b54f2695353e197b585860ce11"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": "650da60a4caf310742b758fb74a7b316df85f974"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": "b087f482b921983dc8a822131ac9d5a4c5b107ef"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Manuals\\Rewrite Labs - Master Instructions Manual (Updated with Outreach Automation).txt"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\mkdocs.yml"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": "714b851e2848c87ec601a182c064ab569c80715a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": "c5342180a242aaf0095597d8638bedc4bd145612"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Outreach\\Rewrite Labs - Outreach Automation Playbook.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": "1edcb62c30974d3d4c669b4d156f90791211bb34"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": "af4e1295a372fb675e06355bd01197a199cd3c66"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\portal.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\styles.css"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": "26a6c1941f190ac87837a3185ec5de0bec8c6faf"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": "34ec7aa9e53cf6321fb94727c5160fef7e8afb2b"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\search.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": "0730ac5abe56b26029233a9a5cacaca0f1ce4d09"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\QA\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\QA\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": "eddf349e32d04d6a27fa6d81cfa8349d659bd22e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "a3fc9b959a0f77895f7de22bbda7f27a444f0b81"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": "557ad0f6f36fac1f1d4574e96afb58e345e5b3e4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": "38806254b3488652da142e31136ac5fa6b8a6b41"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": "b86ad067872ed629d5102979b473b252c1dc82ff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\Rewrite Labs - Master Roadmap (Updated with Outreach Automation Track).txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "srcHash": "9566209cc7fc765a383787202c84b48addbe0dbd"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\ROADMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "srcHash": "b98fb232a91ef51e46a334ff944a71b7b95c4477"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\search-index.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\search-index.json",
+      "srcHash": "9f317212251010e9eff50a7426dcf559d01ffa13"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\SITEMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\SITEMAP.md",
+      "srcHash": "4c12c016112e59592c042f7fa39c983c58bfc714"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\CHANGELOG.md",
+      "srcHash": "fde8813cc4efa44a06e6eaed2941fd8764f73254"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": "e24927e4f8edf308d77463225f509acc3e7162f4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Operator Console Mock UI.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\version-manifest.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\version-manifest.json",
+      "srcHash": "b55683960e1c78dca02143c272f763074172ca36"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\VERSIONING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\VERSIONING.md",
+      "srcHash": "cac03bd0a38ffb3631372bb62eec9245e93f5bac"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\AI\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\AI\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": "78c9fd4ad817a811c0159604c5023a3c0b6331ce"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\API\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\API\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\API\\Docs API Specification.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": "2a3d0deb23897ac15c09da0f24ed467894b20c88"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\BACKUP_POLICY.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": "a7961b0189364b41bb7acb28e3b511ea7d0d962a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Home.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Home.md",
+      "srcHash": "4c7dcfe23e05d8718243a71f7c7cab95e632df1f"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": "f3c267d31697bb4870951d6123202f87e36c79d9"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Search Index Generator.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": "79b75155772126619676ac9c5bc4a482a8734c17"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\GOVERNANCE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": "f5a6bec97bac37a832a743abde1422c4ca214656"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\index.html",
+      "srcHash": "d82bf339c49703e0e7463a0fa98d1651bb7e088c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\INDEX.md",
+      "srcHash": "0e44188d4e316f2dbc5914af291bb895183c3f3e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ingestion-index.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ingestion-index.md",
+      "srcHash": "db3003f10e6143b54f2695353e197b585860ce11"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": "650da60a4caf310742b758fb74a7b316df85f974"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": "7a6b9a20da71d92ace7bd3e88d61259c97e32362"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Manuals\\Rewrite Labs - Master Instructions Manual (Updated with Outreach Automation).txt"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\mkdocs.yml"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": "714b851e2848c87ec601a182c064ab569c80715a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": "2b52bf1b5e249e258b3ec8ac6e6e00805bd90934"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Outreach\\Rewrite Labs - Outreach Automation Playbook.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": "1edcb62c30974d3d4c669b4d156f90791211bb34"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\index.html",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": "af4e1295a372fb675e06355bd01197a199cd3c66"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\portal.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\styles.css"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": "26a6c1941f190ac87837a3185ec5de0bec8c6faf"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": "34ec7aa9e53cf6321fb94727c5160fef7e8afb2b"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\search.js",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": "0730ac5abe56b26029233a9a5cacaca0f1ce4d09"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\QA\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\QA\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": "eddf349e32d04d6a27fa6d81cfa8349d659bd22e"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "a3fc9b959a0f77895f7de22bbda7f27a444f0b81"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": "557ad0f6f36fac1f1d4574e96afb58e345e5b3e4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": "e4ea5c7ce460ee40f6171163caf0ef5f4be1af27"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": "b86ad067872ed629d5102979b473b252c1dc82ff"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\Rewrite Labs - Master Roadmap (Updated with Outreach Automation Track).txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "srcHash": "9566209cc7fc765a383787202c84b48addbe0dbd"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\ROADMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "srcHash": "b98fb232a91ef51e46a334ff944a71b7b95c4477"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\search-index.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\search-index.json",
+      "srcHash": "72da7ae9bfe972f8782c514c938f38444624dd12"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\SITEMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\SITEMAP.md",
+      "srcHash": "79b7beb9a83a009e99497822542769fe42596f9c"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\CHANGELOG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\CHANGELOG.md",
+      "srcHash": "a218d8384f033ba2743be37b70f68eaed7b99250"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": "e24927e4f8edf308d77463225f509acc3e7162f4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": "437c0cd0cd01a94c566eade64fccfce74186ccc2"
+    },
+    {
+      "type": "skip-ext",
+      "file": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Operator Console Mock UI.txt"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\version-manifest.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\version-manifest.json",
+      "srcHash": "c77a6822dfed3c0166e7e0bf39488380d0e5ff38"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\VERSIONING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\VERSIONING.md",
+      "srcHash": "cac03bd0a38ffb3631372bb62eec9245e93f5bac"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\ROADMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "srcHash": "fc3ff73c96f8f1bdaa7fb039d83dbd65409b1656"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\ROADMAP_EXTENDED.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP_EXTENDED.md",
+      "srcHash": "4ce6a62d3517ececd86112530f528ba506034f36"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\SECURITY.md",
+      "dest": "C:\\Users\\soren\\docs\\SECURITY.md",
+      "srcHash": "47e657375c03b56641421d42f01134d9c9b873cc"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\STYLE_GUIDE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\STYLE_GUIDE.md",
+      "srcHash": "4d416bc431c49c2622b410249c091c9d9439bd80"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\SUPPORT.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\SUPPORT.md",
+      "srcHash": "2e83397185024f2e78559de9e7f24b45fd53887a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\TESTING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\TESTING.md",
+      "srcHash": "42320a18156b19f28f5847fc8f10dc6a88a1efb8"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\TROUBLESHOOTING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\TROUBLESHOOTING.md",
+      "srcHash": "576c483cd88bcb1afbff249ca50a7a1fbbdba234"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\AI_MODULE_GUIDE.md",
+      "dest": "C:\\Users\\soren\\docs\\multi-agent\\AI_MODULE_GUIDE.md",
+      "srcHash": "d38bd072d41bf24702034823f78c81029b959604"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\API.md",
+      "dest": "C:\\Users\\soren\\docs\\api\\API.md",
+      "srcHash": "4462b2b4d639303e0e97a204c7633ae2bacb5e43"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\ARCHITECTURE.md",
+      "dest": "C:\\Users\\soren\\docs\\architecture\\ARCHITECTURE.md",
+      "srcHash": "6537eefdad9410fc82fa1647fcfb8b7444fc8c33"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\BENCHMARKS.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\BENCHMARKS.md",
+      "srcHash": "ab3d054984604d41c89f099198e391632188535d"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\CHANGELOG_TEMPLATE.md",
+      "dest": "C:\\Users\\soren\\docs\\release\\CHANGELOG_TEMPLATE.md",
+      "srcHash": "514424dc6365626eb8e7a6a3d6606151e72a29b0"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\CODE_OF_CONDUCT.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\CODE_OF_CONDUCT.md",
+      "srcHash": "56fcf9c6d43aa4f581b01f36e54731e56e4960a2"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\CONFIG.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\CONFIG.md",
+      "srcHash": "c83a9164859435a5403cdeb655179987ba60da41"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\CONTRIBUTING.md",
+      "dest": "C:\\Users\\soren\\docs\\CONTRIBUTING.md",
+      "srcHash": "1890fee3b7d93e56a7b13420ec1e3a0e98830a7d"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\CONTRIBUTOR_ROLES.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\CONTRIBUTOR_ROLES.md",
+      "srcHash": "168150fa4cb1951592d4decc6506ddf6ba136e23"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\DESIGN_DECISIONS.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\DESIGN_DECISIONS.md",
+      "srcHash": "863decf0bc834d682ecb0607447ae2f6a470b925"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\DEVELOPER_GUIDE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\DEVELOPER_GUIDE.md",
+      "srcHash": "493c6bce333f63b9350eb2cbadea8793b84fbeff"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\DOCS_INDEX.md",
+      "dest": "C:\\Users\\soren\\docs\\DOCS_INDEX.md",
+      "srcHash": "27fe5ed575047e679f8000684a548d5c684bb6c6"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\FOLDER_STRUCTURE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\FOLDER_STRUCTURE.md",
+      "srcHash": "a97fbd031841bfee37aca987586b40465b6570d5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\GLOSSARY.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\GLOSSARY.md",
+      "srcHash": "692934495880b0ca3b9d92d10482d96bd735a5ea"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\GOVERNANCE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\GOVERNANCE.md",
+      "srcHash": "92039baa6b13815c58691b0b19d6fa6e9aa57871"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\HISTORY.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\HISTORY.md",
+      "srcHash": "eee29ef9261878687ca8091303eb3162e27cd829"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\INSTALLATION.md",
+      "dest": "C:\\Users\\soren\\docs\\INSTALLATION.md",
+      "srcHash": "325f50ef12d292de9b9b622fe12c6590640cd122"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\ISSUE_TEMPLATE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\ISSUE_TEMPLATE.md",
+      "srcHash": "68ba44d8fcc9747e66ef4edcd91208408afe6a23"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\LICENSE.md",
+      "dest": "C:\\Users\\soren\\docs\\LICENSE.md",
+      "srcHash": "da6f01f9d05b27cb2822a6879ab484570f7e8568"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\MCP_INTEGRATION.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\MCP_INTEGRATION.md",
+      "srcHash": "aafe2cfa39920b19b2b66ed8dfc8b1da0bb75e33"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\MODULES.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\MODULES.md",
+      "srcHash": "e1f4f8aa66cefb8cbb85a20dcec54a50b01ebee0"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\PULL_REQUEST_TEMPLATE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\PULL_REQUEST_TEMPLATE.md",
+      "srcHash": "9edb2e2f68d18fb38be08be2f04b5e25fbc07a4d"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "69e22ff13e03a5c0e186da97d9d622a046b54838"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\RELEASE_PROCESS.md",
+      "dest": "C:\\Users\\soren\\docs\\release\\RELEASE_PROCESS.md",
+      "srcHash": "13c6446aa46678120838bc639453c0f4776c0203"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\ROADMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "srcHash": "fc3ff73c96f8f1bdaa7fb039d83dbd65409b1656"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\ROADMAP_EXTENDED.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP_EXTENDED.md",
+      "srcHash": "4ce6a62d3517ececd86112530f528ba506034f36"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\SECURITY.md",
+      "dest": "C:\\Users\\soren\\docs\\SECURITY.md",
+      "srcHash": "47e657375c03b56641421d42f01134d9c9b873cc"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\STYLE_GUIDE.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\STYLE_GUIDE.md",
+      "srcHash": "4d416bc431c49c2622b410249c091c9d9439bd80"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\SUPPORT.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\SUPPORT.md",
+      "srcHash": "2e83397185024f2e78559de9e7f24b45fd53887a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\TESTING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\TESTING.md",
+      "srcHash": "42320a18156b19f28f5847fc8f10dc6a88a1efb8"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\TROUBLESHOOTING.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\TROUBLESHOOTING.md",
+      "srcHash": "576c483cd88bcb1afbff249ca50a7a1fbbdba234"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\version.json",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\version.json",
+      "srcHash": "3846a7357fbe43982336b3aaf12b7bf91d987740"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\discovery\\docs\\contracts.md",
+      "dest": "C:\\Users\\soren\\docs\\ingestion\\contracts.md",
+      "srcHash": "d11d7c36b2d03bd169b18124c77c1c0c43910ca9"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\discovery\\docs\\queues.md",
+      "dest": "C:\\Users\\soren\\docs\\ingestion\\queues.md",
+      "srcHash": "ba017fb0a58105df0b5147e5f00041acc23d007a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\discovery\\docs\\services.md",
+      "dest": "C:\\Users\\soren\\docs\\ingestion\\services.md",
+      "srcHash": "e937fac16b62e2145058b9098552578185d87a26"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ADR_001.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\ADR_001.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ADR_002.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\ADR_002.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ARCHITECTURE.md",
+      "dest": "C:\\Users\\soren\\docs\\architecture\\ARCHITECTURE.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\MODULES.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\MODULES.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\OSM_ENGINE.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\OSM_ENGINE.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ROADMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\SWEEPER.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\SWEEPER.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\TESTING.md",
+      "dest": "C:\\Users\\soren\\docs\\operator-console\\TESTING.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\architecture.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\architecture.md",
+      "srcHash": "4b7b40ef6d96e5ba335b0775f289a228426defaa"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\commands.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\commands.md",
+      "srcHash": "fed443561d8994324f9478fe4352300a00c3284a"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\CIC-Business-Development-Log_2026_04_21.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\CIC-Business-Development-Log_2026_04_21.md",
+      "srcHash": "0c71609a6687b18c84450d5ab49247d419cca379"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\CIC-Business-Development-Log_2026_04_26.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\CIC-Business-Development-Log_2026_04_26.md",
+      "srcHash": "b92789a3baa9adcf41b9b6f2f75f3b11bb5c8142"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-23_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-23_v1.md",
+      "srcHash": "92c254656b077968e80a9a8d202eab19a7566ce5"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-24_v1.md",
+      "srcHash": "567eb21ccb5c69621e323cb9187a0d5cb66f8c63"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v2.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-24_v2.md",
+      "srcHash": "1de7d6794df5569ec687cf83280499948beb2216"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v3.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-24_v3.md",
+      "srcHash": "c0175c691301a09bc2c59795761f7cfa0d7c1ac8"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-25_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-25_v1.md",
+      "srcHash": "2042c5c53340721cb999ccfec58e6f1a1d558ae4"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-27_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-27_v1.md",
+      "srcHash": "3a24fb55efa3eb852e0f6255da1f9d78cfaa2598"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-30_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-04-30_v1.md",
+      "srcHash": "3ef1299269d370d83f52cdb19f2eb9254104c441"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-05-03_v1.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\cic-news-digest_2026-05-03_v1.md",
+      "srcHash": "afdcd771f761df8acfe9fad0eaa43c6913c41b73"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\ingestion.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\ingestion.md",
+      "srcHash": "2fe6f7aacbb1346cfaa85ed8b8a1729b2605a999"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "667d38ba6c462d053e335fdd9ba0f88a282896b8"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\research-engine.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\research-engine.md",
+      "srcHash": "e5717a76391bc8d840edd95bc5b9eb41cc096069"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\architecture.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\architecture.md",
+      "srcHash": "2f21aa8d77920e9adfe24bf0a2a40d7db131cb71"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\crawler-spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\crawler-spec.md",
+      "srcHash": "097830aafa333194749a15287a0dbb5a92461d52"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\operator-console-spec.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\operator-console-spec.md",
+      "srcHash": "f4c731219422d433ade3787bca98acfcbf27d5eb"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\outreach-templates.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\outreach-templates.md",
+      "srcHash": "0885aeb8b0c4276ac65979906858188ca75680a1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\runbook.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\runbook.md",
+      "srcHash": "3c90510e454749a062cfd72f45f4c7d201d92e6d"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\architecture.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\architecture.md",
+      "srcHash": "bd0ee501f2563ca672e8fe9da147df65dcaa821d"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\extension.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\extension.md",
+      "srcHash": "377a4ca98ff99d701f8533cfae496f2f8f0e3156"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\features.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\features.md",
+      "srcHash": "d8b2570687759868b2e47c302a5d014efaf90462"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\how-it-works.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\how-it-works.md",
+      "srcHash": "ed8ad8139d11ddf6c40f1fa1c6f225cc9aa425b1"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\instructions.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\instructions.md",
+      "srcHash": "8ef41f3e680b77af5d3ac9e9ab8838dd0b1d7328"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\startup.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\startup.md",
+      "srcHash": "dd364f74c1edd1db30d306aba62df4b1a70873ab"
+    },
+    {
+      "type": "would-move",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\structure.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\structure.md",
+      "srcHash": "df1faaf5a9a8ef578edd95b563e4d62d136662b3"
+    }
+  ]
+}

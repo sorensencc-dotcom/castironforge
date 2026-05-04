@@ -1,0 +1,3171 @@
+{
+  "summary": {
+    "merge_if_dest_missing": 442,
+    "duplicate_skip": 0,
+    "delete_empty": 3,
+    "manual_review": 5,
+    "total": 892
+  },
+  "merge_if_dest_missing": [
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\AI_MODULE_GUIDE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\AI_MODULE_GUIDE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\fonts\\OpenSans-Bold-webfont.svg",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Bold-webfont.svg",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\fonts\\OpenSans-BoldItalic-webfont.svg",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-BoldItalic-webfont.svg",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\fonts\\OpenSans-Italic-webfont.svg",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Italic-webfont.svg",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\fonts\\OpenSans-Light-webfont.svg",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Light-webfont.svg",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\fonts\\OpenSans-LightItalic-webfont.svg",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-LightItalic-webfont.svg",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\fonts\\OpenSans-Regular-webfont.svg",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\fonts\\OpenSans-Regular-webfont.svg",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\global.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\global.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\modules_exif_geocode.js.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\modules_exif_geocode.js.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\scripts\\linenumber.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\scripts\\linenumber.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\scripts\\prettify\\lang-css.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\scripts\\prettify\\lang-css.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\scripts\\prettify\\prettify.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\scripts\\prettify\\prettify.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\api\\server.cjs.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\api\\server.cjs.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\API.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\API.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\ARCHITECTURE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\ARCHITECTURE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\BENCHMARKS.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\BENCHMARKS.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\CHANGELOG_TEMPLATE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\CHANGELOG_TEMPLATE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\CODE_OF_CONDUCT.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\CODE_OF_CONDUCT.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\CONFIG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\CONFIG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\CONTRIBUTING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\CONTRIBUTING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\CONTRIBUTOR_ROLES.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\CONTRIBUTOR_ROLES.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\Daily Logs\\CIC-Business-Development-Log_2026_04_21.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\CIC-Business-Development-Log_2026_04_21.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\Daily Logs\\CIC-Business-Development-Log_2026_04_26.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\CIC-Business-Development-Log_2026_04_26.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\Daily Logs\\Daily-Business-Development-Log.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\Daily-Business-Development-Log.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\Daily Logs\\daily-log-index.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\daily-log-index.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\Daily Logs\\daily-log-template.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\Daily Logs\\daily-log-template.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\DESIGN_DECISIONS.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\DESIGN_DECISIONS.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\DEVELOPER_GUIDE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\DEVELOPER_GUIDE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\DOCS_INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\DOCS_INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\FOLDER_STRUCTURE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\FOLDER_STRUCTURE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\GLOSSARY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\GLOSSARY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\GOVERNANCE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\GOVERNANCE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\HISTORY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\HISTORY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\INSTALLATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\INSTALLATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\ISSUE_TEMPLATE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\ISSUE_TEMPLATE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\LICENSE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\LICENSE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\MCP_INTEGRATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\MCP_INTEGRATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\MODULES.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\MODULES.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\PULL_REQUEST_TEMPLATE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\PULL_REQUEST_TEMPLATE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\README.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\README.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RELEASE_PROCESS.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RELEASE_PROCESS.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\AI\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\AI\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\API\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\API\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\Docs Home.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Docs Home.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\ingestion-index.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\ingestion-index.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\QA\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\QA\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\Roadmaps\\ROADMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\Roadmaps\\ROADMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\search-index.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\search-index.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\SITEMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\SITEMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\UI\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\UI\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs\\version-manifest.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs\\version-manifest.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\API\\Docs API Specification.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\BACKUP_POLICY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Home.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Home.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Search Index Generator.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\GOVERNANCE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\portal.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\search.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\README.md-a3fc9b95",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\README.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-canonical-source-to-archive-provenance"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\SITEMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\SITEMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\version-manifest.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\version-manifest.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\VERSIONING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\VERSIONING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\API\\Docs API Specification.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\BACKUP_POLICY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Home.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Home.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Search Index Generator.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\GOVERNANCE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\portal.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\search.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\README.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\README.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\search-index.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\search-index.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\SITEMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\SITEMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\version-manifest.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\version-manifest.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\VERSIONING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\VERSIONING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\API\\Docs API Specification.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\BACKUP_POLICY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Home.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Home.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Search Index Generator.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\GOVERNANCE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\portal.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\search.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\README.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\README.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\search-index.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\search-index.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\SITEMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\SITEMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\version-manifest.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\version-manifest.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\VERSIONING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\VERSIONING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\API\\Docs API Specification.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\BACKUP_POLICY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Home.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Home.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Search Index Generator.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\GOVERNANCE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\portal.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\search.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\README.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\README.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\search-index.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\search-index.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\SITEMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\SITEMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\version-manifest.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\version-manifest.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\VERSIONING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\VERSIONING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\AI\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\AI\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\API\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\API\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\API\\Docs API Specification.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\BACKUP_POLICY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Home.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Home.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Search Index Generator.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\GOVERNANCE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\portal.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\search.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\QA\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\QA\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\README.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\README.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\search-index.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\search-index.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\SITEMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\SITEMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\version-manifest.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\version-manifest.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\VERSIONING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\VERSIONING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\AI\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\AI\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\API\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\API\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\API\\Docs API Specification.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\BACKUP_POLICY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Home.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Home.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Search Index Generator.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\GOVERNANCE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\portal.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\search.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\QA\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\QA\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\README.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\README.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\search-index.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\search-index.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\SITEMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\SITEMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\version-manifest.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\version-manifest.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\VERSIONING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\VERSIONING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\AI\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\AI\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\API\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\API\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\API\\Docs API Specification.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\BACKUP_POLICY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Home.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Home.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Search Index Generator.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\GOVERNANCE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ingestion-index.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ingestion-index.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\portal.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\search.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\QA\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\QA\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\README.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\README.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\ROADMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\ROADMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\search-index.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\search-index.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\SITEMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\SITEMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\version-manifest.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\version-manifest.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\VERSIONING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\VERSIONING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\AI\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\AI\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\API\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\API\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\API\\Docs API Specification.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\API\\Docs API Specification.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\BACKUP_POLICY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\BACKUP_POLICY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Home.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Home.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Search Index Generator.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Search Index Generator.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\GOVERNANCE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\GOVERNANCE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ingestion-index.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ingestion-index.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\LINTER\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\index.html",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\index.html",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\portal.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\portal.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\search.js",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\search.js",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\QA\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\QA\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\README.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\README.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\ROADMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\ROADMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\search-index.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\search-index.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\SITEMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\SITEMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\CHANGELOG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\CHANGELOG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\version-manifest.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\version-manifest.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\VERSIONING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\VERSIONING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ROADMAP.md-fc3ff73c",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\ROADMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-canonical-source-to-archive-provenance"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\ROADMAP_EXTENDED.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\ROADMAP_EXTENDED.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\SECURITY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\SECURITY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\STYLE_GUIDE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\STYLE_GUIDE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\SUPPORT.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\SUPPORT.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\TESTING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\TESTING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\TROUBLESHOOTING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\TROUBLESHOOTING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\AI_MODULE_GUIDE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\AI_MODULE_GUIDE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\API.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\API.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\ARCHITECTURE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\ARCHITECTURE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\BENCHMARKS.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\BENCHMARKS.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\CHANGELOG_TEMPLATE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\CHANGELOG_TEMPLATE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\CODE_OF_CONDUCT.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\CODE_OF_CONDUCT.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\CONFIG.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\CONFIG.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\CONTRIBUTING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\CONTRIBUTING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\CONTRIBUTOR_ROLES.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\CONTRIBUTOR_ROLES.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\DESIGN_DECISIONS.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\DESIGN_DECISIONS.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\DEVELOPER_GUIDE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\DEVELOPER_GUIDE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\DOCS_INDEX.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\DOCS_INDEX.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\FOLDER_STRUCTURE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\FOLDER_STRUCTURE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\GLOSSARY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\GLOSSARY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\GOVERNANCE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\GOVERNANCE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\HISTORY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\HISTORY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\INSTALLATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\INSTALLATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\ISSUE_TEMPLATE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\ISSUE_TEMPLATE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\LICENSE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\LICENSE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\MCP_INTEGRATION.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\MCP_INTEGRATION.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\MODULES.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\MODULES.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\PULL_REQUEST_TEMPLATE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\PULL_REQUEST_TEMPLATE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\v1\\README.md-69e22ff1",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\README.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-canonical-source-to-archive-provenance"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\RELEASE_PROCESS.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\RELEASE_PROCESS.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\ROADMAP.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\ROADMAP.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\ROADMAP_EXTENDED.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\ROADMAP_EXTENDED.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\SECURITY.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\SECURITY.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\STYLE_GUIDE.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\STYLE_GUIDE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\SUPPORT.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\SUPPORT.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\TESTING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\TESTING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\v1\\TROUBLESHOOTING.md",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\v1\\TROUBLESHOOTING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\orig\\version.json",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\docs\\version.json",
+      "srcHash": null,
+      "destHash": null,
+      "op": "archived-original"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\contracts.md-d11d7c36",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\discovery\\docs\\contracts.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\queues.md-ba017fb0",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\discovery\\docs\\queues.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\services.md-e937fac1",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\discovery\\docs\\services.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ADR_001.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ADR_001.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ADR_002.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ADR_002.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\MODULES.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\MODULES.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\OSM_ENGINE.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\OSM_ENGINE.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\SWEEPER.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\SWEEPER.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\TESTING.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\TESTING.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\architecture.md-4b7b40ef",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\architecture.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\commands.md-fed44356",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\commands.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\CIC-Business-Development-Log_2026_04_21.md-0c71609a",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\CIC-Business-Development-Log_2026_04_21.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\CIC-Business-Development-Log_2026_04_26.md-b92789a3",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\CIC-Business-Development-Log_2026_04_26.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-23_v1.md-92c25465",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-23_v1.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v1.md-567eb21c",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v1.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v2.md-1de7d679",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v2.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v3.md-c0175c69",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-24_v3.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-25_v1.md-2042c5c5",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-25_v1.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-27_v1.md-3a24fb55",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-27_v1.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-04-30_v1.md-3ef12992",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-04-30_v1.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\Daily Logs\\digests\\cic-news-digest_2026-05-03_v1.md-afdcd771",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\Daily Logs\\digests\\cic-news-digest_2026-05-03_v1.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ingestion.md-2fe6f7aa",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\ingestion.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\research-engine.md-e5717a76",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\research-engine.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\architecture.md-2f21aa8d",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\architecture.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\crawler-spec.md-097830aa",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\crawler-spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\operator-console-spec.md-f4c73121",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\operator-console-spec.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\outreach-templates.md-0885aeb8",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\outreach-templates.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\runbook.md-3c90510e",
+      "src": "C:\\Users\\soren\\projects\\rewrite-labs-core\\docs\\runbook.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\extension.md-377a4ca9",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\extension.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\features.md-d8b25706",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\features.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\how-it-works.md-ed8ad813",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\how-it-works.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\instructions.md-8ef41f3e",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\instructions.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\startup.md-dd364f74",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\startup.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\structure.md-df1faaf5",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\structure.md",
+      "srcHash": null,
+      "destHash": null,
+      "op": "moved-noncanonical-to-archive"
+    }
+  ],
+  "duplicate_skip": [],
+  "delete_empty": [
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ARCHITECTURE.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ARCHITECTURE.md",
+      "dest": "C:\\Users\\soren\\docs\\architecture\\ARCHITECTURE.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "destHash": "6537eefdad9410fc82fa1647fcfb8b7444fc8c33",
+      "op": "moved-noncanonical-conflict-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\README.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "destHash": "69e22ff13e03a5c0e186da97d9d622a046b54838",
+      "op": "moved-noncanonical-conflict-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\ROADMAP.md-da39a3ee",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\engine\\operatorConsole\\docs\\v1\\ROADMAP.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "srcHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "destHash": "fc3ff73c96f8f1bdaa7fb039d83dbd65409b1656",
+      "op": "moved-noncanonical-conflict-to-archive"
+    }
+  ],
+  "manual_review": [
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\README.md-existing-69e22ff1.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": null,
+      "destHash": "69e22ff13e03a5c0e186da97d9d622a046b54838",
+      "op": "archived-existing-dest"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\project-brain\\ROADMAP.md-existing-b98fb232.md",
+      "dest": "C:\\Users\\soren\\docs\\project-brain\\ROADMAP.md",
+      "srcHash": null,
+      "destHash": "b98fb232a91ef51e46a334ff944a71b7b95c4477",
+      "op": "archived-existing-dest"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\README.md-existing-a3fc9b95.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": null,
+      "destHash": "a3fc9b959a0f77895f7de22bbda7f27a444f0b81",
+      "op": "archived-existing-dest"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\README.md-667d38ba",
+      "src": "C:\\Users\\soren\\google-drive-mcp\\rewrite-mcp\\castironforge\\docs\\README.md",
+      "dest": "C:\\Users\\soren\\docs\\README.md",
+      "srcHash": "667d38ba6c462d053e335fdd9ba0f88a282896b8",
+      "destHash": "69e22ff13e03a5c0e186da97d9d622a046b54838",
+      "op": "moved-noncanonical-conflict-to-archive"
+    },
+    {
+      "archive": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\conflicts\\architecture.md-bd0ee501",
+      "src": "C:\\Users\\soren\\servers\\src\\everything\\docs\\architecture.md",
+      "dest": "C:\\Users\\soren\\docs\\assets\\examples\\architecture.md",
+      "srcHash": "bd0ee501f2563ca672e8fe9da147df65dcaa821d",
+      "destHash": "2f21aa8d77920e9adfe24bf0a2a40d7db131cb71",
+      "op": "moved-noncanonical-conflict-to-archive"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+# Rewrite Labs — Documentation Index
+
+- **AI/**
+  - CHANGELOG.md
+  - Docs AI Integration.md
+- **API/**
+  - CHANGELOG.md
+  - Docs API Specification.md
+- **ARCHITECTURE/**
+  - CHANGELOG.md
+  - Docs Architecture Diagram.md
+- BACKUP_POLICY.md
+- **DASHBOARD/**
+  - CHANGELOG.md
+- Docs Home.md
+- Docs Metrics Dashboard Spec.md
+- Docs Search Index Generator.md
+- GOVERNANCE.md
+- INDEX.md
+- **LINTER/**
+  - CHANGELOG.md
+  - Docs Linter Rules.md
+- **Manuals/**
+  - CHANGELOG.md
+- **OPERATOR_CONSOLE/**
+  - CHANGELOG.md
+  - Docs API Wiring.md
+- OPERATOR_CONSOLE_INTEGRATION.md
+- **Outreach/**
+  - CHANGELOG.md
+- **PLATFORM/**
+  - CHANGELOG.md
+  - Docs Integration Plan.md
+  - index.html
+- **PORTAL/**
+  - CHANGELOG.md
+  - Docs Portal Performance Optimization Plan.md
+  - Docs Portal Search UI Spec.md
+- **QA/**
+  - CHANGELOG.md
+  - Docs QA Checklist.md
+- README.md
+- RELEASE_PIPELINE.md
+- **Roadmaps/**
+  - CHANGELOG.md
+  - Docs Automation Roadmap.md
+  - ROADMAP.md
+  - RewriteLabs_Master_Roadmap.md
+- **SEARCH/**
+  - CHANGELOG.md
+- SITEMAP.md
+- **UI/**
+  - CHANGELOG.md
+  - Docs Automation Roadmap.md
+  - Docs Dashboard Spec.md
+- VERSIONING.md
+- index.html
+- ingestion-index.md

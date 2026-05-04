@@ -1,0 +1,77 @@
+[
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Docs Home.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Docs-Home.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\AI\\Docs AI Integration.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\AI\\Docs-AI-Integration.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\API\\Docs API Specification.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\API\\Docs-API-Specification.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\ARCHITECTURE\\Docs-Architecture-Diagram.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Home.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs-Home.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs-Metrics-Dashboard-Spec.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Search Index Generator.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs-Search-Index-Generator.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\LINTER\\Docs-Linter-Rules.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE\\Docs-API-Wiring.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\Docs-Integration-Plan.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs-Portal-Performance-Optimization-Plan.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs-Portal-Search-UI-Spec.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\QA\\Docs QA Checklist.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\QA\\Docs-QA-Checklist.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\Docs-Automation-Roadmap.md"
+  },
+  {
+    "op": "renamed",
+    "from": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+    "to": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs-Automation-Roadmap.md"
+  }
+]

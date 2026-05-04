@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "name": "Master Instructions Manual",
+      "version": "1.1.0",
+      "path": "/Manuals/Master Instructions Manual/Rewrite Labs - Master Instructions Manual (v1.1).txt",
+      "last_updated": "2026-04-24",
+      "summary": "Added Section 7.6 Outreach Automation System."
+    },
+    {
+      "name": "Master Roadmap",
+      "version": "1.1.0",
+      "path": "/Roadmaps/Rewrite Labs - Master Roadmap (v1.1).txt",
+      "last_updated": "2026-04-24",
+      "summary": "Added Outreach Automation Track across all phases."
+    },
+    {
+      "name": "Outreach Automation Playbook",
+      "version": "1.0.0",
+      "path": "/Playbooks/Outreach/Outreach Automation Playbook (v1.0).txt",
+      "last_updated": "2026-04-24",
+      "summary": "Initial release of Outreach Automation subsystem playbook."
+    }
+  ]
+}

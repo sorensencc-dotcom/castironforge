@@ -1,0 +1,14 @@
+﻿# CastIronForge â€” Operator-Grade Research Automation System
+
+CastIronForge is a deterministic, modular automation framework for:
+- daily research logging
+- ingestion pipelines
+- multi-agent analysis
+- semantic indexing
+- clustering
+- anomaly detection
+- forecasting
+- documentation generation
+
+Templates in /templates are the single source of truth.
+Scripts in /scripts are generated via build-all-scripts.ps1.

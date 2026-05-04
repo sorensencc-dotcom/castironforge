@@ -1,0 +1,1718 @@
+{
+  "timestamp": "2026-05-04T03:37:00.480Z",
+  "groups": [
+    {
+      "hash": "ab3d054984604d41c89f099198e391632188535d",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\BENCHMARKS.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\BENCHMARKS.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ab3d0549-assets-examples-v1-BENCHMARKS.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "56fcf9c6d43aa4f581b01f36e54731e56e4960a2",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\CODE_OF_CONDUCT.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\CODE_OF_CONDUCT.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\56fcf9c6-assets-examples-v1-CODE_OF_CONDUCT.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "c83a9164859435a5403cdeb655179987ba60da41",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\CONFIG.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\CONFIG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\c83a9164-assets-examples-v1-CONFIG.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "168150fa4cb1951592d4decc6506ddf6ba136e23",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\CONTRIBUTOR_ROLES.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\CONTRIBUTOR_ROLES.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\168150fa-assets-examples-v1-CONTRIBUTOR_ROLES.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "0c71609a6687b18c84450d5ab49247d419cca379",
+      "canonical": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\CIC-Business-Development-Log_2026_04_21.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\Daily Logs\\CIC-Business-Development-Log_2026_04_21.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\0c71609a-assets-examples-Daily Logs-CIC-Business-Development-Log_2026_04_21.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "b92789a3baa9adcf41b9b6f2f75f3b11bb5c8142",
+      "canonical": "C:\\Users\\soren\\docs\\project-brain\\castironforge\\CIC-Business-Development-Log_2026_04_26.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\Daily Logs\\CIC-Business-Development-Log_2026_04_26.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b92789a3-assets-examples-Daily Logs-CIC-Business-Development-Log_2026_04_26.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "493c6bce333f63b9350eb2cbadea8793b84fbeff",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\DEVELOPER_GUIDE.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\DEVELOPER_GUIDE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\493c6bce-assets-examples-v1-DEVELOPER_GUIDE.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "a97fbd031841bfee37aca987586b40465b6570d5",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\FOLDER_STRUCTURE.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\FOLDER_STRUCTURE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a97fbd03-assets-examples-v1-FOLDER_STRUCTURE.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "92039baa6b13815c58691b0b19d6fa6e9aa57871",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\GOVERNANCE.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\GOVERNANCE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\92039baa-assets-examples-v1-GOVERNANCE.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "eee29ef9261878687ca8091303eb3162e27cd829",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\HISTORY.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\HISTORY.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\eee29ef9-assets-examples-v1-HISTORY.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "68ba44d8fcc9747e66ef4edcd91208408afe6a23",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\ISSUE_TEMPLATE.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\ISSUE_TEMPLATE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\68ba44d8-assets-examples-v1-ISSUE_TEMPLATE.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "aafe2cfa39920b19b2b66ed8dfc8b1da0bb75e33",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\MCP_INTEGRATION.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\MCP_INTEGRATION.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\aafe2cfa-assets-examples-v1-MCP_INTEGRATION.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "e1f4f8aa66cefb8cbb85a20dcec54a50b01ebee0",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\MODULES.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\MODULES.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e1f4f8aa-assets-examples-v1-MODULES.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "9edb2e2f68d18fb38be08be2f04b5e25fbc07a4d",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\PULL_REQUEST_TEMPLATE.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\PULL_REQUEST_TEMPLATE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\9edb2e2f-assets-examples-v1-PULL_REQUEST_TEMPLATE.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "41ae558934588672a57fe88224f15659a31d31f1",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\AI\\CHANGELOG.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\API\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-API-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-ARCHITECTURE-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-DASHBOARD-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\LINTER\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-LINTER-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Manuals\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-Manuals-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-OPERATOR_CONSOLE-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Outreach\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-Outreach-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-PLATFORM-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-PORTAL-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\QA\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-QA-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-Roadmaps-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-SEARCH-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\UI\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\41ae5589-assets-examples-RewriteLabs-UI-CHANGELOG.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "4c7dcfe23e05d8718243a71f7c7cab95e632df1f",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Docs Home.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Home.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\4c7dcfe2-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-Docs Home.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Home.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\4c7dcfe2-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-Docs Home.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "db3003f10e6143b54f2695353e197b585860ce11",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\ingestion-index.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ingestion-index.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\db3003f1-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-ingestion-index.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ingestion-index.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\db3003f1-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-ingestion-index.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "9566209cc7fc765a383787202c84b48addbe0dbd",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\9566209c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-Roadmaps-RewriteLabs_Master_Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\RewriteLabs_Master_Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\9566209c-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-Roadmaps-RewriteLabs_Master_Roadmap.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "78c9fd4ad817a811c0159604c5023a3c0b6331ce",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\AI\\Docs AI Integration.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\AI\\Docs AI Integration.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\78c9fd4a-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-AI-Docs AI Integration.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\AI\\Docs AI Integration.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\78c9fd4a-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-AI-Docs AI Integration.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\AI\\Docs AI Integration.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\78c9fd4a-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-AI-Docs AI Integration.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\AI\\Docs AI Integration.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\78c9fd4a-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-AI-Docs AI Integration.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\AI\\Docs AI Integration.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\78c9fd4a-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-AI-Docs AI Integration.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\AI\\Docs AI Integration.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\78c9fd4a-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-AI-Docs AI Integration.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\AI\\Docs AI Integration.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\78c9fd4a-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-AI-Docs AI Integration.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "2a3d0deb23897ac15c09da0f24ed467894b20c88",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\API\\Docs API Specification.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\API\\Docs API Specification.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\2a3d0deb-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-API-Docs API Specification.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\API\\Docs API Specification.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\2a3d0deb-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-API-Docs API Specification.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\API\\Docs API Specification.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\2a3d0deb-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-API-Docs API Specification.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\API\\Docs API Specification.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\2a3d0deb-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-API-Docs API Specification.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\API\\Docs API Specification.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\2a3d0deb-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-API-Docs API Specification.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\API\\Docs API Specification.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\2a3d0deb-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-API-Docs API Specification.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\API\\Docs API Specification.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\2a3d0deb-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-API-Docs API Specification.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "437c0cd0cd01a94c566eade64fccfce74186ccc2",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_16_59_59-RewriteLabs-UI-Docs Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-ARCHITECTURE-Docs Architecture Diagram.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-UI-Docs Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-ARCHITECTURE-Docs Architecture Diagram.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-UI-Docs Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-ARCHITECTURE-Docs Architecture Diagram.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-UI-Docs Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-ARCHITECTURE-Docs Architecture Diagram.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-UI-Docs Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-ARCHITECTURE-Docs Architecture Diagram.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-UI-Docs Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-ARCHITECTURE-Docs Architecture Diagram.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-UI-Docs Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ARCHITECTURE\\Docs Architecture Diagram.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-ARCHITECTURE-Docs Architecture Diagram.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Docs Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\437c0cd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-UI-Docs Dashboard Spec.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "a7961b0189364b41bb7acb28e3b511ea7d0d962a",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\BACKUP_POLICY.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\BACKUP_POLICY.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a7961b01-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-BACKUP_POLICY.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\BACKUP_POLICY.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a7961b01-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-BACKUP_POLICY.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\BACKUP_POLICY.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a7961b01-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-BACKUP_POLICY.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\BACKUP_POLICY.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a7961b01-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-BACKUP_POLICY.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\BACKUP_POLICY.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a7961b01-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-BACKUP_POLICY.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\BACKUP_POLICY.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a7961b01-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-BACKUP_POLICY.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\BACKUP_POLICY.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a7961b01-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-BACKUP_POLICY.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "ca261acad2b6e22b2db65f2c986ca0c05dea8292",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Home.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Home.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ca261aca-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-Docs Home.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Home.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ca261aca-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-Docs Home.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Home.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ca261aca-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-Docs Home.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Home.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ca261aca-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-Docs Home.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Home.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ca261aca-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-Docs Home.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "f3c267d31697bb4870951d6123202f87e36c79d9",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f3c267d3-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-Docs Metrics Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f3c267d3-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-Docs Metrics Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f3c267d3-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-Docs Metrics Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f3c267d3-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-Docs Metrics Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f3c267d3-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-Docs Metrics Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f3c267d3-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-Docs Metrics Dashboard Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Metrics Dashboard Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f3c267d3-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-Docs Metrics Dashboard Spec.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "79b75155772126619676ac9c5bc4a482a8734c17",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Docs Search Index Generator.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Docs Search Index Generator.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\79b75155-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-Docs Search Index Generator.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Docs Search Index Generator.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\79b75155-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-Docs Search Index Generator.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Docs Search Index Generator.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\79b75155-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-Docs Search Index Generator.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Docs Search Index Generator.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\79b75155-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-Docs Search Index Generator.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Docs Search Index Generator.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\79b75155-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-Docs Search Index Generator.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Docs Search Index Generator.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\79b75155-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-Docs Search Index Generator.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Docs Search Index Generator.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\79b75155-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-Docs Search Index Generator.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "f5a6bec97bac37a832a743abde1422c4ca214656",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\GOVERNANCE.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\GOVERNANCE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f5a6bec9-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-GOVERNANCE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\GOVERNANCE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f5a6bec9-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-GOVERNANCE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\GOVERNANCE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f5a6bec9-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-GOVERNANCE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\GOVERNANCE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f5a6bec9-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-GOVERNANCE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\GOVERNANCE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f5a6bec9-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-GOVERNANCE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\GOVERNANCE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f5a6bec9-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-GOVERNANCE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\GOVERNANCE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f5a6bec9-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-GOVERNANCE.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "d82bf339c49703e0e7463a0fa98d1651bb7e088c",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\index.html",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\d82bf339-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\d82bf339-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\d82bf339-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\d82bf339-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\d82bf339-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\d82bf339-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\d82bf339-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-index.html",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "842c390d27f37d113fd78785c3aa57af9be58aea",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\INDEX.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\INDEX.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\842c390d-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-INDEX.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\INDEX.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\842c390d-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-INDEX.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\INDEX.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\842c390d-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-INDEX.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "650da60a4caf310742b758fb74a7b316df85f974",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\650da60a-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-LINTER-Docs Linter Rules.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\650da60a-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-LINTER-Docs Linter Rules.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\650da60a-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-LINTER-Docs Linter Rules.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\650da60a-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-LINTER-Docs Linter Rules.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\650da60a-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-LINTER-Docs Linter Rules.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\650da60a-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-LINTER-Docs Linter Rules.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\LINTER\\Docs Linter Rules.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\650da60a-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-LINTER-Docs Linter Rules.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "7782c35626285728f58e560717451b4444ecccf4",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Manuals\\CHANGELOG.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Manuals\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\7782c356-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-Manuals-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Manuals\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\7782c356-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-Manuals-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Manuals\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\7782c356-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-Manuals-CHANGELOG.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "b9d2c5b64eecd7e74e2b1976e2c1aef4460c8089",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\portal.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_16_59_59-RewriteLabs-PLATFORM-portal.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-OPERATOR_CONSOLE-Docs API Wiring.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\portal.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-PLATFORM-portal.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-OPERATOR_CONSOLE-Docs API Wiring.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\portal.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-PLATFORM-portal.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-OPERATOR_CONSOLE-Docs API Wiring.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\portal.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-PLATFORM-portal.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-OPERATOR_CONSOLE-Docs API Wiring.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\portal.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-PLATFORM-portal.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-OPERATOR_CONSOLE-Docs API Wiring.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\portal.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-PLATFORM-portal.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-OPERATOR_CONSOLE-Docs API Wiring.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\portal.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-PLATFORM-portal.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE\\Docs API Wiring.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-OPERATOR_CONSOLE-Docs API Wiring.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\portal.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b9d2c5b6-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-PLATFORM-portal.js",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "714b851e2848c87ec601a182c064ab569c80715a",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\714b851e-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-OPERATOR_CONSOLE_INTEGRATION.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\714b851e-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-OPERATOR_CONSOLE_INTEGRATION.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\714b851e-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-OPERATOR_CONSOLE_INTEGRATION.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\714b851e-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-OPERATOR_CONSOLE_INTEGRATION.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\714b851e-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-OPERATOR_CONSOLE_INTEGRATION.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\714b851e-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-OPERATOR_CONSOLE_INTEGRATION.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE_INTEGRATION.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\714b851e-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-OPERATOR_CONSOLE_INTEGRATION.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "b1f1b402dc6757c5523cd9a91ccf771769acbac6",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Outreach\\CHANGELOG.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Outreach\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b1f1b402-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-Outreach-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Outreach\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b1f1b402-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-Outreach-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Outreach\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b1f1b402-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-Outreach-CHANGELOG.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "1edcb62c30974d3d4c669b4d156f90791211bb34",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\1edcb62c-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-PLATFORM-Docs Integration Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\1edcb62c-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-PLATFORM-Docs Integration Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\1edcb62c-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-PLATFORM-Docs Integration Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\1edcb62c-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-PLATFORM-Docs Integration Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\1edcb62c-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-PLATFORM-Docs Integration Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\1edcb62c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-PLATFORM-Docs Integration Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\Docs Integration Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\1edcb62c-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-PLATFORM-Docs Integration Plan.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "af4e1295a372fb675e06355bd01197a199cd3c66",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PLATFORM\\index.html",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PLATFORM\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\af4e1295-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-PLATFORM-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PLATFORM\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\af4e1295-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-PLATFORM-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PLATFORM\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\af4e1295-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-PLATFORM-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\af4e1295-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-PLATFORM-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\af4e1295-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-PLATFORM-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\af4e1295-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-PLATFORM-index.html",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\index.html",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\af4e1295-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-PLATFORM-index.html",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "26a6c1941f190ac87837a3185ec5de0bec8c6faf",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\26a6c194-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-PORTAL-Docs Portal Performance Optimization Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\26a6c194-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-PORTAL-Docs Portal Performance Optimization Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\26a6c194-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-PORTAL-Docs Portal Performance Optimization Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\26a6c194-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-PORTAL-Docs Portal Performance Optimization Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\26a6c194-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-PORTAL-Docs Portal Performance Optimization Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\26a6c194-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-PORTAL-Docs Portal Performance Optimization Plan.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\Docs Portal Performance Optimization Plan.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\26a6c194-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-PORTAL-Docs Portal Performance Optimization Plan.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "34ec7aa9e53cf6321fb94727c5160fef7e8afb2b",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\34ec7aa9-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-PORTAL-Docs Portal Search UI Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\34ec7aa9-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-PORTAL-Docs Portal Search UI Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\34ec7aa9-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-PORTAL-Docs Portal Search UI Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\34ec7aa9-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-PORTAL-Docs Portal Search UI Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\34ec7aa9-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-PORTAL-Docs Portal Search UI Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\34ec7aa9-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-PORTAL-Docs Portal Search UI Spec.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\Docs Portal Search UI Spec.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\34ec7aa9-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-PORTAL-Docs Portal Search UI Spec.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "0730ac5abe56b26029233a9a5cacaca0f1ce4d09",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\PORTAL\\search.js",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\PORTAL\\search.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\0730ac5a-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-PORTAL-search.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\PORTAL\\search.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\0730ac5a-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-PORTAL-search.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\PORTAL\\search.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\0730ac5a-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-PORTAL-search.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\search.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\0730ac5a-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-PORTAL-search.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\search.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\0730ac5a-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-PORTAL-search.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\search.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\0730ac5a-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-PORTAL-search.js",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\search.js",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\0730ac5a-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-PORTAL-search.js",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "eddf349e32d04d6a27fa6d81cfa8349d659bd22e",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\QA\\Docs QA Checklist.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\QA\\Docs QA Checklist.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\eddf349e-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-QA-Docs QA Checklist.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\QA\\Docs QA Checklist.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\eddf349e-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-QA-Docs QA Checklist.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\QA\\Docs QA Checklist.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\eddf349e-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-QA-Docs QA Checklist.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\QA\\Docs QA Checklist.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\eddf349e-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-QA-Docs QA Checklist.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\QA\\Docs QA Checklist.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\eddf349e-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-QA-Docs QA Checklist.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\QA\\Docs QA Checklist.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\eddf349e-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-QA-Docs QA Checklist.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\QA\\Docs QA Checklist.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\eddf349e-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-QA-Docs QA Checklist.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "557ad0f6f36fac1f1d4574e96afb58e345e5b3e4",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\RELEASE_PIPELINE.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\RELEASE_PIPELINE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\557ad0f6-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-RELEASE_PIPELINE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\RELEASE_PIPELINE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\557ad0f6-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-RELEASE_PIPELINE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\RELEASE_PIPELINE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\557ad0f6-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-RELEASE_PIPELINE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\RELEASE_PIPELINE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\557ad0f6-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-RELEASE_PIPELINE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\RELEASE_PIPELINE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\557ad0f6-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-RELEASE_PIPELINE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\RELEASE_PIPELINE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\557ad0f6-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-RELEASE_PIPELINE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\RELEASE_PIPELINE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\557ad0f6-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-RELEASE_PIPELINE.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "9c92c7f28c22e256ea19e97acbf9bc5268978253",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\9c92c7f2-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-Roadmaps-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\9c92c7f2-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-Roadmaps-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\9c92c7f2-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-Roadmaps-CHANGELOG.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "b86ad067872ed629d5102979b473b252c1dc82ff",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b86ad067-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-Roadmaps-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b86ad067-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-Roadmaps-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b86ad067-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-Roadmaps-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b86ad067-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-Roadmaps-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b86ad067-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-Roadmaps-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b86ad067-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-Roadmaps-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\Roadmaps\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\b86ad067-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-Roadmaps-Docs Automation Roadmap.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "88518c7d0f2107da074ed48c7de02c39764abd29",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\SITEMAP.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\SITEMAP.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\88518c7d-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-SITEMAP.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\SITEMAP.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\88518c7d-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-SITEMAP.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\SITEMAP.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\88518c7d-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-SITEMAP.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "e24927e4f8edf308d77463225f509acc3e7162f4",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e24927e4-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-UI-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e24927e4-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-UI-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e24927e4-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-UI-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e24927e4-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-UI-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e24927e4-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-UI-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e24927e4-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-UI-Docs Automation Roadmap.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\Docs Automation Roadmap.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e24927e4-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-UI-Docs Automation Roadmap.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "620b529d0936e543afd1e494ee533b7ba947f616",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\version-manifest.json",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\version-manifest.json",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\620b529d-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-version-manifest.json",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\version-manifest.json",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\620b529d-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-version-manifest.json",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\version-manifest.json",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\620b529d-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-version-manifest.json",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "cac03bd0a38ffb3631372bb62eec9245e93f5bac",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_16_59_59\\RewriteLabs\\VERSIONING.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\VERSIONING.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\cac03bd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_28_31-RewriteLabs-VERSIONING.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\VERSIONING.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\cac03bd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-VERSIONING.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\VERSIONING.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\cac03bd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-VERSIONING.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\VERSIONING.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\cac03bd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-VERSIONING.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\VERSIONING.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\cac03bd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-VERSIONING.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\VERSIONING.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\cac03bd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-VERSIONING.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\VERSIONING.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\cac03bd0-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-VERSIONING.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "831fc6f0bf34fb7e3b1d0a0939bf83e0d3d645a8",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_28_31\\RewriteLabs\\search-index.json",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_31_55\\RewriteLabs\\search-index.json",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\831fc6f0-assets-examples-RewriteLabs_Backup-2026_04_24_17_31_55-RewriteLabs-search-index.json",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_32_35\\RewriteLabs\\search-index.json",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\831fc6f0-assets-examples-RewriteLabs_Backup-2026_04_24_17_32_35-RewriteLabs-search-index.json",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\search-index.json",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\831fc6f0-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-search-index.json",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "e2727c41b5f21d5b1d30a88848947f0a6a9b5dc5",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\AI\\CHANGELOG.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\API\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e2727c41-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-API-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e2727c41-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-ARCHITECTURE-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e2727c41-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-DASHBOARD-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\LINTER\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e2727c41-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-LINTER-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e2727c41-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-OPERATOR_CONSOLE-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e2727c41-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-PLATFORM-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e2727c41-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-PORTAL-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\QA\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e2727c41-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-QA-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e2727c41-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-SEARCH-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_33_06\\RewriteLabs\\UI\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\e2727c41-assets-examples-RewriteLabs_Backup-2026_04_24_17_33_06-RewriteLabs-UI-CHANGELOG.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "ba0140df820f29d05c7ab88c4645187a18f7b03e",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\AI\\CHANGELOG.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\API\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ba0140df-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-API-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ba0140df-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-ARCHITECTURE-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ba0140df-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-DASHBOARD-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\LINTER\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ba0140df-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-LINTER-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ba0140df-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-OPERATOR_CONSOLE-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ba0140df-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-PLATFORM-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ba0140df-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-PORTAL-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\QA\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ba0140df-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-QA-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ba0140df-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-SEARCH-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\UI\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\ba0140df-assets-examples-RewriteLabs_Backup-2026_04_24_17_45_02-RewriteLabs-UI-CHANGELOG.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "f207c0a8cf2ebd0ea4679da975d0ed3c8de63c04",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\INDEX.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\INDEX.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\f207c0a8-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-INDEX.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "4c12c016112e59592c042f7fa39c983c58bfc714",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_45_02\\RewriteLabs\\SITEMAP.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\SITEMAP.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\4c12c016-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-SITEMAP.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "fde8813cc4efa44a06e6eaed2941fd8764f73254",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\AI\\CHANGELOG.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\API\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\fde8813c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-API-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\fde8813c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-ARCHITECTURE-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\fde8813c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-DASHBOARD-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\LINTER\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\fde8813c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-LINTER-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\fde8813c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-OPERATOR_CONSOLE-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\fde8813c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-PLATFORM-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\fde8813c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-PORTAL-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\QA\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\fde8813c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-QA-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\fde8813c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-SEARCH-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_47_57\\RewriteLabs\\UI\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\fde8813c-assets-examples-RewriteLabs_Backup-2026_04_24_17_47_57-RewriteLabs-UI-CHANGELOG.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "a218d8384f033ba2743be37b70f68eaed7b99250",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\AI\\CHANGELOG.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\API\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a218d838-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-API-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\ARCHITECTURE\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a218d838-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-ARCHITECTURE-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\DASHBOARD\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a218d838-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-DASHBOARD-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\LINTER\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a218d838-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-LINTER-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\OPERATOR_CONSOLE\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a218d838-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-OPERATOR_CONSOLE-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PLATFORM\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a218d838-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-PLATFORM-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\PORTAL\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a218d838-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-PORTAL-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\QA\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a218d838-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-QA-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\SEARCH\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a218d838-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-SEARCH-CHANGELOG.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\RewriteLabs_Backup\\2026_04_24_17_50_14\\RewriteLabs\\UI\\CHANGELOG.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\a218d838-assets-examples-RewriteLabs_Backup-2026_04_24_17_50_14-RewriteLabs-UI-CHANGELOG.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "4d416bc431c49c2622b410249c091c9d9439bd80",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\STYLE_GUIDE.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\STYLE_GUIDE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\4d416bc4-assets-examples-v1-STYLE_GUIDE.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "2e83397185024f2e78559de9e7f24b45fd53887a",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\SUPPORT.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\SUPPORT.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\2e833971-assets-examples-v1-SUPPORT.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "42320a18156b19f28f5847fc8f10dc6a88a1efb8",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\TESTING.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\TESTING.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\42320a18-assets-examples-v1-TESTING.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "576c483cd88bcb1afbff249ca50a7a1fbbdba234",
+      "canonical": "C:\\Users\\soren\\docs\\assets\\examples\\TROUBLESHOOTING.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\assets\\examples\\v1\\TROUBLESHOOTING.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\576c483c-assets-examples-v1-TROUBLESHOOTING.md",
+          "skipped": false
+        }
+      ]
+    },
+    {
+      "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "canonical": "C:\\Users\\soren\\docs\\operator-console\\ADR_001.md",
+      "others": [
+        {
+          "src": "C:\\Users\\soren\\docs\\operator-console\\ADR_002.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\da39a3ee-operator-console-ADR_002.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\operator-console\\MODULES.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\da39a3ee-operator-console-MODULES.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\operator-console\\OSM_ENGINE.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\da39a3ee-operator-console-OSM_ENGINE.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\operator-console\\SWEEPER.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\da39a3ee-operator-console-SWEEPER.md",
+          "skipped": false
+        },
+        {
+          "src": "C:\\Users\\soren\\docs\\operator-console\\TESTING.md",
+          "arch": "C:\\Users\\soren\\archive\\docs-legacy-2026-05-04T03-06-29-830Z\\dupes\\da39a3ee-operator-console-TESTING.md",
+          "skipped": false
+        }
+      ]
+    }
+  ]
+}
