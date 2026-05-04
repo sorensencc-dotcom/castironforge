@@ -1,0 +1,25 @@
+{
+  "name": "cic-ingestion",
+  "version": "1.3.0",
+  "description": "Cast Iron Charlie Documentary Project — Ingestion System",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "init":       "node scripts/init.js",
+    "folders":    "node scripts/init-cic-folders.js",
+    "validate":   "node scripts/validate-cic-folders.js",
+    "maintain":   "node scripts/cic-folders-maintenance.js",
+    "harvest":    "node scripts/run-harvester.js",
+    "sweep":      "node scripts/run-sweeper.js",
+    "index":      "node scripts/run-indexer.js",
+    "corpus":     "node scripts/run-corpus.js",
+    "pipeline":   "node scripts/run-pipeline.js",
+    "test":       "node tests/run-tests.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3"
+  },
+  "devDependencies": {}
+}
