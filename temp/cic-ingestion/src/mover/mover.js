@@ -75,9 +75,12 @@ async function findOriginalCandidate(paths, filename, hash, sidecarPath, logger)
 export async function runMover(db, logger, options = {}) {
   const paths = getPaths();
   const dryRun = !!options.dryRun;
+  const moveOriginals = options.moveOriginals !== undefined ? !!options.moveOriginals : true;
+  const archiveOriginals = options.archiveOriginals !== undefined ? !!options.archiveOriginals : true;
+  const writeDb = options.writeDb !== undefined ? !!options.writeDb : true;
   const now = new Date().toISOString();
 
-  logger.info({ module: 'mover', message: 'Run started', runAt: now });
+  logger.info({ module: 'mover', message: 'Run started', runAt: now, dryRun, moveOriginals, archiveOriginals });
 
   let rows;
   try {
@@ -119,17 +122,21 @@ export async function runMover(db, logger, options = {}) {
       try { await stat(processedPath); } catch (e) { processedExists = false; }
 
       if (originalPath && !processedExists) {
-        if (!dryRun) {
-          await moveFile(originalPath, processedPath);
-          logger.info({ module: 'mover', message: 'Moved original to processed', originalPath, processedPath });
+        if (moveOriginals) {
+          if (!dryRun) {
+            await moveFile(originalPath, processedPath);
+            logger.info({ module: 'mover', message: 'Moved original to processed', originalPath, processedPath });
+          } else {
+            logger.info({ module: 'mover', message: 'Dry-run: would move original to processed', originalPath, processedPath });
+          }
+          processedExists = true;
         } else {
-          logger.info({ module: 'mover', message: 'Dry-run: would move original to processed', originalPath, processedPath });
+          logger.info({ module: 'mover', message: 'Move-originals disabled; skipping move', originalPath, processedPath });
         }
-        processedExists = true;
       }
 
       // If original exists and processed already exists, archive the original to avoid inbox duplication
-      if (originalPath && processedExists) {
+      if (originalPath && processedExists && archiveOriginals) {
         // create archive path for original: archive/<category>/YYYY/MM/DD/originals/<hash-or-ts>-orig-<filename>
         const d = new Date(r.ingested_at || now);
         const y = d.getFullYear();
@@ -157,6 +164,8 @@ export async function runMover(db, logger, options = {}) {
         }
 
         // record originalPath in lineage later
+      } else if (originalPath && processedExists && !archiveOriginals) {
+        logger.info({ module: 'mover', message: 'Archive-originals disabled; leaving original in inbox', originalPath });
       }
 
       // At this point, ensure processed file exists before archiving processed copy
@@ -205,23 +214,27 @@ export async function runMover(db, logger, options = {}) {
 
       // Insert lineage with originalPath if known
       try {
-        const stmt = db.prepare(`
-          INSERT OR IGNORE INTO lineage
-            (search_index_id, hash_sha256, original_path, processed_path, sidecar_path, archive_path, created_at)
-          VALUES (?, ?, ?, ?, ?, ?, ?)
-        `);
+        if (writeDb) {
+          const stmt = db.prepare(`
+            INSERT OR IGNORE INTO lineage
+              (search_index_id, hash_sha256, original_path, processed_path, sidecar_path, archive_path, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+          `);
 
-        const result = stmt.run(
-          r.search_index_id,
-          hash,
-          originalPath,
-          processedPath,
-          sidecarPath,
-          archivePath,
-          new Date().toISOString()
-        );
+          const result = stmt.run(
+            r.search_index_id,
+            hash,
+            originalPath,
+            processedPath,
+            sidecarPath,
+            archivePath,
+            new Date().toISOString()
+          );
 
-        if (result.changes && result.changes > 0) lineageInserted++;
+          if (result.changes && result.changes > 0) lineageInserted++;
+        } else {
+          logger.info({ module: 'mover', message: 'Dry-run: would insert lineage', searchIndexId: r.search_index_id, processedPath, archivePath, originalPath });
+        }
       } catch (err) {
         logger.error({ module: 'mover', message: 'Failed to insert lineage', error: err.message, processedPath });
         errors.push({ file: processedPath, error: err.message });

@@ -13,6 +13,13 @@ async function main() {
   const paths = getPaths();
   log('info', MODULE, 'Starting mover', { db: paths.db });
 
+  const args = process.argv.slice(2);
+  const dryRun = args.includes('--dry-run');
+
+  // CLI toggles: --move-originals / --no-move-originals, --archive-originals / --no-archive-originals
+  const moveOriginals = args.includes('--move-originals') ? true : args.includes('--no-move-originals') ? false : true;
+  const archiveOriginals = args.includes('--archive-originals') ? true : args.includes('--no-archive-originals') ? false : true;
+
   let db;
   try {
     db = await migrate(paths.db);
@@ -28,7 +35,7 @@ async function main() {
   };
 
   try {
-    const summary = await runMover(db, logger, { dryRun: process.argv.includes('--dry-run') });
+    const summary = await runMover(db, logger, { dryRun, moveOriginals, archiveOriginals, writeDb: !dryRun });
     log('info', MODULE, 'Done', summary);
     process.exitCode = 0;
   } catch (err) {

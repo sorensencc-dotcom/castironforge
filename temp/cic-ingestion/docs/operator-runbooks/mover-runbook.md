@@ -10,8 +10,22 @@ How to run
 - Dry run (no writes):
   node scripts/run-mover.js --dry-run
 
-- Real run:
+- Real run (defaults: moves originals and archives originals):
   node scripts/run-mover.js
+
+- CLI toggles (optional):
+  --move-originals        Enable moving originals into processed when processed missing (default: enabled)
+  --no-move-originals     Disable moving originals into processed
+  --archive-originals     Enable archiving originals if both processed and original exist (default: enabled)
+  --no-archive-originals  Disable archiving originals (leave originals in inbox)
+
+Examples
+
+- Run but do not move originals (only archive processed files):
+  node scripts/run-mover.js --no-move-originals
+
+- Dry-run without performing any file or DB writes:
+  node scripts/run-mover.js --dry-run
 
 What it does
 
