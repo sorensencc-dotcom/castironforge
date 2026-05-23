@@ -1,0 +1,30 @@
+{
+  "name": "cic-ingestion",
+  "version": "1.0.0",
+  "description": "Cast Iron Charlie ingestion pipeline with LLM token/context synergy controller",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server/intelligence-server.js",
+    "run-mcp": "node ../../../ops/run-mcp.js",
+    "run-scanner": "node ../../../ops/run-scanner.js",
+    "harvester": "node ../../../ops/run-harvester.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@google/generative-ai": "^0.24.1",
+    "@qdrant/js-client-rest": "^1.9.0",
+    "dotenv": "^17.4.2",
+    "openai": "^4.52.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "vitest": "^4.1.6"
+  }
+}

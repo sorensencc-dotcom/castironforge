@@ -1,0 +1,40 @@
+{
+  "scripts": {
+    "harvester": "node scripts/run-harvester.js",
+    "run-mcp": "node scripts/run-mcp.js",
+    "run-scanner": "node scripts/run-scanner.js",
+    "image:analyze": "node scripts/run-audit.js",
+    "image:reverse": "node scripts/run-enricher.js",
+    "living-docs:import": "node scripts/sync-to-drive.js",
+    "pipeline": "node scripts/run-pipeline.js",
+    "skills:sync": "node scripts/skills-sync.js",
+    "success": "node scripts/project-sync.js",
+    "success:docs": "node scripts/living-docs-sync.js",
+    "success:full": "npm run success && npm run success:docs",
+    "prepare": "husky"
+  },
+  "bin": {
+    "cic-harvester": "dist/cli/harvesterCli.js",
+    "cic-image-analyzer": "dist/cli/imageAnalyzerCli.js",
+    "cic-reverse-image": "dist/cli/reverseImageCli.js",
+    "cic-living-docs-importer": "dist/cli/livingDocsImporterCli.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "@qdrant/js-client-rest": "^1.18.0",
+    "better-sqlite3": "^12.9.0",
+    "busboy": "^1.6.0",
+    "cheerio": "^1.2.0",
+    "dotenv": "^17.4.2",
+    "googleapis": "^171.4.0",
+    "node-fetch": "^3.3.2",
+    "open": "^11.0.0",
+    "wappalyzer": "^7.0.3",
+    "ws": "^8.20.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-security": "^4.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0"
+  }
+}

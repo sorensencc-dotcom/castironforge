@@ -1,0 +1,28 @@
+# file: Dockerfile.extractor
+# date: 2026-05-23
+# Lightweight sandbox for data extraction.
+
+FROM node:20-slim
+
+WORKDIR /app
+
+# Install minimal tools if needed
+# RUN apt-get update && apt-get install -y --no-install-recommends ... && rm -rf /var/lib/apt/lists/*
+
+# Copy package files
+COPY package.json package-lock.json* ./
+
+# Install only dependencies needed for extraction
+# Since we are in the main repo, we might want to install all, 
+# but for a sandbox, we want to be lean.
+RUN npm install --omit=dev --ignore-scripts
+
+# Copy source code needed for extraction
+COPY src/lib/ ./src/lib/
+COPY src/harvester/extractor.js ./src/harvester/
+COPY scripts/sandbox-extract.js ./scripts/
+
+# Run as non-privileged user
+USER node
+
+ENTRYPOINT ["node", "scripts/sandbox-extract.js"]

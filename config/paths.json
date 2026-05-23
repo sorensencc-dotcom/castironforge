@@ -1,0 +1,38 @@
+{
+  "_comment": "CIC Ingestion System — Path Configuration v2.0.0 (Local-Only Refactor)",
+  "_instructions": "Local-only filesystem paths. No Drive lookups.",
+
+  "inboxRoot": "/mnt/c/Users/soren/cic_test_root",
+
+  "inbox":      "{inboxRoot}/CIC_Inbox",
+  "quarantine": "{inboxRoot}/CIC_Quarantine",
+  "processed":  "{inboxRoot}/CIC_Processed",
+  "sidecars":   "{inboxRoot}/CIC_Sidecars",
+  "bundles":    "{inboxRoot}/CIC_Bundles",
+  "dailyTasks": "{inboxRoot}/CIC_DailyTasks",
+  "livingDocs": "./google-drive-mcp/cast-iron-charlie/cic-ingestion/living-docs",
+
+  "status": {
+    "harvester": "{inboxRoot}/CIC_Processed/_status/harvester.json",
+    "indexer":   "{inboxRoot}/CIC_Processed/_status/indexer.json",
+    "daily":     "{inboxRoot}/CIC_Processed/_status/daily.json",
+    "corpus":    "{inboxRoot}/CIC_Processed/_status/corpus.json",
+    "startup":   "{inboxRoot}/CIC_Processed/_status/startup.json"
+  },
+
+  "db": "/mnt/c/Users/soren/cic_test_root/cic.db",
+
+  "archive": "/mnt/c/Users/soren/cic_test_root/_Archive",
+
+  "categories": ["photos", "documents", "audio", "video", "notes"],
+
+  "sweeper": {
+    "scanParentFolder": false,
+    "ignoreNames": ["_archive", "_Archive", "Index", "Search"]
+  },
+
+  "externalSources": {
+    "dailyIntake":    "/mnt/c/Users/soren/cic_test_root/Daily Intake",
+    "cicDailySearch": "/mnt/c/Users/soren/cic_test_root/CIC_Daily_Search"
+  }
+}

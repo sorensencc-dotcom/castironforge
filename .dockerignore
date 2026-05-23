@@ -1,0 +1,24 @@
+# Exclude everything by default
+**
+
+# Allow only what we need for the sandbox
+!package.json
+!package-lock.json
+!src/lib/
+!src/harvester/extractor.js
+!scripts/sandbox-extract.js
+
+# Specifically exclude large/sensitive folders if they were somehow allowed
+node_modules/
+.git/
+AppData/
+Documents/
+Downloads/
+Music/
+Videos/
+OneDrive/
+cic_test_root/
+google-drive-mcp/
+mcp-servers/
+archive/
+backups/

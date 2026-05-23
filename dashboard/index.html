@@ -1,0 +1,541 @@
+<!-- filename: index.html | date: 2026-05-10T14:00:00Z | version: 1.0.0 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIC Pipeline Observatory</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card-bg: #111111;
+            --border: #1e1e1e;
+            --ok: #00ff88;
+            --error: #ff4444;
+            --degraded: #ffaa00;
+            --muted: #555555;
+            --text: #e0e0e0;
+            --white: #ffffff;
+            --font: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--bg);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .title {
+            color: var(--ok);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .stats-summary {
+            font-size: 14px;
+            text-align: right;
+        }
+
+        /* GRID */
+        main {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 700px) {
+            .agent-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card.pulse {
+            animation: pulse-glow 0.8s ease-out;
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+        }
+
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .agent-name {
+            color: var(--white);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .agent-id {
+            color: var(--muted);
+            font-size: 11px;
+            margin-top: 2px;
+        }
+
+        .status-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .status-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--muted);
+            transition: background-color 0.3s ease;
+        }
+
+        .status-dot.online { background-color: var(--ok); box-shadow: 0 0 8px var(--ok); }
+        .status-dot.down { background-color: var(--error); box-shadow: 0 0 8px var(--error); }
+        .status-dot.degraded { background-color: var(--degraded); box-shadow: 0 0 8px var(--degraded); }
+        .status-dot.pending { background-color: var(--muted); }
+
+        .status-text {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .metrics {
+            margin-top: 1rem;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .metric-label { color: var(--muted); }
+        .last-checked { color: var(--muted); font-size: 11px; margin-top: 0.5rem; }
+
+        /* FLOW DIAGRAM */
+        .pipeline-container {
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .node {
+            border: 2px solid var(--muted);
+            padding: 10px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: #000;
+            transition: all 0.3s ease;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .node.online { border-color: var(--ok); box-shadow: 0 0 10px var(--ok); color: var(--ok); }
+        .node.down { border-color: var(--error); box-shadow: 0 0 10px var(--error); color: var(--error); }
+        .node.degraded { border-color: var(--degraded); box-shadow: 0 0 10px var(--degraded); color: var(--degraded); }
+
+        .arrow {
+            color: var(--muted);
+            font-size: 20px;
+        }
+
+        .mcp-node-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin-top: -10px;
+        }
+
+        .up-arrow {
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        /* LOG */
+        .log-section {
+            border-top: 1px solid var(--border);
+            padding: 1rem 2rem;
+        }
+
+        .log-label {
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        #event-log {
+            background-color: #0d0d0d;
+            height: 200px;
+            overflow-y: scroll;
+            padding: 10px;
+            font-size: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .log-entry {
+            margin-bottom: 4px;
+            white-space: pre-wrap;
+        }
+
+        .log-time { color: var(--muted); }
+        .log-id { font-weight: bold; }
+        .log-status.ONLINE { color: var(--ok); }
+        .log-status.DOWN { color: var(--error); }
+        .log-status.DEGRADED { color: var(--degraded); }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--border); }
+        ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="title">CIC Pipeline Observatory</div>
+        <div class="stats-summary">
+            NEXT POLL IN: <span id="countdown">10</span>s | 
+            LAST POLLED: <span id="last-polled">--:--:--</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="agent-grid" id="agent-grid">
+            <!-- Cards injected via JS -->
+        </div>
+
+        <!-- SECURITY TELEMETRY PANEL -->
+        <div class="card" style="grid-column: span 2; border-color: var(--muted);">
+            <div class="agent-name" style="color: var(--degraded);">SEC-OPS: HARDENED INGESTION TELEMETRY</div>
+            <div class="agent-id">Live perimeter metrics from ClamAV & Docker Sandbox</div>
+            
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.5rem;">
+                <div class="card" style="padding: 1rem; background: #080808;">
+                    <div class="metric-label">SCANS TOTAL</div>
+                    <div id="sec-scans-total" style="font-size: 24px; font-weight: bold;">0</div>
+                </div>
+                <div class="card" style="padding: 1rem; background: #080808; border-color: #331111;">
+                    <div class="metric-label" style="color: var(--error);">MALWARE HITS</div>
+                    <div id="sec-malware-hits" style="font-size: 24px; font-weight: bold; color: var(--error);">0</div>
+                </div>
+                <div class="card" style="padding: 1rem; background: #080808;">
+                    <div class="metric-label">SANDBOX RUNS</div>
+                    <div id="sec-sandbox-runs" style="font-size: 24px; font-weight: bold;">0</div>
+                </div>
+                <div class="card" style="padding: 1rem; background: #080808;">
+                    <div class="metric-label">SANDBOX FAIL</div>
+                    <div id="sec-sandbox-fail" style="font-size: 24px; font-weight: bold;">0</div>
+                </div>
+            </div>
+
+            <div class="metrics" style="margin-top: 1rem;">
+                <div id="sec-log" style="font-size: 11px; height: 100px; overflow-y: auto; border: 1px solid var(--border); padding: 5px; background: #050505;">
+                    <div style="color: var(--muted);">Waiting for security events...</div>
+                </div>
+            </div>
+            <div class="last-checked" id="sec-last-checked">Last security sync: --:--:--</div>
+        </div>
+
+        <div class="pipeline-container">
+            <div class="flow" id="pipeline-flow">
+                <div class="node" id="node-ingestion_agent">INGEST</div>
+                <div class="arrow">→</div>
+                <div class="node" id="node-extractor_enricher">ENRICH</div>
+                <div class="arrow">→</div>
+                <div class="node" id="node-research_orchestrator">ORCHESTRATE</div>
+                <div class="arrow">→</div>
+                <div class="node" id="node-synthesis_agent">SYNTHESIZE</div>
+                <div class="arrow">→</div>
+                <div class="node" id="node-audit_agent">AUDIT</div>
+            </div>
+            <div class="mcp-node-container" style="margin-left: auto; padding-right: 50px;">
+                <div class="up-arrow">↑</div>
+                <div class="node" id="node-castironforge_mcp">MCP</div>
+            </div>
+        </div>
+    </main>
+
+    <div class="log-section">
+        <div class="log-label">Event Log</div>
+        <div id="event-log"></div>
+    </div>
+
+    <script>
+        const AGENTS = [
+            { id: 'castironforge_mcp',     name: 'Castironforge MCP',     url: 'http://localhost:3000/health' },
+            { id: 'ingestion_agent',       name: 'Ingestion Agent',        url: 'http://localhost:3001/health' },
+            { id: 'extractor_enricher',    name: 'Extractor Enricher',     url: 'http://localhost:3002/health' },
+            { id: 'research_orchestrator', name: 'Research Orchestrator',  url: 'http://localhost:3003/health' },
+            { id: 'synthesis_agent',       name: 'Synthesis Agent',        url: 'http://localhost:3004/health' },
+            { id: 'audit_agent',           name: 'Audit Agent',            url: 'http://localhost:3005/health' }
+        ];
+        const POLL_INTERVAL_MS = 10000;
+        const FETCH_TIMEOUT_MS = 5000;
+
+        let lastStatuses = {};
+        let countdownValue = POLL_INTERVAL_MS / 1000;
+        let countdownTimer = null;
+
+        function formatTime(date) {
+            return date.toTimeString().split(' ')[0];
+        }
+
+        function formatUptime(seconds) {
+            if (typeof seconds !== 'number' || isNaN(seconds)) return '—';
+            const h = Math.floor(seconds / 3600);
+            const m = Math.floor((seconds % 3600) / 60);
+            const s = Math.floor(seconds % 60);
+            return `${h}h ${m}m ${s}s`;
+        }
+
+        function createAgentCards() {
+            const grid = document.getElementById('agent-grid');
+            AGENTS.forEach(agent => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.id = `card-${agent.id}`;
+                card.innerHTML = `
+                    <div class="agent-header">
+                        <div>
+                            <div class="agent-name">${agent.name}</div>
+                            <div class="agent-id">${agent.id}</div>
+                        </div>
+                    </div>
+                    <div class="status-container">
+                        <div class="status-dot pending" id="dot-${agent.id}"></div>
+                        <span class="status-text" id="status-text-${agent.id}">PENDING</span>
+                    </div>
+                    <div class="metrics" id="metrics-${agent.id}">
+                        <div><span class="metric-label">Uptime:</span> <span class="uptime-val">—</span></div>
+                        <div class="extra-metric">—</div>
+                    </div>
+                    <div class="last-checked" id="last-checked-${agent.id}">Last checked: --:--:--</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function updateLog(agentId, status, latency) {
+            const log = document.getElementById('event-log');
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            const time = formatTime(new Date());
+            const latStr = typeof latency === 'number' ? `${latency}ms` : latency;
+            entry.innerHTML = `<span class="log-time">[${time}]</span> <span class="log-id">${agentId}</span> — <span class="log-status ${status}">${status}</span> (${latStr})`;
+            log.insertBefore(entry, log.firstChild);
+
+            while (log.children.length > 50) {
+                log.removeChild(log.lastChild);
+            }
+        }
+
+        function updateUI(agentId, status, data, latency) {
+            const card = document.getElementById(`card-${agentId}`);
+            const dot = document.getElementById(`dot-${agentId}`);
+            const text = document.getElementById(`status-text-${agentId}`);
+            const metricsDiv = document.getElementById(`metrics-${agentId}`);
+            const lastChecked = document.getElementById(`last-checked-${agentId}`);
+            const node = document.getElementById(`node-${agentId}`);
+
+            // Pulse if status changed
+            if (lastStatuses[agentId] && lastStatuses[agentId] !== status) {
+                card.classList.remove('pulse');
+                void card.offsetWidth; // trigger reflow
+                card.classList.add('pulse');
+            }
+            lastStatuses[agentId] = status;
+
+            // Status Classes
+            const statusLower = status.toLowerCase();
+            dot.className = `status-dot ${statusLower}`;
+            text.textContent = status;
+            text.className = `status-text ${statusLower}`;
+            if (node) {
+                node.className = `node ${statusLower}`;
+            }
+
+            // Metrics
+            const uptimeVal = metricsDiv.querySelector('.uptime-val');
+            const extraMetric = metricsDiv.querySelector('.extra-metric');
+            
+            uptimeVal.textContent = data ? formatUptime(data.uptime) : '—';
+            
+            let extra = '—';
+            if (data) {
+                switch(agentId) {
+                    case 'castironforge_mcp':
+                        if (data.stats) extra = `Agents: ${data.stats.totalAgents ?? 0} | Published: ${data.stats.totalPublished ?? 0}`;
+                        break;
+                    case 'ingestion_agent':
+                        extra = "Intake boundary LIVE";
+                        break;
+                    case 'extractor_enricher':
+                        extra = "Enricher LIVE";
+                        break;
+                    case 'research_orchestrator':
+                        extra = "Orchestrator LIVE";
+                        break;
+                    case 'synthesis_agent':
+                        extra = `Briefs: ${data.briefsGenerated ?? '—'}`;
+                        break;
+                    case 'audit_agent':
+                        extra = `Records: ${data.totalRecords ?? 0} | Anomalies 24h: ${data.anomaliesLast24h ?? 0}`;
+                        break;
+                }
+            }
+            extraMetric.textContent = extra;
+            lastChecked.textContent = `Last checked: ${formatTime(new Date())}`;
+
+            updateLog(agentId, status, latency);
+        }
+
+        async function pollAgent(agent) {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+            const start = performance.now();
+
+            try {
+                const response = await fetch(agent.url, { signal: controller.signal });
+                clearTimeout(timeoutId);
+                const latency = Math.round(performance.now() - start);
+
+                if (!response.ok) {
+                    updateUI(agent.id, 'DEGRADED', null, latency);
+                    return;
+                }
+
+                const body = await response.json();
+                if (body && body.ok === true) {
+                    updateUI(agent.id, 'ONLINE', body, latency);
+                } else {
+                    updateUI(agent.id, 'DEGRADED', body, latency);
+                }
+            } catch (err) {
+                clearTimeout(timeoutId);
+                const latency = err.name === 'AbortError' ? 'timeout' : 'error';
+                updateUI(agent.id, 'DOWN', null, latency);
+            }
+        }
+
+        async function pollAll() {
+            document.getElementById('last-polled').textContent = formatTime(new Date());
+            resetCountdown();
+            await Promise.allSettled([
+                ...AGENTS.map(pollAgent),
+                pollSecurity()
+            ]);
+        }
+
+        async function pollSecurity() {
+            try {
+                const res = await fetch('http://localhost:3000/security/telemetry');
+                if (!res.ok) return;
+                const data = await res.json();
+                
+                document.getElementById('sec-scans-total').textContent = data.stats.scansTotal;
+                document.getElementById('sec-malware-hits').textContent = data.stats.malwareDetected;
+                document.getElementById('sec-sandbox-runs').textContent = data.stats.sandboxRuns;
+                document.getElementById('sec-sandbox-fail').textContent = data.stats.sandboxFailures;
+                document.getElementById('sec-last-checked').textContent = `Last security sync: ${formatTime(new Date())}`;
+
+                const logDiv = document.getElementById('sec-log');
+                logDiv.innerHTML = data.events.map(ev => {
+                    const time = ev.timestamp.split('T')[1].split('.')[0];
+                    const color = ev.status === 'MALICIOUS' ? 'var(--error)' : 
+                                  ev.status === 'CLEAN' ? 'var(--ok)' : 'var(--text)';
+                    const label = ev.event.replace('security.', '').toUpperCase();
+                    return `<div style="margin-bottom: 2px;">
+                        <span style="color: var(--muted)">[${time}]</span> 
+                        <span style="font-weight: bold; color: ${color}">${label}</span> 
+                        <span>${ev.file || ev.assetId || ''}</span> 
+                        <span style="color: var(--muted)">${ev.status || ''}</span>
+                    </div>`;
+                }).join('') || '<div style="color: var(--muted);">No security events recorded.</div>';
+
+            } catch (err) {
+                console.error('Security telemetry poll failed', err);
+            }
+        }
+
+        function resetCountdown() {
+            clearInterval(countdownTimer);
+            countdownValue = POLL_INTERVAL_MS / 1000;
+            updateCountdownUI();
+            countdownTimer = setInterval(() => {
+                countdownValue--;
+                if (countdownValue < 0) countdownValue = 0;
+                updateCountdownUI();
+            }, 1000);
+        }
+
+        function updateCountdownUI() {
+            document.getElementById('countdown').textContent = countdownValue;
+        }
+
+        // Initialize
+        createAgentCards();
+        pollAll();
+        setInterval(pollAll, POLL_INTERVAL_MS);
+
+    </script>
+</body>
+</html>

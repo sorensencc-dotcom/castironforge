@@ -1,0 +1,79 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+.npm
+.eslintcache
+.stylelintcache
+.node_repl_history
+*.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.template
+!.env.example
+*.pem
+*.key
+*.cert
+*.p12
+*.crt
+authcode.txt
+
+# OS/System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+NTUSER.DAT*
+ntuser.dat*
+*.LOG*
+*.blf
+*.regtrans-ms
+*.ini
+.lesshst
+.bash_history
+.rediscli_history
+dump.rdb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project Specific
+cic_test_root/
+test_assets/
+test.db
+clean_test.txt
+virus.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+
+# Distribution
+dist/
+build/
+site/
+
+# Temporary files
+temp/
+tmp/
+*.patch
+*.diff
