@@ -1,0 +1,246 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="800"
+  viewBox="0 0 1200 800"
+>
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="800" fill="#1A1410" />
+
+  <!-- Grid -->
+  <g stroke="#2C2420" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="800" />
+    <line x1="300" y1="0" x2="300" y2="800" />
+    <line x1="500" y1="0" x2="500" y2="800" />
+    <line x1="700" y1="0" x2="700" y2="800" />
+    <line x1="900" y1="0" x2="900" y2="800" />
+    <line x1="1100" y1="0" x2="1100" y2="800" />
+
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="260" x2="1200" y2="260" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="540" x2="1200" y2="540" />
+    <line x1="0" y1="680" x2="1200" y2="680" />
+  </g>
+
+  <!-- Title -->
+  <text
+    x="60"
+    y="70"
+    fill="#E8E0D4"
+    font-family="Playfair Display, serif"
+    font-size="32"
+  >
+    Control Plane — Internal Routing Logic
+  </text>
+
+  <!-- Input: Request Context -->
+  <g>
+    <rect
+      x="80"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="210"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      REQUEST CONTEXT
+    </text>
+    <text
+      x="210"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Region hint · User · Policy · Metadata
+    </text>
+  </g>
+
+  <!-- Policy Layer -->
+  <g>
+    <rect
+      x="380"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="510"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      POLICY LAYER
+    </text>
+    <text
+      x="510"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Access · Routing rules · Overrides
+    </text>
+  </g>
+
+  <!-- Region Health -->
+  <g>
+    <rect
+      x="680"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="810"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      REGION HEALTH
+    </text>
+    <text
+      x="810"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Heartbeats · Latency · Circuit state
+    </text>
+  </g>
+
+  <!-- Circuit Breaker -->
+  <g>
+    <rect
+      x="380" y="420"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="510"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      CIRCUIT BREAKER
+    </text>
+    <text
+      x="510"
+      y="490"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Open · Half-open · Closed
+    </text>
+  </g>
+
+  <!-- Final Routing Decision -->
+  <g>
+    <rect
+      x="680"
+      y="420"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="810"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      ROUTING DECISION
+    </text>
+    <text
+      x="810"
+      y="490"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Selected region · Fallback path
+    </text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#B8922A" stroke-width="2.4" fill="none">
+    <!-- Request Context -> Policy -->
+    <line x1="340" y1="290" x2="380" y2="290" />
+
+    <!-- Policy -> Region Health -->
+    <line x1="640" y1="290" x2="680" y2="290" />
+
+    <!-- Policy -> Circuit Breaker -->
+    <line x1="510" y1="360" x2="510" y2="420" />
+
+    <!-- Region Health -> Routing Decision -->
+    <line x1="810" y1="360" x2="810" y2="420" />
+
+    <!-- Circuit Breaker -> Routing Decision -->
+    <line x1="640" y1="490" x2="680" y2="490" />
+  </g>
+
+  <!-- Ember nodes -->
+  <g fill="#C4501A">
+    <circle cx="340" cy="290" r="5" />
+    <circle cx="640" cy="290" r="5" />
+    <circle cx="510" cy="360" r="5" />
+    <circle cx="810" cy="360" r="5" />
+    <circle cx="640" cy="490" r="5" />
+  </g>
+
+  <!-- CIC Crest watermark -->
+  <g
+    transform="translate(1020, 700) scale(0.7)"
+    fill="none"
+    stroke="#B8922A"
+    stroke-width="2"
+    opacity="0.22"
+  >
+    <path d="M20 10 L80 10 L90 30 L50 90 L10 30 Z" />
+    <line x1="30" y1="25" x2="70" y2="25" />
+    <line x1="30" y1="40" x2="70" y2="40" />
+    <line x1="30" y1="55" x2="70" y2="55" />
+  </g>
+</svg>

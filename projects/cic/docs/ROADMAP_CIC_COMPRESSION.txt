@@ -1,0 +1,25 @@
+[CIC] CROSS-SOURCE COMPRESSION LAYER — ROADMAP
+
+STATUS: PLANNED → IMPLEMENT
+
+MODULE:
+  cic/core/compression/cross_source/
+
+RESPONSIBILITIES:
+  - Consume per-source compressed artifacts.
+  - Deterministically pre-merge claims/entities/events.
+  - Call cheap model to canonicalize groups.
+  - Compute agreement/contradiction/coverage signals.
+  - Emit CrossSourceCompressionResponse for orchestrator + audit.
+  - Cache by topic_id + source hashes.
+
+DELIVERABLES:
+  - Types + JSON schemas
+  - Pre-merge heuristics
+  - Model canonicalization wrapper
+  - Signals computation
+  - Public service entrypoint
+  - Orchestrator integration hook
+
+PRIORITY: HIGH
+OWNER: CIC Core

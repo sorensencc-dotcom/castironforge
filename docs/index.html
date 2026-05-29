@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Cast Iron Charlie Docs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Base Docsify theme (dark) -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">
+
+  <!-- Cast Iron Charlie Unified Docsify Theme -->
+  <link rel="stylesheet" href="./cic-docsify-theme.css">
+
+  <!-- CIC Search UI -->
+  <link rel="stylesheet" href="./cic-docsify-search.css">
+</head>
+
+<body class="sticky">
+  <nav class="cic-docs-nav">
+    <img src="./cic-crest.svg" class="cic-docs-nav-logo" />
+    <span class="cic-docs-nav-title">Cast Iron Charlie Docs</span>
+    <select class="cic-version-switcher" onchange="location.href=this.value">
+      <option value="#/">v1.0</option>
+      <option value="#/v0.9/">v0.9</option>
+      <option value="#/v0.8/">v0.8</option>
+    </select>
+  </nav>
+
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      name: 'Cast Iron Charlie',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      coverpage: true,
+      auto2top: true,
+      themeColor: '#C4501A',
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search CIC Docs…',
+        noData: 'No results found.'
+      }
+    }
+  </script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="./cic-search-panel.js"></script>
+  <script src="./cic-api-indexer.js"></script>
+  <script src="./cic-release-indexer.js"></script>
+  <script src="./cic-release-panel.js"></script>
+  <script src="./cic-release-extensions.js"></script>
+  <script src="./cic-glossary-linker.js"></script>
+  <script src="./cic-api-change-detector.js"></script>
+</body>
+</html>

@@ -1,3 +1,3 @@
-# Documentation Index
+# Introduction
 
-Base documentation scaffold for the monorepo.
+Welcome to the Cast Iron Charlie documentation. This system serves as a unified intelligence platform for capture, recall, and narrative assembly.

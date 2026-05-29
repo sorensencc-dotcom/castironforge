@@ -1,0 +1,21 @@
+- [Introduction](index.md)
+- [Operator Startup](OPERATOR_STARTUP.md)
+- [Phase 3 MAS Spec](PHASE_3_MAS.md)
+- [Phase 4 Governance](PHASE_4_GOVERNANCE.md)
+- [Living Docs Sync](LIVING_DOCS_SYNC.md)
+- [Release Intelligence](release-intelligence.md)
+- [Glossary](glossary.md)
+
+- Design System
+  - [Master Specification](CIC_DESIGN_SYSTEM.md)
+  - [Enforcement Policy](CIC_DESIGN_POLICY.md)
+  - [Authority Charter](CIC_DESIGN_AUTHORITY_CHARTER.md)
+  - [Review Workflow](CIC_DESIGN_REVIEW_WORKFLOW.md)
+  - [Diagram Pack](CIC_DIAGRAM_PACK.md)
+
+- API Reference
+  - [API Template](api-template.md)
+  - [/api/auth](api/auth.md)
+  - [/api/memos](api/memos.md)
+  - [/api/agents](api/agents.md)
+  - [/api/telemetry](api/telemetry.md)

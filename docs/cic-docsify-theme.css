@@ -1,0 +1,703 @@
+/* ============================================================
+   CAST IRON CHARLIE — DOCSIFY EXTENDED THEME
+   Includes:
+     • Cover page styling
+     • Sidebar crest
+     • Navigation header
+     • Component library (panels, alerts, stats, pills)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Libre+Baskerville:wght@400;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap');
+
+/* ------------------------------------------------------------
+   1. TOKENS
+------------------------------------------------------------ */
+:root {
+  --cic-black:  #0a0806;
+  --cic-forge:  #1a1410;
+  --cic-iron:   #2c2420;
+  --cic-rust:   #8B3A1A;
+  --cic-ember:  #C4501A;
+  --cic-brass:  #B8922A;
+  --cic-ash:    #9a9088;
+  --cic-bone:   #e8e0d4;
+  --cic-paper:  #f2ece2;
+  --cic-white:  #faf6f0;
+
+  --cic-bg: var(--cic-black);
+  --cic-bg-elevated: rgba(26,20,16,0.95);
+  --cic-fg: var(--cic-bone);
+  --cic-fg-muted: var(--cic-ash);
+  --cic-border-subtle: rgba(154,144,136,0.25);
+
+  --cic-font-display: 'Playfair Display', serif;
+  --cic-font-body: 'Libre Baskerville', serif;
+  --cic-font-ui: 'Barlow Condensed', sans-serif;
+}
+
+/* ------------------------------------------------------------
+   2. GLOBAL SHELL
+------------------------------------------------------------ */
+body {
+  background: radial-gradient(circle at top, #2c2420 0, #0a0806 55%, #050302 100%);
+  color: var(--cic-fg);
+  font-family: var(--cic-font-body);
+}
+
+/* Film grain */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* ------------------------------------------------------------
+   3. NAVIGATION HEADER (MATCHES MEMOS HEADER)
+------------------------------------------------------------ */
+.cic-docs-nav {
+  background: var(--cic-iron);
+  border-bottom: 1px solid var(--cic-border-subtle);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.cic-docs-nav-logo {
+  width: 32px;
+  height: 32px;
+  opacity: 0.9;
+}
+
+.cic-docs-nav-title {
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cic-brass);
+  font-size: 0.9rem;
+}
+
+/* Adjust Docsify layout for fixed nav */
+body.sticky .sidebar, body.sticky .content {
+  margin-top: 60px;
+}
+
+/* ------------------------------------------------------------
+   4. SIDEBAR + CREST
+------------------------------------------------------------ */
+.sidebar {
+  background: var(--cic-forge) !important;
+  border-right: 1px solid var(--cic-border-subtle) !important;
+}
+
+.sidebar:before {
+  content: '';
+  display: block;
+  background: url('./cic-crest.svg') center/70% no-repeat;
+  width: 100%;
+  height: 140px;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.sidebar .app-name {
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cic-brass);
+  font-size: 1rem;
+}
+
+.sidebar-nav a {
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--cic-fg-muted) !important;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav .active {
+  color: var(--cic-ember) !important;
+}
+
+/* ------------------------------------------------------------
+   5. COVER PAGE
+------------------------------------------------------------ */
+.cover {
+  background: radial-gradient(circle at top, #2c2420 0, #0a0806 55%, #050302 100%) !important;
+}
+
+.cic-cover-title {
+  font-family: var(--cic-font-display);
+  font-size: 3.2rem;
+  color: var(--cic-white);
+}
+
+.cic-cover-sub {
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cic-brass);
+  font-size: 0.9rem;
+}
+
+/* ------------------------------------------------------------
+   6. CONTENT PANEL
+------------------------------------------------------------ */
+.markdown-section {
+  background: var(--cic-bg-elevated);
+  border: 1px solid var(--cic-border-subtle);
+  padding: 2.5rem 2.25rem;
+  margin: 2.5rem auto;
+  max-width: 900px;
+}
+
+/* Headings */
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+  font-family: var(--cic-font-display);
+  color: var(--cic-white);
+}
+
+.markdown-section h1 { font-size: 2.4rem; }
+.markdown-section h2 { font-size: 1.8rem; }
+.markdown-section h3 { font-size: 1.4rem; }
+
+/* Body text */
+.markdown-section p,
+.markdown-section li {
+  font-family: var(--cic-font-body);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--cic-fg-muted);
+}
+
+/* Links */
+.markdown-section a {
+  color: var(--cic-ember);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196,80,26,0.4);
+}
+
+.markdown-section a:hover {
+  color: var(--cic-white);
+  border-bottom-color: var(--cic-white);
+}
+
+/* Code blocks */
+.markdown-section pre {
+  background: #15100d;
+  border: 1px solid rgba(154,144,136,0.35);
+  padding: 1rem;
+}
+
+.markdown-section code {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--cic-ember);
+}
+
+/* Blockquotes */
+.markdown-section blockquote {
+  border-left: 3px solid var(--cic-ember);
+  padding-left: 1rem;
+  color: var(--cic-brass);
+  font-style: italic;
+}
+
+/* Tables */
+.markdown-section table {
+  border-collapse: collapse;
+}
+
+.markdown-section th,
+.markdown-section td {
+  border: 1px solid rgba(154,144,136,0.3);
+  padding: 0.4rem 0.6rem;
+}
+
+/* ------------------------------------------------------------
+   7. COMPONENT LIBRARY
+------------------------------------------------------------ */
+
+/* Panels */
+.cic-panel {
+  background: var(--cic-bg-elevated);
+  border: 1px solid var(--cic-border-subtle);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Alerts */
+.cic-alert {
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--cic-ember);
+  background: rgba(196,80,26,0.08);
+  color: var(--cic-fg);
+  margin: 1.5rem 0;
+}
+
+.cic-alert-warn {
+  border-color: var(--cic-brass);
+  background: rgba(184,146,42,0.08);
+}
+
+.cic-alert-danger {
+  border-color: #b43a2a;
+  background: rgba(180,58,42,0.08);
+}
+
+/* Stats */
+.cic-stat {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+}
+
+.cic-stat-number {
+  font-family: var(--cic-font-display);
+  font-size: 2.4rem;
+  color: var(--cic-white);
+}
+
+.cic-stat-label {
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--cic-fg-muted);
+}
+
+/* Pills */
+.cic-pill {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  border-radius: 0;
+  border: 1px solid var(--cic-border-subtle);
+  margin-right: 0.4rem;
+}
+
+.cic-pill-accent {
+  border-color: var(--cic-ember);
+  color: var(--cic-ember);
+}
+
+.cic-pill-muted {
+  border-color: var(--cic-ash);
+  color: var(--cic-ash);
+}
+
+/* ------------------------------------------------------------
+   8. VERSION SWITCHER
+------------------------------------------------------------ */
+.cic-version-switcher {
+  margin-left: auto;
+  background: var(--cic-forge);
+  color: var(--cic-bone);
+  border: 1px solid var(--cic-border-subtle);
+  padding: 0.4rem 0.6rem;
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.cic-version-switcher:hover {
+  border-color: var(--cic-ember);
+}
+
+/* ------------------------------------------------------------
+   9. API REFERENCE
+------------------------------------------------------------ */
+.sidebar-nav p.cic-label {
+  margin: 1.5rem 0 0.5rem;
+  color: var(--cic-ember);
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.cic-api-title {
+  font-family: var(--cic-font-display);
+  font-size: 2.2rem;
+  color: var(--cic-white);
+}
+
+.cic-panel code,
+.cic-panel pre {
+  background: #15100d !important;
+  border: 1px solid rgba(154,144,136,0.35) !important;
+}
+
+/* ------------------------------------------------------------
+   10. SEARCH RESULTS PANEL
+------------------------------------------------------------ */
+.cic-search-results {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 420px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--cic-bg-elevated);
+  border: 1px solid var(--cic-border-subtle);
+  padding: 1.25rem;
+  z-index: 9999;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+.cic-search-header {
+  margin-bottom: 1rem;
+}
+
+.cic-search-query {
+  font-family: var(--cic-font-body);
+  color: var(--cic-fg-muted);
+  font-size: 0.9rem;
+}
+
+.cic-search-card {
+  border: 1px solid var(--cic-border-subtle);
+  background: rgba(26,20,16,0.85);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.cic-search-card:hover {
+  border-color: var(--cic-ember);
+  background: rgba(26,20,16,0.95);
+}
+
+.cic-search-card-title {
+  font-family: var(--cic-font-display);
+  font-size: 1.2rem;
+  color: var(--cic-white);
+  margin-bottom: 0.5rem;
+}
+
+.cic-search-card-snippet {
+  font-family: var(--cic-font-body);
+  color: var(--cic-fg-muted);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.cic-search-card-link {
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cic-ember);
+  font-size: 0.75rem;
+}
+
+/* ------------------------------------------------------------
+   11. RELEASE NOTES
+------------------------------------------------------------ */
+.cic-release-sidebar-section > p.cic-label {
+  margin: 1.5rem 0 0.5rem;
+  color: var(--cic-ember);
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.cic-release-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 360px;
+  background: var(--cic-bg-elevated);
+  border: 1px solid var(--cic-border-subtle);
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  z-index: 9999;
+}
+
+.cic-release-panel-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cic-release-version {
+  font-family: var(--cic-font-display);
+  font-size: 1.3rem;
+  color: var(--cic-white);
+}
+
+.cic-release-meta {
+  font-family: var(--cic-font-body);
+  font-size: 0.8rem;
+  color: var(--cic-fg-muted);
+  margin-bottom: 0.75rem;
+}
+
+.cic-release-summary {
+  font-family: var(--cic-font-body);
+  font-size: 0.9rem;
+  color: var(--cic-fg-muted);
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+
+.cic-release-link {
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--cic-ember);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196,80,26,0.4);
+}
+
+.cic-release-link:hover {
+  color: var(--cic-white);
+  border-bottom-color: var(--cic-white);
+}
+
+/* ------------------------------------------------------------
+   12. RELEASE INTELLIGENCE EXTENSIONS
+------------------------------------------------------------ */
+
+/* TIMELINE */
+.cic-timeline {
+  border-left: 2px solid var(--cic-border-subtle);
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+}
+.cic-timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.cic-timeline-node {
+  position: absolute;
+  left: -1.1rem;
+  top: 0.3rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cic-ember);
+  box-shadow: 0 0 0 3px rgba(196,80,26,0.25);
+}
+.cic-timeline-version {
+  font-family: var(--cic-font-display);
+  color: var(--cic-white);
+}
+.cic-timeline-date {
+  font-family: var(--cic-font-body);
+  font-size: 0.8rem;
+  color: var(--cic-fg-muted);
+}
+.cic-timeline-summary {
+  font-family: var(--cic-font-body);
+  font-size: 0.9rem;
+  color: var(--cic-fg-muted);
+  margin: 0.4rem 0 0.6rem;
+}
+.cic-timeline-link {
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--cic-ember);
+}
+
+/* DIFF VIEWER */
+.cic-diff-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.cic-diff-meta {
+  font-family: var(--cic-font-body);
+  font-size: 0.8rem;
+  color: var(--cic-fg-muted);
+}
+.cic-diff-body {
+  background: #15100d;
+  border: 1px solid rgba(154,144,136,0.35);
+  padding: 0.75rem 0.9rem;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.cic-diff-line {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+}
+.cic-diff-added {
+  color: var(--cic-ember);
+}
+.cic-diff-unchanged {
+  color: var(--cic-fg-muted);
+}
+
+/* BUNDLE PANEL */
+.cic-bundle-panel {
+  background: var(--cic-bg-elevated);
+  border: 1px solid var(--cic-border-subtle);
+  padding: 1.25rem 1.4rem;
+  margin: 2rem 0;
+}
+.cic-bundle-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.cic-bundle-version {
+  font-family: var(--cic-font-display);
+  font-size: 1.3rem;
+  color: var(--cic-white);
+}
+.cic-bundle-summary {
+  font-family: var(--cic-font-body);
+  font-size: 0.9rem;
+  color: var(--cic-fg-muted);
+  margin-bottom: 0.75rem;
+}
+.cic-bundle-diff {
+  background: #15100d;
+  border: 1px solid rgba(154,144,136,0.35);
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.cic-bundle-link {
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--cic-ember);
+}
+
+/* INTELLIGENCE FEED */
+.cic-feed {
+  margin: 2rem 0;
+}
+.cic-feed-item {
+  border: 1px solid var(--cic-border-subtle);
+  background: rgba(26,20,16,0.85);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.cic-feed-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+.cic-feed-version {
+  font-family: var(--cic-font-display);
+  color: var(--cic-white);
+}
+.cic-feed-date {
+  font-family: var(--cic-font-body);
+  font-size: 0.8rem;
+  color: var(--cic-fg-muted);
+}
+.cic-feed-summary {
+  font-family: var(--cic-font-body);
+  font-size: 0.9rem;
+  color: var(--cic-fg-muted);
+  margin-bottom: 0.5rem;
+}
+.cic-feed-link {
+  font-family: var(--cic-font-ui);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--cic-ember);
+}
+
+/* ------------------------------------------------------------
+   13. GLOSSARY LINKER
+------------------------------------------------------------ */
+.cic-glossary-link {
+  cursor: pointer;
+}
+.cic-glossary-link:hover {
+  border-color: var(--cic-ember);
+  color: var(--cic-ember);
+}
+
+/* ------------------------------------------------------------
+   14. API CHANGE DETECTOR
+------------------------------------------------------------ */
+.cic-api-change-panel {
+  margin: 2rem 0;
+}
+.cic-api-change-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.cic-api-change-meta {
+  font-family: var(--cic-font-body);
+  font-size: 0.8rem;
+  color: var(--cic-fg-muted);
+}
+.cic-api-change-body {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cic-api-change-column {
+  flex: 1 1 220px;
+}
+.cic-api-change-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+.cic-api-added {
+  color: var(--cic-ember);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+}
+.cic-api-removed {
+  color: var(--cic-rust);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+}
+.cic-api-none {
+  color: var(--cic-fg-muted);
+  font-family: var(--cic-font-body);
+  font-size: 0.85rem;
+}
+
+/* ------------------------------------------------------------
+   15. SCROLLBARS
+------------------------------------------------------------ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cic-forge);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cic-ember);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cic-rust);
+}

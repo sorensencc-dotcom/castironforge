@@ -1,0 +1,61 @@
+/* CIC Search UI */
+.search {
+  padding: 0.75rem 1rem;
+  background: var(--cic-iron);
+  border-bottom: 1px solid var(--cic-border-subtle);
+}
+
+.search input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: rgba(10,8,6,0.9);
+  border: 1px solid rgba(154,144,136,0.3);
+  color: var(--cic-bone);
+  font-family: var(--cic-font-body);
+  font-size: 0.9rem;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--cic-ember);
+}
+
+.search .clear-button {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  color: var(--cic-ash);
+}
+
+.search .clear-button:hover {
+  color: var(--cic-ember);
+}
+
+.search .results-panel {
+  background: var(--cic-bg-elevated);
+  border: 1px solid var(--cic-border-subtle);
+  margin-top: 1rem;
+}
+
+.search .results-panel .matching-post {
+  border-bottom: 1px solid var(--cic-border-subtle);
+  padding: 1rem;
+}
+
+.search .results-panel .matching-post:last-child {
+  border-bottom: none;
+}
+
+.search .results-panel .matching-post h2 {
+  font-family: var(--cic-font-display);
+  color: var(--cic-white);
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.search .results-panel em {
+  color: var(--cic-ember);
+  font-style: normal;
+  font-weight: bold;
+}

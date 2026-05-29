@@ -1,0 +1,10 @@
+{
+  "Harvester": "#/glossary?id=harvester",
+  "Orchestrator": "#/glossary?id=orchestrator",
+  "Control Plane": "#/glossary?id=control-plane",
+  "Region Registry": "#/glossary?id=region-registry",
+  "Telemetry": "#/glossary?id=telemetry",
+  "Agent": "#/glossary?id=agent",
+  "MCP": "#/glossary?id=mcp",
+  "DLQ": "#/glossary?id=dlq"
+}
