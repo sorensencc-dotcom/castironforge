@@ -1,0 +1,16 @@
+site_name: BOB Monorepo
+nav:
+  - Home: index.md
+  - Projects:
+    - CIC:
+      - Overview: projects/cic/docs/README.md
+      - Roadmap: projects/cic/docs/CIC_MASTER_ROADMAP.md
+      - Master Spec: projects/cic/docs/CIC_MASTER_SPEC.md
+      - Goal DSL: projects/cic/docs/CIC_GOAL_DSL.md
+      - Gap Register: projects/cic/docs/CIC_NARRATIVE_GAP_REGISTER.md
+    - Rewrite Labs: projects/rl/README.md
+  - Apps:
+    - Control Plane: apps/control-plane/README.md
+    - Operator UI: apps/operator-ui/control-room.html
+theme: readthedocs
+docs_dir: docs
