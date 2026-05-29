@@ -1,0 +1,38 @@
+{
+  "header": {
+    "goal_id": "cic.harvester_v2.GAP-001",
+    "timestamp": "2026-05-29T04:33:20.061Z",
+    "audit_version": "1.0.0",
+    "mode": "simulation"
+  },
+  "summary": {
+    "conf_goal": 0.865,
+    "decision": "FAIL",
+    "evidence_count": 3,
+    "cost_usd": 0.15
+  },
+  "findings": [
+    {
+      "id": "6f05d032-c1d5-484c-be1f-349574a9164a",
+      "title": "Willow Run B-24 Production bottlenecks - War Department Report 1943",
+      "ce": 1,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "f1977607-9a46-49c9-ab36-80047e1e5c9d",
+      "title": "Charles Sorensen's 1943 Willow Run Visit - Internal Ford Memo",
+      "ce": 1,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "704ab983-8da8-4ce1-9f2b-5cf964cca0e8",
+      "title": "The Willow Run Controversy - Detroit Free Press (1943)",
+      "ce": 0.595,
+      "source_type": "SECONDARY"
+    }
+  ],
+  "actions": {
+    "decision": "FAIL",
+    "next_step": "RETRY"
+  }
+}
