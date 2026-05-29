@@ -24,7 +24,10 @@ export function startServer(port) {
     log('info', MODULE, 'Request received', { method: req.method, path: url.pathname });
 
     if (url.pathname === '/health' && req.method === 'GET') {
-      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.writeHead(200, { 
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      });
       res.end(JSON.stringify({
         ok: true,
         agentId: AGENT_ID,

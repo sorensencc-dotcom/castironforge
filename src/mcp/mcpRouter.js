@@ -1,10 +1,18 @@
-// src/mcp/mcpRouter.js | 2026-05-10 | 1.0.0
+// src/mcp/mcpRouter.js | 2026-05-28 | v1.1.0
 /**
  * MCP Router
  * HTTP endpoints for event ingestion, agent registration, and health monitoring.
+ * Now serves the dashboard HTML.
  */
 
 import http from 'node:http';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const DASHBOARD_PATH = path.resolve(__dirname, '../../dashboard/index.html');
 
 const agentsRegistry = new Map();
 const startTime = Date.now();
@@ -78,7 +86,10 @@ export function createMcpRouter(eventBus) {
      * Helper to send JSON response.
      */
     const sendJson = (status, data) => {
-      res.writeHead(status, { 'Content-Type': 'application/json' });
+      res.writeHead(status, { 
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*' // Enable CORS
+      });
       res.end(JSON.stringify(data));
       
       console.log(JSON.stringify({
@@ -92,6 +103,18 @@ export function createMcpRouter(eventBus) {
     };
 
     try {
+      // GET /dashboard
+      if (method === 'GET' && (url === '/dashboard' || url === '/dashboard/')) {
+        try {
+          const html = await fs.readFile(DASHBOARD_PATH, 'utf8');
+          res.writeHead(200, { 'Content-Type': 'text/html' });
+          res.end(html);
+          return;
+        } catch (err) {
+          return sendJson(500, { error: `Failed to load dashboard: ${err.message}` });
+        }
+      }
+
       // POST /events
       if (method === 'POST' && url === '/events') {
         const body = await readBody();

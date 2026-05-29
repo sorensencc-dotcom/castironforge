@@ -7,6 +7,7 @@
 import http from 'node:http';
 import Database from 'better-sqlite3';
 import { startListener } from '../src/orchestrator/mcpListener.js';
+import { setDatabase } from '../src/orchestrator/researchOrchestrator.js';
 import * as entityGraph from '../src/orchestrator/entityGraph.js';
 import * as timelineBuilder from '../src/orchestrator/timelineBuilder.js';
 
@@ -41,12 +42,16 @@ const {
   ORCHESTRATOR_PORT
 } = process.env;
 
+// ─── DB Initialization ────────────────────────────────────────────────────────
+const dbPath = DATABASE_URL.replace('sqlite://', '');
+const db = new Database(dbPath);
+db.pragma('journal_mode = WAL');
+
+// Inject DB dependency into orchestrator
+setDatabase(db);
+
 // ─── DB Migrations ────────────────────────────────────────────────────────────
 async function runMigrations() {
-  const dbPath = DATABASE_URL.replace('sqlite://', '');
-  const db = new Database(dbPath);
-  db.pragma('journal_mode = WAL');
-  
   try {
     db.exec(entityGraph.getMigration());
     db.exec(timelineBuilder.getMigration());
@@ -68,8 +73,6 @@ async function runMigrations() {
       error: error.message
     }));
     process.exit(1);
-  } finally {
-    db.close();
   }
 }
 
@@ -107,7 +110,10 @@ async function registerAgent() {
 function startHealthServer() {
   const server = http.createServer((req, res) => {
     if (req.method === 'GET' && req.url === '/health') {
-      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.writeHead(200, { 
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      });
       res.end(JSON.stringify({
         ok: true,
         agentId: ORCHESTRATOR_AGENT_ID,
