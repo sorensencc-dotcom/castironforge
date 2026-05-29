@@ -1,95 +1,156 @@
-// File: src/providers/qdrant.js | Date: 2026-05-28 | v1.0.0
-// §0.1-A — Qdrant Client Wiring + Connectivity
+// src/providers/qdrant.js
+// Deterministic Qdrant client (ESM)
 
-import { QdrantClient } from '@qdrant/js-client-rest';
-import { log, logError } from '../lib/logger.js';
-import dotenv from 'dotenv';
+import { createLogger } from '../lib/logger.js';
 
-dotenv.config();
+const log = createLogger('qdrant');
 
 const QDRANT_URL = process.env.QDRANT_URL;
 const QDRANT_API_KEY = process.env.QDRANT_API_KEY;
 
-let client = null;
+if (!QDRANT_URL) {
+  throw new Error('QDRANT_URL is not set');
+}
 
-/**
- * Validates environment variables and initializes the Qdrant client.
- * @returns {QdrantClient}
- */
-export function getQdrantClient() {
-  if (client) return client;
-
-  if (!QDRANT_URL) {
-    throw new Error('QDRANT_URL environment variable is not defined.');
+export class QdrantConnectionError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'QdrantConnectionError';
   }
+}
 
-  client = new QdrantClient({
-    url: QDRANT_URL,
-    apiKey: QDRANT_API_KEY,
+export class QdrantSchemaError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'QdrantSchemaError';
+  }
+}
+
+function qdrantHeaders() {
+  const headers = { 'Content-Type': 'application/json' };
+  if (QDRANT_API_KEY) {
+    headers['api-key'] = QDRANT_API_KEY;
+  }
+  return headers;
+}
+
+async function qdrantFetch(path, options = {}) {
+  const url = `${QDRANT_URL.replace(/\/$/, '')}${path}`;
+  const res = await fetch(url, {
+    ...options,
+    headers: {
+      ...qdrantHeaders(),
+      ...(options.headers || {}),
+    },
   });
 
-  return client;
+  let body;
+  try {
+    body = await res.json();
+  } catch {
+    body = null;
+  }
+
+  if (!res.ok) {
+    log.error('Qdrant request failed', { status: res.status, body });
+    throw new QdrantConnectionError(
+      `Qdrant request failed: ${res.status} ${res.statusText}`,
+    );
+  }
+
+  return body;
 }
 
-/**
- * Deterministic connection and health check for Qdrant.
- * @returns {Promise<boolean>}
- */
 export async function healthCheckQdrant() {
   try {
-    const qdrant = getQdrantClient();
-    // Use clusters/status or healthz for a lightweight check
-    const health = await qdrant.api('health');
-    if (health) {
-      log('INFO', 'QDRANT_PROVIDER', 'Qdrant connectivity verified.');
-      return true;
+    const body = await qdrantFetch('/health');
+    const status = body?.status || 'unknown';
+    return { ok: status === 'ok', raw: body };
+  } catch (err) {
+    log.warn('Qdrant health check failed', { error: String(err) });
+    return { ok: false, error: err };
+  }
+}
+
+export async function createCollectionIfMissing(collection, vectorSize) {
+  const path = `/collections/${encodeURIComponent(collection)}`;
+  try {
+    const existing = await qdrantFetch(path, { method: 'GET' });
+    if (existing?.result) {
+      return existing;
     }
-    return false;
-  } catch (error) {
-    logError('QDRANT_PROVIDER', 'Qdrant health check failed.', { error: error.message });
-    return false;
+  } catch {
+    // fall through to create
   }
+
+  const body = {
+    vectors: {
+      size: vectorSize,
+      distance: 'Cosine',
+    },
+  };
+
+  const res = await qdrantFetch(path, {
+    method: 'PUT',
+    body: JSON.stringify(body),
+  });
+
+  if (!res?.result) {
+    throw new QdrantSchemaError(
+      `Failed to create collection ${collection}: ${JSON.stringify(res)}`,
+    );
+  }
+
+  return res;
 }
 
-/**
- * Insert a vector into a specified collection.
- * @param {string} collection 
- * @param {string|number} id 
- * @param {number[]} vector 
- * @param {object} payload 
- */
 export async function insertVector(collection, id, vector, payload = {}) {
-  try {
-    const qdrant = getQdrantClient();
-    await qdrant.upsert(collection, {
-      wait: true,
-      points: [{ id, vector, payload }]
-    });
-    log('INFO', 'QDRANT_PROVIDER', `Vector inserted into collection: ${collection}`, { id });
-  } catch (error) {
-    logError('QDRANT_PROVIDER', `Failed to insert vector into ${collection}`, { id, error: error.message });
-    throw error;
+  if (!Array.isArray(vector) || vector.length === 0) {
+    throw new QdrantSchemaError('Vector must be a non-empty array');
   }
+
+  const body = {
+    points: [
+      {
+        id,
+        vector,
+        payload,
+      },
+    ],
+  };
+
+  const res = await qdrantFetch(
+    `/collections/${encodeURIComponent(collection)}/points`,
+    {
+      method: 'PUT',
+      body: JSON.stringify(body),
+    },
+  );
+
+  return res;
 }
 
-/**
- * Query nearest neighbors from a specified collection.
- * @param {string} collection 
- * @param {number[]} vector 
- * @param {number} limit 
- * @returns {Promise<object[]>}
- */
-export async function queryVector(collection, vector, limit = 5) {
-  try {
-    const qdrant = getQdrantClient();
-    const results = await qdrant.search(collection, {
-      vector,
-      limit,
-      with_payload: true
-    });
-    return results;
-  } catch (error) {
-    logError('QDRANT_PROVIDER', `Failed to query vectors from ${collection}`, { error: error.message });
-    throw error;
+export async function queryVector(collection, vector, limit = 5, filter = null) {
+  if (!Array.isArray(vector) || vector.length === 0) {
+    throw new QdrantSchemaError('Vector must be a non-empty array');
   }
+
+  const body = {
+    vector,
+    limit,
+  };
+
+  if (filter) {
+    body.filter = filter;
+  }
+
+  const res = await qdrantFetch(
+    `/collections/${encodeURIComponent(collection)}/points/search`,
+    {
+      method: 'POST',
+      body: JSON.stringify(body),
+    },
+  );
+
+  return res?.result || [];
 }

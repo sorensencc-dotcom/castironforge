@@ -35,14 +35,25 @@ export function startServer(port) {
     }
 
     if (url.pathname === '/health/qdrant' && req.method === 'GET') {
-      const isHealthy = await healthCheckQdrant();
-      const statusCode = isHealthy ? 200 : 503;
-      res.writeHead(statusCode, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({
-        ok: isHealthy,
-        status: isHealthy ? 'ONLINE' : 'OFFLINE',
-        timestamp: new Date().toISOString()
-      }));
+      try {
+        const result = await healthCheckQdrant();
+        if (!result.ok) {
+          res.writeHead(503, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({
+            status: 'degraded',
+            error: result.error ? String(result.error) : 'unknown',
+          }));
+          return;
+        }
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ status: 'ok', raw: result.raw }));
+      } catch (err) {
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({
+          status: 'error',
+          error: String(err),
+        }));
+      }
       return;
     }
 

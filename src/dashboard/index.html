@@ -46,11 +46,22 @@
             { id: 'qdrant', name: 'Qdrant', endpoint: '/health/qdrant' }
         ];
 
+        async function fetchQdrantHealth() {
+            try {
+                const res = await fetch('/health/qdrant');
+                const body = await res.json();
+                return body.status || 'unknown';
+            } catch {
+                return 'error';
+            }
+        }
+
         async function poll() {
             const grid = document.getElementById('agent-grid');
             grid.innerHTML = '';
 
-            for (const agent of agents) {
+            // 1. Poll agents
+            for (const agent of agents.filter(a => a.id !== 'qdrant')) {
                 const card = document.createElement('div');
                 card.className = 'card';
                 card.id = agent.id;
@@ -71,6 +82,25 @@
                     card.classList.add('offline');
                     card.querySelector('small').innerText = 'ERROR';
                 }
+            }
+
+            // 2. Poll Qdrant specifically
+            const qdrantCard = document.createElement('div');
+            qdrantCard.className = 'card';
+            qdrantCard.id = 'qdrant';
+            qdrantCard.innerHTML = `<span class="pulse"></span><strong>Qdrant</strong><br><small>Checking...</small>`;
+            grid.appendChild(qdrantCard);
+
+            const qdrantStatus = await fetchQdrantHealth();
+            if (qdrantStatus === 'ok') {
+                qdrantCard.classList.add('online');
+                qdrantCard.querySelector('small').innerText = 'ONLINE';
+            } else if (qdrantStatus === 'degraded') {
+                qdrantCard.classList.add('degraded');
+                qdrantCard.querySelector('small').innerText = 'DEGRADED';
+            } else {
+                qdrantCard.classList.add('offline');
+                qdrantCard.querySelector('small').innerText = 'OFFLINE';
             }
         }
 
