@@ -10,7 +10,7 @@ Every entry in this register must be machine-parsable to trigger autonomous `/go
 
 | Gap ID | Theme | Timeframe | Location | Description | Priority | Goal Status |
 |---|---|---|---|---|---|---|
-| GAP-001 | Willow Run | 1941-1945 | Detroit, MI | Specific details of Sorensen's 1943 visit to Willow Run and his interaction with Ford executives regarding B-24 production bottlenecks. | P0 | MATERIALIZED |
+| GAP-001 | Willow Run | 1941-1945 | Detroit, MI | Specific details of Sorensen's 1943 visit to Willow Run and his interaction with Ford executives regarding B-24 production bottlenecks. | P0 | COMPLETE |
 | GAP-002 | Danish Origins | 1881-1900 | Denmark | Records of the Sorensen family's emigration from Denmark to the US; specifically identifying the vessel and port of entry. | P1 | PENDING |
 | GAP-003 | Civilian Jeep | 1944-1946 | Willow Run | Sorensen's role in the transition of Jeep production from military to civilian use. | P2 | PENDING |
 

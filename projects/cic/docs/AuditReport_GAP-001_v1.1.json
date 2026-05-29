@@ -1,0 +1,34 @@
+{
+  "header": {
+    "goal_id": "cic.harvester_v2.GAP-001",
+    "timestamp": "2026-05-29T19:31:57.063Z",
+    "audit_version": "1.1.0",
+    "mode": "remediation-simulation"
+  },
+  "summary": {
+    "conf_goal": 1,
+    "decision": "PASS",
+    "evidence_count": 3
+  },
+  "findings": [
+    {
+      "id": "2f93471f-4aee-4326-bcdf-a639915eee87",
+      "title": "War Production Board Hearing - Willow Run Testimony June 1943",
+      "ce": 1
+    },
+    {
+      "id": "f5c50ec8-a013-4778-9ba0-5cdac9ffd1d4",
+      "title": "Personal Letter: Edsel Ford to Charles Sorensen re: Willow Run Manpower",
+      "ce": 1
+    },
+    {
+      "id": "1a8e62c4-761c-49e9-a19b-fc9a461205d8",
+      "title": "Sorensen Memoir: My Forty Years with Ford (Chapter 12 Excerpt)",
+      "ce": 1
+    }
+  ],
+  "actions": {
+    "decision": "PASS",
+    "next_step": "SYNTHESIS"
+  }
+}
