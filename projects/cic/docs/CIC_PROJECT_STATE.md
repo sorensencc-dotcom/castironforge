@@ -1,25 +1,48 @@
 # CIC_PROJECT_STATE.md  
-# v1.3.1 | 2026-05-28 | ACTIVE  
+# v1.4.0 | 2026-05-28 | ACTIVE  
 # Volatile status only — architecture lives in CIC_SYSTEM.md.
 
 ---
 
-## 1. Current Focus (2026‑05‑28)
-
-### **Ingestion Runtime Stabilization**
-- Queue Layer fully operational (`producer`, `dlq`, `drift`, `schemas`).
-- Section Tracking online; §0.4 complete.
-- ReverseImageSearchExtractor integrated and passing all tests.
-- Dashboard v1 online (6‑agent polling, pulse states, pipeline diagram).
-- Preparing for §0.1‑A (Qdrant client) as next ingestion milestone.
-
-### **Control Plane / Host Health**
-- Environment Health Plane (CPU, disk, memory) feeding dashboard.
-- Autonomous Recovery Plane enforcing disk/CPU safeguards.
+## 1. Executive Summary
+CIC documentation is now fully **Operator-Grade**. The roadmap bridges film production (Narrative Gaps) directly to the intelligence pipeline (Autonomous Goals). Governance agents (Economy, Security, Audit) are now declaratively integrated into the execution layer via the new `/goal` DSL.
 
 ---
 
-## 2. Section Tracking Status
+## 2. Immediate Roadmap
+- [x] **Implementation**: Materialize first `cic.harvester_v2.gap_fill` goal (GAP-001) from Narrative Gap Register.
+- [x] **Enrichment**: Finalize Rights Metadata schema and integrate into Phase 8.
+- [x] **Audit**: Verify and integrate AuditAgent truth thresholds (v1.0.0 Spec).
+- [ ] **Research**: Execute GAP-001 research query via SearXNG integration.
+
+---
+
+## 3. Operational Status
+- **Pipeline**: STABLE
+- **Governance**: ACTIVE (DSL-driven)
+- **Telemetry**: LIVE (Host + Agent health)
+- **Authority**: OPERATOR-LED (Refined DSL control)
+- **Goal Status**: GAP-001 Materialized & Ingested.
+- **Audit Mode**: Truth Threshold Pack v1.0.0 Active.
+
+---
+
+## 4. Technical Milestone Status
+
+### **Ingestion Runtime (Active)**
+- Queue Layer fully operational (`producer`, `dlq`, `drift`, `schemas`).
+- Section Tracking: §0.4 complete.
+- ReverseImageSearchExtractor integrated and validated.
+- Qdrant Integration: Client wired and health checks operational (§0.1-A).
+
+### **Control Plane & Recovery**
+- Control Plane v2.4.0: Token/Security metrics integrated.
+- Environment Health Plane: WSL2/Linux host monitoring active.
+- Autonomous Recovery Plane: Disk pressure and CPU saturation safeguards active.
+
+---
+
+## 5. Section Tracking (Ingestion)
 
 | Section | Description | Status |
 |--------|-------------|--------|
@@ -28,90 +51,14 @@
 | §0.3 | Job planning (ingest targets) | Pending |
 | §0.4 | Job materialization into queue | **COMPLETE** |
 
-**Invariant:** Section state is monotonic; regression requires operator override.
-
 ---
 
-## 3. Ingestion Pipeline Status
-
-### **Harvester**
-- Stable. Folder validator + classifier working as expected.
-- Drift detection active via `drift.ts`.
-
-### **Queue Layer**
-- Producer generating valid jobs (schema‑verified).
-- DLQ receiving failed jobs deterministically.
-- Drift jobs auto‑materializing on folder divergence.
-
-### **Extractors**
-- ImageAnalyzerV2 (v2.0.0) stable.
-- ReverseImageSearchExtractor (v1.0.0) integrated and validated.
-- Extractor chaining functioning in enrichment pipeline.
-- **Qdrant Integration**: Client wired and health checks operational.
-
-### **Indexer**
-- SQLite WAL mode stable.
-- Bundle builder producing consistent corpus entries.
-
-### **Sweeper**
-- Daily sweeper running without anomalies.
-
----
-
-## 4. Dashboard Status
-
-- Live at `src/dashboard/index.html`.
-- Polling 6 agents every 10s.
-- Pulse states: idle, running, error, degraded.
-- Pipeline diagram rendering correctly.
-- Host metrics (CPU/disk/memory) surfaced from Control Plane v2.4.0.
-
----
-
-## 5. Control Plane & Recovery
-
-### **Control Plane v2.4.0**
-- Token/Security metrics integrated.
-- Environment Health Plane active.
-
-### **Autonomous Recovery Plane**
-- Disk pressure enforcement active.
-- CPU saturation enforcement active.
-- No recovery events triggered in last 24h.
-
----
-
-## 6. Open Tasks (Short Horizon)
-
-1. **Implement §0.1‑A Qdrant client**  
-   - Connectivity  
-   - Basic vector insert/query  
-   - Health check integration  
-
-2. **Extend dashboard with ingestion job counters**  
-   - Queue depth  
-   - DLQ count  
-   - Drift job count  
-
-3. **Rights Metadata Enrichment (Phase 8b prep)**  
-   - Define rights schema  
-   - Map ingestion assets to rights metadata  
-
-4. **AuditAgent (Phase 10 prep)**  
-   - Confidence scoring  
-   - Factual alignment gating  
-
----
-
-## 7. Risks / Watchpoints
-
+## 6. Risks / Watchpoints
 - Qdrant client integration may require schema adjustments.
 - Disk pressure events possible during large ingestion bursts.
-- ReverseImageSearchExtractor may need rate limiting depending on provider.
+- GAP-001 execution may hit rate limits on web discovery providers.
 
 ---
 
-## 8. Versioning
-
-- **v1.3.0** — Added Queue Layer, Section Tracking, Extractor #2, Dashboard, and updated Control Plane/Recovery status.
-- Patch updates expected as ingestion runtime stabilizes.
+## 7. Versioning
+- **v1.4.0** — Consolidated high-level roadmap with technical ingestion status. Integrated Audit Pack v1.0.0.
