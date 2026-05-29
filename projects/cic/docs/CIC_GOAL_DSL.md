@@ -75,8 +75,11 @@ success {
     latency.harvester < 50ms
     
     // Audit & Integrity Hooks (AuditAgent)
-    audit.confidence >= 0.92         // Minimum truth threshold
+    audit.confidence_min = 0.92       // Minimum truth threshold
     audit.max_anomalies = 0          // Zero-tolerance for drift
+    audit.allow_medium_anomalies = false
+    audit.allow_high_anomalies = false
+    
     pipeline.status = "clean"        // No DLQ residue
     security.clean = true            // Sentinel verification
 }

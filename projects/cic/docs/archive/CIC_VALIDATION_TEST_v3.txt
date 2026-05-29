@@ -1,0 +1,108 @@
+CIC_VALIDATION_TEST_v3
+
+PURPOSE
+Validate CIC v3.0 repository completeness, correctness, and contract alignment.
+
+FORMAT
+All checks MUST return PASS or FAIL with a concrete file path or type name.
+
+CHECKS
+
+[1] CODE_DIRECTORIES
+- cic/core/ingest/
+- cic/core/enrich/
+- cic/core/compression/
+- cic/core/orchestrate/
+- cic/core/synthesize/
+- cic/core/audit/
+- cic/core/models/
+- cic/agents/
+- cic/pipelines/
+
+[2] CODE_FILES
+- cic/core/orchestrate/evidence_packet.py
+- cic/core/audit/audit_trace.py
+- cic/core/models/router.py
+- cic/pipelines/pipeline_compress.py
+- cic/pipelines/pipeline_full.py
+- cic/agents/ingestion_agent.py
+- cic/agents/enrichment_agent.py
+- cic/agents/compression_agent.py
+- cic/agents/orchestrator_agent.py
+- cic/agents/synthesis_agent.py
+- cic/agents/audit_agent.py
+
+[3] DOC_FILES
+- cic/docs/CIC_SYSTEM.md
+- cic/docs/CIC_ARCHITECTURE.md
+- cic/docs/CIC_MASTER_ROADMAP_v3.0.md
+- cic/docs/CIC_PIPELINE_FLOW.md
+- cic/docs/CIC_PIPELINE_FLOW_DIAGRAM.md
+- cic/docs/CIC_AGENT_CONTRACTS.md
+- cic/docs/CIC_DATA_CONTRACTS.md
+- cic/docs/CIC_SIGNAL_REFERENCE.md
+- cic/docs/CIC_OPERATOR_GUIDE.md
+- cic/docs/CIC_DEBUG_GUIDE.md
+- cic/docs/CIC_TEST_PLAN.md
+- cic/docs/CIC_DOCS_INDEX.md
+- cic/docs/README.md
+
+[4] TYPE_DEFINITIONS
+- RawArtifact
+- EnrichedArtifact
+- EvidencePacket
+- AuditTrace
+- CrossSourceCompressionResponse
+
+[5] SYNTHESIS_OUTPUT_STRUCTURE
+- narrative.narrative : str
+- narrative.sections : list
+- narrative.confidence : float
+- contradictions.contradictions : list
+- contradictions.alignment_score : float
+- summary : str
+
+[6] PIPELINE_ENTRYPOINTS
+- run_ingest_pipeline()
+- run_enrich_pipeline()
+- run_compression_pipeline()
+- run_full_pipeline()
+
+[7] AGENT_METHODS
+- run_ingestion_agent()
+- run_enrichment_agent()
+- run_compression_agent()
+- run_orchestrator_agent()
+- run_synthesis_agent()
+- run_audit_agent()
+
+[8] SIGNALS
+- agreement_density : float
+- contradiction_density : float
+- coverage : float
+
+[9] ORCHESTRATOR_DECISIONS
+- run_synthesis = coverage > 0.2
+- run_audit = contradiction_density > 0.05 OR agreement_density < 0.3
+
+[10] IMPORT_SANITY
+- python -m compileall cic
+
+[11] TEST_STRUCTURE
+- cic/tests/core/
+- cic/tests/agents/
+- cic/tests/pipelines/
+- cic/tests/golden/
+
+[12] DRY_RUN
+- run_full_pipeline(topic_id, sources) returns:
+  - topic_id
+  - raw
+  - enriched
+  - evidence
+  - orchestration
+
+RESULT
+If ANY check fails → feed failures into CLAUDE_BOB_CIC_FINISHER_v2.
+
+END

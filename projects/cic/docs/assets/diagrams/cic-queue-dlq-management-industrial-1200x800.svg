@@ -1,0 +1,273 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="800"
+  viewBox="0 0 1200 800"
+>
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="800" fill="#1A1410" />
+
+  <!-- Grid -->
+  <g stroke="#2C2420" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="800" />
+    <line x1="300" y1="0" x2="300" y2="800" />
+    <line x1="500" y1="0" x2="500" y2="800" />
+    <line x1="700" y1="0" x2="700" y2="800" />
+    <line x1="900" y1="0" x2="900" y2="800" />
+    <line x1="1100" y1="0" x2="1100" y2="800" />
+
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="260" x2="1200" y2="260" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="540" x2="1200" y2="540" />
+    <line x1="0" y1="680" x2="1200" y2="680" />
+  </g>
+
+  <!-- Title -->
+  <text
+    x="60"
+    y="70"
+    fill="#E8E0D4"
+    font-family="Playfair Display, serif"
+    font-size="32"
+  >
+    Queue & DLQ Management
+  </text>
+
+  <!-- Orchestrator Output -->
+  <g>
+    <rect
+      x="80"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="210"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      ORCHESTRATOR OUTPUT
+    </text>
+    <text
+      x="210"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Evidence packets → Queue
+    </text>
+  </g>
+
+  <!-- Main Queue -->
+  <g>
+    <rect
+      x="420"
+      y="220"
+      width="300"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="570"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      MAIN QUEUE
+    </text>
+    <text
+      x="570"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      FIFO · Backpressure · Visibility timeout
+    </text>
+  </g>
+
+  <!-- DLQ -->
+  <g>
+    <rect
+      x="880"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="1010"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      DLQ
+    </text>
+    <text
+      x="1010"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Max retries · Poison messages
+    </text>
+  </g>
+
+  <!-- Consumers -->
+  <g>
+    <rect
+      x="200"
+      y="420"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2"
+    />
+    <text
+      x="330"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="18"
+    >
+      HARVESTER CONSUMER
+    </text>
+    <text
+      x="330"
+      y="490"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Extractors · Enrichment
+    </text>
+  </g>
+
+  <g>
+    <rect
+      x="520"
+      y="420"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2"
+    />
+    <text
+      x="650"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="18"
+    >
+      ORCHESTRATOR CONSUMER
+    </text>
+    <text
+      x="650"
+      y="490"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Decision engine · Routing
+    </text>
+  </g>
+
+  <g>
+    <rect
+      x="840"
+      y="420"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2"
+    />
+    <text
+      x="970"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="18"
+    >
+      INDEXER / STORAGE
+    </text>
+    <text
+      x="970"
+      y="490"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Qdrant · Search · Archive
+    </text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#B8922A" stroke-width="2.4" fill="none">
+    <!-- Orchestrator -> Queue -->
+    <line x1="340" y1="290" x2="420" y2="290" />
+
+    <!-- Queue -> Consumers -->
+    <line x1="570" y1="360" x2="330" y2="420" />
+    <line x1="570" y1="360" x2="650" y2="420" />
+    <line x1="570" y1="360" x2="970" y2="420" />
+
+    <!-- Queue -> DLQ -->
+    <line x1="720" y1="290" x2="880" y2="290" />
+  </g>
+
+  <!-- Ember nodes -->
+  <g fill="#C4501A">
+    <circle cx="340" cy="290" r="5" />
+    <circle cx="420" cy="290" r="5" />
+    <circle cx="720" cy="290" r="5" />
+    <circle cx="330" cy="420" r="4" />
+    <circle cx="650" cy="420" r="4" />
+    <circle cx="970" cy="420" r="4" />
+  </g>
+
+  <!-- CIC Crest watermark -->
+  <g
+    transform="translate(1020, 700) scale(0.7)"
+    fill="none"
+    stroke="#B8922A"
+    stroke-width="2"
+    opacity="0.22"
+  >
+    <path d="M20 10 L80 10 L90 30 L50 90 L10 30 Z" />
+    <line x1="30" y1="25" x2="70" y2="25" />
+    <line x1="30" y1="40" x2="70" y2="40" />
+    <line x1="30" y1="55" x2="70" y2="55" />
+  </g>
+</svg>

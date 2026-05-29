@@ -1,0 +1,229 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="800"
+  viewBox="0 0 1200 800"
+>
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="800" fill="#1A1410" />
+
+  <!-- Grid -->
+  <g stroke="#2C2420" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="800" />
+    <line x1="300" y1="0" x2="300" y2="800" />
+    <line x1="500" y1="0" x2="500" y2="800" />
+    <line x1="700" y1="0" x2="700" y2="800" />
+    <line x1="900" y1="0" x2="900" y2="800" />
+    <line x1="1100" y1="0" x2="1100" y2="800" />
+
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="260" x2="1200" y2="260" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="540" x2="1200" y2="540" />
+    <line x1="0" y1="680" x2="1200" y2="680" />
+  </g>
+
+  <!-- Title -->
+  <text
+    x="60"
+    y="70"
+    fill="#E8E0D4"
+    font-family="Playfair Display, serif"
+    font-size="32"
+  >
+    Orchestrator Flow — Evidence → Decision → Agent
+  </text>
+
+  <!-- Evidence Packet Input -->
+  <g>
+    <rect
+      x="80"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="210"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      EVIDENCE PACKET
+    </text>
+    <text
+      x="210"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Canonical fields · Signals · Metadata
+    </text>
+  </g>
+
+  <!-- Decision Engine (Diamond) -->
+  <g stroke="#B8922A" stroke-width="2.5" fill="#2C2420">
+    <polygon points="490,220 640,290 490,360 340,290" />
+  </g>
+  <text
+    x="490"
+    y="295"
+    text-anchor="middle"
+    fill="#E8E0D4"
+    font-family="Barlow Condensed"
+    font-size="20"
+    letter-spacing="1"
+  >
+    DECISION ENGINE
+  </text>
+  <text
+    x="490"
+    y="325"
+    text-anchor="middle"
+    fill="#9A9088"
+    font-family="Libre Baskerville"
+    font-size="13"
+  >
+    Routing · Policies · Model selection
+  </text>
+
+  <!-- Routing Logic -->
+  <g>
+    <rect
+      x="680"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="810"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      ROUTING LOGIC
+    </text>
+    <text
+      x="810"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Agent selection · Fallbacks · Escalation
+    </text>
+  </g>
+
+  <!-- Agent Fan-Out -->
+  <g>
+    <rect
+      x="200"
+      y="420"
+      width="220"
+      height="120"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2"
+    />
+    <text
+      x="310"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="18"
+    >
+      AGENT A
+    </text>
+
+    <rect
+      x="460"
+      y="420"
+      width="220"
+      height="120"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2"
+    />
+    <text
+      x="570"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="18"
+    >
+      AGENT B
+    </text>
+
+    <rect
+      x="720"
+      y="420"
+      width="220"
+      height="120"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2"
+    />
+    <text
+      x="830"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="18"
+    >
+      AGENT C
+    </text>
+  </g>
+
+  <!-- Main pipeline arrows -->
+  <g stroke="#B8922A" stroke-width="2.4" fill="none">
+    <!-- Evidence -> Decision -->
+    <line x1="340" y1="290" x2="340" y2="290" />
+    <!-- Decision -> Routing -->
+    <line x1="640" y1="290" x2="680" y2="290" />
+    <!-- Routing -> Agents -->
+    <line x1="810" y1="360" x2="310" y2="420" />
+    <line x1="810" y1="360" x2="570" y2="420" />
+    <line x1="810" y1="360" x2="830" y2="420" />
+  </g>
+
+  <!-- Ember nodes -->
+  <g fill="#C4501A">
+    <circle cx="340" cy="290" r="5" />
+    <circle cx="640" cy="290" r="5" />
+    <circle cx="810" cy="360" r="6" />
+    <circle cx="310" cy="420" r="4" />
+    <circle cx="570" cy="420" r="4" />
+    <circle cx="830" cy="420" r="4" />
+  </g>
+
+  <!-- CIC Crest watermark -->
+  <g
+    transform="translate(1020, 700) scale(0.7)"
+    fill="none"
+    stroke="#B8922A"
+    stroke-width="2"
+    opacity="0.22"
+  >
+    <path d="M20 10 L80 10 L90 30 L50 90 L10 30 Z" />
+    <line x1="30" y1="25" x2="70" y2="25" />
+    <line x1="30" y1="40" x2="70" y2="40" />
+    <line x1="30" y1="55" x2="70" y2="55" />
+  </g>
+</svg>

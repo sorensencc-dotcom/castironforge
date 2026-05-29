@@ -1,0 +1,382 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="800"
+  viewBox="0 0 1200 800"
+>
+  <!-- Background (Forge) -->
+  <rect x="0" y="0" width="1200" height="800" fill="#1A1410" />
+
+  <!-- Grid (subtle) -->
+  <g stroke="#2C2420" stroke-width="1">
+    <!-- verticals -->
+    <line x1="100" y1="0" x2="100" y2="800" />
+    <line x1="300" y1="0" x2="300" y2="800" />
+    <line x1="500" y1="0" x2="500" y2="800" />
+    <line x1="700" y1="0" x2="700" y2="800" />
+    <line x1="900" y1="0" x2="900" y2="800" />
+    <line x1="1100" y1="0" x2="1100" y2="800" />
+    <!-- horizontals -->
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="260" x2="1200" y2="260" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="540" x2="1200" y2="540" />
+    <line x1="0" y1="680" x2="1200" y2="680" />
+  </g>
+
+  <!-- Title -->
+  <text
+    x="60"
+    y="70"
+    fill="#E8E0D4"
+    font-family="Playfair Display, serif"
+    font-size="32"
+  >
+    CIC Multi-Region Architecture
+  </text>
+
+  <!-- Region Registry -->
+  <g>
+    <rect
+      x="80"
+      y="120"
+      width="260"
+      height="120"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="210"
+      y="165"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="18"
+      letter-spacing="1"
+    >
+      REGION REGISTRY
+    </text>
+    <text
+      x="210"
+      y="195"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville, serif"
+      font-size="13"
+    >
+      Regions · Capabilities · Health
+    </text>
+  </g>
+
+  <!-- Control Plane -->
+  <g>
+    <rect
+      x="460"
+      y="120"
+      width="280"
+      height="120"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="600"
+      y="165"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="18"
+      letter-spacing="1"
+    >
+      CONTROL PLANE
+    </text>
+    <text
+      x="600"
+      y="195"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville, serif"
+      font-size="13"
+    >
+      Routing · Policy · Circuit Breakers
+    </text>
+  </g>
+
+  <!-- Proxy Router -->
+  <g>
+    <rect
+      x="860"
+      y="120"
+      width="260"
+      height="120"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="990"
+      y="165"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="18"
+      letter-spacing="1"
+    >
+      PROXY ROUTER
+    </text>
+    <text
+      x="990"
+      y="195"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville, serif"
+      font-size="13"
+    >
+      Region-aware ingress
+    </text>
+  </g>
+
+  <!-- Region A -->
+  <g>
+    <rect
+      x="120"
+      y="320"
+      width="280"
+      height="260"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="260"
+      y="355"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="18"
+      letter-spacing="1"
+    >
+      REGION A
+    </text>
+
+    <!-- Region A: Agents -->
+    <rect
+      x="150"
+      y="380"
+      width="220"
+      height="70"
+      fill="none"
+      stroke="#B8922A"
+      stroke-width="1.8"
+    />
+    <text
+      x="260"
+      y="420"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="15"
+      letter-spacing="1"
+    >
+      AGENTS
+    </text>
+
+    <!-- Region A: Harvester -->
+    <rect
+      x="150"
+      y="470"
+      width="220"
+      height="70"
+      fill="none"
+      stroke="#B8922A"
+      stroke-width="1.8"
+    />
+    <text
+      x="260"
+      y="510"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="15"
+      letter-spacing="1"
+    >
+      HARVESTER NODES
+    </text>
+  </g>
+
+  <!-- Region B -->
+  <g>
+    <rect
+      x="460"
+      y="320"
+      width="280"
+      height="260"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="600"
+      y="355"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="18"
+      letter-spacing="1"
+    >
+      REGION B
+    </text>
+
+    <!-- Region B: Agents -->
+    <rect
+      x="490"
+      y="380"
+      width="220"
+      height="70"
+      fill="none"
+      stroke="#B8922A"
+      stroke-width="1.8"
+    />
+    <text
+      x="600"
+      y="420"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="15"
+      letter-spacing="1"
+    >
+      AGENTS
+    </text>
+
+    <!-- Region B: Harvester -->
+    <rect
+      x="490"
+      y="470"
+      width="220"
+      height="70"
+      fill="none"
+      stroke="#B8922A"
+      stroke-width="1.8"
+    />
+    <text
+      x="600"
+      y="510"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="15"
+      letter-spacing="1"
+    >
+      HARVESTER NODES
+    </text>
+  </g>
+
+  <!-- Region C -->
+  <g>
+    <rect
+      x="800"
+      y="320"
+      width="280"
+      height="260"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="940"
+      y="355"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="18"
+      letter-spacing="1"
+    >
+      REGION C
+    </text>
+
+    <!-- Region C: Agents -->
+    <rect
+      x="830"
+      y="380"
+      width="220"
+      height="70"
+      fill="none"
+      stroke="#B8922A"
+      stroke-width="1.8"
+    />
+    <text
+      x="940"
+      y="420"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="15"
+      letter-spacing="1"
+    >
+      AGENTS
+    </text>
+
+    <!-- Region C: Harvester -->
+    <rect
+      x="830"
+      y="470"
+      width="220"
+      height="70"
+      fill="none"
+      stroke="#B8922A"
+      stroke-width="1.8"
+    />
+    <text
+      x="940"
+      y="510"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="15"
+      letter-spacing="1"
+    >
+      HARVESTER NODES
+    </text>
+  </g>
+
+  <!-- Connections: Registry -> Control Plane -> Proxy -> Regions -->
+  <g stroke="#B8922A" stroke-width="2.2" fill="none">
+    <!-- Registry -> Control Plane -->
+    <line x1="340" y1="180" x2="460" y2="180" />
+    <!-- Control Plane -> Proxy -->
+    <line x1="740" y1="180" x2="860" y2="180" />
+    <!-- Proxy -> Regions (fan-out) -->
+    <line x1="990" y1="240" x2="260" y2="320" />
+    <line x1="990" y1="240" x2="600" y2="320" />
+    <line x1="990" y1="240" x2="940" y2="320" />
+  </g>
+
+  <!-- Ember nodes on key junctions -->
+  <g fill="#C4501A">
+    <circle cx="340" cy="180" r="5" />
+    <circle cx="460" cy="180" r="5" />
+    <circle cx="740" cy="180" r="5" />
+    <circle cx="860" cy="180" r="5" />
+    <circle cx="990" cy="240" r="6" />
+    <circle cx="260" cy="320" r="5" />
+    <circle cx="600" cy="320" r="5" />
+    <circle cx="940" cy="320" r="5" />
+  </g>
+
+  <!-- CIC Crest watermark (bottom-right) -->
+  <g
+    transform="translate(1020, 700) scale(0.7)"
+    fill="none"
+    stroke="#B8922A"
+    stroke-width="2"
+    opacity="0.22"
+  >
+    <!-- Simple geometric crest: shield + inner grid -->
+    <path d="M20 10 L80 10 L90 30 L50 90 L10 30 Z" />
+    <line x1="30" y1="25" x2="70" y2="25" />
+    <line x1="30" y1="40" x2="70" y2="40" />
+    <line x1="30" y1="55" x2="70" y2="55" />
+  </g>
+</svg>

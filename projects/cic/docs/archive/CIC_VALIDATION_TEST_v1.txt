@@ -1,0 +1,121 @@
+CIC_VALIDATION_TEST_v1
+
+PURPOSE
+- Validate that the CIC repo and docs are complete and aligned with the v3.0 spec.
+
+RUN THIS CHECKLIST MANUALLY OR VIA SCRIPT.
+
+CHECKLIST
+
+1) FILE PRESENCE — CODE
+- Verify all exist:
+  - cic/core/ingest/
+  - cic/core/enrich/
+  - cic/core/compression/
+  - cic/core/orchestrate/
+  - cic/core/synthesize/
+  - cic/core/audit/
+  - cic/core/models/
+  - cic/agents/
+  - cic/pipelines/
+
+- Verify these specific files exist:
+  - cic/core/orchestrate/evidence_packet.py
+  - cic/core/audit/audit_trace.py
+  - cic/core/models/router.py
+  - cic/pipelines/pipeline_compress.py
+  - cic/pipelines/pipeline_full.py
+  - cic/agents/ingestion_agent.py
+  - cic/agents/enrichment_agent.py
+  - cic/agents/compression_agent.py
+  - cic/agents/orchestrator_agent.py
+  - cic/agents/synthesis_agent.py
+  - cic/agents/audit_agent.py
+
+2) FILE PRESENCE — DOCS
+- Verify all exist:
+  - cic/docs/CIC_SYSTEM.md
+  - cic/docs/CIC_ARCHITECTURE.md
+  - cic/docs/CIC_MASTER_ROADMAP_v3.0.md
+  - cic/docs/CIC_PIPELINE_FLOW.md
+  - cic/docs/CIC_PIPELINE_FLOW_DIAGRAM.md
+  - cic/docs/CIC_AGENT_CONTRACTS.md
+  - cic/docs/CIC_DATA_CONTRACTS.md
+  - cic/docs/CIC_SIGNAL_REFERENCE.md
+  - cic/docs/CIC_OPERATOR_GUIDE.md
+  - cic/docs/CIC_DEBUG_GUIDE.md
+  - cic/docs/CIC_TEST_PLAN.md
+  - cic/docs/CIC_DOCS_INDEX.md
+  - cic/docs/README.md
+
+3) TYPE ALIGNMENT
+- Confirm these types exist in code and match CIC_DATA_CONTRACTS.md:
+  - RawArtifact
+  - EnrichedArtifact
+  - EvidencePacket
+  - AuditTrace
+  - CrossSourceCompressionResponse (or equivalent cross_source structure)
+
+- Confirm Synthesis output structure matches CIC_DATA_CONTRACTS.md:
+  - narrative.narrative
+  - narrative.sections
+  - narrative.confidence
+  - contradictions.contradictions
+  - contradictions.alignment_score
+  - summary (str)
+
+4) PIPELINE ENTRYPOINTS
+- Confirm:
+  - run_ingest_pipeline(sources: List[str]) → List[RawArtifact]
+  - run_enrich_pipeline(raw_artifacts: List[RawArtifact]) → List[EnrichedArtifact]
+  - run_compression_pipeline(topic_id: str, enriched: List[EnrichedArtifact]) → EvidencePacket
+  - run_full_pipeline(topic_id: str, sources: List[str]) → Dict
+
+5) AGENT CONTRACTS
+- Confirm:
+  - ingestion_agent.run_ingestion_agent(sources: List[str]) → List[RawArtifact]
+  - enrichment_agent.run_enrichment_agent(raw_artifacts: List[RawArtifact]) → List[EnrichedArtifact]
+  - compression_agent.run_compression_agent(topic_id: str, enriched: List[EnrichedArtifact]) → EvidencePacket
+  - orchestrator_agent.run_orchestrator_agent(evidence_packet: EvidencePacket) → orchestration output
+  - synthesis_agent.run_synthesis_agent(evidence_packet: EvidencePacket) → synthesis output
+  - audit_agent.run_audit_agent(evidence_packet: EvidencePacket, synthesis_output) → audit output
+
+6) SIGNALS
+- Confirm cross_source.signals contains:
+  - agreement_density: float
+  - contradiction_density: float
+  - coverage: float
+
+7) ORCHESTRATOR LOGIC
+- Confirm orchestrate() uses signals to decide:
+  - run_synthesis
+  - run_audit
+
+8) IMPORT SANITY
+- Run static import check:
+  - python -m compileall cic
+- Ensure no ImportError / SyntaxError.
+
+9) TEST SCAFFOLD (OPTIONAL IF NOT YET IMPLEMENTED)
+- Confirm directories exist:
+  - cic/tests/core/
+  - cic/tests/agents/
+  - cic/tests/pipelines/
+  - cic/tests/golden/
+
+10) DRY RUN
+- In a Python shell:
+  - Import run_full_pipeline.
+  - Call with a dummy topic_id and at least one reachable URL.
+  - Confirm it returns a dict with keys:
+    - topic_id
+    - raw
+    - enriched
+    - evidence
+    - orchestration
+
+RESULT
+- If all checks pass: CIC v3.0 is structurally valid and aligned with docs.
+- If any check fails: feed failures back into CLAUDE_BOB_CIC_FINISHER_v1.
+
+END

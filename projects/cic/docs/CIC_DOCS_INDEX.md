@@ -18,6 +18,9 @@
 - **CIC_GOAL_DSL.md (v0.9.2-alpha)**  
   Declarative DSL for autonomous goals.
 
+- **CIC_AUDIT_AGENT_SPEC.md (v1.0.0)**  
+  Technical spec for epistemic integrity, scoring models, and anomaly detection.
+
 - **CIC_NARRATIVE_GAP_REGISTER.md (v1.0.0)**  
   Machine-readable story gaps.
 

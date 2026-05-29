@@ -1,0 +1,115 @@
+CIC_VALIDATION_TEST_v2
+
+PURPOSE
+Validate CIC v3.0 repo completeness and correctness.
+
+CHECKLIST
+
+1) CODE PRESENCE
+- Confirm existence of:
+  cic/core/ingest/
+  cic/core/enrich/
+  cic/core/compression/
+  cic/core/orchestrate/
+  cic/core/synthesize/
+  cic/core/audit/
+  cic/core/models/
+  cic/agents/
+  cic/pipelines/
+
+- Confirm files:
+  cic/core/orchestrate/evidence_packet.py
+  cic/core/audit/audit_trace.py
+  cic/core/models/router.py
+  cic/pipelines/pipeline_compress.py
+  cic/pipelines/pipeline_full.py
+  cic/agents/ingestion_agent.py
+  cic/agents/enrichment_agent.py
+  cic/agents/compression_agent.py
+  cic/agents/orchestrator_agent.py
+  cic/agents/synthesis_agent.py
+  cic/agents/audit_agent.py
+
+2) DOC PRESENCE
+- Confirm:
+  cic/docs/CIC_SYSTEM.md
+  cic/docs/CIC_ARCHITECTURE.md
+  cic/docs/CIC_MASTER_ROADMAP_v3.0.md
+  cic/docs/CIC_PIPELINE_FLOW.md
+  cic/docs/CIC_PIPELINE_FLOW_DIAGRAM.md
+  cic/docs/CIC_AGENT_CONTRACTS.md
+  cic/docs/CIC_DATA_CONTRACTS.md
+  cic/docs/CIC_SIGNAL_REFERENCE.md
+  cic/docs/CIC_OPERATOR_GUIDE.md
+  cic/docs/CIC_DEBUG_GUIDE.md
+  cic/docs/CIC_TEST_PLAN.md
+  cic/docs/CIC_DOCS_INDEX.md
+  cic/docs/README.md
+
+3) TYPE ALIGNMENT
+- Confirm code implements:
+  RawArtifact
+  EnrichedArtifact
+  EvidencePacket
+  AuditTrace
+  CrossSourceCompressionResponse
+
+- Confirm synthesis output matches CIC_DATA_CONTRACTS.md:
+  narrative.narrative
+  narrative.sections
+  narrative.confidence
+  contradictions.contradictions
+  contradictions.alignment_score
+  summary
+
+4) PIPELINE ENTRYPOINTS
+- Confirm:
+  run_ingest_pipeline()
+  run_enrich_pipeline()
+  run_compression_pipeline()
+  run_full_pipeline()
+
+5) AGENT CONTRACTS
+- Confirm:
+  ingestion_agent.run_ingestion_agent()
+  enrichment_agent.run_enrichment_agent()
+  compression_agent.run_compression_agent()
+  orchestrator_agent.run_orchestrator_agent()
+  synthesis_agent.run_synthesis_agent()
+  audit_agent.run_audit_agent()
+
+6) SIGNALS
+- Confirm:
+  agreement_density
+  contradiction_density
+  coverage
+
+7) ORCHESTRATOR LOGIC
+- Confirm decisions use signals exactly as documented.
+
+8) IMPORT SANITY
+- Run:
+  python -m compileall cic
+
+9) TEST STRUCTURE
+- Confirm:
+  cic/tests/core/
+  cic/tests/agents/
+  cic/tests/pipelines/
+  cic/tests/golden/
+
+10) DRY RUN
+- Import run_full_pipeline.
+- Execute with a reachable URL.
+- Confirm output keys:
+  topic_id
+  raw
+  enriched
+  evidence
+  orchestration
+
+RESULT
+- If all checks pass: CIC v3.0 is valid.
+- If any fail: feed failures into CLAUDE_BOB_CIC_FINISHER_v2.
+
+END

@@ -1,0 +1,269 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="800"
+  viewBox="0 0 1200 800"
+>
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="800" fill="#1A1410" />
+
+  <!-- Grid -->
+  <g stroke="#2C2420" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="800" />
+    <line x1="300" y1="0" x2="300" y2="800" />
+    <line x1="500" y1="0" x2="500" y2="800" />
+    <line x1="700" y1="0" x2="700" y2="800" />
+    <line x1="900" y1="0" x2="900" y2="800" />
+    <line x1="1100" y1="0" x2="1100" y2="800" />
+
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="260" x2="1200" y2="260" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="540" x2="1200" y2="540" />
+    <line x1="0" y1="680" x2="1200" y2="680" />
+  </g>
+
+  <!-- Title -->
+  <text
+    x="60"
+    y="70"
+    fill="#E8E0D4"
+    font-family="Playfair Display, serif"
+    font-size="32"
+  >
+    Region Registry & Proxy Logic
+  </text>
+
+  <!-- Region Registry -->
+  <g>
+    <rect
+      x="80"
+      y="220"
+      width="300"
+      height="160"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.6"
+    />
+    <text
+      x="230"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      REGION REGISTRY
+    </text>
+    <text
+      x="230"
+      y="295"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Regions · Capabilities · Health
+    </text>
+    <text
+      x="230"
+      y="325"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Authoritative source of truth
+    </text>
+  </g>
+
+  <!-- Control Plane -->
+  <g>
+    <rect
+      x="440"
+      y="220"
+      width="300"
+      height="160"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.6"
+    />
+    <text
+      x="590"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      CONTROL PLANE
+    </text>
+    <text
+      x="590"
+      y="295"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Policies · Health · Circuit breakers
+    </text>
+    <text
+      x="590"
+      y="325"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Region selection logic
+    </text>
+  </g>
+
+  <!-- Proxy Router -->
+  <g>
+    <rect
+      x="800"
+      y="220"
+      width="300"
+      height="160"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.6"
+    />
+    <text
+      x="950"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="20"
+      letter-spacing="1"
+    >
+      PROXY ROUTER
+    </text>
+    <text
+      x="950"
+      y="295"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Region-aware ingress
+    </text>
+    <text
+      x="950"
+      y="325"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville"
+      font-size="13"
+    >
+      Dispatch to selected region
+    </text>
+  </g>
+
+  <!-- Region Nodes -->
+  <g>
+    <rect
+      x="200"
+      y="460"
+      width="220"
+      height="120"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2"
+    />
+    <text
+      x="310"
+      y="500"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="18"
+    >
+      REGION A
+    </text>
+
+    <rect
+      x="490"
+      y="460"
+      width="220"
+      height="120"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2"
+    />
+    <text
+      x="600"
+      y="500"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="18"
+    >
+      REGION B
+    </text>
+
+    <rect
+      x="780"
+      y="460"
+      width="220"
+      height="120"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2"
+    />
+    <text
+      x="890"
+      y="500"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed"
+      font-size="18"
+    >
+      REGION C
+    </text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#B8922A" stroke-width="2.4" fill="none">
+    <!-- Registry -> Control Plane -->
+    <line x1="380" y1="300" x2="440" y2="300" />
+
+    <!-- Control Plane -> Proxy -->
+    <line x1="740" y1="300" x2="800" y2="300" />
+
+    <!-- Proxy -> Regions -->
+    <line x1="950" y1="380" x2="310" y2="460" />
+    <line x1="950" y1="380" x2="600" y2="460" />
+    <line x1="950" y1="380" x2="890" y2="460" />
+  </g>
+
+  <!-- Ember nodes -->
+  <g fill="#C4501A">
+    <circle cx="380" cy="300" r="5" />
+    <circle cx="740" cy="300" r="5" />
+    <circle cx="950" cy="380" r="6" />
+    <circle cx="310" cy="460" r="4" />
+    <circle cx="600" cy="460" r="4" />
+    <circle cx="890" cy="460" r="4" />
+  </g>
+
+  <!-- CIC Crest watermark -->
+  <g
+    transform="translate(1020, 700) scale(0.7)"
+    fill="none"
+    stroke="#B8922A"
+    stroke-width="2"
+    opacity="0.22"
+  >
+    <path d="M20 10 L80 10 L90 30 L50 90 L10 30 Z" />
+    <line x1="30" y1="25" x2="70" y2="25" />
+    <line x1="30" y1="40" x2="70" y2="40" />
+    <line x1="30" y1="55" x2="70" y2="55" />
+  </g>
+</svg>

@@ -1,0 +1,336 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="800"
+  viewBox="0 0 1200 800"
+>
+  <!-- Background (Forge) -->
+  <rect x="0" y="0" width="1200" height="800" fill="#1A1410" />
+
+  <!-- Grid -->
+  <g stroke="#2C2420" stroke-width="1">
+    <!-- verticals -->
+    <line x1="100" y1="0" x2="100" y2="800" />
+    <line x1="300" y1="0" x2="300" y2="800" />
+    <line x1="500" y1="0" x2="500" y2="800" />
+    <line x1="700" y1="0" x2="700" y2="800" />
+    <line x1="900" y1="0" x2="900" y2="800" />
+    <line x1="1100" y1="0" x2="1100" y2="800" />
+    <!-- horizontals -->
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="260" x2="1200" y2="260" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="540" x2="1200" y2="540" />
+    <line x1="0" y1="680" x2="1200" y2="680" />
+  </g>
+
+  <!-- Title -->
+  <text
+    x="60"
+    y="70"
+    fill="#E8E0D4"
+    font-family="Playfair Display, serif"
+    font-size="32"
+  >
+    Harvester Pipeline — Discovery → Metadata → Sidecar
+  </text>
+
+  <!-- Stage 1: Discovery -->
+  <g>
+    <rect
+      x="80"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="210"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="20"
+      letter-spacing="1"
+    >
+      DISCOVERY
+    </text>
+    <text
+      x="210"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville, serif"
+      font-size="13"
+    >
+      Source scanning · Schedules · Triggers
+    </text>
+  </g>
+
+  <!-- Stage 2: Fetch & Normalize -->
+  <g>
+    <rect
+      x="360"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="490"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="20"
+      letter-spacing="1"
+    >
+      FETCH &amp; NORMALIZE
+    </text>
+    <text
+      x="490"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville, serif"
+      font-size="13"
+    >
+      Raw content · Canonical form
+    </text>
+  </g>
+
+  <!-- Stage 3: Metadata Extraction -->
+  <g>
+    <rect
+      x="640"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="770"
+      y="260"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="20"
+      letter-spacing="1"
+    >
+      METADATA
+    </text>
+    <text
+      x="770"
+      y="290"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville, serif"
+      font-size="13"
+    >
+      Title · Timestamps · Entities · Links
+    </text>
+  </g>
+
+  <!-- Stage 4: Sidecar & Evidence Packet -->
+  <g>
+    <rect
+      x="920"
+      y="220"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.5"
+    />
+    <text
+      x="1050"
+      y="255"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="20"
+      letter-spacing="1"
+    >
+      SIDECAR
+    </text>
+    <text
+      x="1050"
+      y="285"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville, serif"
+      font-size="13"
+    >
+      Metadata sidecar · Evidence packet
+    </text>
+  </g>
+
+  <!-- Lower lane: Extractors -->
+  <g>
+    <rect
+      x="200"
+      y="420"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.0"
+    />
+    <text
+      x="330"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="18"
+      letter-spacing="1"
+    >
+      EXTRACTORS
+    </text>
+    <text
+      x="330"
+      y="490"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville, serif"
+      font-size="13"
+    >
+      Text · Tables · Images · Code
+    </text>
+  </g>
+
+  <g>
+    <rect
+      x="520"
+      y="420"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.0"
+    />
+    <text
+      x="650"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="18"
+      letter-spacing="1"
+    >
+      ENRICHMENT
+    </text>
+    <text
+      x="650"
+      y="490"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville, serif"
+      font-size="13"
+    >
+      Normalized fields · Derived signals
+    </text>
+  </g>
+
+  <g>
+    <rect
+      x="840"
+      y="420"
+      width="260"
+      height="140"
+      fill="#2C2420"
+      stroke="#B8922A"
+      stroke-width="2.0"
+    />
+    <text
+      x="970"
+      y="460"
+      text-anchor="middle"
+      fill="#E8E0D4"
+      font-family="Barlow Condensed, sans-serif"
+      font-size="18"
+      letter-spacing="1"
+    >
+      OUTPUT CHANNELS
+    </text>
+    <text
+      x="970"
+      y="490"
+      text-anchor="middle"
+      fill="#9A9088"
+      font-family="Libre Baskerville, serif"
+      font-size="13"
+    >
+      Orchestrator · Queue · Index
+    </text>
+  </g>
+
+  <!-- Main pipeline arrows -->
+  <g stroke="#B8922A" stroke-width="2.4" fill="none">
+    <!-- Discovery -> Fetch -->
+    <line x1="340" y1="290" x2="360" y2="290" />
+    <!-- Fetch -> Metadata -->
+    <line x1="620" y1="290" x2="640" y2="290" />
+    <!-- Metadata -> Sidecar -->
+    <line x1="900" y1="290" x2="920" y2="290" />
+  </g>
+
+  <!-- Ember nodes on main pipeline -->
+  <g fill="#C4501A">
+    <circle cx="340" cy="290" r="5" />
+    <circle cx="620" cy="290" r="5" />
+    <circle cx="900" cy="290" r="5" />
+  </g>
+
+  <!-- Branch: Fetch -> Extractors -->
+  <g stroke="#B8922A" stroke-width="2.0" fill="none">
+    <line x1="490" y1="360" x2="330" y2="420" />
+    <line x1="490" y1="360" x2="650" y2="420" />
+  </g>
+  <g fill="#C4501A">
+    <circle cx="490" cy="360" r="5" />
+    <circle cx="330" cy="420" r="4" />
+    <circle cx="650" cy="420" r="4" />
+  </g>
+
+  <!-- Branch: Enrichment -> Output Channels -->
+  <g stroke="#B8922A" stroke-width="2.0" fill="none">
+    <line x1="780" y1="490" x2="840" y2="490" />
+  </g>
+  <g fill="#C4501A">
+    <circle cx="780" cy="490" r="4" />
+    <circle cx="840" cy="490" r="4" />
+  </g>
+
+  <!-- Caption: Evidence Packet -->
+  <text
+    x="1050"
+    y="340"
+    text-anchor="middle"
+    fill="#9A9088"
+    font-family="Libre Baskerville, serif"
+    font-size="13"
+  >
+    Emits canonical evidence packet
+  </text>
+
+  <!-- CIC Crest watermark (bottom-right) -->
+  <g
+    transform="translate(1020, 700) scale(0.7)"
+    fill="none"
+    stroke="#B8922A"
+    stroke-width="2"
+    opacity="0.22"
+  >
+    <path d="M20 10 L80 10 L90 30 L50 90 L10 30 Z" />
+    <line x1="30" y1="25" x2="70" y2="25" />
+    <line x1="30" y1="40" x2="70" y2="40" />
+    <line x1="30" y1="55" x2="70" y2="55" />
+  </g>
+</svg>
