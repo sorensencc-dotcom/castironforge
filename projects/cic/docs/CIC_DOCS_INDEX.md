@@ -21,6 +21,9 @@
 - **CIC_AUDIT_AGENT_SPEC.md (v1.0.0)**  
   Technical spec for epistemic integrity, scoring models, and anomaly detection.
 
+- **SEARXNG_EXECUTION_PLAN_GAP-001.md (v1.0.0)**  
+  Deterministic retrieval sequence for GAP-001 autonomous research.
+
 - **CIC_NARRATIVE_GAP_REGISTER.md (v1.0.0)**  
   Machine-readable story gaps.
 
