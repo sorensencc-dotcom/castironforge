@@ -7,6 +7,7 @@ import http from 'node:http';
 import busboy from 'busboy';
 import { ingest } from './ingestionAgent.js';
 import { log, logError } from '../lib/logger.js';
+import { healthCheckQdrant } from '../providers/qdrant.js';
 
 const AGENT_ID = process.env.INGESTION_AGENT_ID;
 const MODULE = 'ingestion-server';
@@ -28,6 +29,18 @@ export function startServer(port) {
         ok: true,
         agentId: AGENT_ID,
         uptime: process.uptime(),
+        timestamp: new Date().toISOString()
+      }));
+      return;
+    }
+
+    if (url.pathname === '/health/qdrant' && req.method === 'GET') {
+      const isHealthy = await healthCheckQdrant();
+      const statusCode = isHealthy ? 200 : 503;
+      res.writeHead(statusCode, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({
+        ok: isHealthy,
+        status: isHealthy ? 'ONLINE' : 'OFFLINE',
         timestamp: new Date().toISOString()
       }));
       return;

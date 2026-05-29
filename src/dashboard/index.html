@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIC Operator Dashboard</title>
+    <style>
+        body { font-family: 'JetBrains Mono', monospace; background: #0a0a0a; color: #eee; margin: 2rem; }
+        h1 { border-bottom: 2px solid #333; padding-bottom: 0.5rem; color: #ff5722; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .card { background: #1a1a1a; padding: 1rem; border-left: 4px solid #333; border-radius: 4px; }
+        .card.online { border-left-color: #4caf50; }
+        .card.offline { border-left-color: #f44336; }
+        .card.degraded { border-left-color: #ffeb3b; }
+        .pulse { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
+        .online .pulse { background: #4caf50; box-shadow: 0 0 8px #4caf50; }
+        .offline .pulse { background: #f44336; }
+        .degraded .pulse { background: #ffeb3b; }
+        .metrics { font-size: 0.8rem; color: #888; margin-top: 1rem; }
+        .pipeline { margin-top: 2rem; padding: 1rem; background: #111; border: 1px dashed #333; }
+    </style>
+</head>
+<body>
+    <h1>CIC OPERATOR DASHBOARD v1.0.0</h1>
+    <div class="grid" id="agent-grid">
+        <!-- Agents will be rendered here -->
+    </div>
+
+    <div class="pipeline">
+        <h3>INGESTION PIPELINE DIAGRAM</h3>
+        <p>Harvester → Queue → Extractors → Indexer → Qdrant</p>
+    </div>
+
+    <div class="metrics" id="host-metrics">
+        Loading host health...
+    </div>
+
+    <script>
+        const agents = [
+            { id: 'harvester', name: 'Harvester', endpoint: '/health/harvester' },
+            { id: 'extractor', name: 'Extractor', endpoint: '/health/extractor' },
+            { id: 'analyzer', name: 'Analyzer', endpoint: '/health/analyzer' },
+            { id: 'indexer', name: 'Indexer', endpoint: '/health/indexer' },
+            { id: 'sweeper', name: 'Sweeper', endpoint: '/health/sweeper' },
+            { id: 'synthesis', name: 'Synthesis', endpoint: '/health/synthesis' },
+            { id: 'qdrant', name: 'Qdrant', endpoint: '/health/qdrant' }
+        ];
+
+        async function poll() {
+            const grid = document.getElementById('agent-grid');
+            grid.innerHTML = '';
+
+            for (const agent of agents) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.id = agent.id;
+                card.innerHTML = `<span class="pulse"></span><strong>${agent.name}</strong><br><small>Checking...</small>`;
+                grid.appendChild(card);
+
+                try {
+                    const res = await fetch(agent.endpoint);
+                    const data = await res.json();
+                    if (data.ok) {
+                        card.classList.add('online');
+                        card.querySelector('small').innerText = 'ONLINE';
+                    } else {
+                        card.classList.add('offline');
+                        card.querySelector('small').innerText = 'OFFLINE';
+                    }
+                } catch (e) {
+                    card.classList.add('offline');
+                    card.querySelector('small').innerText = 'ERROR';
+                }
+            }
+        }
+
+        setInterval(poll, 10000);
+        poll();
+    </script>
+</body>
+</html>

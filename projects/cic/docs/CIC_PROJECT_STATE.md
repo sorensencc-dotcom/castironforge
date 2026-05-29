@@ -1,5 +1,5 @@
 # CIC_PROJECT_STATE.md  
-# v1.3.0 | 2026-05-28 | ACTIVE  
+# v1.3.1 | 2026-05-28 | ACTIVE  
 # Volatile status only — architecture lives in CIC_SYSTEM.md.
 
 ---
@@ -23,8 +23,8 @@
 
 | Section | Description | Status |
 |--------|-------------|--------|
-| §0.1‑A | Qdrant client wiring + connectivity | **NEXT** |
-| §0.2 | Folder scan + classification | Pending |
+| §0.1‑A | Qdrant client wiring + connectivity | **COMPLETE** |
+| §0.2 | Folder scan + classification | **NEXT** |
 | §0.3 | Job planning (ingest targets) | Pending |
 | §0.4 | Job materialization into queue | **COMPLETE** |
 
@@ -47,6 +47,7 @@
 - ImageAnalyzerV2 (v2.0.0) stable.
 - ReverseImageSearchExtractor (v1.0.0) integrated and validated.
 - Extractor chaining functioning in enrichment pipeline.
+- **Qdrant Integration**: Client wired and health checks operational.
 
 ### **Indexer**
 - SQLite WAL mode stable.

@@ -1,5 +1,5 @@
 # CIC_SYSTEM.md — CIC Research Engine  
-# v1.2.0 | 2026-05-28 | ACTIVE  
+# v1.2.1 | 2026-05-28 | ACTIVE  
 # No volatile state here — update CIC_PROJECT_STATE.md.
 
 ---
@@ -58,7 +58,7 @@ src/
   ingestion/        — ingestionAgent, ingestionSchema, ingestionServer
   lib/              — classifier, folder-validator, logger, paths, sidecar, status
   prompts/          — loader, index, guard
-  providers/        — searxng-cic.ts
+  providers/        — searxng-cic.ts, qdrant.js (vector-store client)
   queue/            — producer, dlq, drift, schemas
   sweeper/          — daily-sweeper
   synthesis/        — briefBuilder, briefStore, synthesisAgent
@@ -113,6 +113,9 @@ Sub-extractors (parallel):
 
 Requires: `GEMINI_API_KEY`.  
 Wired to `scripts/run-enricher.js`.  
+
+Extractors may emit vector payloads for Qdrant storage.
+Indexer integrates with Qdrant via `providers/qdrant.js`.
 
 ### 6.3 ReverseImageSearchExtractor (v1.0.0)
 
