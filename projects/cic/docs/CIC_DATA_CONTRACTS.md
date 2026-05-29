@@ -37,12 +37,28 @@ EnrichedArtifact {
   locations: Location[]
   people: Person[]
   reverse_image: ReverseImageResult | None
+  rights_context: RightsMetadata
 }
 ```
 
 ---
 
-## 3. DOCUMENT COMPRESSION OUTPUT
+## 3. RIGHTS METADATA (NEW)
+
+```
+RightsMetadata {
+  license_type: "public_domain" | "cc-by" | "proprietary" | "fair_use" | "unknown"
+  term: "perpetual" | "limited" | "unknown"
+  territory: "worldwide" | "regional" | "unknown"
+  usage_class: "broadcast" | "festival" | "internal" | "educational"
+  source_authority: str
+  clearance_status: "clean" | "pending" | "restricted"
+}
+```
+
+---
+
+## 4. DOCUMENT COMPRESSION OUTPUT
 
 ```
 CompressedDocument {

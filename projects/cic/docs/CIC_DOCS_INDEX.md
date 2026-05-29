@@ -36,8 +36,8 @@
 - **CIC_AGENT_CONTRACTS.md**  
   Formal contracts for all CIC agents.
 
-- **CIC_DATA_CONTRACTS.md**  
-  Typed schemas for all artifact types.
+- **CIC_DATA_CONTRACTS.md (v3.1.0)**  
+  Typed schemas for all artifact types. Includes new RightsMetadata context.
 
 - **CIC_SIGNAL_REFERENCE.md**  
   Definitions and thresholds for cross‑source signals.

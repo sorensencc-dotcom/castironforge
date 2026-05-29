@@ -20,8 +20,8 @@ CIC documentation is now fully **Operator-Grade**. The roadmap bridges film prod
 - **Environment Health**: Host-level monitoring (WSL2) integrated into Control Plane.
 
 ## 3. Immediate Roadmap
-- [ ] **Implementation**: Materialize first `cic.harvester_v2.gap_fill` goal from Narrative Gap Register.
-- [ ] **Enrichment**: Finalize Rights Metadata schema and integrate into Phase 8.
+- [x] **Implementation**: Materialize first `cic.harvester_v2.gap_fill` goal (GAP-001) from Narrative Gap Register.
+- [x] **Enrichment**: Finalize Rights Metadata schema and integrate into Phase 8.
 - [ ] **Audit**: Verify AuditAgent truth thresholds against golden archival sets.
 
 ## 4. Operational Status
@@ -29,3 +29,4 @@ CIC documentation is now fully **Operator-Grade**. The roadmap bridges film prod
 - **Governance**: ACTIVE (DSL-driven)
 - **Telemetry**: LIVE (Host + Agent health)
 - **Authority**: OPERATOR-LED (Refined DSL control)
+- **Goal Status**: GAP-001 Materialized & Ingested.
