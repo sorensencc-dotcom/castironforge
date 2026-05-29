@@ -1,0 +1,26 @@
+{
+  "policies": [
+    {
+      "id": "academic_default",
+      "max_retries": 4,
+      "base_delay_ms": 1500,
+      "backoff_factor": 2.0,
+      "jitter": 0.2,
+      "retryable_statuses": [429, 500, 503]
+    },
+    {
+      "id": "news_default",
+      "max_retries": 3,
+      "base_delay_ms": 800,
+      "backoff_factor": 1.8,
+      "jitter": 0.15
+    },
+    {
+      "id": "general_default",
+      "max_retries": 2,
+      "base_delay_ms": 500,
+      "backoff_factor": 1.5,
+      "jitter": 0.1
+    }
+  ]
+}

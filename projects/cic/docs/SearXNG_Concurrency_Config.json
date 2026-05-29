@@ -1,0 +1,38 @@
+{
+  "run_id": "AUTO",
+  "goal_id": "cic.harvester_v2.GAP-001",
+  "engine_groups": {
+    "academic": {
+      "max_concurrency": 4,
+      "min_concurrency": 1,
+      "burst_limit": 6,
+      "retry_policy": "academic_default",
+      "latency_targets": { "p50": 1500, "p90": 3000 }
+    },
+    "news": {
+      "max_concurrency": 6,
+      "min_concurrency": 2,
+      "burst_limit": 8,
+      "retry_policy": "news_default",
+      "latency_targets": { "p50": 800, "p90": 1500 }
+    },
+    "industry": {
+      "max_concurrency": 6,
+      "min_concurrency": 2,
+      "burst_limit": 8,
+      "retry_policy": "news_default"
+    },
+    "general": {
+      "max_concurrency": 8,
+      "min_concurrency": 2,
+      "burst_limit": 10,
+      "retry_policy": "general_default"
+    },
+    "images": {
+      "max_concurrency": 3,
+      "min_concurrency": 1,
+      "burst_limit": 4,
+      "retry_policy": "general_default"
+    }
+  }
+}

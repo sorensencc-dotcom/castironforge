@@ -1,0 +1,14 @@
+{
+  "goal_id": "cic.harvester_v2.GAP-001",
+  "max_cost_per_run_usd": 2.00,
+  "max_cost_per_query_usd": 0.10,
+  "early_stop_reserve_fraction": 0.20,
+  "min_cost_efficiency_threshold": 0.3,
+  "engine_group_limits": {
+    "academic": 0.80,
+    "news": 0.50,
+    "industry": 0.40,
+    "general": 0.20,
+    "images": 0.10
+  }
+}
