@@ -9,7 +9,7 @@ async function main() {
     log('INFO', MODULE, 'Starting CIC Services via PM2...');
     
     // Start PM2 processes
-    execSync('pm2 start ecosystem.config.js', { stdio: 'inherit' });
+    execSync('pm2 start ecosystem.config.cjs', { stdio: 'inherit' });
     
     log('INFO', MODULE, 'Services started. Opening Dashboard...');
     
