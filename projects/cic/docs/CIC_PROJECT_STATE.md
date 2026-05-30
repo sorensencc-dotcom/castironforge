@@ -1,5 +1,5 @@
 # CIC_PROJECT_STATE.md  
-# v2.0.0 | 2026-05-30 | MASTER FUSION COMPLETE
+# v2.0.1 | 2026-05-30 | MASTER FUSION COMPLETE
 # Volatile status only — architecture lives in CIC_SYSTEM.md.
 
 ---
