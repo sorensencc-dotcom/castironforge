@@ -1,0 +1,11 @@
+{
+  "goal_id": "cic.harvester_v2.GAP-021",
+  "engines": {
+    "primary": "industrial_archives",
+    "secondary": "news_historical"
+  },
+  "fan_out_queries": [
+    "Ford strategic planning 1950s",
+    "Ford financial modernization"
+  ]
+}

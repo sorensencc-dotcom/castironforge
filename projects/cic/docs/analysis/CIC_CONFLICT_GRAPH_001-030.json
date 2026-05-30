@@ -1,0 +1,52 @@
+{
+  "graph": {
+    "nodes": [
+      {"id": "henry_ford", "label": "Henry Ford", "group": "authority", "era": "001-014"},
+      {"id": "edsel_ford", "label": "Edsel Ford", "group": "authority", "era": "006-011"},
+      {"id": "hfii", "label": "Henry Ford II", "group": "authority", "era": "015-021"},
+      {"id": "sorensen", "label": "Charles Sorensen", "group": "industrial", "era": "002-014"},
+      {"id": "bennett", "label": "Harry Bennett", "group": "industrial", "era": "008-015"},
+      {"id": "mcnamara", "label": "Robert McNamara", "group": "strategic", "era": "024-030"},
+      {"id": "whiz_kids", "label": "Whiz Kids", "group": "strategic", "era": "018-027"},
+      {"id": "legacy_execs", "label": "Legacy Executives", "group": "authority", "era": "015-020"},
+      {"id": "soc_dept", "label": "Sociological Department", "group": "cultural", "era": "008"},
+      {"id": "prod_eng", "label": "Production Engineering", "group": "industrial", "era": "004-014"},
+      {"id": "uaw", "label": "UAW", "group": "labor", "era": "009-019"},
+      {"id": "gm", "label": "GM", "group": "strategic", "era": "026"},
+      {"id": "edsel_div", "label": "Edsel Division", "group": "strategic", "era": "022-023"},
+      {"id": "ford_div", "label": "Ford Division", "group": "strategic", "era": "022-030"},
+      {"id": "falcon", "label": "Falcon Program", "group": "strategic", "era": "025"}
+    ],
+    "edges": [
+      {"id": "e1", "source": "henry_ford", "target": "edsel_ford", "type": "authority", "intensity": 0.95, "era": "010-011", "description": "Henry Ford undermines Edsel's authority and modernization efforts."},
+      {"id": "e2", "source": "henry_ford", "target": "sorensen", "type": "authority", "intensity": 0.90, "era": "004-014", "description": "Volatile partnership; Henry's paranoia leads to Sorensen's exit."},
+      {"id": "e3", "source": "sorensen", "target": "bennett", "type": "industrial", "intensity": 0.85, "era": "008-010", "description": "Rivalry over industrial control and influence with Henry."},
+      {"id": "e4", "source": "hfii", "target": "legacy_execs", "type": "authority", "intensity": 0.88, "era": "015-020", "description": "Henry Ford II purges the pre-war executive structure."},
+      {"id": "e5", "source": "hfii", "target": "bennett", "type": "authority", "intensity": 0.92, "era": "015", "description": "HFII fires Harry Bennett to consolidate power."},
+      {"id": "e6", "source": "whiz_kids", "target": "legacy_execs", "type": "cultural", "intensity": 0.80, "era": "018-020", "description": "Quantitative management vs. legacy intuition-driven budgeting."},
+      {"id": "e7", "source": "mcnamara", "target": "hfii", "type": "authority", "intensity": 0.70, "era": "024-028", "description": "Structural tension between HFII's culture and McNamara's metrics."},
+      {"id": "e8", "source": "prod_eng", "target": "soc_dept", "type": "cultural", "intensity": 0.75, "era": "008", "description": "Production throughput vs. moral surveillance and home inspections."},
+      {"id": "e9", "source": "ford_div", "target": "edsel_div", "type": "strategic", "intensity": 0.85, "era": "022-023", "description": "Internal competition and political fragmentation sabotage the Edsel."},
+      {"id": "e10", "source": "gm", "target": "ford_div", "type": "strategic", "intensity": 0.90, "era": "026", "description": "GM's market segmentation forces Ford into strategic catch-up."},
+      {"id": "u1", "source": "uaw", "target": "ford_div", "type": "labor", "intensity": 0.95, "era": "009-019", "description": "Violent pre-war suppression transitions to post-war normalization."},
+      {"id": "e11", "source": "falcon", "target": "edsel_div", "type": "strategic", "intensity": 0.80, "era": "025", "description": "Falcon succeeds as the anti-Edsel; a data-driven victory."}
+    ],
+    "styles": {
+      "node_style": {
+        "authority": {"color": "#ff4d4d", "size": 28},
+        "industrial": {"color": "#4da6ff", "size": 26},
+        "labor": {"color": "#ffcc00", "size": 26},
+        "strategic": {"color": "#66cc66", "size": 24},
+        "cultural": {"color": "#cc66ff", "size": 24}
+      },
+      "edge_style": {
+        "authority": {"color": "#ff1a1a", "width": 3},
+        "industrial": {"color": "#1a75ff", "width": 3},
+        "labor": {"color": "#e6b800", "width": 3},
+        "strategic": {"color": "#33cc33", "width": 2},
+        "cultural": {"color": "#b366ff", "width": 2}
+      }
+    },
+    "layout": "force-directed"
+  }
+}

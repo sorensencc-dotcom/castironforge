@@ -1,0 +1,19 @@
+{
+  "theme": "Security State",
+  "audit": {
+    "type": "Security-State Strict v1.7",
+    "confidence_min": 0.92,
+    "primary_sources": 4,
+    "secondary_sources": 3,
+    "contradiction_penalty": 1.30
+  },
+  "retrieval": {
+    "primary_engines": ["industrial_archives"],
+    "secondary_engines": ["news_historical"],
+    "fanout": ["Harry Bennett Ford Service Department", "Ford surveillance employees"]
+  },
+  "constraints": {
+    "economic_cap": 4.00,
+    "routing": "Pro"
+  }
+}

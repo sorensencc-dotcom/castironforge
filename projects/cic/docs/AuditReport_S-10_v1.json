@@ -1,0 +1,44 @@
+{
+  "header": {
+    "goal_id": "cic.harvester_v2.S-10",
+    "timestamp": "2026-05-30T20:30:04.548Z",
+    "audit_version": "1.0.0",
+    "mode": "simulation"
+  },
+  "summary": {
+    "conf_goal": 0.9,
+    "decision": "PASS",
+    "evidence_count": 4,
+    "cost_usd": 0.12
+  },
+  "findings": [
+    {
+      "id": "b124ee30-8e7a-49c7-90ac-09ed07e1c4b3",
+      "title": "Primary Source for S-10 - Official Archive",
+      "ce": 0.98,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "3c181c84-259a-4a4b-a8b3-ce838ad88cfe",
+      "title": "Internal Memo regarding S-10",
+      "ce": 0.96,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "d25d4aec-3a5c-4d0d-b6d6-cc10f3e97b76",
+      "title": "Technical Review of S-10 Impact",
+      "ce": 0.72,
+      "source_type": "SECONDARY"
+    },
+    {
+      "id": "3978b219-83a6-4f79-87f9-ca0a99e9acbd",
+      "title": "Supporting Documentation for S-10",
+      "ce": 0.94,
+      "source_type": "PRIMARY"
+    }
+  ],
+  "actions": {
+    "decision": "PASS",
+    "next_step": "SYTHESIS"
+  }
+}

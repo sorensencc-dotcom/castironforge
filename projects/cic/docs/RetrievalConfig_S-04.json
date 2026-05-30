@@ -1,0 +1,11 @@
+{
+  "goal_id": "cic.harvester_v2.S-04",
+  "engines": {
+    "primary": "industrial_archives",
+    "secondary": "news_historical"
+  },
+  "fan_out_queries": [
+    "Henry Ford II consolidation of power",
+    "Harry Bennett firing 1945"
+  ]
+}

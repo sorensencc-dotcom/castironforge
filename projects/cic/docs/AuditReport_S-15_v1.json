@@ -1,0 +1,44 @@
+{
+  "header": {
+    "goal_id": "cic.harvester_v2.S-15",
+    "timestamp": "2026-05-30T20:30:06.680Z",
+    "audit_version": "1.0.0",
+    "mode": "simulation"
+  },
+  "summary": {
+    "conf_goal": 0.9,
+    "decision": "PASS",
+    "evidence_count": 4,
+    "cost_usd": 0.12
+  },
+  "findings": [
+    {
+      "id": "26bb759a-3ba4-425f-97cf-437fe3ed700a",
+      "title": "Primary Source for S-15 - Official Archive",
+      "ce": 0.98,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "574e7f8f-72e2-408a-a49c-613f107189c6",
+      "title": "Internal Memo regarding S-15",
+      "ce": 0.96,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "2beb3650-b21a-4a98-9500-479dee7efda4",
+      "title": "Technical Review of S-15 Impact",
+      "ce": 0.72,
+      "source_type": "SECONDARY"
+    },
+    {
+      "id": "609e8b12-fd1b-48d2-a786-96f339681ed3",
+      "title": "Supporting Documentation for S-15",
+      "ce": 0.94,
+      "source_type": "PRIMARY"
+    }
+  ],
+  "actions": {
+    "decision": "PASS",
+    "next_step": "SYTHESIS"
+  }
+}

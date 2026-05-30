@@ -1,0 +1,28 @@
+{
+  "mission_id": "S-09",
+  "goal_id": "cic.harvester_v2.S-09",
+  "audit": {
+    "confidence_min": 0.95,
+    "max_anomalies": 0,
+    "contradiction_penalty": 1.5,
+    "temporal_alignment_strict": true,
+    "required_claims": []
+  },
+  "economics": {
+    "max_cost_usd": 5,
+    "early_stop_reserve": 0.15,
+    "min_efficiency": 0.4
+  },
+  "retrieval": {
+    "engine_groups": {
+      "industrial_archives": {
+        "max_concurrency": 8,
+        "retry_policy": "strict"
+      },
+      "news_historical": {
+        "max_concurrency": 4,
+        "retry_policy": "standard"
+      }
+    }
+  }
+}

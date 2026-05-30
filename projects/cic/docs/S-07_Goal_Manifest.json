@@ -1,0 +1,19 @@
+{
+  "goal_id": "cic.harvester_v2.S-07",
+  "intent": {
+    "description": "CESOR Farm (Michigan): 2,000‑acre industrial laboratory and Sorensen’s personal proving ground.",
+    "owner": "cic.operator"
+  },
+  "constraints": {
+    "max_cost_usd": 4,
+    "security_level": "strict",
+    "model_tier": "pro",
+    "on_failure": "rollback",
+    "max_retries": 3
+  },
+  "success": {
+    "audit.confidence_min": 0.92,
+    "audit.max_anomalies": 0,
+    "pipeline.status": "clean"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "gaps": [
+    { "id": "GAP-001", "profile": "industrial-macro", "theme": "Willow Run", "timeframe": "1941-1945", "intent": "Specific details of Sorensen's 1943 visit to Willow Run and his interaction with Ford executives regarding B-24 production bottlenecks." },
+    { "id": "GAP-002", "profile": "origins", "theme": "Danish Origins", "timeframe": "1881-1900", "intent": "Records of the Sorensen family's emigration from Denmark to the US; specifically identifying the vessel and port of entry." },
+    { "id": "GAP-003", "profile": "industrial-macro", "theme": "Civilian Jeep", "timeframe": "1944-1946", "intent": "Sorensen's role in the transition of Jeep production from military to civilian use." },
+    { "id": "GAP-004", "profile": "macro-systems", "theme": "Industrial Integration", "timeframe": "1905-1913", "intent": "Documents Sorensen’s transition from machinist to Ford’s core production architect, including early line‑balancing and the integration of Highland Park workflows." },
+    { "id": "GAP-005", "profile": "macro-systems", "theme": "Model T Revolution", "timeframe": "1913-1918", "intent": "Covers the birth of continuous‑motion production, the 1913 magneto line, and the 1914 chassis line optimization." },
+    { "id": "GAP-006", "profile": "political-industrial", "theme": "Political-Industrial Conflict", "timeframe": "1918-1921", "intent": "Details the managerial collision between Sorensen and William Knudsen, the Eagle Boat mobilization, and the 1921 resignation event." },
+    { "id": "GAP-007", "profile": "macro-systems", "theme": "Macro-Systems Engineering", "timeframe": "1920-1927", "intent": "Chronicles Sorensen’s role in scaling the Rouge into a fully integrated ore‑to‑vehicle organism, including Blast Furnace A and the 33‑hour production cycle." },
+    { "id": "GAP-008", "profile": "social-governance", "theme": "Industrial-Social Governance", "timeframe": "1914-1925", "intent": "Documents the clash between Ford’s Sociological Department and production leadership, including home inspections, labor compliance, and the Sorensen–Marquis conflict." },
+    { "id": "GAP-009", "profile": "labor-conflict", "theme": "Labor Crisis", "timeframe": "1929-1932", "intent": "The Ford Hunger March and Labor Crisis. Depression-era production collapse, Ford Service Department violence, and Sorensen's crisis management role." },
+    { "id": "GAP-010", "profile": "security-state", "theme": "Security State", "timeframe": "1921-1940", "intent": "The Ford–Bennett Security State. Rise of Harry Bennett, Ford Service Department surveillance, and Sorensen–Bennett rivalry." },
+    { "id": "GAP-011", "profile": "executive-family", "theme": "Executive Conflict", "timeframe": "1930-1943", "intent": "The Ford–Edsel Conflict. Henry vs Edsel managerial and emotional fracture, Sorensen's alignment, and Edsel's health decline." },
+    { "id": "GAP-012", "profile": "executive-family", "theme": "Executive Governance", "timeframe": "1938-1941", "intent": "The Ford Production Board Crisis. Breakdown of executive decision structure before WWII mobilization." },
+    { "id": "GAP-013", "profile": "political-industrial", "theme": "Political-Industrial Mobilization", "timeframe": "1941-1943", "intent": "Ford's WWII Mobilization Conflict. Internal conflict over entry into WWII production and Willow Run scaling." },
+    { "id": "GAP-014", "profile": "executive-family", "theme": "Executive Exit", "timeframe": "1943-1944", "intent": "The Sorensen Departure Arc. Verified timeline and causes of Sorensen's exit from Ford Motor Company." }
+  ]
+}

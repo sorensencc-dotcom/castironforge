@@ -1,0 +1,19 @@
+{
+  "goal_id": "cic.harvester_v2.GAP-010",
+  "intent": {
+    "description": "The Ford–Bennett Security State. Rise of Harry Bennett, Ford Service Department surveillance, and Sorensen–Bennett rivalry.",
+    "owner": "cic.operator"
+  },
+  "constraints": {
+    "max_cost_usd": 4,
+    "security_level": "strict",
+    "model_tier": "pro",
+    "on_failure": "rollback",
+    "max_retries": 3
+  },
+  "success": {
+    "audit.confidence_min": 0.92,
+    "audit.max_anomalies": 0,
+    "pipeline.status": "clean"
+  }
+}

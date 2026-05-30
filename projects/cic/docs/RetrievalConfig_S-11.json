@@ -1,0 +1,11 @@
+{
+  "goal_id": "cic.harvester_v2.S-11",
+  "engines": {
+    "primary": "industrial_archives",
+    "secondary": "news_historical"
+  },
+  "fan_out_queries": [
+    "Sorensen Cuba properties expropriation",
+    "CESOR SA corporate structure"
+  ]
+}

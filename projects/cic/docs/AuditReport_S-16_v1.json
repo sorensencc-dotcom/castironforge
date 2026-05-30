@@ -1,0 +1,44 @@
+{
+  "header": {
+    "goal_id": "cic.harvester_v2.S-16",
+    "timestamp": "2026-05-30T20:30:07.097Z",
+    "audit_version": "1.0.0",
+    "mode": "simulation"
+  },
+  "summary": {
+    "conf_goal": 0.9,
+    "decision": "PASS",
+    "evidence_count": 4,
+    "cost_usd": 0.12
+  },
+  "findings": [
+    {
+      "id": "b2ce505e-9d5f-487b-ac51-fc7d4893c833",
+      "title": "Primary Source for S-16 - Official Archive",
+      "ce": 0.98,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "7f11f999-8d0b-4a0c-af6b-c349d00438b1",
+      "title": "Internal Memo regarding S-16",
+      "ce": 0.96,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "cfb00649-700b-4970-ad23-7e9a9ef5b4c1",
+      "title": "Technical Review of S-16 Impact",
+      "ce": 0.72,
+      "source_type": "SECONDARY"
+    },
+    {
+      "id": "ece7a503-65a1-4d18-b4c5-4e38f00af316",
+      "title": "Supporting Documentation for S-16",
+      "ce": 0.94,
+      "source_type": "PRIMARY"
+    }
+  ],
+  "actions": {
+    "decision": "PASS",
+    "next_step": "SYTHESIS"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "header": {
+    "goal_id": "cic.harvester_v2.S-13",
+    "timestamp": "2026-05-30T20:30:05.821Z",
+    "audit_version": "1.0.0",
+    "mode": "simulation"
+  },
+  "summary": {
+    "conf_goal": 0.9,
+    "decision": "PASS",
+    "evidence_count": 4,
+    "cost_usd": 0.12
+  },
+  "findings": [
+    {
+      "id": "87c3d475-455d-4f41-beb0-189409f83662",
+      "title": "Primary Source for S-13 - Official Archive",
+      "ce": 0.98,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "c03b8f94-eb14-4320-ae70-a58ffe060843",
+      "title": "Internal Memo regarding S-13",
+      "ce": 0.96,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "b320cb80-d2b7-4349-bca3-6499f50882cc",
+      "title": "Technical Review of S-13 Impact",
+      "ce": 0.72,
+      "source_type": "SECONDARY"
+    },
+    {
+      "id": "af10a583-ae5e-4d68-827d-b371c3a9adf4",
+      "title": "Supporting Documentation for S-13",
+      "ce": 0.94,
+      "source_type": "PRIMARY"
+    }
+  ],
+  "actions": {
+    "decision": "PASS",
+    "next_step": "SYTHESIS"
+  }
+}

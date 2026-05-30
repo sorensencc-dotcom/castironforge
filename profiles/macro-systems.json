@@ -1,0 +1,19 @@
+{
+  "theme": "Systems Modernization",
+  "audit": {
+    "type": "Industrial-Systems Strict v1.7",
+    "confidence_min": 0.92,
+    "primary_sources": 4,
+    "secondary_sources": 3,
+    "contradiction_penalty": 1.30
+  },
+  "retrieval": {
+    "primary_engines": ["industrial_archives"],
+    "secondary_engines": ["news_historical"],
+    "fanout": ["Ford Whiz Kids arrival", "Robert McNamara Ford career start"]
+  },
+  "constraints": {
+    "economic_cap": 4.00,
+    "routing": "Pro"
+  }
+}

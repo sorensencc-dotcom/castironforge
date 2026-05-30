@@ -1,0 +1,19 @@
+{
+  "goal_id": "cic.harvester_v2.S-11",
+  "intent": {
+    "description": "Post‑Revolution Aftermath: FOIA trail, missing records, and unresolved family claims.",
+    "owner": "cic.operator"
+  },
+  "constraints": {
+    "max_cost_usd": 5,
+    "security_level": "strict",
+    "model_tier": "pro",
+    "on_failure": "rollback",
+    "max_retries": 3
+  },
+  "success": {
+    "audit.confidence_min": 0.95,
+    "audit.max_anomalies": 0,
+    "pipeline.status": "clean"
+  }
+}

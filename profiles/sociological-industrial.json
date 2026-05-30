@@ -1,0 +1,19 @@
+{
+  "theme": "Corporate Identity",
+  "audit": {
+    "type": "Sociological-Industrial Strict v1.7",
+    "confidence_min": 0.92,
+    "primary_sources": 4,
+    "secondary_sources": 3,
+    "contradiction_penalty": 1.30
+  },
+  "retrieval": {
+    "primary_engines": ["industrial_archives"],
+    "secondary_engines": ["news_historical"],
+    "fanout": ["Ford corporate culture 1950s shift", "Sociological impact of Whiz Kids management"]
+  },
+  "constraints": {
+    "economic_cap": 4.00,
+    "routing": "Pro"
+  }
+}

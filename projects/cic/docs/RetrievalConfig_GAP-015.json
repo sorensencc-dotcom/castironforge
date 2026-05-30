@@ -1,0 +1,12 @@
+{
+  "goal_id": "cic.harvester_v2.GAP-015",
+  "engines": {
+    "primary": "industrial_archives",
+    "secondary": "news_historical"
+  },
+  "fan_out_queries": [
+    "Ford Motor Company leadership transition 1945",
+    "Henry Ford II takes control Ford 1945",
+    "Ford board reorganization September 1945"
+  ]
+}

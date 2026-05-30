@@ -1,0 +1,19 @@
+{
+  "theme": "Origins",
+  "audit": {
+    "type": "Origins-Biographical Strict v1.7",
+    "confidence_min": 0.90,
+    "primary_sources": 3,
+    "secondary_sources": 3,
+    "contradiction_penalty": 1.10
+  },
+  "retrieval": {
+    "primary_engines": ["industrial_archives"],
+    "secondary_engines": ["news_historical"],
+    "fanout": ["Sorensen family emigration Denmark", "Charles Sorensen childhood Detroit"]
+  },
+  "constraints": {
+    "economic_cap": 3.00,
+    "routing": "Pro"
+  }
+}

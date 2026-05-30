@@ -1,0 +1,23 @@
+{
+  "gaps": [
+    {
+      "id": "GAP-015",
+      "theme": "Post-Ford Era",
+      "timeframe": "1944-1950",
+      "description": "Sorensen's transition to Willys-Overland and the scaling of the CJ-2A production.",
+      "claims": [
+        "willys_overland_appointment_verified",
+        "cj2a_production_scaling_stats",
+        "sorensen_post_ford_legacy"
+      ],
+      "engines": {
+        "primary": ["Willys-Overland archives", "Toledo business records"],
+        "secondary": ["automotive histories", "1940s news"]
+      },
+      "queries": [
+        "Sorensen Willys-Overland appointment 1944",
+        "scaling CJ-2A Jeep production 1945"
+      ]
+    }
+  ]
+}

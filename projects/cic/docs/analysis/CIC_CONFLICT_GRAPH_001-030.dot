@@ -1,0 +1,43 @@
+digraph CIC_Conflict_001_030 {
+  rankdir=LR;
+  node [shape=circle, style=filled, fontname="Helvetica"];
+
+  // Authority
+  henry_ford     [label="Henry Ford",     fillcolor="#ff4d4d"];
+  edsel_ford     [label="Edsel Ford",     fillcolor="#ff4d4d"];
+  hfii           [label="Henry Ford II",  fillcolor="#ff4d4d"];
+  mcnamara       [label="Robert McNamara",fillcolor="#ff4d4d"];
+
+  // Industrial
+  sorensen       [label="Charles Sorensen", fillcolor="#4da6ff"];
+  bennett        [label="Harry Bennett",    fillcolor="#4da6ff"];
+  prod_eng       [label="Production Eng.",  fillcolor="#4da6ff"];
+
+  // Cultural
+  soc_dept       [label="Sociological Dept.", fillcolor="#cc66ff"];
+  whiz_kids      [label="Whiz Kids",          fillcolor="#cc66ff"];
+  legacy_execs   [label="Legacy Execs",       fillcolor="#cc66ff"];
+
+  // Strategic
+  gm             [label="GM",             fillcolor="#66cc66"];
+  edsel_div      [label="Edsel Division", fillcolor="#66cc66"];
+  ford_div       [label="Ford Division",  fillcolor="#66cc66"];
+  falcon         [label="Falcon Program", fillcolor="#66cc66"];
+
+  // Labor
+  uaw            [label="UAW", fillcolor="#ffcc00"];
+
+  // Edges
+  henry_ford -> edsel_ford   [color="#ff1a1a", penwidth=3, label="authority"];
+  henry_ford -> sorensen     [color="#ff1a1a", penwidth=3, label="authority"];
+  sorensen    -> bennett     [color="#1a75ff", penwidth=3, label="industrial"];
+  hfii        -> legacy_execs[color="#ff1a1a", penwidth=3, label="authority"];
+  hfii        -> bennett     [color="#ff1a1a", penwidth=3, label="authority"];
+  whiz_kids   -> legacy_execs[color="#b366ff", penwidth=2, label="cultural"];
+  mcnamara    -> hfii        [color="#ff1a1a", penwidth=2, label="authority"];
+  prod_eng    -> soc_dept    [color="#b366ff", penwidth=2, label="cultural"];
+  ford_div    -> edsel_div   [color="#33cc33", penwidth=2, label="strategic"];
+  gm          -> ford_div    [color="#33cc33", penwidth=3, label="strategic"];
+  uaw         -> ford_div    [color="#e6b800", penwidth=3, label="labor"];
+  falcon      -> edsel_div   [color="#33cc33", penwidth=2, label="strategic"];
+}

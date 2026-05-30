@@ -1,0 +1,19 @@
+{
+  "goal_id": "cic.harvester_v2.S-12",
+  "intent": {
+    "description": "Memoir Publication & Reception: How 'My Forty Years with Ford' landed and Ford's internal response.",
+    "owner": "cic.operator"
+  },
+  "constraints": {
+    "max_cost_usd": 3,
+    "security_level": "strict",
+    "model_tier": "pro",
+    "on_failure": "rollback",
+    "max_retries": 3
+  },
+  "success": {
+    "audit.confidence_min": 0.9,
+    "audit.max_anomalies": 0,
+    "pipeline.status": "clean"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "gaps": [
+    { "id": "GAP-022", "profile": "strategic-governance", "theme": "Strategic Misalignment", "timeframe": "1955-1957", "intent": "Document the flawed market assumptions and internal politics behind the Edsel program." },
+    { "id": "GAP-023", "profile": "industrial-macro", "theme": "Market Collapse", "timeframe": "1957-1959", "intent": "Establish the operational, marketing, and economic causes of the Edsel disaster." },
+    { "id": "GAP-024", "profile": "executive-strategic", "theme": "Systems Management", "timeframe": "1955-1960", "intent": "Trace McNamara’s ascent and the introduction of quantitative management." },
+    { "id": "GAP-025", "profile": "macro-systems", "theme": "Product Strategy", "timeframe": "1957-1960", "intent": "Document the Falcon as the anti‑Edsel and McNamara’s first major systems‑driven success." },
+    { "id": "GAP-026", "profile": "industrial-macro", "theme": "Competitive Dynamics", "timeframe": "1955-1960", "intent": "Establish the competitive pressures that shaped Ford’s 1950s strategy." },
+    { "id": "GAP-027", "profile": "strategic-governance", "theme": "Financial Modernization", "timeframe": "1956-1960", "intent": "Document the Whiz Kids’ transformation of Ford’s financial systems." },
+    { "id": "GAP-028", "profile": "executive-family", "theme": "Internal Conflict", "timeframe": "1955-1960", "intent": "Map the power struggle between HFII, McNamara, and the old‑guard executives." },
+    { "id": "GAP-029", "profile": "sociological-industrial", "theme": "Corporate Identity", "timeframe": "1955-1960", "intent": "Establish how Ford’s culture changed under systems management." },
+    { "id": "GAP-030", "profile": "strategic-governance", "theme": "Strategic Inflection", "timeframe": "1960", "intent": "Document the transition into the Kennedy‑era corporate mindset." }
+  ]
+}

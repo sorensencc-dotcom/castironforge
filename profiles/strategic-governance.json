@@ -1,0 +1,19 @@
+{
+  "theme": "Corporate Strategy",
+  "audit": {
+    "type": "Executive-Strategic Strict v1.7",
+    "confidence_min": 0.92,
+    "primary_sources": 4,
+    "secondary_sources": 3,
+    "contradiction_penalty": 1.30
+  },
+  "retrieval": {
+    "primary_engines": ["industrial_archives"],
+    "secondary_engines": ["news_historical"],
+    "fanout": ["Ford strategic planning 1950s", "Ford financial modernization"]
+  },
+  "constraints": {
+    "economic_cap": 4.00,
+    "routing": "Pro"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "theme": "Biographical Narrative",
+  "audit": {
+    "type": "Biographical-Strict v1.7",
+    "confidence_min": 0.90,
+    "primary_sources": 3,
+    "secondary_sources": 3,
+    "contradiction_penalty": 1.20
+  },
+  "retrieval": {
+    "primary_engines": ["industrial_archives"],
+    "secondary_engines": ["news_historical"],
+    "fanout": ["Charles Sorensen personal history", "Sorensen family memoir"]
+  },
+  "constraints": {
+    "economic_cap": 3.00,
+    "routing": "Pro"
+  }
+}

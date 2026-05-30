@@ -1,0 +1,12 @@
+{
+  "goal_id": "cic.harvester_v2.GAP-018",
+  "engines": {
+    "primary": "industrial_archives",
+    "secondary": "news_historical"
+  },
+  "fan_out_queries": [
+    "Ford 1949 model development",
+    "Ford postwar production restart",
+    "Ford plant upgrades 1947"
+  ]
+}

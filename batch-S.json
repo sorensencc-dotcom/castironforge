@@ -1,0 +1,21 @@
+{
+  "gaps": [
+    { "id": "S-01", "profile": "industrial-macro", "theme": "Willow Run", "timeframe": "1940-1942", "intent": "Sorensen’s pencil plan for Willow Run, the insomnia, and the one‑per‑hour demand." },
+    { "id": "S-02", "profile": "industrial-macro", "theme": "Willow Run", "timeframe": "1941-1943", "intent": "Willow Run vs. Army Air Forces: Design freezes, redesign battles, and quality vs. throughput." },
+    { "id": "S-03", "profile": "industrial-macro", "theme": "Willow Run", "timeframe": "1942-1945", "intent": "The Women of Willow Run: Tap‑code communication, ±0.002\" tolerances, and the automatic riveter." },
+    { "id": "S-04", "profile": "executive-family", "theme": "Executive Exit", "timeframe": "1942-1944", "intent": "Sorensen’s Exit: Bennett’s influence, Fortune backlash, and the March 1944 Miami resignation." },
+    { "id": "S-05", "profile": "industrial-macro", "theme": "Willys-Overland", "timeframe": "1944-1946", "intent": "Willys‑Overland & The Civilian Jeep: CJ launch at CESOR Farm and the SUV origin story." },
+    { "id": "S-06", "profile": "industrial-macro", "theme": "Global Industry", "timeframe": "1929", "intent": "Soviet Industrialization Agreement: Sorensen’s global industrial impact and the Soviet Ford deal." },
+    { "id": "S-07", "profile": "industrial-macro", "theme": "CESOR Farm", "timeframe": "1940-1950", "intent": "CESOR Farm (Michigan): 2,000‑acre industrial laboratory and Sorensen’s personal proving ground." },
+    { "id": "S-08", "profile": "global-legal-strict", "theme": "Cuba Holdings", "timeframe": "1940-1960", "intent": "The Cuba Holdings (CESOR S.A.): Land seizures, nominee structures, and the Oppenheim connection." },
+    { "id": "S-09", "profile": "global-legal-strict", "theme": "Cuba Holdings", "timeframe": "1940-1959", "intent": "Havana Lithographing Company: Corporate structure, stock holdings, and pre‑revolution operations." },
+    { "id": "S-10", "profile": "global-legal-strict", "theme": "Cuba Revolution", "timeframe": "1959-1961", "intent": "The Revolution & Expropriation: Nationalization decrees and valuation logic for Cuba claims." },
+    { "id": "S-11", "profile": "global-legal-strict", "theme": "Cuba Aftermath", "timeframe": "1961-1968", "intent": "Post‑Revolution Aftermath: FOIA trail, missing records, and unresolved family claims." },
+    { "id": "S-12", "profile": "biographical-strict", "theme": "Memoir", "timeframe": "1956", "intent": "Memoir Publication & Reception: How 'My Forty Years with Ford' landed and Ford's internal response." },
+    { "id": "S-13", "profile": "biographical-strict", "theme": "Later Life", "timeframe": "1944-1968", "intent": "Miami Beach Years: 5185 N. Bay Dr., social life, and retirement in exile." },
+    { "id": "S-14", "profile": "biographical-strict", "theme": "Later Life", "timeframe": "1960", "intent": "Second Marriage: Edith Thompson Montgomery and the emotional reset at age 78." },
+    { "id": "S-15", "profile": "industrial-macro", "theme": "Later Life", "timeframe": "1963", "intent": "Studebaker / Brooks Stevens: The LCMV and the $560 unit cost project." },
+    { "id": "S-16", "profile": "biographical-strict", "theme": "End of Life", "timeframe": "1968", "intent": "Death & Burial: Settling the discrepancy between August 11 and August 28 death dates." },
+    { "id": "S-17", "profile": "origins", "theme": "Family Legacy", "timeframe": "2026", "intent": "The Family Arc & Copenhagen: Four generations returning to Amalienborg and the immigrant loop." }
+  ]
+}

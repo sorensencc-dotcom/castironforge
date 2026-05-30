@@ -1,0 +1,58 @@
+{
+  "gaps": [
+    {
+      "id": "GAP-015",
+      "theme": "Postwar Transition",
+      "timeframe": "1945-1947",
+      "description": "Establish Ford Motor Company’s structural and managerial transition after Henry Ford’s decline and Edsel’s death.",
+      "claims": ["Henry Ford II presidency start date", "Board of Directors changes 1945", "Henry Ford retirement details"],
+      "engines": { "primary": "industrial_archives", "secondary": "news_historical" },
+      "queries": ["Ford Motor Company leadership transition 1945", "Henry Ford II takes control Ford 1945", "Ford board reorganization September 1945"]
+    },
+    {
+      "id": "GAP-016",
+      "theme": "Executive Consolidation",
+      "timeframe": "1945-1950",
+      "description": "Document the power consolidation of Henry Ford II and the dismantling of the old Ford regime.",
+      "claims": ["Harry Bennett firing date", "Ernest Breech hiring date", "Executive reorganization 1946"],
+      "engines": { "primary": "industrial_archives", "secondary": "news_historical" },
+      "queries": ["Henry Ford II fires Harry Bennett", "Ernest Breech Ford hiring 1946", "Henry Ford II consolidated power Ford"]
+    },
+    {
+      "id": "GAP-017",
+      "theme": "Systems Modernization",
+      "timeframe": "1946-1952",
+      "description": "Establish the arrival, methodology, and organizational impact of the Whiz Kids on Ford’s postwar modernization.",
+      "claims": ["Whiz Kids hire date", "Robert McNamara role 1946", "Charles Tex Thornton Ford entry"],
+      "engines": { "primary": "industrial_archives", "secondary": "news_historical" },
+      "queries": ["Ford Whiz Kids members list", "Robert McNamara early career Ford", "Tex Thornton Ford reorganization"]
+    },
+    {
+      "id": "GAP-018",
+      "theme": "Industrial Reconstruction",
+      "timeframe": "1945-1950",
+      "description": "Document the reconstruction of Ford’s production system after wartime disruption.",
+      "claims": ["Postwar civilian production restart date", "New model development 1949", "Plant modernization 1946-1948"],
+      "engines": { "primary": "industrial_archives", "secondary": "news_historical" },
+      "queries": ["Ford 1949 model development", "Ford postwar production restart", "Ford plant upgrades 1947"]
+    },
+    {
+      "id": "GAP-019",
+      "theme": "Labor Stabilization",
+      "timeframe": "1947-1955",
+      "description": "Establish the early relationship between Ford and the UAW after the violent prewar era.",
+      "claims": ["1947 UAW contract details", "Health and welfare fund establishment", "Ford-UAW strike 1949"],
+      "engines": { "primary": "industrial_archives", "secondary": "news_historical" },
+      "queries": ["Ford UAW 1947 contract", "Walter Reuther Ford negotiations 1948", "Ford labor relations postwar"]
+    },
+    {
+      "id": "GAP-020",
+      "theme": "Corporate Strategy",
+      "timeframe": "1950-1955",
+      "description": "Document Ford’s shift toward modern corporate governance, financial discipline, and strategic planning.",
+      "claims": ["Centralized financial control establishment", "Product planning department creation", "1950s market share growth"],
+      "engines": { "primary": "industrial_archives", "secondary": "news_historical" },
+      "queries": ["Ford financial controls modernization", "Ford 1950s strategic planning", "Ford Motor Company reorganization 1950"]
+    }
+  ]
+}

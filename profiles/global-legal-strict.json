@@ -1,0 +1,19 @@
+{
+  "theme": "Global Corporate Legal",
+  "audit": {
+    "type": "Global-Legal-Strict v1.7",
+    "confidence_min": 0.95,
+    "primary_sources": 5,
+    "secondary_sources": 3,
+    "contradiction_penalty": 1.50
+  },
+  "retrieval": {
+    "primary_engines": ["industrial_archives"],
+    "secondary_engines": ["news_historical"],
+    "fanout": ["Sorensen Cuba properties expropriation", "CESOR SA corporate structure"]
+  },
+  "constraints": {
+    "economic_cap": 5.00,
+    "routing": "Pro"
+  }
+}

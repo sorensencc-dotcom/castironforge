@@ -1,0 +1,32 @@
+{
+  "mission_id": "GAP-015",
+  "goal_id": "cic.harvester_v2.GAP-015",
+  "audit": {
+    "confidence_min": 0.92,
+    "max_anomalies": 0,
+    "contradiction_penalty": 1.3,
+    "temporal_alignment_strict": true,
+    "required_claims": [
+      "Henry Ford II presidency start date",
+      "Board of Directors changes 1945",
+      "Henry Ford retirement details"
+    ]
+  },
+  "economics": {
+    "max_cost_usd": 4,
+    "early_stop_reserve": 0.15,
+    "min_efficiency": 0.4
+  },
+  "retrieval": {
+    "engine_groups": {
+      "industrial_archives": {
+        "max_concurrency": 8,
+        "retry_policy": "strict"
+      },
+      "news_historical": {
+        "max_concurrency": 4,
+        "retry_policy": "standard"
+      }
+    }
+  }
+}

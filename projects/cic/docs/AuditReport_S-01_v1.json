@@ -1,0 +1,44 @@
+{
+  "header": {
+    "goal_id": "cic.harvester_v2.S-01",
+    "timestamp": "2026-05-30T20:30:00.422Z",
+    "audit_version": "1.0.0",
+    "mode": "simulation"
+  },
+  "summary": {
+    "conf_goal": 0.9,
+    "decision": "PASS",
+    "evidence_count": 4,
+    "cost_usd": 0.12
+  },
+  "findings": [
+    {
+      "id": "b86c6815-6aee-4788-a99a-4d71c69e6581",
+      "title": "Primary Source for S-01 - Official Archive",
+      "ce": 0.98,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "edc95616-a608-426d-bbed-eb9a8c0db445",
+      "title": "Internal Memo regarding S-01",
+      "ce": 0.96,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "e064e877-86b1-47c7-b781-9be5c7ec8d8e",
+      "title": "Technical Review of S-01 Impact",
+      "ce": 0.72,
+      "source_type": "SECONDARY"
+    },
+    {
+      "id": "563677d3-0bb4-4414-acf5-43c80b1ca432",
+      "title": "Supporting Documentation for S-01",
+      "ce": 0.94,
+      "source_type": "PRIMARY"
+    }
+  ],
+  "actions": {
+    "decision": "PASS",
+    "next_step": "SYTHESIS"
+  }
+}

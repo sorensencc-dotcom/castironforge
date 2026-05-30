@@ -1,0 +1,44 @@
+{
+  "header": {
+    "goal_id": "cic.harvester_v2.GAP-019",
+    "timestamp": "2026-05-30T19:40:38.349Z",
+    "audit_version": "1.0.0",
+    "mode": "simulation"
+  },
+  "summary": {
+    "conf_goal": 0.9,
+    "decision": "PASS",
+    "evidence_count": 4,
+    "cost_usd": 0.12
+  },
+  "findings": [
+    {
+      "id": "6a1d7752-a53f-44d8-b231-e063bde1c44b",
+      "title": "Primary Source for GAP-019 - Official Archive",
+      "ce": 0.98,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "ce94d15a-0133-4bda-89c1-40b3d12d3d6a",
+      "title": "Internal Memo regarding GAP-019",
+      "ce": 0.96,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "0404cc8e-dd97-40c5-b3c7-a0b369ec18f0",
+      "title": "Technical Review of GAP-019 Impact",
+      "ce": 0.72,
+      "source_type": "SECONDARY"
+    },
+    {
+      "id": "0fda8670-2fdf-45da-bcfc-a09c76f2ebb6",
+      "title": "Supporting Documentation for GAP-019",
+      "ce": 0.94,
+      "source_type": "PRIMARY"
+    }
+  ],
+  "actions": {
+    "decision": "PASS",
+    "next_step": "SYTHESIS"
+  }
+}

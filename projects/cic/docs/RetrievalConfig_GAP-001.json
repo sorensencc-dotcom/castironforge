@@ -1,0 +1,11 @@
+{
+  "goal_id": "cic.harvester_v2.GAP-001",
+  "engines": {
+    "primary": "industrial_archives",
+    "secondary": "news_historical"
+  },
+  "fan_out_queries": [
+    "Ford postwar production restart",
+    "Ford plant modernization 1946"
+  ]
+}

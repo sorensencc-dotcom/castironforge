@@ -3,33 +3,24 @@
   "audit_config": {
     "confidence_min": 0.92,
     "max_anomalies": 0,
-    "allow_medium_anomalies": false,
-    "allow_high_anomalies": false,
-    "contradiction_penalty": 1.2,
+    "temporal_alignment_strict": true,
+    "contradiction_penalty": 1.3,
+    "min_primary_sources": 4,
+    "min_secondary_sources": 3,
+    "required_claims": [],
     "weights": {
       "source": {
-        "PRIMARY": 1.0,
-        "SECONDARY": 0.7,
-        "TERTIARY": 0.4,
-        "UNKNOWN": 0.3
+        "PRIMARY": 1,
+        "SECONDARY": 0.8,
+        "TERTIARY": 0.3,
+        "UNKNOWN": 0.1
       },
       "temporal": {
-        "ALIGNED": 1.0,
-        "OFF_BY_1_YEAR": 0.8,
-        "OFF_BY_2_5_YEARS": 0.6,
-        "CONFLICTING": 0.4
+        "ALIGNED": 1,
+        "OFF_BY_1_YEAR": 0.5,
+        "OFF_BY_2_5_YEARS": 0.2,
+        "CONFLICTING": 0
       }
-    },
-    "domain_tuning": {
-      "primary_bias_factor": 1.1,
-      "late_recollection_penalty": 0.8,
-      "priority_years": [1943],
-      "priority_keywords": ["Willow Run", "B-24", "bottleneck"]
-    },
-    "retry_policy": {
-      "max_retries": 3,
-      "backoff": "exponential",
-      "retryable_anomalies": ["STRUCTURAL_ANOMALY", "COVERAGE_GAP"]
     }
   }
 }

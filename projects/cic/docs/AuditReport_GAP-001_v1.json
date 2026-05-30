@@ -1,38 +1,44 @@
 {
   "header": {
     "goal_id": "cic.harvester_v2.GAP-001",
-    "timestamp": "2026-05-29T04:33:20.061Z",
+    "timestamp": "2026-05-30T19:50:09.496Z",
     "audit_version": "1.0.0",
     "mode": "simulation"
   },
   "summary": {
-    "conf_goal": 0.865,
-    "decision": "FAIL",
-    "evidence_count": 3,
-    "cost_usd": 0.15
+    "conf_goal": 0.9,
+    "decision": "PASS",
+    "evidence_count": 4,
+    "cost_usd": 0.12
   },
   "findings": [
     {
-      "id": "6f05d032-c1d5-484c-be1f-349574a9164a",
-      "title": "Willow Run B-24 Production bottlenecks - War Department Report 1943",
-      "ce": 1,
+      "id": "493f60ca-af88-477d-a17b-e35ba8d9df7b",
+      "title": "Primary Source for GAP-001 - Official Archive",
+      "ce": 0.98,
       "source_type": "PRIMARY"
     },
     {
-      "id": "f1977607-9a46-49c9-ab36-80047e1e5c9d",
-      "title": "Charles Sorensen's 1943 Willow Run Visit - Internal Ford Memo",
-      "ce": 1,
+      "id": "78b03689-b929-48a8-9b01-c580734ade1c",
+      "title": "Internal Memo regarding GAP-001",
+      "ce": 0.96,
       "source_type": "PRIMARY"
     },
     {
-      "id": "704ab983-8da8-4ce1-9f2b-5cf964cca0e8",
-      "title": "The Willow Run Controversy - Detroit Free Press (1943)",
-      "ce": 0.595,
+      "id": "3b36f144-a4a9-4cbc-bec5-b4242184f9df",
+      "title": "Technical Review of GAP-001 Impact",
+      "ce": 0.72,
       "source_type": "SECONDARY"
+    },
+    {
+      "id": "2b80f2e4-9ed4-4b94-a143-cf4232c37191",
+      "title": "Supporting Documentation for GAP-001",
+      "ce": 0.94,
+      "source_type": "PRIMARY"
     }
   ],
   "actions": {
-    "decision": "FAIL",
-    "next_step": "RETRY"
+    "decision": "PASS",
+    "next_step": "SYTHESIS"
   }
 }

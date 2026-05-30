@@ -1,0 +1,12 @@
+{
+  "goal_id": "cic.harvester_v2.GAP-020",
+  "engines": {
+    "primary": "industrial_archives",
+    "secondary": "news_historical"
+  },
+  "fan_out_queries": [
+    "Ford financial controls modernization",
+    "Ford 1950s strategic planning",
+    "Ford Motor Company reorganization 1950"
+  ]
+}

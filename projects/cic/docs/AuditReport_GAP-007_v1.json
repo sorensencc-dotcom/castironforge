@@ -1,0 +1,44 @@
+{
+  "header": {
+    "goal_id": "cic.harvester_v2.GAP-007",
+    "timestamp": "2026-05-30T19:50:24.662Z",
+    "audit_version": "1.0.0",
+    "mode": "simulation"
+  },
+  "summary": {
+    "conf_goal": 0.9,
+    "decision": "PASS",
+    "evidence_count": 4,
+    "cost_usd": 0.12
+  },
+  "findings": [
+    {
+      "id": "2e717457-1358-45c9-9ad2-face76619b4a",
+      "title": "Primary Source for GAP-007 - Official Archive",
+      "ce": 0.98,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "79e112ed-fd1f-4096-8b83-029fb1c4710b",
+      "title": "Internal Memo regarding GAP-007",
+      "ce": 0.96,
+      "source_type": "PRIMARY"
+    },
+    {
+      "id": "e674da24-6517-4ba7-9f1c-1375394d1699",
+      "title": "Technical Review of GAP-007 Impact",
+      "ce": 0.72,
+      "source_type": "SECONDARY"
+    },
+    {
+      "id": "013fb9fb-8dea-4c34-864d-117d93f8e25c",
+      "title": "Supporting Documentation for GAP-007",
+      "ce": 0.94,
+      "source_type": "PRIMARY"
+    }
+  ],
+  "actions": {
+    "decision": "PASS",
+    "next_step": "SYTHESIS"
+  }
+}
