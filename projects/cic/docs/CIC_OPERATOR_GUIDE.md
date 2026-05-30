@@ -58,6 +58,15 @@ The SkillOpt subsystem provides capabilities for managing and optimizing skill p
 
 ---
 
+### 3.5 Dashboard Access
+To monitor the SkillOpt system and view performance metrics, start the dashboard server:
+```bash
+npm run skillopt:dashboard
+```
+The dashboard UI will typically be accessible via a web browser at `http://localhost:3000` (or the configured `DASHBOARD_PORT`).
+
+---
+
 ## 4. INTERPRETING GOVERNANCE SIGNALS
 
 ### 4.1 Economy (TokenEconomyAgent)

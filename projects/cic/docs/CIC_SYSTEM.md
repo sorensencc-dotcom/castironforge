@@ -258,6 +258,7 @@ Section tracking makes ingestion **resumable, observable, and deterministic**.
 | `npm run skills:sync` | `node scripts/skills-sync.js` | Automated skills discovery |
 | `npm run success:docs` | `node scripts/living-docs-sync.js` | Sync Living Docs |
 | `npm run success:full` | `npm run success && npm run success:docs` | Full protocol + Doc sync |
+| `npm run skillopt:dashboard` | `node src/dashboard/server.mjs` | Start SkillOpt Dashboard server |
 
 ---
 

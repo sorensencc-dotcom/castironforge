@@ -11,6 +11,7 @@
     "success": "node scripts/project-sync.js",
     "success:docs": "node scripts/living-docs-sync.js",
     "success:full": "npm run success && npm run success:docs",
+    "skillopt:dashboard": "node src/dashboard/server.mjs",
     "prepare": "husky"
   },
   "bin": {
@@ -21,6 +22,8 @@
   },
   "type": "module",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "@qdrant/js-client-rest": "^1.18.0",
     "better-sqlite3": "^12.9.0",
     "busboy": "^1.6.0",
@@ -33,8 +36,12 @@
     "ws": "^8.20.0"
   },
   "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@vitest/ui": "^4.1.7",
     "eslint-plugin-security": "^4.0.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0"
+    "lint-staged": "^16.4.0",
+    "ts-node": "^10.9.2",
+    "vitest": "^4.1.7"
   }
 }
