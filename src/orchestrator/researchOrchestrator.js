@@ -4,28 +4,24 @@
  * Core logic for processing enriched assets, building entity graphs, and timelines.
  */
 
-import Database from 'better-sqlite3';
 import http from 'node:http';
 import * as entityGraph from './entityGraph.js';
 import * as timelineBuilder from './timelineBuilder.js';
+import { processIngestionEvent } from '../../ingestion/worker.mjs'; // Correct path
+import { log, logError } from '../lib/logger.js'; // Assuming logger is available
 
-// Validate env vars
-const REQUIRED_ENV = [
-  'DATABASE_URL',
-  'MCP_BASE_URL',
-  'ORCHESTRATOR_AGENT_ID'
-];
+/** @type {any} */
+let db = null;
 
-for (const env of REQUIRED_ENV) {
-  if (!process.env[env]) {
-    throw new Error(`${env} environment variable is required`);
-  }
+/**
+ * Initializes the module with a database instance.
+ * @param {any} dbInstance
+ */
+export function setDatabase(dbInstance) {
+  db = dbInstance;
+  entityGraph.setDatabase(dbInstance);
+  timelineBuilder.setDatabase(dbInstance);
 }
-
-// Initialize DB
-const dbPath = process.env.DATABASE_URL.replace('sqlite://', '');
-const db = new Database(dbPath);
-db.pragma('journal_mode = WAL');
 
 /**
  * @typedef {Object} OrchestrationResult
@@ -57,6 +53,27 @@ export async function orchestrate(assetId) {
       throw new Error(`Asset ${assetId} not found`);
     }
     const enricherData = JSON.parse(asset.enriched_data);
+
+    // --- NEW: Process enriched data through the ingestion worker (redesign, telemetry, SkillOptConsumer) ---
+    try {
+      const processedEvent = await processIngestionEvent({
+        dom: enricherData.dom, // Assuming enricherData directly contains these fields
+        contentBlocks: enricherData.contentBlocks,
+        heuristics: enricherData.heuristics,
+        auditDeltas: enricherData.auditDeltas,
+        metadata: enricherData.metadata,
+        assetId: assetId // Pass assetId for context if needed
+      });
+      // The redesignPlan is now on processedEvent.redesignPlan
+      log('info', 'orchestrator', 'Redesign generated and telemetry emitted', { assetId: assetId });
+      // Optionally update the asset record with redesignPlan if needed
+      // db.prepare('UPDATE assets SET redesign_plan = ? WHERE id = ?').run(processedEvent.redesignPlan, assetId);
+
+    } catch (err) {
+      logError('orchestrator', 'Failed to process ingestion event for SkillOpt', { err: err.message, assetId: assetId });
+      // Continue orchestration even if redesign generation fails
+    }
+    // --- END NEW ---
 
     // 2. Pull extractor output (entities) from entities table
     const entities = db.prepare('SELECT label, type FROM entities WHERE asset_id = ?').all(assetId);

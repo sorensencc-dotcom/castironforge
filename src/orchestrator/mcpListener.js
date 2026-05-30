@@ -36,10 +36,10 @@ export function startListener() {
       msg: 'Connected to MCP WebSocket'
     }));
 
-    // Subscribe to asset.enriched events
+    // Subscribe to asset.ingested events
     ws.send(JSON.stringify({
       action: 'subscribe',
-      topic: 'asset.enriched'
+      topic: 'asset.ingested'
     }));
   });
 
@@ -56,9 +56,11 @@ export function startListener() {
         event: message.event
       }));
 
-      if (message.event === 'asset.enriched') {
-        const { assetId } = message.payload || message;
+      if (message.event === 'asset.ingested') {
+        const { assetId, mimeType } = message.payload || message; // assetId and mimeType should be available
         if (assetId) {
+          // The orchestrate function expects only assetId, but the message from ingest() contains mimeType too.
+          // We pass assetId only, and orchestrate() fetches the full enriched data.
           await orchestrate(assetId);
         }
       }

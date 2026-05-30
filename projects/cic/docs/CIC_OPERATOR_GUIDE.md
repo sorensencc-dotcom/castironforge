@@ -41,6 +41,21 @@ goal "custom_research_001" {
 }
 ```
 
+### 3.3 Batch Operations (GAP Manager)
+For multi-gap initialization and token efficiency, use the GAP Manager:
+```bash
+# Execute batch initialization, registration, and verification
+node scripts/gap-manager.js <batch.json>
+```
+*Note: This reduces conversational turns and context usage by consolidating artifact generation.*
+
+### 3.4 SkillOpt Management
+The SkillOpt subsystem provides capabilities for managing and optimizing skill performance.
+
+- **`node src/cli.mjs skillopt:validate <itemPath> <outputPath>`**: Validates a single SkillOpt item and outputs the result.
+- **`node src/cli.mjs skillopt:train`**: Initiates the training process for SkillOpt models.
+- **`node src/cli.mjs skillopt:deploy`**: Deploys the best performing SkillOpt model to production.
+
 ---
 
 ## 4. INTERPRETING GOVERNANCE SIGNALS

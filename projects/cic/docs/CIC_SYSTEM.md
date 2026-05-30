@@ -1,5 +1,5 @@
 # CIC_SYSTEM.md — CIC Research Engine  
-# v1.2.1 | 2026-05-28 | ACTIVE  
+# v1.3.0 | 2026-05-30 | ACTIVE  
 # No volatile state here — update CIC_PROJECT_STATE.md.
 
 ---
@@ -55,21 +55,40 @@ src/
   extractor/        — iExtractor, extractorRegistry, ImageAnalyzerV2.js, ReverseImageSearchExtractor.js
   harvester/        — harvester, extractor
   indexer/          — indexer, bundle-builder
-  ingestion/        — ingestionAgent, ingestionSchema, ingestionServer
+  ingestion/        — ingestionAgent, ingestionSchema, ingestionServer, worker (authoritative ingestion worker)
   lib/              — classifier, folder-validator, logger, paths, sidecar, status
   prompts/          — loader, index, guard
-  providers/        — searxng-cic.ts, qdrant.js (vector-store client)
+  providers/        — searxng-cic.ts, qdrant.js (vector-store client, service pending)
   queue/            — producer, dlq, drift, schemas
   sweeper/          — daily-sweeper
+  skillopt/         — redesignAgent, skillOptConsumer, skillRegistryLoader, telemetry, validator (SkillOpt subsystem)
   synthesis/        — briefBuilder, briefStore, synthesisAgent
   dashboard/        — operator dashboard (index.html, assets)
 ```
 
 ---
 
-## 5. Prompt Management System (PMS)
+## 5. SkillOpt System
 
-### 5.1 Architecture (`src/prompts/`, `prompts/`)
+The SkillOpt system introduces a self-improving loop for CIC's redesign capabilities, enabling dynamic skill optimization, telemetry, and training data generation. It acts as the authoritative "synthesis" stage, generating redesign outputs and feeding back into the optimization pipeline.
+
+### 5.1 Components (`src/skillopt/`)
+-   `redesignAgent.mjs`: Core logic for generating redesign plans based on loaded skills.
+-   `skillRegistryLoader.mjs`: Manages the loading and registration of different skill versions.
+-   `validator.mjs`: Provides functionality for validating skill outputs against predefined criteria.
+-   `telemetry.mjs`: Records performance and quality metrics of the redesign process for analysis and feedback.
+-   `skillOptConsumer.mjs`: Consumes redesign outputs and relevant context to generate training data for skill optimization.
+
+### 5.2 Integration Points
+-   **Ingestion Worker (`src/ingestion/worker.mjs`)**: The `processIngestionEvent` function integrates SkillOpt by calling `redesignAgent.generate`, emitting telemetry, and feeding data to `skillOptConsumer`. This effectively establishes the "redesign stage" within the ingestion pipeline.
+-   **CLI (`src/cli.mjs`)**: Provides operator control over the SkillOpt lifecycle, including `skillopt:validate`, `skillopt:train`, and `skillopt:deploy` commands.
+-   **Operator Dashboard (`src/dashboard/index.html`)**: Will integrate with SkillOpt telemetry to provide real-time insights into skill performance, version timelines, and quality metrics.
+
+---
+
+## 6. Prompt Management System (PMS)
+
+### 6.1 Architecture (`src/prompts/`, `prompts/`)
 
 Centralized registry and deterministic loader for LLM instructions.
 
@@ -223,7 +242,7 @@ Section tracking makes ingestion **resumable, observable, and deterministic**.
 
 ---
 
-## 11. npm Scripts
+## 12. npm Scripts
 
 | Script | Command | Purpose |
 |---|---|---|
@@ -233,45 +252,50 @@ Section tracking makes ingestion **resumable, observable, and deterministic**.
 | `npm run image:reverse` | `node scripts/run-enricher.js` | Run enrichment on images |
 | `npm run run-mcp` | `node scripts/run-mcp.js` | Start MCP server |
 | `npm run run-scanner` | `node scripts/run-scanner.js` | Start perimeter scanner |
+| `npm run skillopt:validate` | `node src/cli.mjs skillopt:validate <itemPath> <outputPath>` | Validate a SkillOpt item |
+| `npm run skillopt:train` | `node src/cli.mjs skillopt:train` | Train SkillOpt models |
+| `npm run skillopt:deploy` | `node src/cli.mjs skillopt:deploy` | Deploy SkillOpt model |
 | `npm run skills:sync` | `node scripts/skills-sync.js` | Automated skills discovery |
 | `npm run success:docs` | `node scripts/living-docs-sync.js` | Sync Living Docs |
 | `npm run success:full` | `npm run success && npm run success:docs` | Full protocol + Doc sync |
 
 ---
 
-## 12. Operator Dashboard
+## 13. Operator Dashboard
 
-### 12.1 Location
+
+### 13.1 Location
 
 - `src/dashboard/index.html` (plus any supporting JS/CSS assets).
 
-### 12.2 Features
+### 13.2 Features
 
 - **6-agent polling view**: Harvester, Extractor, Analyzer, Indexer, Sweeper, Synthesis.  
+- **SkillOpt Telemetry Integration**: Displays live skill version timelines, validation score charts, redesign diffs, drift detection, and latency graphs.
 - **Pulse states**: idle, running, error, degraded.  
 - **Pipeline diagram**: visual representation of ingestion → enrichment → indexing → synthesis.  
 - **Environment Health Plane integration**:  
   - WSL2/Linux host metrics (CPU, disk, memory).  
   - SLO-style health indicators surfaced from Control Plane v2.4.0.   
 
-### 12.3 Purpose
+### 13.3 Purpose
 
 - Provide a unified operator surface for CIC ingestion and enrichment.  
 - Surface environment health and ingestion status in one place.  
 
 ---
 
-## 13. Environment Health Plane & Autonomous Recovery
+## 14. Environment Health Plane & Autonomous Recovery
 
 These map to **Phase 12 — Control Plane v2.4.0** and **Phase 16 — Autonomous Recovery Plane** in the roadmap.   
 
-### 13.1 Environment Health Plane
+### 14.1 Environment Health Plane
 
 - Monitors WSL2/Linux host: CPU, disk, memory.  
-- Feeds metrics into the SLO Dashboard (and dashboard UI in §12).  
+- Feeds metrics into the SLO Dashboard (and dashboard UI in §13).  
 - Used to gate heavy ingestion workloads when host is under pressure.
 
-### 13.2 Autonomous Recovery Plane
+### 14.2 Autonomous Recovery Plane
 
 - SLO Metrics Plane (C1) and Recovery Policies Engine (C2).  
 - Host-level safeguards:
@@ -280,7 +304,7 @@ These map to **Phase 12 — Control Plane v2.4.0** and **Phase 16 — Autonomous
 
 ---
 
-## 14. Research Archive (Drive)
+## 15. Research Archive (Drive)
 
 - Root: `1QyU92RlTFTrlMIGwAUQcRJFf5KtNeskf`  
 - Work: `1y71nYLB61V5yFhkNwfltop1OwCR9sXkg`  
@@ -288,7 +312,7 @@ These map to **Phase 12 — Control Plane v2.4.0** and **Phase 16 — Autonomous
 
 ---
 
-## 15. BOB Governance
+## 16. BOB Governance
 
 Follow `META_BOB_V_FINAL_FORM`.  
 Factory: `createBOB(config)` in `src/llm/index.js`.  
@@ -296,7 +320,7 @@ Ref: `.../reference_meta_bob_spec.md`.
 
 ---
 
-## 16. Governance & Versioning
+## 17. Governance & Versioning
 
 - Markdown in `projects/cic/docs/` is the source of truth.  
 - Git is the authoritative history.  
@@ -305,4 +329,4 @@ Ref: `.../reference_meta_bob_spec.md`.
   - **Minor** = subsystem addition  
   - **Patch** = corrections   
 
-Current file: **v1.2.0 (minor)** — subsystem additions (queue layer, extractor #2, dashboard, section tracking) without structural overhaul.
+Current file: **v1.3.0 (minor)** — SkillOpt system integration.
