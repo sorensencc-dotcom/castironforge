@@ -1,11 +1,11 @@
 # CIC_PROJECT_STATE.md  
-# v1.4.2 | 2026-05-28 | ACTIVE  
+# v1.7.0 | 2026-05-30 | ACTIVE  
 # Volatile status only — architecture lives in CIC_SYSTEM.md.
 
 ---
 
 ## 1. Executive Summary
-CIC documentation and infrastructure are now fully **Operator-Grade**. The first autonomous research goal (**GAP-001**) has been successfully remediated and completed. The system utilized a **Deep Archival Fan-Out** strategy to reach **1.000 confidence**, satisfying the P0 research requirement for the Willow Run 1943 research hole.
+CIC documentation and infrastructure are fully **Operator-Grade**. Both biographical research goals (**GAP-001** and **GAP-002**) have been successfully remediated and completed. **CIC-AI Runtime v1.2.0** is now officially promoted to **Full Production**. We have kicked off the **v1.3.0 upgrade series**, completing **Phase 1.3.1 (Persistent Knowledge Graph)** which introduces disk-backed serialization, chronological lineages, temporal query slicing, and a BFS query traversal plane.
 
 ---
 
@@ -14,34 +14,38 @@ CIC documentation and infrastructure are now fully **Operator-Grade**. The first
 - [x] **Enrichment**: Finalize Rights Metadata schema (v3.1.0).
 - [x] **Audit**: Verify and integrate AuditAgent truth thresholds (v1.0.0).
 - [x] **Execution**: Trigger GAP-001 retrieval cycle (Success: 1.000 confidence).
-- [ ] **Implementation**: Materialize GAP-002 (Danish Origins) via Mission Control.
+- [x] **Implementation**: Materialize GAP-002 (Danish Origins) via Mission Control.
+- [x] **Validation**: Graduate CIC-AI Runtime v1.2.0 from Canary to Full Production.
+- [x] **Roadmap**: Prepare planning brief for v1.3.0 architectural upgrades.
+- [x] **Pillar 1**: Implement Persistent Knowledge Graph (v1.3.1).
+- [ ] **Pillar 2**: Implement Retrieval Planner + Multi-Hop Reasoning (v1.3.2).
+- [ ] **Pillar 3**: Implement Observability v2 Dashboard (v1.3.3).
 
 ---
 
 ## 3. Operational Status
 - **Pipeline**: STABLE
-- **Governance**: ACTIVE (Audit-Driven)
-- **Telemetry**: LIVE (Unified Dashboard v2.0.0)
-- **Goal Status**: GAP-001 COMPLETE; GAP-002 PENDING.
+- **Governance**: ACTIVE (Audit-Driven & Contract-Enforced)
+- **Telemetry**: LIVE (Unified Production Dashboard v2.0.0 & Ingestion Monitor Panel)
+- **Goal Status**: GAP-001 COMPLETE; GAP-002 COMPLETE; Canary Validation COMPLETE; Production LIVE.
 - **Audit Mode**: Truth Threshold Pack v1.0.0 Active.
 
 ---
 
-## 4. Execution Trace (GAP-001)
-- **Status**: COMPLETE
-- **Final Confidence**: 1.000 (Target: 0.920)
-- **Evidence Count**: 3 Primary Archival items (National Archives, Ford Archive).
-- **Decision rationale**: Primary source testimony and internal memos provided 100% factual certainty.
-- **Report**: `AuditReport_GAP-001_v1.1.json`
+## 4. Execution Trace (Production v1.3.1)
+- **Status**: PRODUCTION ACTIVE
+- **Safeguard State**: Live Execution (Dry-Run Inactive), fail-safe gates online.
+- **Smoke Tests**: Validated in canary; fully promoted to primary traffic channels.
+- **Telemetry Endpoints**: Live metric polling active across Qdrant and persistent knowledge graphs.
 
 ---
 
 ## 5. Technical Milestone Status
-- **Mission Control**: v1.0.0 Online (One-click runner).
-- **Observatory**: v2.0.0 Online (Industrial Design Standards).
-- **Infrastructure**: PM2 persistence active for MCP/Intelligence.
+- **Mission Control**: v1.1.1 Online (Hardened simulation for industrial archives).
+- **Observatory**: v2.2.0 Online (High-density industrial design).
+- **Infrastructure**: PM2 persistence active; Qdrant production collections live; Disk-backed entity/graph registries live.
 
 ---
 
 ## 6. Versioning
-- **v1.4.2** — Logged GAP-001 SUCCESS and completed remediation.
+- **v1.7.0** — Completed Phase 1.3.1 Persistent Knowledge Graph upgrades and updated roadmap for 1.3.2.
