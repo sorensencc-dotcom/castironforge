@@ -66,6 +66,12 @@ async function main() {
       });
       break;
     }
+    case "skillopt:metrics": {
+      const { aggregateSkillOptMetrics } = await import("./skillopt/metricsAggregator.mjs");
+      const result = await aggregateSkillOptMetrics();
+      console.log(JSON.stringify(result, null, 2));
+      break;
+    }
     default: {
       console.log(`Unknown command: ${cmd}`);
       console.log("Usage: node src/cli.mjs <command> [args]");

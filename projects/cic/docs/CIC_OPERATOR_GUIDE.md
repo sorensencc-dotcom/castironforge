@@ -55,6 +55,7 @@ The SkillOpt subsystem provides capabilities for managing and optimizing skill p
 - **`node src/cli.mjs skillopt:validate <itemPath> <outputPath>`**: Validates a single SkillOpt item and outputs the result.
 - **`node src/cli.mjs skillopt:train`**: Initiates the training process for SkillOpt models.
 - **`node src/cli.mjs skillopt:deploy`**: Deploys the best performing SkillOpt model to production.
+- **`node src/cli.mjs skillopt:metrics`**: Aggregates and displays current SkillOpt system metrics.
 
 ---
 
