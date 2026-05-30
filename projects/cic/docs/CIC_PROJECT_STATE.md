@@ -1,11 +1,13 @@
 # CIC_PROJECT_STATE.md  
-# v1.7.0 | 2026-05-30 | ACTIVE  
+# v1.8.0 | 2026-05-30 | ACTIVE  
 # Volatile status only — architecture lives in CIC_SYSTEM.md.
 
 ---
 
 ## 1. Executive Summary
-CIC documentation and infrastructure are fully **Operator-Grade**. Both biographical research goals (**GAP-001** and **GAP-002**) have been successfully remediated and completed. **CIC-AI Runtime v1.2.0** is now officially promoted to **Full Production**. We have kicked off the **v1.3.0 upgrade series**, completing **Phase 1.3.1 (Persistent Knowledge Graph)** which introduces disk-backed serialization, chronological lineages, temporal query slicing, and a BFS query traversal plane.
+CIC documentation and infrastructure are fully **Operator-Grade**. Both biographical research goals (**GAP-001** and **GAP-002**) have been successfully remediated and completed. **CIC-AI Runtime v1.2.0** is now officially promoted to **Full Production**. We have kicked off the **v1.3.0 upgrade series**, completing:
+*   **Phase 1.3.1 (Persistent Knowledge Graph)**: introducing disk-backed serialization, chronological lineages, and BFS query traversals.
+*   **Phase 1.3.2 (Retrieval Planner & Reasoning Layer)**: introducing query budgets, dynamic evidence collectors, seed-refine-synthesize reasoning loops, and contradiction checks.
 
 ---
 
@@ -18,7 +20,7 @@ CIC documentation and infrastructure are fully **Operator-Grade**. Both biograph
 - [x] **Validation**: Graduate CIC-AI Runtime v1.2.0 from Canary to Full Production.
 - [x] **Roadmap**: Prepare planning brief for v1.3.0 architectural upgrades.
 - [x] **Pillar 1**: Implement Persistent Knowledge Graph (v1.3.1).
-- [ ] **Pillar 2**: Implement Retrieval Planner + Multi-Hop Reasoning (v1.3.2).
+- [x] **Pillar 2**: Implement Retrieval Planner + Multi-Hop Reasoning (v1.3.2).
 - [ ] **Pillar 3**: Implement Observability v2 Dashboard (v1.3.3).
 
 ---
@@ -32,20 +34,20 @@ CIC documentation and infrastructure are fully **Operator-Grade**. Both biograph
 
 ---
 
-## 4. Execution Trace (Production v1.3.1)
+## 4. Execution Trace (Production v1.3.2)
 - **Status**: PRODUCTION ACTIVE
 - **Safeguard State**: Live Execution (Dry-Run Inactive), fail-safe gates online.
 - **Smoke Tests**: Validated in canary; fully promoted to primary traffic channels.
-- **Telemetry Endpoints**: Live metric polling active across Qdrant and persistent knowledge graphs.
+- **Telemetry Endpoints**: Live metric polling active across Qdrant, persistent knowledge graphs, and RAG query plane.
 
 ---
 
 ## 5. Technical Milestone Status
 - **Mission Control**: v1.1.1 Online (Hardened simulation for industrial archives).
 - **Observatory**: v2.2.0 Online (High-density industrial design).
-- **Infrastructure**: PM2 persistence active; Qdrant production collections live; Disk-backed entity/graph registries live.
+- **Infrastructure**: PM2 persistence active; Qdrant production collections live; Disk-backed entity/graph registries live; RAG trace auditing live.
 
 ---
 
 ## 6. Versioning
-- **v1.7.0** — Completed Phase 1.3.1 Persistent Knowledge Graph upgrades and updated roadmap for 1.3.2.
+- **v1.8.0** — Completed Phase 1.3.2 Retrieval Planner & Multi-Hop Reasoning upgrades and updated roadmap for 1.3.3.
