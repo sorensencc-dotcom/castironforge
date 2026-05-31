@@ -19,6 +19,7 @@
 |---|---|---|---|
 | SYSTEM | `CIC_SYSTEM.md` | `projects/cic/docs/` | Stable architecture |
 | STATE | `CIC_PROJECT_STATE.md` | `projects/cic/docs/` | Volatile status |
+| CONTROL PLANE | `CIC_CONTROL_PLANE_ARCHITECTURE_v3.0.md` | `docs/` | v3.0 Control Plane Arch |
 | ROUTING | `CIC_ROUTING_SPEC_v2.3.md` | `docs/` | v2.3 Routing Spec |
 | Living doc | `Treatment.md` | `projects/cic/docs/living-docs/` | Authoritative treatment |
 | Living doc | `Kroll_Archive_Log.md` | `projects/cic/docs/living-docs/` | Ingestion log |
@@ -84,20 +85,27 @@ The SkillOpt system introduces a self-improving loop for CIC's redesign capabili
 
 ---
 
-## 6. Routing Intelligence (v2.3)
+## 6. Control Plane Intelligence (v3.0)
 
-CIC v2.3 implements a **Local-First, Cloud-Only for Reasoning** routing strategy. This maximizes token economy while maintaining high-quality synthesis.
+CIC v3.0 implements a **Governed Intelligence Network** through a multi-layered control plane. This system ensures deterministic, cost-optimized, and safety-aware inference across all CIC agents.
 
-### 6.1 Routing Policy
-- **L0/L1 (Local)**: Classification, extraction, formatting, and safety pre-filtering.
-- **C1 (Cloud-Flash)**: Fast extraction, outreach, and fallback reasoning.
-- **C2 (Cloud-Pro)**: High-entropy reasoning (Redesign), arbitration, and long-context synthesis.
+### 6.1 Governance Layer (PolicyEngine v3.0)
+The top-level governor enforcing tenant-specific rules:
+- **Overrides**: Forced model targets per subsystem.
+- **Guardrails**: Safety blocking, cost conservation, and latency caps.
+- **Multi-Tenancy**: Declarative policies stored in `control_plane/policies/`.
 
-### 6.2 Fallback & Arbitration
-- **Fallback**: Automatic downgrade (C2 -> C1 -> L1) triggered by `TokenEconomyAgent` telemetry (latency, cost, drift).
-- **Arbitration**: C2-based resolution of multi-agent disagreements.
+### 6.2 Routing Layer (RouterAgent v2.3)
+The deterministic tier selector:
+- **Tiering**: L0, L1, C1, C2 selection based on task entropy.
+- **Protection**: Automated drift detection and `LOCAL_FALLBACK` triggers.
+- **Metrics**: Real-time p95 latency-based overrides.
 
-Reference: `docs/CIC_ROUTING_SPEC_v2.3.md` for full implementation details.
+### 6.3 Execution & Telemetry
+- **Orchestrator**: Unified execution path with automated fallback resilience.
+- **Telemetry**: 10-event audit trail for full observability of policy and routing decisions.
+
+Reference: `docs/CIC_CONTROL_PLANE_ARCHITECTURE_v3.0.md` for full implementation details.
 
 ---
 

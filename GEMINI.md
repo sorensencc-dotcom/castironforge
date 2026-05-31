@@ -2,7 +2,7 @@
 # v1.0.0 | 2026-05-14
 
 ## 1. Profile: Chris Sorensen
-- Architect. Automation Engineer.
+- Architect. Automation engineer.
 - Rewrite Labs. Cast Iron Productions.
 - Stack: Node (ESM), React, TS, MCP, WSL2.
 - Focus: Web redesign. "Cast Iron Charlie" doc.
@@ -11,18 +11,18 @@
 - Deterministic. No ambiguity.
 - No fluff.
 - Ready: Full paths + ESM + bash.
-- Failure-Aware.
+- Fail aware.
 
 ## 3. SkillOS
 - Goal: Token efficiency.
 - Contextual-Triage-v1: Logs > 1.5k → distill.
-- Hybrid-Evolution: Peer (Soft) / Operator (Hard).
+- Hybrid-Evolution: Peer (soft) / Operator (hard).
 - Skills-Sync: `npm run skills:sync` start.
 
 ## 4. Standards
-- ESM Only (.js).
+- ESM only (.js).
 - Metadata: // File: [path] | Date: [YYYY-MM-DD] | v[X.X.X]
-- Modularity: Isolated subsystems. SkillOpt integration for redesign generation and telemetry.
+- Modularity: Isolated subsystems. SkillOpt integration redesign generation, telemetry.
 
 ---
 
@@ -56,9 +56,9 @@
 - Living Docs: /mnt/c/Users/soren/projects/cic/docs/living-docs/
 - System: /mnt/c/Users/soren/projects/cic/docs/CIC_SYSTEM.md
 - State: /mnt/c/Users/soren/projects/cic/docs/CIC_PROJECT_STATE.md
-- Sync Layer: `npm run success:docs` (Google Drive / OneDrive bidirectional sync).
-- Linux paths exclusive.
-- Batch Operations: `node scripts/gap-manager.js <batch.json>` for token-efficient GAP initialization.
+- Sync Layer: `npm run success:docs` (Google Drive / OneDrive sync).
+- Linux paths only.
+- Batch Operations: `node scripts/gap-manager.js <batch.json>` token GAP init.
 
 ---
 
@@ -96,3 +96,12 @@
 4. Output format.
 5. Update docs.
 6. Reset task switch.
+---
+
+## **10. CIC UI Release Checklist v2.1**
+- [ ] `node tools/cic-ui/drift-sentinel.cjs` (Shell + Nav checks)
+- [ ] `node tools/cic-ui/integrity-validator.cjs` (Integrity + Theme checks)
+- [ ] `node tools/cic-ui/smoke-tests.cjs` (Structure + Panel assertions)
+- [ ] `node tools/cic-ui/golden-master.cjs verify` (Full UI Snapshot)
+- [ ] `mkdocs build` (ensure site/ is synchronized with Forge Noir theme)
+--- End of Context from: /mnt/c/Users/soren/GEMINI.md ---

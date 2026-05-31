@@ -19,6 +19,8 @@ CIC is now a fully functional **Sorensen Documentary Engine**. We have completed
 - [x] **Phase IV**: Construct Master Archival Pull List.
 - [x] **Phase IV**: Construct 12-slide Pitch Deck.
 - [x] **v2.3 Routing Spec**: Implementation-ready mapping for Local/Cloud inference.
+- [x] **v3.0 Control Plane**: Policy-driven governance, deterministic routing, and unified orchestration.
+- [ ] **v3.1 Adaptive Intelligence**: Model portfolio, drift mitigation, and live governance.
 
 ---
 
