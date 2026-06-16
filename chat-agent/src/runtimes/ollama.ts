@@ -1,40 +1,61 @@
-import type { RuntimeAdapter, RuntimeStatus, CompleteParams, StreamParams } from './types';
+import type { RuntimeAdapter, HealthStatus, RuntimeModel, CompleteParams, StreamParams } from './types';
+import { OLLAMA_URL } from './config';
 
-const OLLAMA_URL = process.env.OLLAMA_URL ?? 'http://localhost:11434';
+interface OllamaModelDetails {
+  parameter_size?: string;
+}
 
 interface OllamaModel {
   name: string;
-  details?: { parameter_size?: string };
+  model: string;
+  modified_at: string;
+  size: number;
+  digest: string;
+  details?: OllamaModelDetails;
 }
 
-async function ping(): Promise<boolean> {
-  try {
-    const res = await fetch(`${OLLAMA_URL}/api/tags`);
-    return res.ok;
-  } catch {
-    return false;
-  }
+interface OllamaTagsResponse {
+  models: OllamaModel[];
+}
+
+interface OllamaGenerateResponse {
+  model: string;
+  created_at: string;
+  response: string;
+  done: boolean;
+}
+
+interface OllamaGenerateStreamChunk {
+  model: string;
+  created_at: string;
+  response?: string;
+  done: boolean;
+}
+
+interface OllamaEmbeddingResponse {
+  embedding: number[];
 }
 
 export const ollamaAdapter: RuntimeAdapter = {
-  async health(): Promise<RuntimeStatus> {
-    return (await ping()) ? 'ok' : 'error';
-  },
-
-  async models() {
+  async health(): Promise<HealthStatus> {
     try {
       const res = await fetch(`${OLLAMA_URL}/api/tags`);
-      if (!res.ok) return [];
-      const data = (await res.json()) as { models?: OllamaModel[] };
-      return (data.models ?? []).map(m => ({
-        id: `local:${m.name}`,
-        name: m.name,
-        runtime: 'ollama',
-        size: m.details?.parameter_size
-      }));
+      return res.ok ? 'ok' : 'error';
     } catch {
-      return [];
+      return 'error';
     }
+  },
+
+  async models(): Promise<RuntimeModel[]> {
+    const res = await fetch(`${OLLAMA_URL}/api/tags`);
+    if (!res.ok) return [];
+    const data = (await res.json()) as OllamaTagsResponse;
+    return data.models.map(m => ({
+      id: `local:${m.name}`,
+      name: m.name,
+      runtime: 'ollama',
+      size: m.details?.parameter_size
+    }));
   },
 
   async complete({ model, message }: CompleteParams): Promise<string> {
@@ -48,9 +69,9 @@ export const ollamaAdapter: RuntimeAdapter = {
       })
     });
 
-    if (!res.ok) throw new Error(`Ollama complete error: ${res.status}`);
-    const data = (await res.json()) as { response?: string };
-    return data.response ?? '';
+    if (!res.ok) throw new Error(`Ollama complete error: HTTP ${res.status}`);
+    const data = (await res.json()) as OllamaGenerateResponse;
+    return data.response;
   },
 
   async stream({ model, message, onToken, onDone }: StreamParams): Promise<void> {
@@ -64,24 +85,27 @@ export const ollamaAdapter: RuntimeAdapter = {
       })
     });
 
-    if (!res.ok || !res.body) throw new Error(`Ollama stream error: ${res.status}`);
+    if (!res.ok || !res.body) throw new Error(`Ollama stream error: HTTP ${res.status}`);
 
     const reader = res.body.getReader();
     const decoder = new TextDecoder();
-    let done = false;
+    let finished = false;
 
-    while (!done) {
+    while (!finished) {
       const chunk = await reader.read();
       if (chunk.done) break;
-      const text = decoder.decode(chunk.value, { stream: true });
 
+      const text = decoder.decode(chunk.value, { stream: true });
       for (const line of text.split('\n')) {
-        if (!line.trim()) continue;
+        const trimmed = line.trim();
+        if (!trimmed) continue;
+        let obj: OllamaGenerateStreamChunk;
         try {
-          const obj = JSON.parse(line) as { done?: boolean; response?: string };
-          if (obj.done) { onDone(); done = true; break; }
-          if (obj.response) onToken(obj.response);
-        } catch { /* ignore partial-line parse errors */ }
+          obj = JSON.parse(trimmed) as OllamaGenerateStreamChunk;
+        } catch { continue; }
+
+        if (obj.done) { onDone(); finished = true; break; }
+        if (obj.response) onToken(obj.response);
       }
     }
   },
@@ -93,8 +117,8 @@ export const ollamaAdapter: RuntimeAdapter = {
       body: JSON.stringify({ model: 'nomic-embed-text', prompt: text })
     });
 
-    if (!res.ok) throw new Error(`Ollama embed error: ${res.status}`);
-    const data = (await res.json()) as { embedding?: number[] };
-    return data.embedding ?? [];
+    if (!res.ok) throw new Error(`Ollama embed error: HTTP ${res.status}`);
+    const data = (await res.json()) as OllamaEmbeddingResponse;
+    return data.embedding;
   }
 };

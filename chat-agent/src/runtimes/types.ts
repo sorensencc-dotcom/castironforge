@@ -1,11 +1,4 @@
-export type RuntimeStatus = 'ok' | 'degraded' | 'error';
-
-export interface ModelInfo {
-  id: string;
-  name: string;
-  runtime: string;
-  size?: string;
-}
+export type HealthStatus = 'ok' | 'degraded' | 'error';
 
 export interface CompleteParams {
   sessionId: string;
@@ -18,9 +11,16 @@ export interface StreamParams extends CompleteParams {
   onDone: () => void;
 }
 
+export interface RuntimeModel {
+  id: string;
+  name: string;
+  runtime: 'ollama' | 'llamacpp' | 'torque';
+  size?: string;
+}
+
 export interface RuntimeAdapter {
-  health(): Promise<RuntimeStatus>;
-  models(): Promise<ModelInfo[]>;
+  health(): Promise<HealthStatus>;
+  models(): Promise<RuntimeModel[]>;
   complete(params: CompleteParams): Promise<string>;
   stream(params: StreamParams): Promise<void>;
   embed(text: string): Promise<number[]>;

@@ -1,41 +1,55 @@
-import type { RuntimeAdapter, RuntimeStatus, CompleteParams, StreamParams } from './types';
+import type { RuntimeAdapter, HealthStatus, RuntimeModel, CompleteParams, StreamParams } from './types';
+import { LLAMACPP_URL } from './config';
 
-const LLAMACPP_URL = process.env.LLAMACPP_URL ?? 'http://localhost:8080';
+interface LlamaCppHealthResponse {
+  status: HealthStatus;
+}
 
 interface LlamaCppModel {
   id: string;
   name: string;
-  size?: string;
+  size: string;
 }
 
-async function ping(): Promise<boolean> {
-  try {
-    const res = await fetch(`${LLAMACPP_URL}/health`);
-    return res.ok;
-  } catch {
-    return false;
-  }
+interface LlamaCppModelsResponse {
+  models: LlamaCppModel[];
+}
+
+interface LlamaCppCompletionResponse {
+  completion: string;
+}
+
+interface LlamaCppCompletionStreamChunk {
+  token: string;
+  done: boolean;
+}
+
+interface LlamaCppEmbeddingResponse {
+  embedding: number[];
 }
 
 export const llamaCppAdapter: RuntimeAdapter = {
-  async health(): Promise<RuntimeStatus> {
-    return (await ping()) ? 'ok' : 'error';
+  async health(): Promise<HealthStatus> {
+    try {
+      const res = await fetch(`${LLAMACPP_URL}/health`);
+      if (!res.ok) return 'error';
+      const data = (await res.json()) as LlamaCppHealthResponse;
+      return data.status;
+    } catch {
+      return 'error';
+    }
   },
 
-  async models() {
-    try {
-      const res = await fetch(`${LLAMACPP_URL}/models`);
-      if (!res.ok) return [];
-      const data = (await res.json()) as { models?: LlamaCppModel[] };
-      return (data.models ?? []).map(m => ({
-        id: `cpu:${m.id}`,
-        name: m.name,
-        runtime: 'llamacpp',
-        size: m.size
-      }));
-    } catch {
-      return [];
-    }
+  async models(): Promise<RuntimeModel[]> {
+    const res = await fetch(`${LLAMACPP_URL}/models`);
+    if (!res.ok) return [];
+    const data = (await res.json()) as LlamaCppModelsResponse;
+    return data.models.map(m => ({
+      id: `cpu:${m.id}`,
+      name: m.name,
+      runtime: 'llamacpp',
+      size: m.size
+    }));
   },
 
   async complete({ model, message }: CompleteParams): Promise<string> {
@@ -49,9 +63,9 @@ export const llamaCppAdapter: RuntimeAdapter = {
       })
     });
 
-    if (!res.ok) throw new Error(`llama.cpp complete error: ${res.status}`);
-    const data = (await res.json()) as { completion?: string };
-    return data.completion ?? '';
+    if (!res.ok) throw new Error(`llama.cpp complete error: HTTP ${res.status}`);
+    const data = (await res.json()) as LlamaCppCompletionResponse;
+    return data.completion;
   },
 
   async stream({ model, message, onToken, onDone }: StreamParams): Promise<void> {
@@ -65,21 +79,27 @@ export const llamaCppAdapter: RuntimeAdapter = {
       })
     });
 
-    if (!res.ok || !res.body) throw new Error(`llama.cpp stream error: ${res.status}`);
+    if (!res.ok || !res.body) throw new Error(`llama.cpp stream error: HTTP ${res.status}`);
 
     const reader = res.body.getReader();
     const decoder = new TextDecoder();
-    let done = false;
+    let finished = false;
 
-    while (!done) {
+    while (!finished) {
       const chunk = await reader.read();
       if (chunk.done) break;
-      const text = decoder.decode(chunk.value, { stream: true });
 
+      const text = decoder.decode(chunk.value, { stream: true });
       for (const line of text.split('\n')) {
-        if (!line.trim()) continue;
-        if (line === '[DONE]') { onDone(); done = true; break; }
-        onToken(line);
+        const trimmed = line.trim();
+        if (!trimmed) continue;
+        let obj: LlamaCppCompletionStreamChunk;
+        try {
+          obj = JSON.parse(trimmed) as LlamaCppCompletionStreamChunk;
+        } catch { continue; }
+
+        if (obj.done) { onDone(); finished = true; break; }
+        if (obj.token) onToken(obj.token);
       }
     }
   },
@@ -91,8 +111,8 @@ export const llamaCppAdapter: RuntimeAdapter = {
       body: JSON.stringify({ text })
     });
 
-    if (!res.ok) throw new Error(`llama.cpp embed error: ${res.status}`);
-    const data = (await res.json()) as { embedding?: number[] };
-    return data.embedding ?? [];
+    if (!res.ok) throw new Error(`llama.cpp embed error: HTTP ${res.status}`);
+    const data = (await res.json()) as LlamaCppEmbeddingResponse;
+    return data.embedding;
   }
 };

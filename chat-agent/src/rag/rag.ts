@@ -1,4 +1,4 @@
-const TORQUE_URL = process.env.TORQUE_URL ?? 'http://localhost:9000';
+import { TORQUE_URL } from '../runtimes/config';
 
 export interface SearchResult {
   id: string;
