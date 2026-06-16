@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-950 text-zinc-100;
+  @apply bg-stone-950 text-stone-100;
   font-feature-settings: 'rlig' 1, 'calt' 1;
 }
 
@@ -14,8 +14,8 @@ body {
   @apply bg-transparent;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-zinc-700 rounded-full;
+  @apply bg-stone-700 rounded-full;
 }
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-zinc-600;
+  @apply bg-stone-600;
 }
