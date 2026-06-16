@@ -4,6 +4,7 @@ import { torqueAdapter } from '../runtimes/torque';
 import { ollamaAdapter } from '../runtimes/ollama';
 import { llamaCppAdapter } from '../runtimes/llamacpp';
 import { rag } from '../rag/rag';
+import { buildRagPrompt } from '../rag/promptBuilder';
 
 export const chatAgentRouter = Router();
 
@@ -39,8 +40,13 @@ chatAgentRouter.post('/chat', async (req, res) => {
     message: string;
   };
 
-  const runtime = resolveRuntime(model);
-  const response = await runtime.complete({ sessionId, model, message });
+  const [chunks, runtime] = await Promise.all([
+    rag.search(message).catch(() => []),
+    Promise.resolve(resolveRuntime(model))
+  ]);
+
+  const prompt = buildRagPrompt(message, chunks);
+  const response = await runtime.complete({ sessionId, model, message: prompt });
 
   res.json({ id: crypto.randomUUID(), message: response });
 });
@@ -48,7 +54,12 @@ chatAgentRouter.post('/chat', async (req, res) => {
 chatAgentRouter.get('/chat/stream', async (req, res) => {
   const { sessionId, model, message } = req.query as Record<string, string>;
 
-  const runtime = resolveRuntime(model);
+  const [chunks, runtime] = await Promise.all([
+    rag.search(message).catch(() => []),
+    Promise.resolve(resolveRuntime(model))
+  ]);
+
+  const prompt = buildRagPrompt(message, chunks);
 
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache');
@@ -57,7 +68,7 @@ chatAgentRouter.get('/chat/stream', async (req, res) => {
   await runtime.stream({
     sessionId,
     model,
-    message,
+    message: prompt,
     onToken: token => { res.write(`data: ${token}\n\n`); },
     onDone: () => {
       res.write('data: [DONE]\n\n');
