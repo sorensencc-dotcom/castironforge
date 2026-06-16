@@ -1,4 +1,4 @@
-import type { ChatRequest, ChatMessage } from '../types/chat';
+import type { ChatRequest, ChatMessage, HealthStatus, Model } from '../types/chat';
 
 const BASE_URL = 'http://localhost:8000'; // CIC Chat Agent
 
@@ -52,4 +52,17 @@ export function streamChatMessage(
   };
 
   return () => eventSource.close();
+}
+
+export async function fetchHealth(): Promise<HealthStatus> {
+  const res = await fetch(`${BASE_URL}/health`);
+  if (!res.ok) throw new Error(`Health check failed: ${res.status}`);
+  return res.json() as Promise<HealthStatus>;
+}
+
+export async function fetchModels(): Promise<Model[]> {
+  const res = await fetch(`${BASE_URL}/models`);
+  if (!res.ok) throw new Error(`Models fetch failed: ${res.status}`);
+  const data = await res.json();
+  return (data as { models: Model[] }).models;
 }

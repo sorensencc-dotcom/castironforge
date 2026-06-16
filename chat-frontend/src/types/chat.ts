@@ -15,3 +15,17 @@ export interface ChatRequest {
   model: string;
   message: string;
 }
+
+export type RuntimeStatus = 'ok' | 'degraded' | 'error' | 'unreachable' | 'unknown';
+
+export interface HealthStatus {
+  ollama: RuntimeStatus;
+  torque: RuntimeStatus;
+  llamacpp: RuntimeStatus;
+}
+
+export interface Model {
+  id: string;
+  name: string;
+  runtime: string;
+}
