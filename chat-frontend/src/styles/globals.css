@@ -3,5 +3,19 @@
 @tailwind utilities;
 
 body {
-  @apply bg-neutral-950 text-neutral-100;
+  @apply bg-zinc-950 text-zinc-100;
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-zinc-600;
 }

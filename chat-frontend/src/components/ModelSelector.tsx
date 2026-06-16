@@ -9,26 +9,30 @@ interface Props {
 export function ModelSelector({ model, onChange }: Props) {
   const { models, loading } = useModels();
 
+  const current = models.find(m => m.id === model);
+  const label = current ? current.name : model.split(':')[1] ?? model;
+
   return (
-    <div className="p-4 border-b border-neutral-800 flex gap-4 items-center">
-      <div className="flex-1">
-        <label className="block text-sm mb-1">Model</label>
-        <select
-          className="w-full bg-neutral-900 border border-neutral-700 rounded px-3 py-2 disabled:opacity-50"
-          value={model}
-          onChange={e => onChange(e.target.value)}
-          disabled={loading}
-        >
-          {models.map(m => (
-            <option key={m.id} value={m.id}>
-              {m.runtime}: {m.name}{m.size ? ` (${m.size})` : ''}
-            </option>
-          ))}
-        </select>
-      </div>
-      <span className="text-xs text-neutral-500">
-        {loading ? 'Loading models…' : `${models.length} model${models.length !== 1 ? 's' : ''} available`}
-      </span>
+    <div className="relative">
+      <select
+        className="appearance-none bg-zinc-800 hover:bg-zinc-700 border border-zinc-700/60 text-zinc-300 text-xs rounded-lg pl-3 pr-7 py-1.5 cursor-pointer disabled:opacity-40 transition-colors focus:outline-none focus:ring-1 focus:ring-indigo-500"
+        value={model}
+        onChange={e => onChange(e.target.value)}
+        disabled={loading}
+        title={loading ? 'Loading models…' : `${models.length} model${models.length !== 1 ? 's' : ''}`}
+      >
+        {models.map(m => (
+          <option key={m.id} value={m.id}>
+            {m.name}{m.size ? ` · ${m.size}` : ''}
+          </option>
+        ))}
+      </select>
+      <svg
+        className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-zinc-500"
+        width="10" height="10" viewBox="0 0 10 10" fill="none"
+      >
+        <path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
     </div>
   );
 }
