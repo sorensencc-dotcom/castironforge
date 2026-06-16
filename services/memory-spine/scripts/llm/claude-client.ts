@@ -12,6 +12,21 @@ import Anthropic from '@anthropic-ai/sdk';
 
 const client = new Anthropic();
 
+/**
+ * Minimal single-turn text call — no structured output, no thinking.
+ * Used by generate-dataset-llm.ts for direct question/summary generation.
+ */
+export async function claudeText(prompt: string, maxTokens = 512): Promise<string> {
+  const resp = await client.messages.create({
+    model: 'claude-opus-4-8',
+    max_tokens: maxTokens,
+    temperature: 0.2,
+    messages: [{ role: 'user', content: prompt }],
+  });
+  const block = resp.content.find(b => b.type === 'text');
+  return block?.type === 'text' ? block.text.trim() : '';
+}
+
 const REFINE_SCHEMA = {
   type: 'object',
   properties: {

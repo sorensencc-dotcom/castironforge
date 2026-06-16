@@ -13,7 +13,11 @@
     "generate-dataset": "node --loader ts-node/esm scripts/generate-dataset.ts",
     "generate-dataset:dry": "DRY_RUN=1 node --loader ts-node/esm scripts/generate-dataset.ts",
     "generate-dataset-hybrid": "node --loader ts-node/esm scripts/generate-dataset-hybrid.ts",
-    "generate-dataset-hybrid:dry": "DRY_RUN=1 node --loader ts-node/esm scripts/generate-dataset-hybrid.ts"
+    "generate-dataset-hybrid:dry": "DRY_RUN=1 node --loader ts-node/esm scripts/generate-dataset-hybrid.ts",
+    "generate-dataset-llm": "node --loader ts-node/esm scripts/generate-dataset-llm.ts",
+    "generate-dataset-llm:dry": "DRY_RUN=1 node --loader ts-node/esm scripts/generate-dataset-llm.ts",
+    "calibrate-confidence": "node --loader ts-node/esm scripts/calibrate-confidence.ts",
+    "train-memory-v1": "bash scripts/train-memory-v1.sh"
   },
   "engines": {
     "node": ">=20.0.0"
