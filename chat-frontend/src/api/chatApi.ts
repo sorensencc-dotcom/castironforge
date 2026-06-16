@@ -15,11 +15,11 @@ export async function sendChatMessage(
     throw new Error(`Chat API error: ${res.status}`);
   }
 
-  const data = await res.json();
+  const data = (await res.json()) as { id?: string; message?: string };
   return {
     id: data.id ?? crypto.randomUUID(),
     role: 'assistant',
-    content: data.message,
+    content: data.message ?? '',
     timestamp: Date.now()
   };
 }
@@ -63,6 +63,6 @@ export async function fetchHealth(): Promise<HealthStatus> {
 export async function fetchModels(): Promise<Model[]> {
   const res = await fetch(`${BASE_URL}/models`);
   if (!res.ok) throw new Error(`Models fetch failed: ${res.status}`);
-  const data = await res.json();
-  return (data as { models: Model[] }).models;
+  const data = (await res.json()) as { models?: Model[] };
+  return data.models ?? [];
 }

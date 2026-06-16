@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { streamChatMessage, sendChatMessage } from '../api/chatApi';
 import type { ChatRequest, ChatMessage } from '../types/chat';
 
@@ -13,6 +13,12 @@ export function useStreamingChat({
   updateLastAssistantMessage,
   setIsStreaming
 }: UseStreamingChatParams) {
+  const closeRef = useRef<(() => void) | null>(null);
+
+  useEffect(() => {
+    return () => { closeRef.current?.(); };
+  }, []);
+
   const send = useCallback(
     async (payload: ChatRequest, useStream: boolean) => {
       const userMsg: ChatMessage = {
@@ -40,22 +46,22 @@ export function useStreamingChat({
 
       let buffer = '';
 
-      const close = streamChatMessage(
+      closeRef.current = streamChatMessage(
         payload,
         token => {
           buffer += token;
           updateLastAssistantMessage(buffer);
         },
         () => {
+          closeRef.current = null;
           setIsStreaming(false);
         },
         err => {
           console.error('Streaming error', err);
+          closeRef.current = null;
           setIsStreaming(false);
         }
       );
-
-      return close;
     },
     [addMessage, updateLastAssistantMessage, setIsStreaming]
   );

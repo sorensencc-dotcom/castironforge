@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { randomUUID } from 'crypto';
 import type { RuntimeAdapter } from '../runtimes/types';
 import { torqueAdapter } from '../runtimes/torque';
 import { ollamaAdapter } from '../runtimes/ollama';
@@ -40,46 +41,68 @@ chatAgentRouter.post('/chat', async (req, res) => {
     message: string;
   };
 
-  const [chunks, runtime] = await Promise.all([
-    rag.search(message).catch(() => []),
-    Promise.resolve(resolveRuntime(model))
-  ]);
+  let runtime: RuntimeAdapter;
+  try {
+    runtime = resolveRuntime(model);
+  } catch (err) {
+    res.status(400).json({ error: (err as Error).message });
+    return;
+  }
 
-  const prompt = buildRagPrompt(message, chunks);
-  const response = await runtime.complete({ sessionId, model, message: prompt });
-
-  res.json({ id: crypto.randomUUID(), message: response });
+  try {
+    const chunks = await rag.search(message).catch(() => []);
+    const prompt = buildRagPrompt(message, chunks);
+    const response = await runtime.complete({ sessionId, model, message: prompt });
+    res.json({ id: randomUUID(), message: response });
+  } catch {
+    res.status(500).json({ error: 'Inference failed' });
+  }
 });
 
 chatAgentRouter.get('/chat/stream', async (req, res) => {
   const { sessionId, model, message } = req.query as Record<string, string>;
 
-  const [chunks, runtime] = await Promise.all([
-    rag.search(message).catch(() => []),
-    Promise.resolve(resolveRuntime(model))
-  ]);
+  let runtime: RuntimeAdapter;
+  try {
+    runtime = resolveRuntime(model);
+  } catch (err) {
+    res.status(400).json({ error: (err as Error).message });
+    return;
+  }
 
+  const chunks = await rag.search(message).catch(() => []);
   const prompt = buildRagPrompt(message, chunks);
 
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache');
   res.setHeader('Connection', 'keep-alive');
 
-  await runtime.stream({
-    sessionId,
-    model,
-    message: prompt,
-    onToken: token => { res.write(`data: ${token}\n\n`); },
-    onDone: () => {
-      res.write('data: [DONE]\n\n');
-      res.end();
-    }
-  });
+  try {
+    await runtime.stream({
+      sessionId,
+      model,
+      message: prompt,
+      onToken: token => { res.write(`data: ${token}\n\n`); },
+      onDone: () => {
+        res.write('data: [DONE]\n\n');
+        res.end();
+      }
+    });
+  } catch {
+    res.write('data: [ERROR]\n\n');
+    res.end();
+  }
 });
 
 chatAgentRouter.post('/embed', async (req, res) => {
   const { model, text } = req.body as { model: string; text: string };
-  const runtime = resolveRuntime(model);
+  let runtime: RuntimeAdapter;
+  try {
+    runtime = resolveRuntime(model);
+  } catch (err) {
+    res.status(400).json({ error: (err as Error).message });
+    return;
+  }
   const embedding = await runtime.embed(text);
   res.json({ embedding });
 });
@@ -94,5 +117,5 @@ function resolveRuntime(model: string): RuntimeAdapter {
   if (model.startsWith('local:')) return ollamaAdapter;
   if (model.startsWith('cpu:')) return llamaCppAdapter;
   if (model.startsWith('torque:')) return torqueAdapter;
-  throw new Error(`Unknown runtime for model: ${model}`);
+  throw new Error(`Unknown runtime prefix for model: ${model}`);
 }

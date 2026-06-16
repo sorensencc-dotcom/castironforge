@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import type { ChatMessage } from '../types/chat';
 
 export function useChatSession() {
@@ -6,22 +6,19 @@ export function useChatSession() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [model, setModel] = useState('local:qwen2.5');
   const [isStreaming, setIsStreaming] = useState(false);
+  const pendingAssistantIdRef = useRef<string | null>(null);
 
   function addMessage(msg: ChatMessage) {
+    if (msg.role === 'assistant') pendingAssistantIdRef.current = msg.id;
     setMessages(prev => [...prev, msg]);
   }
 
   function updateLastAssistantMessage(content: string) {
-    setMessages(prev => {
-      const copy = [...prev];
-      for (let i = copy.length - 1; i >= 0; i--) {
-        if (copy[i].role === 'assistant') {
-          copy[i] = { ...copy[i], content };
-          break;
-        }
-      }
-      return copy;
-    });
+    const targetId = pendingAssistantIdRef.current;
+    if (!targetId) return;
+    setMessages(prev =>
+      prev.map(m => (m.id === targetId ? { ...m, content } : m))
+    );
   }
 
   return {

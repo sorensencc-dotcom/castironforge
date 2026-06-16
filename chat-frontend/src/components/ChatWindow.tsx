@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { MessageBubble } from './MessageBubble';
-import { useChatSession } from '../hooks/useChatSession';
 import { useStreamingChat } from '../hooks/useStreamingChat';
+import type { useChatSession } from '../hooks/useChatSession';
 
-export function ChatWindow() {
+type Session = ReturnType<typeof useChatSession>;
+
+interface Props {
+  session: Session;
+}
+
+export function ChatWindow({ session }: Props) {
   const {
     sessionId,
     messages,
@@ -12,7 +18,7 @@ export function ChatWindow() {
     model,
     isStreaming,
     setIsStreaming
-  } = useChatSession();
+  } = session;
 
   const { send } = useStreamingChat({
     addMessage,
