@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "cic-memory-spine": {
+      "command": "node",
+      "args": [
+        "--loader", "ts-node/esm",
+        "src/mcp/server.ts"
+      ],
+      "cwd": "services/memory-spine",
+      "env": {
+        "MEMORY_SPINE_DATA_DIR": "${workspaceFolder}/services/memory-spine/data"
+      }
+    }
+  }
+}

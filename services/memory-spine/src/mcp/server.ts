@@ -46,7 +46,7 @@ async function handleToolCall(id: number | string, name: string, args: Record<st
   if (name === 'memory_query') {
     const { active: memory_version } = loadVersions();
     const result = buildStubQueryResponse(
-      args as Parameters<typeof buildStubQueryResponse>[0],
+      args as unknown as Parameters<typeof buildStubQueryResponse>[0],
       memory_version,
     );
     respond(id, { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] });
