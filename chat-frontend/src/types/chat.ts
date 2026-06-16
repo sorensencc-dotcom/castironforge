@@ -28,4 +28,5 @@ export interface Model {
   id: string;
   name: string;
   runtime: string;
+  size?: string;
 }

@@ -21,7 +21,7 @@ export function ModelSelector({ model, onChange }: Props) {
         >
           {models.map(m => (
             <option key={m.id} value={m.id}>
-              {m.runtime}: {m.name}
+              {m.runtime}: {m.name}{m.size ? ` (${m.size})` : ''}
             </option>
           ))}
         </select>
