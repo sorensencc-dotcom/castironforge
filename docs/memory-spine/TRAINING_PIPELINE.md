@@ -1,143 +1,96 @@
 # CIC Memory Spine — Training Pipeline
 
-How memory-vN artifacts are built from the CIC corpus.
+## 1. Goals
 
----
+- Train a small (1–3B) parametric memory model on CIC corpus.
+- Provide fixed-cost retrieval independent of corpus size.
+- Enable versioned, hot-swappable memory (`memory-vN`) with rollback.
+- Preserve provenance and confidence for every answer.
 
-## Inputs
+## 2. Data sources
 
-| Source | Type | Examples |
-|---|---|---|
-| CIC ADRs | Architecture Decision Records | `adr-*.md` files |
-| CIC design docs | Specs, RFCs | Architecture docs, service definitions |
-| CIC chat logs | Conversational Q&A | Agent interactions, operator logs |
-| CIC code comments | Inline documentation | Repair engine, orchestrator source |
-| CIC roadmap docs | Planning documents | `ROADMAP.md`, `ROADMAP_EXTENDED.md` |
-| Synthetic Q&A | Auto-generated pairs | From section headings, summaries, code comments |
+- `cic/adr/` — Architecture Decision Records.
+- `cic/docs/` — subsystem and architecture docs.
+- `cic/build/` — self-healing build system specs.
+- `cic/routing/` — model routing and budget-aware logic.
+- `cic/roadmap/` — roadmap and planning docs.
+- `cic/logs/agent/` — agent conversations and Q&A.
 
----
+## 3. Dataset construction
 
-## Preprocessing pipeline
+1. **Ingest documents**
+   - Normalize to UTF-8 text.
+   - Attach metadata: `doc_id`, `path`, `domain`, `timestamp`.
 
-```
-Raw corpus
-    │
-    ▼
-Chunking (semantic segments)
-    │   - Functions → one chunk each
-    │   - Sections → one chunk each
-    │   - ADR entries → one chunk each
-    ▼
-Metadata tagging
-    │   { doc_id, chunk_id, type, domain, timestamp, tags }
-    ▼
-Feature extraction
-    │   - Embeddings (dense)
-    │   - Sparse features (TF-IDF, BM25)
-    │   - Document graph (cross-references)
-    ▼
-Q&A pair generation
-    │   - From headings → "What is X?"
-    │   - From summaries → "How does X work?"
-    │   - From code → "What does function X do?"
-    ▼
-Training set assembly
-    │   { query, context_features, answer, provenance }
-    ▼
-memory-vN artifact
-```
+2. **Chunking**
+   - Split into semantic chunks (sections, functions, ADR entries).
+   - Target size: 256–1024 tokens per chunk.
+   - Store `chunk_id`, `doc_id`, `offset`, `domain`.
 
----
+3. **Q&A generation**
+   - For each chunk:
+     - Generate 3–10 synthetic questions (titles, headings, summaries).
+     - Extract human-authored questions from CIC logs where available.
+   - Label each pair with:
+     - `question_text`
+     - `answer_text` (chunk summary or direct span)
+     - `doc_id`, `chunk_id`, `domain`, `timestamp`.
 
-## Training objective
+4. **Multi-hop examples**
+   - Build questions that require 2–3 related chunks (e.g., build + routing).
+   - Compose answers that reference multiple docs.
+   - Store `related_doc_ids` and `related_chunk_ids`.
 
-**Primary:** Conditioned generation
+5. **Train / val / test splits**
+   - Split by `doc_id` to avoid leakage:
+     - Train: 70%
+     - Val: 15%
+     - Test: 15%
+   - Maintain domain balance across splits.
 
-```
-P(answer | query, domain_features, time_hint)
-```
+## 4. Model objective
 
-The model learns to output compact answers given a query and optional context features. It does not retrieve at inference time.
+- Conditional generation:
+  - Input: `question_text` + metadata features.
+  - Output: `answer_text`.
+- Loss: standard cross-entropy over answer tokens.
+- Auxiliary heads:
+  - Confidence score (0–1).
+  - Provenance pointer distribution over `doc_id` / `chunk_id`.
 
-**Secondary objectives:**
-- Multi-hop consistency: cross-document relationships must be captured in a single pass.
-- Robustness to noisy features: simulate bad retrieval and partial metadata during training.
-- Confidence calibration: model outputs a calibrated confidence score alongside the answer.
+## 5. Training procedure
 
----
+1. Tokenize questions and answers with target model tokenizer.
+2. Encode metadata as special tokens or side-channel features.
+3. Train for N epochs with early stopping on validation loss.
+4. Save:
+   - Model weights.
+   - Tokenizer.
+   - Confidence calibration data.
+   - Provenance mapping rules.
 
-## Model spec
+## 6. Versioning
 
-| Property | Value |
-|---|---|
-| Architecture | Small transformer (encoder-decoder or decoder-only) |
-| Parameter count | 1–3B (or distilled variant for local node deployment) |
-| Training data | CIC corpus Q&A pairs + synthetic pairs |
-| Output | Answer tokens + provenance pointers + confidence logit |
-| Deployment | Local (single node) or distributed (per domain) |
+- Each trained model is a `memory-vN` artifact:
+  - `model/weights.bin`
+  - `model/tokenizer/`
+  - `config.json`
+  - `calibration.json`
+  - `provenance_schema.json`
+- Store under `models/memory-vN/`.
+- Activation and rollback managed via `MemoryAdmin`.
 
----
+## 7. Evaluation
 
-## Artifact naming
+- Per-domain accuracy on held-out Q&A.
+- Multi-hop question performance.
+- Confidence calibration (reliability curves).
+- Latency and throughput under CIC load.
 
-```
-memory-v{N}/
-  model.bin          # Model weights
-  config.json        # Hyperparameters, vocab, domain heads
-  provenance.json    # doc_id → chunk_id mappings used during training
-  confidence.json    # Calibration curves per domain
-  manifest.json      # { version, corpus_snapshot, trained_at, doc_count }
-```
+## 8. Deployment
 
-Example `manifest.json`:
-
-```json
-{
-  "version": "memory-v3",
-  "corpus_snapshot": "2026-05-10T00:00:00Z",
-  "trained_at": "2026-05-11T02:15:00Z",
-  "doc_count": 142,
-  "domains": ["cic-core", "skills", "roadmap", "infra"]
-}
-```
-
----
-
-## Update cadence
-
-| Trigger | Cadence |
-|---|---|
-| Nightly build | Every night at 02:00 UTC |
-| On-demand | After significant corpus changes (e.g., new ADR batch) |
-| Post-incident | After a memory failure or degraded confidence episode |
-
-Activation is separate from training. A new artifact is built and validated before being activated via `POST /v1/memory/admin/activate`.
-
----
-
-## Rollback
-
-If a new memory version degrades answer quality or confidence calibration:
-
-```
-POST /v1/memory/admin/rollback
-{ "to_version": "memory-v2" }
-```
-
-Rollback completes in <1 second (pointer swap only; no model reload required if both versions are warm).
-
----
-
-## Domain-specific heads (Phase 4+)
-
-The memory model can be extended with domain-specific output heads sharing a common backbone:
-
-```
-Shared backbone
-    ├── cic-core head
-    ├── skills head
-    ├── roadmap head
-    └── infra head
-```
-
-Each head is trained on its domain's corpus and can be updated independently. The Memory Router selects the head based on the `domain` field in the query.
+- Export model as a service:
+  - `POST /v1/memory/query` → uses `memory-vN`.
+- Wire into CIC Memory Spine:
+  - Router selects active `memory-vN`.
+  - Fallback to keyword scorer if model unavailable.

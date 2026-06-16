@@ -1,0 +1,32 @@
+{
+  "model_name": "memory-llama-1b",
+  "base_model": "llama-3-8b-instruct",
+  "parameter_efficiency": "lora",
+  "train_data_path": "datasets/memory-dataset-v1.json",
+  "output_dir": "models/memory-v1",
+  "max_seq_length": 2048,
+  "batch_size": 64,
+  "gradient_accumulation_steps": 4,
+  "learning_rate": 2e-4,
+  "weight_decay": 0.01,
+  "num_epochs": 3,
+  "warmup_steps": 500,
+  "lr_scheduler": "cosine",
+  "seed": 42,
+  "loss": "cross_entropy",
+  "aux_heads": {
+    "confidence": true,
+    "provenance_pointer": true
+  },
+  "metadata_features": [
+    "domain",
+    "timestamp"
+  ],
+  "save_every_n_steps": 1000,
+  "eval_every_n_steps": 1000,
+  "eval_metrics": [
+    "qa_accuracy",
+    "multi_hop_accuracy",
+    "confidence_brier_score"
+  ]
+}

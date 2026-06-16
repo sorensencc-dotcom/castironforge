@@ -64,6 +64,13 @@ export function countDocs(): number {
   return readdirSync(CORPUS_DIR).filter(f => f.endsWith('.json')).length;
 }
 
+export function listDocs(): CorpusDoc[] {
+  ensureCorpusDir();
+  return readdirSync(CORPUS_DIR)
+    .filter(f => f.endsWith('.json'))
+    .map(f => JSON.parse(readFileSync(join(CORPUS_DIR, f), 'utf-8')) as CorpusDoc);
+}
+
 export function getLastEditTime(): string | null {
   ensureCorpusDir();
   const files = readdirSync(CORPUS_DIR).filter(f => f.endsWith('.json'));
