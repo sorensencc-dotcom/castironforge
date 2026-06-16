@@ -9,3 +9,9 @@ export interface ChatSession {
   id: string;
   messages: ChatMessage[];
 }
+
+export interface ChatRequest {
+  sessionId: string;
+  model: string;
+  message: string;
+}

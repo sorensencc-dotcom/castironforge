@@ -1,28 +1,38 @@
 import React, { useState } from 'react';
 import { MessageBubble } from './MessageBubble';
 import { useChatSession } from '../hooks/useChatSession';
+import { useStreamingChat } from '../hooks/useStreamingChat';
 
 export function ChatWindow() {
-  const { messages, addMessage } = useChatSession();
+  const {
+    sessionId,
+    messages,
+    addMessage,
+    updateLastAssistantMessage,
+    model,
+    isStreaming,
+    setIsStreaming
+  } = useChatSession();
+
+  const { send } = useStreamingChat({
+    addMessage,
+    updateLastAssistantMessage,
+    setIsStreaming
+  });
+
   const [input, setInput] = useState('');
+  const [useStream, setUseStream] = useState(true);
 
-  function sendMessage() {
+  async function handleSend() {
     if (!input.trim()) return;
-
-    addMessage({
-      id: crypto.randomUUID(),
-      role: 'user',
-      content: input,
-      timestamp: Date.now()
-    });
-
+    await send({ sessionId, model, message: input }, useStream);
     setInput('');
   }
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      sendMessage();
+      void handleSend();
     }
   }
 
@@ -34,20 +44,33 @@ export function ChatWindow() {
         ))}
       </div>
 
-      <div className="p-4 border-t border-neutral-800 flex gap-2">
-        <input
-          className="flex-1 bg-neutral-900 border border-neutral-700 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder="Type a message…"
-        />
-        <button
-          onClick={sendMessage}
-          className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded text-white transition-colors"
-        >
-          Send
-        </button>
+      <div className="p-4 border-t border-neutral-800 flex flex-col gap-2">
+        <div className="flex items-center gap-2 text-xs text-neutral-400">
+          <input
+            id="stream-toggle"
+            type="checkbox"
+            checked={useStream}
+            onChange={e => setUseStream(e.target.checked)}
+          />
+          <label htmlFor="stream-toggle">Use streaming (SSE)</label>
+        </div>
+        <div className="flex gap-2">
+          <input
+            className="flex-1 bg-neutral-900 border border-neutral-700 rounded px-3 py-2 focus:outline-none focus:border-blue-500"
+            value={input}
+            onChange={e => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Ask your local agent…"
+            disabled={isStreaming}
+          />
+          <button
+            onClick={() => void handleSend()}
+            className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded text-white disabled:bg-blue-900 transition-colors"
+            disabled={isStreaming}
+          >
+            {isStreaming ? 'Streaming…' : 'Send'}
+          </button>
+        </div>
       </div>
     </div>
   );
