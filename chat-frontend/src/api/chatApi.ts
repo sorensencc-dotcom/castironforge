@@ -1,11 +1,11 @@
 import type { ChatRequest, ChatMessage } from '../types/chat';
 
-const BASE_URL = 'http://localhost:8000'; // change to your agent host
+const BASE_URL = 'http://localhost:8000'; // CIC Chat Agent
 
 export async function sendChatMessage(
   payload: ChatRequest
 ): Promise<ChatMessage> {
-  const res = await fetch(`${BASE_URL}/api/chat`, {
+  const res = await fetch(`${BASE_URL}/chat`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
@@ -19,24 +19,23 @@ export async function sendChatMessage(
   return {
     id: data.id ?? crypto.randomUUID(),
     role: 'assistant',
-    content: data.content,
+    content: data.message,
     timestamp: Date.now()
   };
 }
 
-// SSE streaming endpoint: /api/chat/stream
 export function streamChatMessage(
   payload: ChatRequest,
   onToken: (token: string) => void,
   onDone: () => void,
   onError: (err: unknown) => void
 ) {
-  const url = `${BASE_URL}/api/chat/stream`;
-  const eventSource = new EventSource(
-    `${url}?sessionId=${encodeURIComponent(payload.sessionId)}&model=${encodeURIComponent(
-      payload.model
-    )}&message=${encodeURIComponent(payload.message)}`
-  );
+  const params = new URLSearchParams({
+    sessionId: payload.sessionId,
+    model: payload.model,
+    message: payload.message
+  });
+  const eventSource = new EventSource(`${BASE_URL}/chat/stream?${params.toString()}`);
 
   eventSource.onmessage = e => {
     if (e.data === '[DONE]') {
