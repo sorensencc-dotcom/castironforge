@@ -1,33 +1,35 @@
-import type { RuntimeAdapter, RuntimeStatus, ModelInfo, CompleteParams, StreamParams } from './types';
+import type { RuntimeAdapter, RuntimeStatus, CompleteParams, StreamParams } from './types';
 
 const TORQUE_URL = process.env.TORQUE_URL ?? 'http://localhost:9000';
 
+async function ping(): Promise<boolean> {
+  try {
+    const res = await fetch(`${TORQUE_URL}/health`);
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
 export const torqueAdapter: RuntimeAdapter = {
   async health(): Promise<RuntimeStatus> {
-    // TODO: GET ${TORQUE_URL}/health
-    return 'ok';
+    return (await ping()) ? 'ok' : 'error';
   },
 
-  async models(): Promise<ModelInfo[]> {
-    // TorqueQuery is a retrieval engine, not an inference runtime.
-    // Returns empty — models come from Ollama and llama.cpp.
+  // TorqueQuery is retrieval-only — inference comes from Ollama/llama.cpp
+  async models() {
     return [];
   },
 
-  async complete(params: CompleteParams): Promise<string> {
-    // TODO: POST ${TORQUE_URL}/query
-    void params;
-    return '';
+  async complete(_params: CompleteParams): Promise<string> {
+    throw new Error('torqueAdapter.complete: not supported — use ollamaAdapter or llamaCppAdapter');
   },
 
-  async stream(params: StreamParams): Promise<void> {
-    // TODO: streaming via TorqueQuery
-    void params;
+  async stream(_params: StreamParams): Promise<void> {
+    throw new Error('torqueAdapter.stream: not supported — use ollamaAdapter or llamaCppAdapter');
   },
 
-  async embed(text: string): Promise<number[]> {
-    // TODO: POST ${TORQUE_URL}/embed
-    void text;
-    return [];
+  async embed(_text: string): Promise<number[]> {
+    throw new Error('torqueAdapter.embed: not supported — use ollamaAdapter or llamaCppAdapter');
   }
 };
