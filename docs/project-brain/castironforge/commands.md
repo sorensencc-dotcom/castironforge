@@ -31,3 +31,8 @@ Ingestion:
 - auto-ingest-research
 - agent-research
 - source-map-research
+
+Memory Spine:
+- memory-query    # POST /v1/memory/query — lookup a CIC knowledge question
+- memory-edit     # POST /v1/memory/edit  — add/update/delete a corpus document
+- memory-admin    # GET/POST /v1/memory/admin — version status, activate, rollback
