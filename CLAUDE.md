@@ -76,3 +76,66 @@ Browser (chat-frontend :5173)
 ### CORS
 
 The backend only allows `Origin: http://localhost:5173`. Change `server.ts` if the frontend port changes. OPTIONS preflights return 204 with no body.
+
+## Full Stack Startup
+
+Running the complete CIC Chat Agent stack locally requires five services:
+
+### 1. TorqueQuery (FastAPI RAG service)
+```bash
+cd ../torquequery
+export PYTHONPATH=.
+uvicorn torquequery.main:app --host 0.0.0.0 --port 9000 --reload
+```
+
+Or on Windows PowerShell:
+```powershell
+cd ../torquequery
+$env:PYTHONPATH="."
+uvicorn torquequery.main:app --host 0.0.0.0 --port 9000 --reload
+```
+
+This service runs on `:9000` by default (set via `TORQUE_URL` env var in `chat-agent/src/runtimes/config.ts`). It provides `/health` and `/query` endpoints for RAG search.
+
+### 2. Ollama (Local LLM inference)
+```bash
+ollama serve
+```
+
+Listens on `:11434`. Pull models with `ollama pull qwen2.5`.
+
+### 3. llama.cpp (Alternative inference)
+```bash
+./llama-server -m model.gguf -ngl 99 --port 8080
+```
+
+Listens on `:8080`. Optional if using Ollama.
+
+### 4. Chat Agent Backend
+```bash
+cd chat-agent
+npm install
+npm run dev
+```
+
+Listens on `:8000`. Connects to all three services above and orchestrates requests.
+
+### 5. Chat Frontend
+```bash
+cd chat-frontend
+npm install
+npm run dev
+```
+
+Vite dev server on `:5173`. Opens browser to `http://localhost:5173`.
+
+### Quick reference (all terminals side-by-side)
+| Service | Port | Command |
+|---------|------|---------|
+| TorqueQuery | 9000 | `cd torquequery && uvicorn torquequery.main:app --host 0.0.0.0 --port 9000 --reload` |
+| Ollama | 11434 | `ollama serve` |
+| llama.cpp | 8080 | `./llama-server -m model.gguf -ngl 99 --port 8080` |
+| chat-agent | 8000 | `cd chat-agent && npm run dev` |
+| chat-frontend | 5173 | `cd chat-frontend && npm run dev` |
+
+Once all five are running, open `http://localhost:5173` and you can select between `local:*` (Ollama), `cpu:*` (llama.cpp), and `torque:*` (TorqueQuery) models.
