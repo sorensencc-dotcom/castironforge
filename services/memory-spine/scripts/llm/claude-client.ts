@@ -27,27 +27,6 @@ export async function claudeText(prompt: string, maxTokens = 512): Promise<strin
   return block?.type === 'text' ? block.text.trim() : '';
 }
 
-const REFINE_SCHEMA = {
-  type: 'object',
-  properties: {
-    questions: {
-      type: 'array',
-      items: { type: 'string' },
-      description: 'Refined, precise questions answerable from the chunk.',
-    },
-    multi_hop_questions: {
-      type: 'array',
-      items: { type: 'string' },
-      description: 'Questions that require connecting facts across chunks.',
-    },
-    summary: {
-      type: 'string',
-      description: 'Concise 1-3 sentence factual summary of the chunk.',
-    },
-  },
-  required: ['questions', 'multi_hop_questions', 'summary'],
-  additionalProperties: false,
-} as const;
 
 export type RefineResult = {
   questions: string[];
@@ -90,21 +69,13 @@ ${draftQuestions.map((q, i) => `${i + 1}. ${q}`).join('\n')}
 DRAFT SUMMARY (local LLM):
 ${draftSummary.slice(0, 400)}
 
-Return valid JSON matching the schema exactly.`;
+Return ONLY a raw JSON object (no markdown, no explanation) with exactly these keys:
+{ "questions": [...], "multi_hop_questions": [...], "summary": "..." }`;
 
   const response = await client.messages.create({
     model: 'claude-opus-4-8',
     max_tokens: 1024,
     messages: [{ role: 'user', content: prompt }],
-    output_config: {
-      format: {
-        type: 'json_schema',
-        json_schema: {
-          name: 'refine_result',
-          schema: REFINE_SCHEMA,
-        },
-      },
-    },
   });
 
   const textBlock = response.content.find(b => b.type === 'text');
@@ -112,7 +83,10 @@ Return valid JSON matching the schema exactly.`;
     throw new Error('Claude returned no text block');
   }
 
-  const parsed = JSON.parse(textBlock.text) as {
+  // Extract JSON from the response (may be wrapped in ```json ... ```)
+  const raw = textBlock.text.trim();
+  const jsonMatch = raw.match(/```(?:json)?\s*([\s\S]*?)```/) ?? [null, raw];
+  const parsed = JSON.parse(jsonMatch[1]!.trim()) as {
     questions: string[];
     multi_hop_questions: string[];
     summary: string;
