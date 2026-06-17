@@ -1,0 +1,132 @@
+[
+  {
+    "id": "cic_code_search",
+    "group": "cic",
+    "name": "Code Search",
+    "description": "Search for code patterns, functions, and imports across the repository",
+    "version": "0.1.0",
+    "endpointType": "local",
+    "endpoint": "./tools/CICCodeSearch.ts",
+    "inputSchema": {
+      "type": "object",
+      "required": ["query"],
+      "properties": {
+        "query": { "type": "string", "description": "Code search query" },
+        "fileType": { "type": "string", "description": "File type filter (e.g., ts, js)" }
+      }
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "file": { "type": "string" },
+              "line": { "type": "number" },
+              "content": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "capabilities": ["read", "search"],
+    "modelHints": {
+      "preferredModel": "glm-5.1",
+      "reasoningEffort": "high"
+    }
+  },
+  {
+    "id": "cic_code_refactor",
+    "group": "cic",
+    "name": "Code Refactor",
+    "description": "Analyze and propose code refactorings for repo-scale changes",
+    "version": "0.1.0",
+    "endpointType": "local",
+    "endpoint": "./tools/CICCodeRefactor.ts",
+    "inputSchema": {
+      "type": "object",
+      "required": ["files", "refactorType"],
+      "properties": {
+        "files": { "type": "array", "items": { "type": "string" } },
+        "refactorType": { "type": "string" },
+        "scope": { "type": "string", "enum": ["local", "multi-file", "repo"] }
+      }
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "plan": {
+          "type": "object",
+          "properties": {
+            "steps": { "type": "array" },
+            "impacts": { "type": "array" }
+          }
+        }
+      }
+    },
+    "capabilities": ["read", "refactor"],
+    "modelHints": {
+      "preferredModel": "glm-5.2",
+      "reasoningEffort": "max"
+    }
+  },
+  {
+    "id": "cic_build_runner",
+    "group": "cic",
+    "name": "Build Runner",
+    "description": "Execute build commands and report status",
+    "version": "0.1.0",
+    "endpointType": "local",
+    "endpoint": "./tools/CICBuildRunner.ts",
+    "inputSchema": {
+      "type": "object",
+      "required": ["command"],
+      "properties": {
+        "command": { "type": "string" },
+        "timeout": { "type": "number" }
+      }
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "success": { "type": "boolean" },
+        "output": { "type": "string" },
+        "errors": { "type": "array" }
+      }
+    },
+    "capabilities": ["build"],
+    "limits": {
+      "timeoutMs": 300000
+    }
+  },
+  {
+    "id": "cic_test_runner",
+    "group": "cic",
+    "name": "Test Runner",
+    "description": "Execute test suites and report coverage",
+    "version": "0.1.0",
+    "endpointType": "local",
+    "endpoint": "./tools/CICTestRunner.ts",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "pattern": { "type": "string" },
+        "coverage": { "type": "boolean" }
+      }
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "passed": { "type": "number" },
+        "failed": { "type": "number" },
+        "coverage": { "type": "number" }
+      }
+    },
+    "capabilities": ["test"],
+    "limits": {
+      "timeoutMs": 600000
+    }
+  }
+]

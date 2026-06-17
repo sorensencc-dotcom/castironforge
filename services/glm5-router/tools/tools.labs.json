@@ -1,0 +1,172 @@
+[
+  {
+    "id": "labs_site_crawler",
+    "group": "labs",
+    "name": "Site Crawler",
+    "description": "Crawl and extract DOM, content, and metadata from websites",
+    "version": "0.1.0",
+    "endpointType": "local",
+    "endpoint": "./tools/LabsSiteCrawler.ts",
+    "inputSchema": {
+      "type": "object",
+      "required": ["url"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "depth": { "type": "number" },
+        "screenshot": { "type": "boolean" }
+      }
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "dom": { "type": "string" },
+        "screenshot": { "type": "string" },
+        "pages": { "type": "array" }
+      }
+    },
+    "capabilities": ["harvest", "read"],
+    "modelHints": {
+      "preferredModel": "glm-5.2",
+      "reasoningEffort": "high"
+    },
+    "limits": {
+      "timeoutMs": 60000
+    }
+  },
+  {
+    "id": "labs_design_analyzer",
+    "group": "labs",
+    "name": "Design Analyzer",
+    "description": "Analyze design quality, mobile-friendliness, and conversion readiness",
+    "version": "0.1.0",
+    "endpointType": "local",
+    "endpoint": "./tools/LabsDesignAnalyzer.ts",
+    "inputSchema": {
+      "type": "object",
+      "required": ["site"],
+      "properties": {
+        "site": { "type": "string" },
+        "dom": { "type": "string" },
+        "screenshot": { "type": "string" }
+      }
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "designAge": { "type": "string" },
+        "issues": { "type": "array" },
+        "strengths": { "type": "array" },
+        "metrics": { "type": "object" }
+      }
+    },
+    "capabilities": ["read", "classify"],
+    "modelHints": {
+      "preferredModel": "glm-5.1",
+      "reasoningEffort": "high"
+    }
+  },
+  {
+    "id": "labs_lead_scorer",
+    "group": "labs",
+    "name": "Lead Scorer",
+    "description": "Rapidly score leads for redesign outreach based on site analysis",
+    "version": "0.1.0",
+    "endpointType": "local",
+    "endpoint": "./tools/LabsLeadScorer.ts",
+    "inputSchema": {
+      "type": "object",
+      "required": ["site", "company"],
+      "properties": {
+        "site": { "type": "string" },
+        "company": { "type": "string" },
+        "industry": { "type": "string" },
+        "analysis": { "type": "object" }
+      }
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "recommendation": { "type": "string" },
+        "factors": { "type": "object" }
+      }
+    },
+    "capabilities": ["score", "classify"],
+    "modelHints": {
+      "preferredModel": "glm-5.1",
+      "reasoningEffort": "high"
+    }
+  },
+  {
+    "id": "labs_outreach_composer",
+    "group": "labs",
+    "name": "Outreach Composer",
+    "description": "Generate personalized outreach emails and follow-up sequences",
+    "version": "0.1.0",
+    "endpointType": "local",
+    "endpoint": "./tools/LabsOutreachComposer.ts",
+    "inputSchema": {
+      "type": "object",
+      "required": ["site", "company", "contact"],
+      "properties": {
+        "site": { "type": "string" },
+        "company": { "type": "string" },
+        "contact": { "type": "object" },
+        "industry": { "type": "string" }
+      }
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "object",
+          "properties": {
+            "subject": { "type": "string" },
+            "body": { "type": "string" },
+            "cta": { "type": "string" }
+          }
+        },
+        "followUp": { "type": "array" }
+      }
+    },
+    "capabilities": ["outreach", "write"],
+    "modelHints": {
+      "preferredModel": "glm-5.1",
+      "reasoningEffort": "high"
+    }
+  },
+  {
+    "id": "labs_redesign_generator",
+    "group": "labs",
+    "name": "Redesign Generator",
+    "description": "Generate full-site redesigns with components, tokens, and layouts",
+    "version": "0.1.0",
+    "endpointType": "local",
+    "endpoint": "./tools/LabsRedesignGenerator.ts",
+    "inputSchema": {
+      "type": "object",
+      "required": ["site", "dom"],
+      "properties": {
+        "site": { "type": "string" },
+        "dom": { "type": "string" },
+        "industry": { "type": "string" },
+        "goals": { "type": "array" }
+      }
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "components": { "type": "array" },
+        "tokens": { "type": "object" },
+        "layouts": { "type": "object" }
+      }
+    },
+    "capabilities": ["design", "write"],
+    "modelHints": {
+      "preferredModel": "glm-5.2",
+      "reasoningEffort": "max"
+    }
+  }
+]
