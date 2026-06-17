@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>CastIronForge — Operator Console</title>
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/popovers.css">
+
+  <!--
+    Popover API polyfill: runs before module scripts so [popover] elements
+    are hidden immediately; native-support check is inside the script.
+  -->
+  <script src="scripts/popover-polyfill.js"></script>
+</head>
+<body>
+
+<!-- ── Page shell: container registered for CSS style queries ─────────────── -->
+<!-- JS sets --density on this element; @container style(--density: dense) rules respond. -->
+<div id="page-shell">
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header class="shell-header" role="banner">
+    <div class="shell-header__brand">
+      <div class="shell-header__brand-mark" aria-hidden="true">CF</div>
+      <h1>CastIronForge</h1>
+    </div>
+
+    <time id="utc-clock" class="card-sub" title="Current UTC time"></time>
+
+    <!-- Density toggle: sets --density custom property on #page-shell -->
+    <div class="density-controls" role="group" aria-label="Display density">
+      <button class="density-btn" data-density="comfortable" aria-pressed="true">Comfortable</button>
+      <button class="density-btn" data-density="dense"       aria-pressed="false">Dense</button>
+    </div>
+  </header>
+
+  <!-- ── Main content ───────────────────────────────────────────────────── -->
+  <main class="shell-main" role="main">
+
+    <!-- ── Memory Spine ─────────────────────────────────────────────────── -->
+    <section class="status-section" aria-labelledby="section-memory-spine">
+      <div class="section-header">
+        <h2 id="section-memory-spine">Memory Spine</h2>
+        <span id="ms-status">
+          <span class="badge badge--neutral">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Connecting…</span>
+          </span>
+        </span>
+      </div>
+
+      <!-- card-grid: size-based @container rules control column count -->
+      <div class="card-grid" role="list" aria-label="Memory Spine metrics">
+
+        <!-- Active Version card -->
+        <article class="status-card" role="listitem">
+          <div class="card-header">
+            <span class="card-title">Active Version</span>
+            <!--
+              Popover trigger: native popovertarget wires automatically.
+              aria-controls + aria-expanded maintained by dashboard.js.
+            -->
+            <button
+              class="info-btn"
+              popovertarget="version-detail"
+              popovertargetaction="toggle"
+              aria-controls="version-detail"
+              aria-expanded="false"
+              aria-label="Version details">i</button>
+          </div>
+          <div class="card-value" id="ms-active-version">…</div>
+        </article>
+
+        <!-- Document count card -->
+        <article class="status-card" role="listitem">
+          <div class="card-header">
+            <span class="card-title">Documents</span>
+          </div>
+          <div class="card-value" id="ms-doc-count">…</div>
+          <div class="card-sub">in active corpus</div>
+        </article>
+
+        <!-- Last edit card -->
+        <article class="status-card" role="listitem">
+          <div class="card-header">
+            <span class="card-title">Last Edited</span>
+          </div>
+          <div class="card-value" id="ms-last-edit" style="font-size:1.125rem">…</div>
+          <div class="card-sub" id="ms-previous-version-sub"></div>
+        </article>
+
+        <!-- Previous Version card -->
+        <article class="status-card" role="listitem">
+          <div class="card-header">
+            <span class="card-title">Previous Version</span>
+          </div>
+          <div class="card-value" id="ms-previous-version" style="font-size:1.125rem">…</div>
+        </article>
+
+      </div><!-- /.card-grid -->
+    </section>
+
+    <!-- ── Agent Fleet ───────────────────────────────────────────────────── -->
+    <section class="status-section" aria-labelledby="section-agent-fleet">
+      <div class="section-header">
+        <h2 id="section-agent-fleet">Agent Fleet</h2>
+        <span class="badge badge--info">13 agents</span>
+      </div>
+
+      <!--
+        agent-grid: also registers as a container for size-based rules.
+        Agent cards with their per-agent detail popovers are injected by dashboard.js.
+      -->
+      <div id="agent-grid" class="agent-grid" role="list" aria-label="Agent fleet"></div>
+    </section>
+
+  </main><!-- /.shell-main -->
+
+</div><!-- /#page-shell -->
+
+
+<!-- ── Popovers (rendered here; native browser hoists to top layer) ─────────
+     polyfill: positions them via JS and uses [data-popover-open] to show/hide.
+-->
+
+<!-- Version detail popover -->
+<div
+  id="version-detail"
+  popover="auto"
+  class="detail-popover"
+  role="dialog"
+  aria-label="Memory Spine version details"
+  aria-live="polite">
+  <h3>Version Details</h3>
+  <dl id="version-detail-content">
+    <!-- Populated by dashboard.js -->
+  </dl>
+  <div class="detail-popover__actions">
+    <button class="popover-action-btn" onclick="document.getElementById('version-detail').hidePopover()">
+      Close
+    </button>
+    <a class="popover-action-btn popover-action-btn--primary" href="http://localhost:3100/v1/memory/admin/status" target="_blank" rel="noopener">
+      API →
+    </a>
+  </div>
+</div>
+
+<script type="module" src="scripts/dashboard.js"></script>
+</body>
+</html>

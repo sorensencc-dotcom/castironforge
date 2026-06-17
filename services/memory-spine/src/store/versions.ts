@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { dateTimeService } from '../lib/datetime.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = process.env.MEMORY_SPINE_DATA_DIR ?? join(__dirname, '../../data');
@@ -24,7 +25,7 @@ export function loadVersions(): VersionManifest {
       active: 'memory-v1',
       previous: null,
       available: ['memory-v1'],
-      history: [{ version: 'memory-v1', activated_at: new Date().toISOString() }],
+      history: [{ version: 'memory-v1', activated_at: dateTimeService.nowISO() }],
     };
     writeFileSync(VERSIONS_FILE, JSON.stringify(initial, null, 2));
     return initial;
@@ -45,7 +46,7 @@ export function activateVersion(targetVersion: string): { active_version: string
   const prev = manifest.active;
   manifest.previous = prev;
   manifest.active = targetVersion;
-  manifest.history.push({ version: targetVersion, activated_at: new Date().toISOString() });
+  manifest.history.push({ version: targetVersion, activated_at: dateTimeService.nowISO() });
   saveVersions(manifest);
   return { active_version: targetVersion, previous_version: prev };
 }
@@ -56,7 +57,7 @@ export function rollbackVersion(toVersion?: string): { active_version: string; r
   const target = toVersion ?? manifest.previous ?? manifest.active;
   manifest.previous = rolledBackFrom;
   manifest.active = target;
-  manifest.history.push({ version: target, activated_at: new Date().toISOString() });
+  manifest.history.push({ version: target, activated_at: dateTimeService.nowISO() });
   saveVersions(manifest);
   return { active_version: target, rolled_back_from: rolledBackFrom };
 }

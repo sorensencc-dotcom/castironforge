@@ -1,10 +1,12 @@
 // Resolves ${{ path.to.value }} references against a context object.
 // Supports: event.*, steps.<id>.output.*, now
+import { nowISO } from './datetime.js';
+
 export function resolveTemplates(value, context) {
   if (typeof value === 'string') {
     return value.replace(/\$\{\{\s*([^}]+)\s*\}\}/g, (_, expr) => {
       const path = expr.trim();
-      if (path === 'now') return new Date().toISOString();
+      if (path === 'now') return nowISO();
       const parts = path.split('.');
       let cur = context;
       for (const part of parts) {
