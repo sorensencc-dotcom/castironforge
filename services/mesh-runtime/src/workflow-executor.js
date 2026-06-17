@@ -1,6 +1,7 @@
 import { logger } from './logger.js';
 import { resolveTemplates } from './templates.js';
 import { buildExecutionOrder } from './graph.js';
+import { nowISO } from './datetime.js';
 
 export class WorkflowExecutor {
   constructor(loader, agentRunner) {
@@ -13,7 +14,7 @@ export class WorkflowExecutor {
     const workflow = await this.loader.loadWorkflow(workflowId);
     const steps = buildExecutionOrder(workflow.workflow.steps);
     const stepOutputs = {};
-    const context = { event: triggerEvent, steps: stepOutputs, now: new Date().toISOString() };
+    const context = { event: triggerEvent, steps: stepOutputs, now: nowISO() };
 
     for (const step of steps) {
       logger.info('step_start', { workflow_id: workflowId, step_id: step.id });

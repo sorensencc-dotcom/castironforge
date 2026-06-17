@@ -1,0 +1,291 @@
+/* ─── Container registration ─────────────────────────────────────────────── */
+/*
+ * CSS Style Queries (Interop 2026)
+ * Strategy: set --density custom property on #page-shell via JS; child components
+ * query it with @container style(--density: dense) to adapt spacing/font-size.
+ * Gated behind @supports so non-supporting browsers fall back to "comfortable" defaults.
+ */
+
+#page-shell {
+  container-type: inline-size;
+  container-name: page-shell;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100dvh;
+}
+
+/* ─── Shell header ───────────────────────────────────────────────────────── */
+.shell-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.shell-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.shell-header__brand-mark {
+  display: grid;
+  place-items: center;
+  width: 28px; height: 28px;
+  background: var(--color-accent);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.density-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.density-btn {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition);
+}
+.density-btn:hover { background: var(--color-surface-alt); color: var(--color-text); }
+.density-btn[aria-pressed="true"] {
+  background: var(--color-accent-dim);
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+/* ─── Main content ───────────────────────────────────────────────────────── */
+.shell-main {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  overflow-y: auto;
+}
+
+/* ─── Section ────────────────────────────────────────────────────────────── */
+.status-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.section-header h2 {
+  flex: 1;
+}
+
+/* ─── Card grid: size-based container queries ─────────────────────────────
+ * The .card-grid element registers its own container so children can adapt
+ * to available width independent of viewport.
+ */
+.card-grid {
+  container-type: inline-size;
+  container-name: card-grid;
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+@supports (container-type: inline-size) {
+  @container card-grid (max-width: 480px) {
+    .card-grid { grid-template-columns: 1fr; }
+  }
+  @container card-grid (min-width: 481px) and (max-width: 800px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+}
+
+/* ─── Status card ────────────────────────────────────────────────────────── */
+.status-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: border-color var(--transition);
+}
+
+.status-card:hover { border-color: var(--color-accent-dim); }
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.card-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.card-sub {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ─── CSS Style Queries: --density adaptation ────────────────────────────
+ * JS sets `--density` on #page-shell. Children nested inside query it.
+ * Fallback (no style-query support): comfortable layout stays as default.
+ */
+@supports (container-type: inline-size) {
+  @container page-shell style(--density: dense) {
+    .status-card {
+      padding: var(--space-sm) var(--space-md);
+      gap: var(--space-xs);
+      border-radius: var(--radius-sm);
+    }
+
+    .card-value {
+      font-size: 1.125rem;
+    }
+
+    .card-title {
+      font-size: 0.6875rem;
+    }
+
+    .card-sub {
+      font-size: 0.6875rem;
+    }
+
+    .shell-main {
+      padding: var(--space-md);
+      gap: var(--space-lg);
+    }
+
+    .card-grid {
+      gap: var(--space-sm);
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+  }
+
+  @container page-shell style(--density: comfortable) {
+    /* Explicit comfortable defaults — matches the stylesheet baseline. */
+    .status-card {
+      padding: var(--space-lg);
+      gap: var(--space-sm);
+    }
+
+    .card-value { font-size: 1.5rem; }
+  }
+}
+
+/* ─── Agent card ─────────────────────────────────────────────────────────── */
+.agent-grid {
+  container-type: inline-size;
+  container-name: agent-grid;
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.agent-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  transition: border-color var(--transition);
+}
+
+.agent-card:hover { border-color: var(--color-accent-dim); }
+
+.agent-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.agent-card__name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.agent-card__model {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  margin-top: 2px;
+}
+
+@supports (container-type: inline-size) {
+  @container page-shell style(--density: dense) {
+    .agent-card {
+      padding: var(--space-sm) var(--space-md);
+      gap: var(--space-sm);
+    }
+
+    .agent-card__name { font-size: 0.8125rem; }
+
+    .agent-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--space-xs);
+    }
+  }
+}
+
+/* ─── Responsive shell: viewport size queries ────────────────────────────── */
+@supports (container-type: inline-size) {
+  @container page-shell (max-width: 600px) {
+    .shell-header { padding: var(--space-md); }
+    .shell-main   { padding: var(--space-md); }
+    .density-controls { display: none; }
+  }
+}
+
+/* ─── Loading skeleton ───────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface-alt) 25%,
+    var(--color-border) 50%,
+    var(--color-surface-alt) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+  color: transparent !important;
+  pointer-events: none;
+  user-select: none;
+}

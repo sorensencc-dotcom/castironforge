@@ -1,0 +1,220 @@
+/* ─── Popover API (Interop 2026) ─────────────────────────────────────────
+ * Native: uses [popover] attribute + :popover-open pseudo-class.
+ * Fallback: popover-polyfill.js adds [data-popover-open] and sets hidden attribute;
+ *           the [data-popover-open] selector below matches both paths.
+ * Accessibility notes:
+ *   - Trigger buttons carry aria-controls + aria-expanded (set by dashboard.js)
+ *   - auto popovers light-dismiss on outside click (native + polyfill)
+ *   - hint popovers light-dismiss on focus-out
+ */
+
+/* ─── Shared popover chrome ──────────────────────────────────────────────── */
+[popover] {
+  /* Native browsers reset margin/border/padding for [popover]; we apply our own. */
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  padding: var(--space-lg);
+  max-width: min(400px, calc(100dvw - 2rem));
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.4),
+    0 10px 24px -4px rgb(0 0 0 / 0.5);
+
+  /* Polyfill fallback: hidden by default until opened */
+  display: none;
+}
+
+/* Shown state — native */
+[popover]:popover-open {
+  display: block;
+}
+
+/* Shown state — polyfill fallback */
+[data-popover-open] {
+  display: block !important;
+}
+
+/* ─── Entrance / exit animation ──────────────────────────────────────────── */
+@keyframes popover-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);    }
+}
+@keyframes popover-out {
+  from { opacity: 1; transform: translateY(0)   scale(1);    }
+  to   { opacity: 0; transform: translateY(-6px) scale(0.97); }
+}
+
+@supports selector(:popover-open) {
+  [popover]:popover-open {
+    animation: popover-in 180ms ease forwards;
+  }
+}
+
+/* ─── Positioning helpers ─────────────────────────────────────────────────
+ * Native popovers use the Anchor Positioning API when available.
+ * For now we position via JS (setPopoverAnchor in dashboard.js) as a
+ * pragmatic cross-browser approach until anchor positioning ships widely.
+ */
+[popover] {
+  position: fixed;
+  inset: unset;       /* override UA stylesheet */
+  z-index: 100;
+}
+
+/* ─── Detail popover (version history, health, agent config) ─────────────── */
+.detail-popover {
+  min-width: 280px;
+}
+
+.detail-popover h3 {
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9375rem;
+}
+
+.detail-popover dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-xs) var(--space-md);
+}
+
+.detail-popover dt {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.detail-popover dd {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  word-break: break-all;
+}
+
+.detail-popover__actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.popover-action-btn {
+  flex: 1;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  transition: all var(--transition);
+  text-align: center;
+}
+
+.popover-action-btn:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.popover-action-btn--primary {
+  background: var(--color-accent-dim);
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.popover-action-btn--primary:hover {
+  background: var(--color-accent);
+}
+
+/* ─── Menu popover (contextual action menus) ─────────────────────────────── */
+.menu-popover {
+  padding: var(--space-xs);
+  min-width: 180px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background var(--transition);
+  width: 100%;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background: var(--color-surface);
+}
+
+.menu-item--danger:hover {
+  background: color-mix(in srgb, var(--color-error) 12%, transparent);
+  color: var(--color-error);
+}
+
+.menu-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-xs) 0;
+}
+
+/* ─── Tooltip popover (hint) ─────────────────────────────────────────────── */
+[popover="hint"],
+[popover="manual"].tooltip-popover {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
+  border-radius: var(--radius-sm);
+  max-width: 240px;
+  pointer-events: none;
+}
+
+/* ─── Info button (trigger for detail popovers) ──────────────────────────── */
+.info-btn {
+  display: grid;
+  place-items: center;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.info-btn:hover,
+.info-btn[aria-expanded="true"] {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+}
+
+/* ─── More / context menu button ─────────────────────────────────────────── */
+.more-btn {
+  display: grid;
+  place-items: center;
+  width: 28px; height: 28px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  transition: all var(--transition);
+}
+
+.more-btn:hover,
+.more-btn[aria-expanded="true"] {
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+}
+
+/* ─── Backdrop tint for auto popovers (native top-layer only) ────────────── */
+@supports selector(:popover-open) {
+  ::backdrop {
+    background: transparent;
+  }
+}

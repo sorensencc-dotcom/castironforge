@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, statSync, unlinkSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { dateTimeService } from '../lib/datetime.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = process.env.MEMORY_SPINE_DATA_DIR ?? join(__dirname, '../../data');
@@ -34,7 +35,7 @@ export function getDoc(doc_id: string): CorpusDoc | null {
 export function upsertDoc(doc_id: string, fields: Partial<CorpusDoc>, version: string): CorpusDoc {
   ensureCorpusDir();
   const existing = getDoc(doc_id);
-  const now = new Date().toISOString();
+  const now = dateTimeService.nowISO();
   const doc: CorpusDoc = {
     doc_id,
     title: fields.title ?? existing?.title ?? '',
