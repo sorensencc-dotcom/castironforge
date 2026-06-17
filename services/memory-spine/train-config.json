@@ -1,6 +1,6 @@
 {
-  "model_name": "memory-llama-1b",
-  "base_model": "llama-3-8b-instruct",
+  "model_name": "memory-phi-1",
+  "base_model": "phi-3.5-mini-instruct",
   "parameter_efficiency": "lora",
   "train_data_path": "datasets/memory-dataset-v1.json",
   "output_dir": "models/memory-v1",

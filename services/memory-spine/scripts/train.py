@@ -37,7 +37,14 @@ def parse_args() -> argparse.Namespace:
 # ---------------------------------------------------------------------------
 
 BASE_MODEL_MAP = {
+    # Gated — requires HF login + Meta access approval
     "llama-3-8b-instruct": "meta-llama/Meta-Llama-3-8B-Instruct",
+    # Ungated — no login or access request needed
+    "phi-3.5-mini-instruct": "microsoft/Phi-3.5-mini-instruct",
+    "phi-3-mini-instruct":   "microsoft/Phi-3-mini-4k-instruct",
+    "smollm2-1.7b":          "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "qwen2.5-7b-instruct":   "Qwen/Qwen2.5-7B-Instruct",
+    "mistral-7b-instruct":   "mistralai/Mistral-7B-Instruct-v0.3",
 }
 
 REQUIRED_CONFIG_KEYS = [
