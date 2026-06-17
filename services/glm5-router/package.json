@@ -1,0 +1,33 @@
+{
+  "name": "@castironforge/glm5-router",
+  "version": "0.1.0",
+  "description": "GLM-5 CIC Integration — deterministic model routing, context assembly, and TorqueQuery adapter",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./router": "./dist/router/CICRouter.js",
+    "./adapters": "./dist/adapters/index.js",
+    "./types": "./dist/types/index.js",
+    "./prompts": "./dist/prompts/PromptPacks.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node --loader ts-node/esm --test src/**/*.test.ts",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/**/*.ts"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.55.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/jest": "^29.0.0",
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2"
+  }
+}
