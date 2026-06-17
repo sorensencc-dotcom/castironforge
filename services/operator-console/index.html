@@ -136,11 +136,13 @@
   aria-label="Memory Spine version details"
   aria-live="polite">
   <h3>Version Details</h3>
-  <dl id="version-detail-content">
-    <!-- Populated by dashboard.js -->
-  </dl>
+  <div class="popover-content">
+    <dl id="version-detail-content">
+      <!-- Populated by dashboard.js -->
+    </dl>
+  </div>
   <div class="detail-popover__actions">
-    <button class="popover-action-btn" onclick="document.getElementById('version-detail').hidePopover()">
+    <button class="popover-action-btn" popovertargetaction="hide" popovertarget="version-detail">
       Close
     </button>
     <a class="popover-action-btn popover-action-btn--primary" href="http://localhost:3100/v1/memory/admin/status" target="_blank" rel="noopener">

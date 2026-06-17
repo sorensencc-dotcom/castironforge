@@ -1,6 +1,6 @@
-import { test, describe } from 'node:test';
+import { test, describe, before } from 'node:test';
 import assert from 'node:assert/strict';
-import { LegacyDateTimeService, createDateTimeService } from './datetime.js';
+import { LegacyDateTimeService, createDateTimeService, type DateTimeService } from './datetime.js';
 
 const svc = new LegacyDateTimeService();
 
@@ -114,3 +114,63 @@ describe('createDateTimeService', () => {
     assert.ok(epochMs > 0);
   });
 });
+
+// ── Service contract spec ─────────────────────────────────────────────────
+// Run the same invariants against any DateTimeService implementation so that
+// new backends (TemporalDateTimeService, mocks) are automatically regression-
+// tested by adding a single call below.
+// Cross-service note: the same inputs and expected patterns appear in
+// services/mesh-runtime/src/datetime.test.js to verify JS runtime parity.
+function testServiceContract(label: string, factory: () => DateTimeService): void {
+  describe(`${label} — service contract`, () => {
+    let s: DateTimeService;
+    before(() => { s = factory(); });
+
+    test('nowISO is parseable by the Date constructor', () => {
+      const iso = s.nowISO();
+      assert.ok(!isNaN(new Date(iso).getTime()), `not parseable: ${iso}`);
+    });
+
+    test('nowISO is monotonically non-decreasing over 10 rapid reads', () => {
+      const reads = Array.from({ length: 10 }, () => s.nowISO());
+      for (let i = 1; i < reads.length; i++) {
+        assert.ok(
+          new Date(reads[i]).getTime() >= new Date(reads[i - 1]).getTime(),
+          `read ${i} went backward: ${reads[i - 1]} > ${reads[i]}`,
+        );
+      }
+    });
+
+    test('parseISO(nowISO()) round-trips without epoch loss', () => {
+      const iso = s.nowISO();
+      const { epochMs } = s.parseISO(iso);
+      const directMs = new Date(iso).getTime();
+      assert.ok(Math.abs(epochMs - directMs) <= 1, `epoch drift: expected ~${directMs}, got ${epochMs}`);
+    });
+
+    test('toUserZone: 12:00 UTC = 08:00 EDT in June (UTC-4)', () => {
+      const result = s.toUserZone('2026-06-17T12:00:00.000Z', 'America/New_York');
+      assert.ok(result.includes('08:00'), `expected 08:00 EDT, got: ${result}`);
+    });
+
+    test('formatRange: start === end produces a valid single-point range', () => {
+      const iso = '2026-06-17T00:00:00.000Z';
+      const result = s.formatRange(iso, iso, 'UTC');
+      assert.ok(result.includes('2026-06-17'), `date missing: ${result}`);
+      assert.ok(result.includes('–'), `separator missing: ${result}`);
+      assert.ok(result.includes('[UTC]'), `zone label missing: ${result}`);
+    });
+
+    test('formatRange output format is cross-service compatible: "<dt> – <dt> [<zone>]"', () => {
+      const result = s.formatRange(
+        '2026-01-01T00:00:00.000Z',
+        '2026-01-01T06:00:00.000Z',
+        'UTC',
+      );
+      assert.match(result, /^.+ – .+ \[[^\]]+\]$/);
+    });
+  });
+}
+
+testServiceContract('LegacyDateTimeService', () => new LegacyDateTimeService());
+testServiceContract('createDateTimeService() result', createDateTimeService);
