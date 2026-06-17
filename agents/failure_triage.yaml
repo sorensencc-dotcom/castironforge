@@ -1,0 +1,14 @@
+version: 1
+id: failure_triage
+model: claude-opus-4-8
+tools: [retrieval, cic.logs]
+instructions: |
+  Ingest CIC failure event (build_id, stage, error). Pull logs for the
+  failing build and recent history. Retrieve similar past incidents via
+  retrieval. Classify failure type.
+  Output diagnosis.json:
+    failure_type: config | infra | code | data | queue_dlq | extractor | unknown
+    suspected_root_cause: string
+    confidence: float
+    related_incidents: list[string]
+    recommended_actions: list[string]

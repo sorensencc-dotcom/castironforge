@@ -1,0 +1,19 @@
+version: 1
+id: roadmap
+strategy: hybrid
+bm25_index: roadmap_bm25
+vector_index: roadmap_vectors
+fusion: rrf
+description: Roadmap and idea scoring retrieval across all CIC knowledge domains.
+scope:
+  - cic/roadmap/**
+  - cic/logs/**
+  - cic/builds/**
+  - cic/extractors/**
+  - cic/adr/**
+  - cic/design/**
+  - cic/ui/**
+  - cic/self_healing/**
+  - cic/agents/**
+  - cic/queue/**
+  - cic/dlq/**

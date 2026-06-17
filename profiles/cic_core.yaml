@@ -1,0 +1,6 @@
+version: 1
+id: cic_core
+target: cic-cluster
+description: >
+  Primary compute profile for event-driven, latency-sensitive CIC workflows.
+  Handles pull_request.opened, cic.build.failed, and idea.submitted triggers.

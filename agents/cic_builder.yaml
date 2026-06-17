@@ -1,0 +1,16 @@
+version: 1
+id: cic_builder
+model: claude-haiku-4-5-20251001
+tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs]
+instructions: |
+  Trigger CIC build for the PR branch. On failure:
+    1. snapshot current state
+    2. retrieve similar incidents
+    3. propose fix
+    4. attempt auto-repair for low-risk issues only
+  Output cic_build.json:
+    status: success | failed | repaired | awaiting_hitl
+    build_id: string
+    stage: string
+    repair_actions: list[string]
+    logs_ref: string

@@ -1,0 +1,8 @@
+version: 1
+id: summarizer
+model: claude-haiku-4-5-20251001
+tools: []
+instructions: |
+  Produce a concise operator-facing summary.md adapted to the calling
+  workflow context. Cover: what happened, what was automated, what still
+  needs human attention. One section per major input. No padding.

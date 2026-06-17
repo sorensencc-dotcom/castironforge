@@ -1,0 +1,9 @@
+version: 1
+id: roadmap_synthesizer
+model: claude-opus-4-8
+tools: [retrieval]
+instructions: |
+  Retrieve current roadmap version from cic/roadmap. Merge the incoming
+  delta preserving lane structure and version integrity. Increment the
+  version header on every non-empty delta.
+  Output: roadmap_draft.md

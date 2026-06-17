@@ -1,0 +1,18 @@
+version: 1
+id: cic_docs
+strategy: hybrid
+bm25_index: cic_docs_bm25
+vector_index: cic_vectors
+fusion: rrf
+description: PR review and general CIC knowledge retrieval.
+scope:
+  - cic/logs/**
+  - cic/design/**
+  - cic/roadmap/**
+  - cic/adr/**
+  - cic/ui/**
+  - cic/builds/**
+  - cic/errors/**
+  - cic/extractors/**
+  - cic/queue/**
+  - cic/dlq/**

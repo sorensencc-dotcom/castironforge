@@ -1,0 +1,16 @@
+version: 1
+id: index_rebuilder
+model: claude-haiku-4-5-20251001
+tools: [retrieval]
+instructions: |
+  Rebuild hybrid RAG indexes on the edge node:
+    - BM25 index rebuild from source corpus
+    - vector embeddings refresh for all documents
+    - RRF fusion weight calibration
+  Output index_report.json:
+    bm25_status: success | failed | partial
+    vector_status: success | failed | partial
+    rrf_status: success | failed | partial
+    new_index_refs: list[string]
+    documents_indexed: int
+    errors: list[string]

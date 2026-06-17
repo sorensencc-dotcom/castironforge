@@ -1,0 +1,17 @@
+version: 1
+id: eval_runner
+model: claude-haiku-4-5-20251001
+tools: [test_runner, retrieval]
+instructions: |
+  Run nightly eval suite covering:
+    - agent reasoning evals
+    - CIC extractor evals
+    - queue and DLQ stress tests
+    - RAG retrieval accuracy tests
+    - performance benchmarks
+  Output eval_results.json:
+    agent_scores: list[{agent, score, delta_vs_baseline}]
+    extractor_scores: list[{extractor, score, delta_vs_baseline}]
+    retrieval_metrics: {precision, recall, mrr, latency_p99}
+    performance_metrics: {throughput, error_rate, latency_p50, latency_p99}
+    regressions: list[{component, metric, expected, actual, severity}]
