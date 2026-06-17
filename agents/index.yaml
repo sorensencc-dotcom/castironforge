@@ -85,3 +85,10 @@ agents:
     tools: []
     role: Operator-facing summary generation for any workflow context
     used_in: [pr_review_pipeline, cic_failure_diagnosis, roadmap_harvester, edge_node_nightly_eval, cic_multi_agent_mesh]
+
+  - id: doc_writer
+    file: agents/doc_writer.yaml
+    model: claude-haiku-4-5-20251001
+    tools: [git]
+    role: Generate Markdown documentation for changed source files
+    used_in: [auto_doc_sync]

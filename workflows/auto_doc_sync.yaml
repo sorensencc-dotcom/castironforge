@@ -1,0 +1,49 @@
+version: 1
+name: auto_doc_sync
+description: >
+  Auto-docs workflow: triggered on push, scans changed source files,
+  generates Markdown documentation for each via Claude, and writes
+  output under docs/auto/.
+
+agents:
+  doc_writer:
+    model: claude-haiku-4-5-20251001
+    tools: [git]
+    instructions: |
+      For each changed source file, produce a concise Markdown doc page.
+      Sections: Purpose, Exports/API, Key behaviours, Dependencies, Usage example.
+      Output doc_update.json:
+        path: string        # relative source path
+        doc_path: string    # output path under docs/auto/
+        content: string     # full Markdown content
+        summary: string     # one-sentence summary
+
+  summarizer:
+    model: claude-haiku-4-5-20251001
+    tools: []
+    instructions: |
+      Summarize what was documented in this run.
+      Output summary.md: list of files documented, any errors, suggested next steps.
+
+workflow:
+  trigger:
+    event: push.main
+
+  steps:
+    - id: write_docs
+      agent: doc_writer
+      depends_on: []
+      input:
+        changed_files: ${{ event.changed_files }}
+      output: doc_update.json
+
+    - id: summary
+      agent: summarizer
+      depends_on: [write_docs]
+      input:
+        doc_updates: ${{ steps.write_docs.output }}
+      output: summary.md
+
+outputs:
+  - doc_update.json
+  - summary.md

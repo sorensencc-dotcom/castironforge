@@ -1,0 +1,15 @@
+{
+  "name": "@castironforge/auto-docs",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "CIC auto-docs: Claude-powered documentation generator for changed source files",
+  "engines": { "node": ">=20" },
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:dry": "DRY_RUN=1 node src/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  }
+}
