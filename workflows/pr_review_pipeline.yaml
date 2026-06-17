@@ -1,0 +1,106 @@
+version: 1
+name: pr_review_pipeline
+description: >
+  Phase-1 autonomous workflow: PR review → tests → CIC build → summary.
+  Deterministic routing, retrieval-grounded agents, CIC integration.
+
+agents:
+  reviewer:
+    model: claude-opus-4-8
+    tools: [retrieval, git]
+    instructions: |
+      Perform deep PR review. Enforce CIC coding standards:
+      - deterministic, operator-grade code
+      - ESM with explicit .js extensions
+      - explicit errors + structured JSON logs
+      - Node 20+, WSL2 Ubuntu 22.04+
+      - validate inputs at boundaries
+      - export only required symbols
+      - no hidden state
+      Output: review.json (issues, suggestions, required_changes).
+
+  tester:
+    model: claude-haiku-4-5-20251001
+    tools: [test_runner, retrieval]
+    instructions: |
+      Run full test suite. Detect flaky tests. Summarize failures.
+      Output: tests.json (pass, fail, coverage, flakiness).
+
+  cic_builder:
+    model: claude-haiku-4-5-20251001
+    tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs]
+    instructions: |
+      Trigger CIC build. On failure:
+        1. snapshot current state
+        2. retrieve similar incidents via retrieval
+        3. propose fix
+        4. attempt auto-repair
+      Output: cic.json (status, repair_actions, logs).
+
+  summarizer:
+    model: claude-haiku-4-5-20251001
+    tools: []
+    instructions: |
+      Produce final summary for human review.
+      Include: PR review findings, test results, CIC build status,
+      recommended next steps.
+      Output: summary.md
+
+retrieval:
+  strategy: hybrid
+  bm25_index: cic_docs_bm25
+  vector_index: cic_vectors
+  fusion: rrf
+  scope:
+    - cic/logs/**
+    - cic/design/**
+    - cic/roadmap/**
+    - cic/adr/**
+    - cic/ui/**
+    - cic/builds/**
+    - cic/errors/**
+    - cic/extractors/**
+    - cic/queue/**
+    - cic/dlq/**
+
+workflow:
+  trigger:
+    event: pull_request.opened
+
+  steps:
+    - id: review
+      agent: reviewer
+      input:
+        pr_diff: ${{ event.pr.diff }}
+      output: review.json
+
+    - id: tests
+      agent: tester
+      depends_on: []
+      input:
+        code: ${{ event.pr.code }}
+      output: tests.json
+
+    - id: cic_build
+      agent: cic_builder
+      depends_on: []
+      input:
+        branch: ${{ event.pr.branch }}
+      output: cic.json
+
+    - id: summary
+      agent: summarizer
+      depends_on: [review, tests, cic_build]
+      input:
+        review: ${{ steps.review.output }}
+        tests: ${{ steps.tests.output }}
+        cic: ${{ steps.cic_build.output }}
+      output: summary.md
+
+  hitl:
+    - step: summary
+      action: approve
+      description: Human must approve summary before merge is unblocked.
+
+outputs:
+  - summary.md
