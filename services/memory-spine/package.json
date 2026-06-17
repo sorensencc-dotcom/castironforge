@@ -17,7 +17,9 @@
     "generate-dataset-llm": "node --loader ts-node/esm scripts/generate-dataset-llm.ts",
     "generate-dataset-llm:dry": "DRY_RUN=1 node --loader ts-node/esm scripts/generate-dataset-llm.ts",
     "calibrate-confidence": "node --loader ts-node/esm scripts/calibrate-confidence.ts",
-    "train-memory-v1": "bash scripts/train-memory-v1.sh"
+    "train-memory-v1": "bash scripts/train-memory-v1.sh",
+    "train-memory-v1:validate": "python3 scripts/train.py --dry_run",
+    "train-memory-v1:py": "python3 scripts/train.py"
   },
   "engines": {
     "node": ">=20.0.0"

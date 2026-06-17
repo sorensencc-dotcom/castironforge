@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-set -euo pipefail
+# train-memory-v1.sh — works on both Linux and Git Bash for Windows
+set -eu
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SERVICE_DIR="$(dirname "$SCRIPT_DIR")"
@@ -9,7 +10,7 @@ CONFIG="${SERVICE_DIR}/train-config.json"
 OUTDIR="${SERVICE_DIR}/models/memory-v1"
 CHECKPOINT_DIR="${OUTDIR}/checkpoints"
 
-if [[ ! -f "$DATASET" ]]; then
+if [ ! -f "$DATASET" ]; then
   echo "[error] Dataset not found: $DATASET"
   echo "  Run: npm run generate-dataset-hybrid"
   exit 1
