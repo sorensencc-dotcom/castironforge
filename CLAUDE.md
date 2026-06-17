@@ -79,6 +79,34 @@ The backend only allows `Origin: http://localhost:5173`. Change `server.ts` if t
 
 ## Full Stack Startup
 
+### Quick Start: Docker Compose (Recommended)
+
+One command to start everything:
+
+```bash
+docker-compose up
+```
+
+This starts:
+- TorqueQuery on `:9000`
+- Ollama on `:11434`
+- chat-agent on `:8000`
+- chat-frontend on `:5173`
+
+Then open `http://localhost:5173` in your browser.
+
+**Requirements:** Docker and Docker Compose installed.
+
+**Notes:**
+- Ollama container works on CPU. For GPU support, uncomment the `deploy.resources` section in `docker-compose.yml` and use `nvidia-docker`.
+- llama.cpp is commented out by default. Uncomment and adjust if needed.
+- All services communicate via Docker network (`cic-network`).
+- Source code is mounted as volumes for live reload during development.
+
+---
+
+### Manual Startup (5 terminals)
+
 Running the complete CIC Chat Agent stack locally requires five services:
 
 ### 1. TorqueQuery (FastAPI RAG service)
