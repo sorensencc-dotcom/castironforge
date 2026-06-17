@@ -23,15 +23,16 @@ chatAgentRouter.get('/health', async (_req, res) => {
 });
 
 chatAgentRouter.get('/models', async (_req, res) => {
+  const models = [];
   try {
-    const [ollamaModels, llamaModels] = await Promise.all([
-      ollamaAdapter.models(),
-      llamaCppAdapter.models()
-    ]);
-    res.json({ models: [...ollamaModels, ...llamaModels] });
-  } catch {
-    res.status(500).json({ models: [] });
-  }
+    const ollamaModels = await ollamaAdapter.models().catch(() => []);
+    models.push(...ollamaModels);
+  } catch {}
+  try {
+    const llamaModels = await llamaCppAdapter.models().catch(() => []);
+    models.push(...llamaModels);
+  } catch {}
+  res.json({ models });
 });
 
 chatAgentRouter.post('/chat', async (req, res) => {
