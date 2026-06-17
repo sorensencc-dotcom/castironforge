@@ -72,24 +72,35 @@ def validate_dataset(dataset_path: Path) -> list[dict]:
         )
     with dataset_path.open() as f:
         raw = json.load(f)
-    if not isinstance(raw, list):
-        _fatal(f"Dataset must be a JSON array; got {type(raw).__name__}")
-    if len(raw) == 0:
+
+    # Both generator scripts wrap examples: { "examples": [...], "meta": {...} }
+    # Accept that wrapper or a plain array.
+    if isinstance(raw, dict):
+        if "examples" not in raw:
+            _fatal(f"Dataset object missing 'examples' key. Got keys: {list(raw.keys())}")
+        records = raw["examples"]
+    elif isinstance(raw, list):
+        records = raw
+    else:
+        _fatal(f"Dataset must be a JSON array or object with 'examples' key; got {type(raw).__name__}")
+
+    if len(records) == 0:
         _fatal("Dataset is empty")
 
-    # Validate record schema — accept instruction/output or messages format
-    for i, record in enumerate(raw[:5]):
-        has_instruct_format = "instruction" in record and "output" in record
-        has_messages_format = "messages" in record and isinstance(record["messages"], list)
-        if not has_instruct_format and not has_messages_format:
+    # Accept: instruction/output  |  question_text/answer_text  |  messages:[...]
+    for i, record in enumerate(records[:5]):
+        has_instruct  = "instruction" in record and "output" in record
+        has_qa        = "question_text" in record and "answer_text" in record
+        has_messages  = "messages" in record and isinstance(record["messages"], list)
+        if not (has_instruct or has_qa or has_messages):
             _fatal(
                 f"Record {i} missing required fields. "
-                "Expected {instruction, output} or {messages: [...]}. "
+                "Expected {instruction, output}, {question_text, answer_text}, or {messages: [...]}. "
                 f"Got: {list(record.keys())}"
             )
 
-    _log(f"Dataset validated: {len(raw):,} records at {dataset_path}")
-    return raw
+    _log(f"Dataset validated: {len(records):,} records at {dataset_path}")
+    return records
 
 
 # ---------------------------------------------------------------------------
@@ -154,8 +165,13 @@ def train(cfg: dict, dataset_path: Path, output_dir: Path, base_model_id: str) -
                 content = msg.get("content", "")
                 parts.append(f"<|{role}|>\n{content}")
             return "\n".join(parts) + "\n<|end|>"
-        instruction = record.get("instruction", "")
-        output = record.get("output", "")
+        # question_text/answer_text (from generate-dataset and generate-dataset-hybrid)
+        if "question_text" in record:
+            instruction = record["question_text"]
+            output = record["answer_text"]
+        else:
+            instruction = record.get("instruction", "")
+            output = record.get("output", "")
         return f"<|user|>\n{instruction}\n<|assistant|>\n{output}\n<|end|>"
 
     formatted = [{"text": format_record(r)} for r in raw]
