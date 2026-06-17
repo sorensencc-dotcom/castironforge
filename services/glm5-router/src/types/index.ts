@@ -249,7 +249,53 @@ export interface CallObservability {
   context_size: number;
   task_type?: TaskType;
   scope?: Scope;
+  mode?: "cic" | "labs" | "chat";
   latency_ms: number;
   success: boolean;
   error?: string;
+}
+
+// Unified Router Mode
+export type RouterMode = "cic" | "labs" | "chat";
+
+// Unified Context Frame (supports CIC, Labs, and Chat)
+export interface UnifiedContextFrame {
+  user_intent: string;
+  mode: RouterMode;
+  dom_context?: DOMContext;
+  code_context?: CodeContext;
+  design_context?: DesignContext;
+  cic_context?: CICContext;
+  search_context?: SearchContext;
+  labs_context?: LabsContextFrame;
+}
+
+// Labs Context (extends core context)
+export interface LabsContextFrame {
+  site?: {
+    url: string;
+    title: string;
+    screenshot?: string;
+  };
+  target_industry?: string;
+  lead_info?: {
+    company: string;
+    contact_name?: string;
+    email?: string;
+  };
+}
+
+// Unified Router Configuration
+export interface UnifiedRouterConfig {
+  model_thresholds: {
+    context_size_long: number;
+    context_size_very_long: number;
+  };
+  default_reasoning_effort: ReasoningEffort;
+  enable_thinking: boolean;
+  modes: {
+    cic: { enabled: boolean };
+    labs: { enabled: boolean };
+    chat: { enabled: boolean };
+  };
 }
