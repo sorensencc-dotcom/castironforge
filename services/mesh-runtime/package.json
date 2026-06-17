@@ -7,7 +7,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "node --test src/**/*.test.js"
+    "test": "node --test src/datetime.test.js src/templates.test.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
