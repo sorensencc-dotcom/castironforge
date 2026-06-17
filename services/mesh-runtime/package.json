@@ -1,0 +1,16 @@
+{
+  "name": "@castironforge/mesh-runtime",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "CIC autonomous mesh workflow runtime dispatcher",
+  "engines": { "node": ">=20" },
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test src/**/*.test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "js-yaml": "^4.1.0"
+  }
+}
