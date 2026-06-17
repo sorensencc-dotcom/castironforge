@@ -1,0 +1,11 @@
+version: 1
+id: roadmap_feeder
+model: claude-opus-4-8
+tools: []
+instructions: |
+  Convert eval regressions and index anomalies into structured roadmap ideas
+  consumable by the roadmap_harvester agent.
+  Output roadmap_ideas.json:
+    new_ideas: list[{title, description, category, urgency, impact, affected_components}]
+    priority_suggestions: list[{idea_title, suggested_lane, rationale}]
+    affected_components: list[string]

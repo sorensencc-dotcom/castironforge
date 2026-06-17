@@ -1,0 +1,128 @@
+version: 1
+name: edge_node_nightly_eval
+description: >
+  Nightly evaluation workflow executed on the Edge Node (Mac).
+  Runs agent evals, extractor tests, RAG index rebuilds, and produces
+  a unified eval report and roadmap deltas for the Roadmap Harvester.
+
+runtime:
+  target: edge-mac
+  requirements:
+    os: macos
+    long_running: true
+    isolation: sandboxed
+
+agents:
+  eval_runner:
+    model: claude-haiku-4-5-20251001
+    tools: [test_runner, retrieval]
+    instructions: |
+      Run nightly eval suite covering:
+        - agent reasoning evals
+        - CIC extractor evals
+        - queue and DLQ stress tests
+        - RAG retrieval accuracy tests
+        - performance benchmarks
+      Output eval_results.json:
+        agent_scores: list[{agent, score, delta_vs_baseline}]
+        extractor_scores: list[{extractor, score, delta_vs_baseline}]
+        retrieval_metrics: {precision, recall, mrr, latency_p99}
+        performance_metrics: {throughput, error_rate, latency_p50, latency_p99}
+        regressions: list[{component, metric, expected, actual, severity}]
+
+  index_rebuilder:
+    model: claude-haiku-4-5-20251001
+    tools: [retrieval]
+    instructions: |
+      Rebuild the hybrid RAG indexes on the edge node:
+        - BM25 index rebuild from source corpus
+        - vector embeddings refresh for all documents
+        - RRF fusion weight calibration
+      Output index_report.json:
+        bm25_status: success | failed | partial
+        vector_status: success | failed | partial
+        rrf_status: success | failed | partial
+        new_index_refs: list[string]
+        documents_indexed: int
+        errors: list[string]
+
+  roadmap_feeder:
+    model: claude-opus-4-8
+    tools: []
+    instructions: |
+      Convert eval regressions and improvements into structured roadmap ideas
+      that can be consumed by the Roadmap Harvester workflow.
+      Output roadmap_ideas.json:
+        new_ideas: list[{title, description, category, urgency, impact, affected_components}]
+        priority_suggestions: list[{idea_title, suggested_lane, rationale}]
+        affected_components: list[string]
+
+  summarizer:
+    model: claude-haiku-4-5-20251001
+    tools: []
+    instructions: |
+      Produce a concise operator-facing summary.md covering:
+        - nightly eval pass/fail by component
+        - regressions detected (with severity)
+        - index rebuild status
+        - roadmap ideas generated
+        - recommended operator actions
+
+retrieval:
+  strategy: hybrid
+  bm25_index: cic_bm25
+  vector_index: cic_vectors
+  fusion: rrf
+  scope:
+    - cic/logs/**
+    - cic/builds/**
+    - cic/extractors/**
+    - cic/agents/**
+    - cic/roadmap/**
+    - cic/self_healing/**
+    - cic/queue/**
+    - cic/dlq/**
+    - cic/design/**
+    - cic/adr/**
+
+workflow:
+  trigger:
+    schedule: "0 3 * * *"
+
+  steps:
+    - id: run_evals
+      agent: eval_runner
+      depends_on: []
+      input:
+        date: ${{ now }}
+      output: eval_results.json
+
+    - id: rebuild_indexes
+      agent: index_rebuilder
+      depends_on: [run_evals]
+      input:
+        eval_results: ${{ steps.run_evals.output }}
+      output: index_report.json
+
+    - id: feed_roadmap
+      agent: roadmap_feeder
+      depends_on: [run_evals, rebuild_indexes]
+      input:
+        eval_results: ${{ steps.run_evals.output }}
+        index_report: ${{ steps.rebuild_indexes.output }}
+      output: roadmap_ideas.json
+
+    - id: summary
+      agent: summarizer
+      depends_on: [run_evals, rebuild_indexes, feed_roadmap]
+      input:
+        eval_results: ${{ steps.run_evals.output }}
+        index_report: ${{ steps.rebuild_indexes.output }}
+        roadmap_ideas: ${{ steps.feed_roadmap.output }}
+      output: summary.md
+
+outputs:
+  - eval_results.json
+  - index_report.json
+  - roadmap_ideas.json
+  - summary.md

@@ -1,0 +1,138 @@
+version: 1
+name: cic_failure_diagnosis
+description: >
+  Phase-2 workflow: detect CIC failure, diagnose via retrieval, propose repair,
+  and optionally trigger self-healing actions.
+
+agents:
+  failure_triage:
+    model: claude-opus-4-8
+    tools: [retrieval, cic.logs]
+    instructions: |
+      You are the CIC Failure Triage Agent.
+      Tasks:
+      - Ingest current CIC failure event (error, stack, build_id, stage).
+      - Pull relevant logs from cic.logs for the failing build and recent history.
+      - Use retrieval to find similar past incidents and their resolutions.
+      - Classify failure type: config | infra | code | data | queue_dlq | extractor | unknown.
+      - Output diagnosis.json:
+          failure_type: string
+          suspected_root_cause: string
+          confidence: float (0.0–1.0)
+          related_incidents: list[string]
+          recommended_actions: list[string]
+
+  repair_planner:
+    model: claude-opus-4-8
+    tools: [retrieval, cic.restart, cic.repair, cic.snapshot, cic.restore]
+    instructions: |
+      You are the CIC Repair Planner Agent.
+      Tasks:
+      - Read diagnosis.json from failure_triage.
+      - Use retrieval to inspect how similar failures were resolved.
+      - Select repair strategy:
+          - restart only
+          - repair configuration or code
+          - restore from snapshot
+          - escalate to human (high risk or low confidence)
+      - Plan an explicit, ordered repair sequence with risk assessment.
+      - Never schedule high-risk actions without requires_hitl: true.
+      - Output repair_plan.json:
+          actions: list[{step: string, tool: string, args: object}]
+          risk_level: low | medium | high
+          requires_hitl: bool
+          notes: string
+
+  repair_executor:
+    model: claude-haiku-4-5-20251001
+    tools: [cic.restart, cic.repair, cic.snapshot, cic.restore]
+    instructions: |
+      You are the CIC Repair Executor Agent.
+      Tasks:
+      - Read repair_plan.json.
+      - Execute only actions where risk_level=low AND requires_hitl=false.
+      - On medium/high risk or requires_hitl=true: halt, annotate, do not execute.
+      - After each action, collect updated CIC status from cic.logs.
+      - Output repair_result.json:
+          executed_actions: list[string]
+          status: success | partial | failed | awaiting_hitl
+          new_logs_ref: string
+          notes: string
+
+  summarizer:
+    model: claude-haiku-4-5-20251001
+    tools: []
+    instructions: |
+      You are the CIC Failure Summary Agent.
+      Produce a concise operator-facing summary covering:
+      - What failed and where
+      - Most likely root cause with confidence
+      - Actions taken automatically
+      - Actions still requiring human attention
+      Output: summary.md
+
+retrieval:
+  strategy: hybrid
+  bm25_index: cic_failure_bm25
+  vector_index: cic_failure_vectors
+  fusion: rrf
+  scope:
+    - cic/logs/**
+    - cic/builds/**
+    - cic/errors/**
+    - cic/adr/**
+    - cic/ops/runbooks/**
+    - cic/queue/**
+    - cic/dlq/**
+    - cic/extractors/**
+    - cic/self_healing/**
+
+workflow:
+  trigger:
+    event: cic.build.failed
+
+  steps:
+    - id: triage
+      agent: failure_triage
+      depends_on: []
+      input:
+        failure_event:
+          build_id: ${{ event.build.id }}
+          stage: ${{ event.build.stage }}
+          error: ${{ event.build.error }}
+          timestamp: ${{ event.timestamp }}
+      output: diagnosis.json
+
+    - id: plan_repair
+      agent: repair_planner
+      depends_on: [triage]
+      input:
+        diagnosis: ${{ steps.triage.output }}
+      output: repair_plan.json
+
+    - id: execute_repair
+      agent: repair_executor
+      depends_on: [plan_repair]
+      input:
+        plan: ${{ steps.plan_repair.output }}
+      output: repair_result.json
+
+    - id: summary
+      agent: summarizer
+      depends_on: [triage, execute_repair]
+      input:
+        diagnosis: ${{ steps.triage.output }}
+        repair_result: ${{ steps.execute_repair.output }}
+      output: summary.md
+
+  hitl:
+    - step: execute_repair
+      condition: ${{ steps.plan_repair.output.requires_hitl == true }}
+      action: approve
+      description: Human must approve medium/high-risk repair actions before execution.
+
+outputs:
+  - summary.md
+  - diagnosis.json
+  - repair_plan.json
+  - repair_result.json

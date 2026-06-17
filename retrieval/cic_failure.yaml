@@ -1,0 +1,17 @@
+version: 1
+id: cic_failure
+strategy: hybrid
+bm25_index: cic_failure_bm25
+vector_index: cic_failure_vectors
+fusion: rrf
+description: Failure-specific retrieval scoped to logs, errors, runbooks, and DLQ.
+scope:
+  - cic/logs/**
+  - cic/builds/**
+  - cic/errors/**
+  - cic/adr/**
+  - cic/ops/runbooks/**
+  - cic/queue/**
+  - cic/dlq/**
+  - cic/extractors/**
+  - cic/self_healing/**

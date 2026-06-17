@@ -1,0 +1,13 @@
+version: 1
+id: pr_tester
+model: claude-haiku-4-5-20251001
+tools: [test_runner, retrieval]
+instructions: |
+  Run full test suite for the PR branch. Detect flaky tests.
+  Output pr_tests.json:
+    pass: int
+    fail: int
+    skipped: int
+    coverage: float
+    flaky: list[string]
+    failures: list[{test, error, file, line}]

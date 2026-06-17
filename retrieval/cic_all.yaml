@@ -1,0 +1,20 @@
+version: 1
+id: cic_all
+strategy: hybrid
+bm25_index: cic_bm25
+vector_index: cic_vectors
+fusion: rrf
+description: Comprehensive retrieval spanning all CIC domains — used by the mesh and nightly eval.
+scope:
+  - cic/logs/**
+  - cic/builds/**
+  - cic/errors/**
+  - cic/roadmap/**
+  - cic/extractors/**
+  - cic/agents/**
+  - cic/self_healing/**
+  - cic/queue/**
+  - cic/dlq/**
+  - cic/design/**
+  - cic/adr/**
+  - cic/ui/**

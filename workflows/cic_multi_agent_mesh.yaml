@@ -1,0 +1,322 @@
+version: 1
+name: cic_multi_agent_mesh
+description: >
+  Full autonomous CIC multi-agent mesh.
+  Unifies PR review, CIC failure diagnosis, roadmap harvesting,
+  and edge-node nightly eval into a single versioned system.
+
+runtime_profiles:
+  cic_core:
+    target: cic-cluster
+  edge_node:
+    target: edge-mac
+    requirements:
+      os: macos
+      long_running: true
+      isolation: sandboxed
+
+agents:
+  pr_reviewer:
+    model: claude-opus-4-8
+    tools: [retrieval, git]
+    instructions: |
+      Deep PR review against CIC coding standards:
+        - deterministic, operator-grade code
+        - ESM with explicit .js extensions
+        - explicit errors + structured JSON logs
+        - Node 20+, validate inputs at boundaries
+        - export only required symbols, no hidden state
+      Output: pr_review.json (issues, suggestions, required_changes)
+
+  pr_tester:
+    model: claude-haiku-4-5-20251001
+    tools: [test_runner, retrieval]
+    instructions: |
+      Run tests for PR branch. Detect flaky tests. Summarize failures.
+      Output: pr_tests.json (pass, fail, coverage, flakiness)
+
+  cic_builder:
+    model: claude-haiku-4-5-20251001
+    tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs]
+    instructions: |
+      Trigger CIC build. On failure: snapshot, retrieve similar incidents,
+      propose fix, attempt auto-repair.
+      Output: cic_build.json (status, repair_actions, logs)
+
+  failure_triage:
+    model: claude-opus-4-8
+    tools: [retrieval, cic.logs]
+    instructions: |
+      Diagnose CIC failure. Classify type (config|infra|code|data|queue_dlq|extractor|unknown).
+      Retrieve similar past incidents. Produce structured diagnosis.
+      Output: diagnosis.json (failure_type, suspected_root_cause, confidence,
+                              related_incidents, recommended_actions)
+
+  repair_planner:
+    model: claude-opus-4-8
+    tools: [retrieval, cic.restart, cic.repair, cic.snapshot, cic.restore]
+    instructions: |
+      Plan ordered repair sequence with explicit risk assessment.
+      Never schedule high-risk actions without requires_hitl: true.
+      Output: repair_plan.json (actions[], risk_level, requires_hitl, rationale)
+
+  repair_executor:
+    model: claude-haiku-4-5-20251001
+    tools: [cic.restart, cic.repair, cic.snapshot, cic.restore]
+    instructions: |
+      Execute only safe actions (risk_level=low, requires_hitl=false).
+      Halt and annotate on medium/high risk or requires_hitl=true.
+      Output: repair_result.json (executed_actions[], status, new_logs_ref, notes)
+
+  roadmap_harvester:
+    model: claude-opus-4-8
+    tools: [retrieval]
+    instructions: |
+      Convert failures, PR feedback, and eval regressions into canonical
+      roadmap items. Score by impact, urgency, and CIC health relevance.
+      Do NOT modify the roadmap directly — output deltas only.
+      Output: roadmap_delta.json (new_items[], updated_items[], removed_items[],
+                                  priority_ranking[], autoschedule_suggestions[])
+
+  roadmap_synthesizer:
+    model: claude-opus-4-8
+    tools: [retrieval]
+    instructions: |
+      Retrieve current roadmap version. Merge delta preserving lane structure
+      and version integrity. Increment version header on every non-empty delta.
+      Output: roadmap_draft.md
+
+  eval_runner:
+    model: claude-haiku-4-5-20251001
+    tools: [test_runner, retrieval]
+    instructions: |
+      Run nightly eval suite: agent reasoning, extractor evals, queue/DLQ
+      stress tests, RAG accuracy, performance benchmarks.
+      Output: eval_results.json (agent_scores[], extractor_scores[],
+                                 retrieval_metrics, performance_metrics, regressions[])
+
+  index_rebuilder:
+    model: claude-haiku-4-5-20251001
+    tools: [retrieval]
+    instructions: |
+      Rebuild BM25 + vector embeddings + RRF calibration on edge node.
+      Output: index_report.json (bm25_status, vector_status, rrf_status,
+                                 new_index_refs, documents_indexed, errors[])
+
+  roadmap_feeder:
+    model: claude-opus-4-8
+    tools: []
+    instructions: |
+      Convert eval regressions and index anomalies into structured roadmap ideas
+      consumable by the roadmap_harvester agent.
+      Output: roadmap_ideas.json (new_ideas[], priority_suggestions[], affected_components[])
+
+  summarizer:
+    model: claude-haiku-4-5-20251001
+    tools: []
+    instructions: |
+      Produce concise operator-facing summary.md for the calling workflow context.
+      Cover: what happened, what was automated, what needs human attention.
+
+retrieval:
+  strategy: hybrid
+  bm25_index: cic_bm25
+  vector_index: cic_vectors
+  fusion: rrf
+  scope:
+    - cic/logs/**
+    - cic/builds/**
+    - cic/errors/**
+    - cic/roadmap/**
+    - cic/extractors/**
+    - cic/agents/**
+    - cic/self_healing/**
+    - cic/queue/**
+    - cic/dlq/**
+    - cic/design/**
+    - cic/adr/**
+    - cic/ui/**
+
+workflows:
+  - id: pr_review_pipeline
+    trigger:
+      event: pull_request.opened
+    runtime_profile: cic_core
+
+    steps:
+      - id: review
+        agent: pr_reviewer
+        depends_on: []
+        input:
+          pr_diff: ${{ event.pr.diff }}
+        output: pr_review.json
+
+      - id: tests
+        agent: pr_tester
+        depends_on: []
+        input:
+          code: ${{ event.pr.code }}
+        output: pr_tests.json
+
+      - id: cic_build
+        agent: cic_builder
+        depends_on: []
+        input:
+          branch: ${{ event.pr.branch }}
+        output: cic_build.json
+
+      - id: harvest_from_pr
+        agent: roadmap_harvester
+        depends_on: [review, tests, cic_build]
+        input:
+          pr_review: ${{ steps.review.output }}
+          pr_tests: ${{ steps.tests.output }}
+          cic_build: ${{ steps.cic_build.output }}
+        output: roadmap_delta.json
+
+      - id: synthesize_roadmap_from_pr
+        agent: roadmap_synthesizer
+        depends_on: [harvest_from_pr]
+        input:
+          delta: ${{ steps.harvest_from_pr.output }}
+        output: roadmap_draft.md
+
+      - id: summary
+        agent: summarizer
+        depends_on: [review, tests, cic_build, harvest_from_pr]
+        input:
+          pr_review: ${{ steps.review.output }}
+          pr_tests: ${{ steps.tests.output }}
+          cic_build: ${{ steps.cic_build.output }}
+          roadmap_delta: ${{ steps.harvest_from_pr.output }}
+        output: summary.md
+
+    hitl:
+      - step: synthesize_roadmap_from_pr
+        action: approve
+        description: Approve roadmap changes derived from this PR before version bump.
+
+  - id: cic_failure_diagnosis
+    trigger:
+      event: cic.build.failed
+    runtime_profile: cic_core
+
+    steps:
+      - id: triage
+        agent: failure_triage
+        depends_on: []
+        input:
+          failure_event:
+            build_id: ${{ event.build.id }}
+            stage: ${{ event.build.stage }}
+            error: ${{ event.build.error }}
+            timestamp: ${{ event.timestamp }}
+        output: diagnosis.json
+
+      - id: plan_repair
+        agent: repair_planner
+        depends_on: [triage]
+        input:
+          diagnosis: ${{ steps.triage.output }}
+        output: repair_plan.json
+
+      - id: execute_repair
+        agent: repair_executor
+        depends_on: [plan_repair]
+        input:
+          plan: ${{ steps.plan_repair.output }}
+        output: repair_result.json
+
+      - id: harvest_from_failure
+        agent: roadmap_harvester
+        depends_on: [triage, execute_repair]
+        input:
+          diagnosis: ${{ steps.triage.output }}
+          repair_result: ${{ steps.execute_repair.output }}
+        output: roadmap_delta.json
+
+      - id: synthesize_roadmap_from_failure
+        agent: roadmap_synthesizer
+        depends_on: [harvest_from_failure]
+        input:
+          delta: ${{ steps.harvest_from_failure.output }}
+        output: roadmap_draft.md
+
+      - id: summary
+        agent: summarizer
+        depends_on: [triage, execute_repair, harvest_from_failure]
+        input:
+          diagnosis: ${{ steps.triage.output }}
+          repair_result: ${{ steps.execute_repair.output }}
+          roadmap_delta: ${{ steps.harvest_from_failure.output }}
+        output: summary.md
+
+    hitl:
+      - step: execute_repair
+        condition: ${{ steps.plan_repair.output.requires_hitl == true }}
+        action: approve
+        description: Approve medium/high-risk CIC repair actions before execution.
+      - step: synthesize_roadmap_from_failure
+        action: approve
+        description: Approve roadmap changes derived from this failure before version bump.
+
+  - id: edge_node_nightly_eval
+    trigger:
+      schedule: "0 3 * * *"
+    runtime_profile: edge_node
+
+    steps:
+      - id: run_evals
+        agent: eval_runner
+        depends_on: []
+        input:
+          date: ${{ now }}
+        output: eval_results.json
+
+      - id: rebuild_indexes
+        agent: index_rebuilder
+        depends_on: [run_evals]
+        input:
+          eval_results: ${{ steps.run_evals.output }}
+        output: index_report.json
+
+      - id: feed_roadmap
+        agent: roadmap_feeder
+        depends_on: [run_evals, rebuild_indexes]
+        input:
+          eval_results: ${{ steps.run_evals.output }}
+          index_report: ${{ steps.rebuild_indexes.output }}
+        output: roadmap_ideas.json
+
+      - id: harvest_from_evals
+        agent: roadmap_harvester
+        depends_on: [feed_roadmap]
+        input:
+          ideas: ${{ steps.feed_roadmap.output }}
+        output: roadmap_delta.json
+
+      - id: synthesize_roadmap_from_evals
+        agent: roadmap_synthesizer
+        depends_on: [harvest_from_evals]
+        input:
+          delta: ${{ steps.harvest_from_evals.output }}
+        output: roadmap_draft.md
+
+      - id: summary
+        agent: summarizer
+        depends_on: [run_evals, rebuild_indexes, feed_roadmap, harvest_from_evals]
+        input:
+          eval_results: ${{ steps.run_evals.output }}
+          index_report: ${{ steps.rebuild_indexes.output }}
+          roadmap_ideas: ${{ steps.feed_roadmap.output }}
+          roadmap_delta: ${{ steps.harvest_from_evals.output }}
+        output: summary.md
+
+outputs:
+  - pr_review_pipeline.summary.md
+  - cic_failure_diagnosis.summary.md
+  - edge_node_nightly_eval.summary.md
+  - roadmap_draft.md
+  - roadmap_delta.json
+  - eval_results.json
+  - index_report.json

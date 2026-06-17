@@ -1,0 +1,15 @@
+version: 1
+description: Registry of CIC mesh runtime profiles.
+
+profiles:
+  - id: cic_core
+    file: profiles/cic_core.yaml
+    target: cic-cluster
+    description: Primary compute profile for event-driven, latency-sensitive workflows.
+    used_in: [pr_review_pipeline, cic_failure_diagnosis, roadmap_harvester, cic_multi_agent_mesh]
+
+  - id: edge_node
+    file: profiles/edge_node.yaml
+    target: edge-mac
+    description: Mac edge node for long-running nightly evals and index rebuilds.
+    used_in: [edge_node_nightly_eval, cic_multi_agent_mesh]

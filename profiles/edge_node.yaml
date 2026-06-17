@@ -1,0 +1,10 @@
+version: 1
+id: edge_node
+target: edge-mac
+description: >
+  Mac edge node for long-running nightly evals and index rebuilds.
+  Dedicated compute; isolated from production CIC cluster.
+requirements:
+  os: macos
+  long_running: true
+  isolation: sandboxed

@@ -1,0 +1,87 @@
+version: 1
+description: Registry of all CIC autonomous mesh agents.
+
+agents:
+  - id: pr_reviewer
+    file: agents/pr_reviewer.yaml
+    model: claude-opus-4-8
+    tools: [retrieval, git]
+    role: PR review and CIC standards enforcement
+    used_in: [pr_review_pipeline, cic_multi_agent_mesh]
+
+  - id: pr_tester
+    file: agents/pr_tester.yaml
+    model: claude-haiku-4-5-20251001
+    tools: [test_runner, retrieval]
+    role: Test execution and failure analysis
+    used_in: [pr_review_pipeline, cic_multi_agent_mesh]
+
+  - id: cic_builder
+    file: agents/cic_builder.yaml
+    model: claude-haiku-4-5-20251001
+    tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs]
+    role: CIC build trigger and basic self-healing
+    used_in: [pr_review_pipeline, cic_multi_agent_mesh]
+
+  - id: failure_triage
+    file: agents/failure_triage.yaml
+    model: claude-opus-4-8
+    tools: [retrieval, cic.logs]
+    role: CIC failure classification and incident correlation
+    used_in: [cic_failure_diagnosis, cic_multi_agent_mesh]
+
+  - id: repair_planner
+    file: agents/repair_planner.yaml
+    model: claude-opus-4-8
+    tools: [retrieval, cic.restart, cic.repair, cic.snapshot, cic.restore]
+    role: Ordered repair sequence planning with risk assessment
+    used_in: [cic_failure_diagnosis, cic_multi_agent_mesh]
+
+  - id: repair_executor
+    file: agents/repair_executor.yaml
+    model: claude-haiku-4-5-20251001
+    tools: [cic.restart, cic.repair, cic.snapshot, cic.restore]
+    role: Safe execution of low-risk repair actions
+    used_in: [cic_failure_diagnosis, cic_multi_agent_mesh]
+
+  - id: roadmap_harvester
+    file: agents/roadmap_harvester.yaml
+    model: claude-opus-4-8
+    tools: [retrieval]
+    role: Normalize and score raw ideas into canonical roadmap deltas
+    used_in: [roadmap_harvester, pr_review_pipeline, cic_failure_diagnosis, cic_multi_agent_mesh]
+
+  - id: roadmap_synthesizer
+    file: agents/roadmap_synthesizer.yaml
+    model: claude-opus-4-8
+    tools: [retrieval]
+    role: Merge roadmap deltas into versioned roadmap draft
+    used_in: [roadmap_harvester, pr_review_pipeline, cic_failure_diagnosis, cic_multi_agent_mesh]
+
+  - id: eval_runner
+    file: agents/eval_runner.yaml
+    model: claude-haiku-4-5-20251001
+    tools: [test_runner, retrieval]
+    role: Nightly agent, extractor, and retrieval evals
+    used_in: [edge_node_nightly_eval, cic_multi_agent_mesh]
+
+  - id: index_rebuilder
+    file: agents/index_rebuilder.yaml
+    model: claude-haiku-4-5-20251001
+    tools: [retrieval]
+    role: BM25 + vector + RRF index rebuild on edge node
+    used_in: [edge_node_nightly_eval, cic_multi_agent_mesh]
+
+  - id: roadmap_feeder
+    file: agents/roadmap_feeder.yaml
+    model: claude-opus-4-8
+    tools: []
+    role: Convert eval regressions into structured roadmap ideas
+    used_in: [edge_node_nightly_eval, cic_multi_agent_mesh]
+
+  - id: summarizer
+    file: agents/summarizer.yaml
+    model: claude-haiku-4-5-20251001
+    tools: []
+    role: Operator-facing summary generation for any workflow context
+    used_in: [pr_review_pipeline, cic_failure_diagnosis, roadmap_harvester, edge_node_nightly_eval, cic_multi_agent_mesh]

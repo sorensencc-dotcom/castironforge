@@ -1,0 +1,33 @@
+version: 1
+description: Registry of all CIC autonomous mesh workflows.
+
+workflows:
+  - id: pr_review_pipeline
+    file: workflows/pr_review_pipeline.yaml
+    trigger: pull_request.opened
+    runtime_profile: cic_core
+    description: PR review, tests, CIC build, roadmap delta — HITL before merge.
+
+  - id: cic_failure_diagnosis
+    file: workflows/cic_failure_diagnosis.yaml
+    trigger: cic.build.failed
+    runtime_profile: cic_core
+    description: Failure triage, repair planning, safe auto-repair, HITL escalation.
+
+  - id: roadmap_harvester
+    file: workflows/roadmap_harvester.yaml
+    trigger: idea.submitted
+    runtime_profile: cic_core
+    description: Normalize and score ideas into versioned roadmap deltas.
+
+  - id: edge_node_nightly_eval
+    file: workflows/edge_node_nightly_eval.yaml
+    trigger: "cron: 0 3 * * *"
+    runtime_profile: edge_node
+    description: Nightly agent evals, index rebuild, regression surfacing on Mac edge node.
+
+  - id: cic_multi_agent_mesh
+    file: workflows/cic_multi_agent_mesh.yaml
+    trigger: composite
+    runtime_profile: [cic_core, edge_node]
+    description: Unified mesh spec composing all four sub-workflows and all 12 agents.

@@ -1,0 +1,31 @@
+version: 1
+description: Registry of CIC mesh retrieval configurations.
+
+configs:
+  - id: cic_docs
+    file: retrieval/cic_docs.yaml
+    bm25_index: cic_docs_bm25
+    vector_index: cic_vectors
+    description: PR review and general CIC knowledge retrieval.
+    used_in: [pr_review_pipeline]
+
+  - id: cic_failure
+    file: retrieval/cic_failure.yaml
+    bm25_index: cic_failure_bm25
+    vector_index: cic_failure_vectors
+    description: Failure-specific retrieval scoped to logs, errors, runbooks, DLQ.
+    used_in: [cic_failure_diagnosis]
+
+  - id: roadmap
+    file: retrieval/roadmap.yaml
+    bm25_index: roadmap_bm25
+    vector_index: roadmap_vectors
+    description: Roadmap and idea scoring retrieval across all CIC knowledge domains.
+    used_in: [roadmap_harvester]
+
+  - id: cic_all
+    file: retrieval/cic_all.yaml
+    bm25_index: cic_bm25
+    vector_index: cic_vectors
+    description: Comprehensive retrieval spanning all CIC domains — used by the mesh and nightly eval.
+    used_in: [edge_node_nightly_eval, cic_multi_agent_mesh]

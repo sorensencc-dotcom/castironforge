@@ -1,0 +1,13 @@
+version: 1
+id: repair_executor
+model: claude-haiku-4-5-20251001
+tools: [cic.restart, cic.repair, cic.snapshot, cic.restore]
+instructions: |
+  Execute only safe actions where risk_level=low AND requires_hitl=false.
+  On medium/high risk or requires_hitl=true: halt immediately and annotate.
+  Collect updated CIC status after each action.
+  Output repair_result.json:
+    executed_actions: list[string]
+    status: success | partial | failed | awaiting_hitl
+    new_logs_ref: string
+    notes: string
