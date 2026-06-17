@@ -1,0 +1,113 @@
+version: '3.8'
+
+services:
+  # TorqueQuery: RAG search service (FastAPI)
+  torquequery:
+    build:
+      context: ../torquequery
+      dockerfile: Dockerfile
+    container_name: cic-torquequery
+    ports:
+      - "9000:9000"
+    environment:
+      PYTHONUNBUFFERED: "1"
+    command: uvicorn torquequery.main:app --host 0.0.0.0 --port 9000 --reload
+    volumes:
+      - ../torquequery:/app
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # Ollama: Local LLM inference (CPU/GPU)
+  # Note: Requires NVIDIA GPU support. If not using GPU, run `ollama serve` on host instead.
+  ollama:
+    image: ollama/ollama:latest
+    container_name: cic-ollama
+    ports:
+      - "11434:11434"
+    environment:
+      OLLAMA_HOST: 0.0.0.0:11434
+    volumes:
+      - ollama_data:/root/.ollama
+    # Uncomment for GPU support (requires nvidia-docker):
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # llama.cpp: Alternative LLM inference
+  # Note: Requires pre-built binary or source. Run on host if simpler.
+  # llamacpp:
+  #   build:
+  #     context: ../llama.cpp
+  #     dockerfile: Dockerfile
+  #   container_name: cic-llamacpp
+  #   ports:
+  #     - "8080:8080"
+  #   command: ./llama-server -m model.gguf -ngl 99 --port 8080
+  #   volumes:
+  #     - ../llama.cpp:/app
+
+  # Chat Agent Backend: Express.js API server
+  chat-agent:
+    build:
+      context: ./chat-agent
+      dockerfile: Dockerfile
+    container_name: cic-chat-agent
+    ports:
+      - "8000:8000"
+    environment:
+      NODE_ENV: development
+      PORT: 8000
+      TORQUE_URL: http://torquequery:9000
+      OLLAMA_URL: http://ollama:11434
+      LLAMACPP_URL: http://llamacpp:8080
+    depends_on:
+      torquequery:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+    volumes:
+      - ./chat-agent/src:/app/src
+      - ./chat-agent/node_modules:/app/node_modules
+    command: npm run dev
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # Chat Frontend: Vite + React dev server
+  chat-frontend:
+    build:
+      context: ./chat-frontend
+      dockerfile: Dockerfile
+    container_name: cic-chat-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: http://localhost:8000
+    depends_on:
+      - chat-agent
+    volumes:
+      - ./chat-frontend/src:/app/src
+      - ./chat-frontend/node_modules:/app/node_modules
+    command: npm run dev -- --host 0.0.0.0
+
+volumes:
+  ollama_data:
+
+networks:
+  default:
+    name: cic-network
+    driver: bridge
