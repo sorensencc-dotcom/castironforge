@@ -70,7 +70,7 @@ def validate_dataset(dataset_path: Path) -> list[dict]:
             f"Dataset not found: {dataset_path}\n"
             "  Run: npm run generate-dataset  (or generate-dataset-hybrid)"
         )
-    with dataset_path.open() as f:
+    with dataset_path.open(encoding="utf-8") as f:
         raw = json.load(f)
 
     # Both generator scripts wrap examples: { "examples": [...], "meta": {...} }
@@ -154,7 +154,7 @@ def train(cfg: dict, dataset_path: Path, output_dir: Path, base_model_id: str) -
 
     # Dataset
     _log("Preparing dataset...")
-    with dataset_path.open() as f:
+    with dataset_path.open(encoding="utf-8") as f:
         raw = json.load(f)
 
     def format_record(record: dict) -> str:
