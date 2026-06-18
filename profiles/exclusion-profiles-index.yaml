@@ -1,0 +1,117 @@
+version: "1.0.0"
+title: Registry of Exclusion Profiles for CIC & Autonomous Indexing
+description: |
+  Central registry for balanced exclusion profiles used by CIC ingestion pipelines,
+  workspace indexing engines, and autonomous agent ingestion systems.
+
+  Profiles are auto-detected via exclusion-profile-engine.ts based on workspace
+  fingerprinting (presence of package.json, tsconfig.json, pyproject.toml, etc.).
+
+engine:
+  id: exclusion-profile-engine
+  language: typescript
+  file: profiles/exclusion-profile-engine.ts
+  description: Auto-detecting profile engine with CLI support
+  cli_usage: |
+    # Detect profile for current workspace
+    npx ts-node profiles/exclusion-profile-engine.ts detect
+
+    # Load full profile definition
+    npx ts-node profiles/exclusion-profile-engine.ts profile
+
+    # Generate CIC-ready spec
+    npx ts-node profiles/exclusion-profile-engine.ts spec
+
+profiles:
+  - id: balanced
+    file: profiles/balanced-exclusion-spec.json
+    strategy: balanced
+    description: Default balanced profile for all language types and workspace structures
+    layers: 4
+    target_audience: [cic, antigravity, torquequery, autonomous-indexing]
+    status: production
+    rationale: |
+      Balanced exclusion uses 4 deterministic layers (dependencies, build artifacts,
+      secrets, binary payloads) with surgical negation rules. Preserves architectural
+      signals, config schemas, and framework metadata while blocking token bloat.
+
+  - id: fullstack
+    extends: balanced
+    description: Optimized for JS/TS fullstack applications (React, Next.js, Vue, Angular, Vite, Express)
+    language_focus: [typescript, javascript, tsx, jsx]
+    target_audience: [cic, autonomous-indexing]
+    status: production
+
+  - id: python
+    extends: balanced
+    description: Optimized for Python/data engineering (FastAPI, Django, Jupyter, ML frameworks)
+    language_focus: [python, ipynb]
+    target_audience: [cic, autonomous-indexing]
+    status: production
+
+  - id: monorepo
+    extends: balanced
+    description: Optimized for monorepos (Turborepo, Lerna, Nx, pnpm workspaces)
+    structural_markers: [packages/, apps/, turbo.json, lerna.json, nx.json]
+    target_audience: [cic, autonomous-indexing]
+    status: production
+
+  - id: ml
+    extends: balanced
+    description: Optimized for ML workspaces (PyTorch, TensorFlow, wandb, checkpoints)
+    artifact_classes: [model_weights, training_checkpoints, ml_metadata]
+    target_audience: [cic, autonomous-indexing]
+    status: production
+
+manifest:
+  id: cicignore
+  path: .cicignore
+  description: Unified exclusion manifest readable by CIC ingestion engines
+  format: gitignore-compatible
+  status: production
+
+automated_detection:
+  enabled: true
+  engine: exclusion-profile-engine
+  fingerprint_markers:
+    fullstack:
+      - package.json
+      - tsconfig.json
+      - "next.config.js || next.config.ts"
+    python:
+      - requirements.txt
+      - pyproject.toml
+      - "**/*.ipynb"
+    monorepo:
+      - packages/
+      - apps/
+      - turbo.json
+    ml:
+      - checkpoints/
+      - wandb/
+      - "**/*.pt"
+  priority_order: [monorepo, ml, python, fullstack, balanced]
+  caching: true
+  cache_ttl_seconds: 3600
+
+usage_examples:
+  cic_ingestion:
+    description: Use balanced profile in CIC ingestion pipeline
+    config: |
+      {
+        "version": "1.0.0",
+        "strategy": "balanced",
+        "profile_spec": "profiles/balanced-exclusion-spec.json"
+      }
+
+  autonomous_indexing:
+    description: Auto-detect profile for workspace
+    command: exclusion-profile-engine.detect()
+    output: "fullstack | python | monorepo | ml | balanced"
+
+  custom_workspace:
+    description: Load specific profile programmatically
+    usage: |
+      import ExclusionProfileEngine from './exclusion-profile-engine';
+      const engine = new ExclusionProfileEngine();
+      const profile = engine.getProfileByName('fullstack');

@@ -1,0 +1,359 @@
+{
+  "version": "1.0.0",
+  "title": "Balanced Exclusion Profile for CIC & Autonomous Agents",
+  "description": "Operator-grade exclusion specification tuned for autonomous workspace engines and multi-agent indexing pipelines. Uses 4 deterministic layers with surgical exceptions to preserve architectural signals while blocking token bloat and secrets.",
+  "strategy": "balanced",
+  "metadata": {
+    "created": "2026-06-18",
+    "author": "CIC Exclusion Profile Engine",
+    "targetAudience": ["Antigravity", "CIC", "TorqueQuery", "autonomous-indexing"],
+    "compatibility": ["v1.0.0"]
+  },
+  "layers": {
+    "dependencies": {
+      "description": "Dependency tree exclusions with manifest preservation",
+      "exclude": [
+        "node_modules/",
+        "vendor/",
+        ".venv/",
+        ".pnpm-store/",
+        "__pycache__/",
+        ".mypy_cache/",
+        ".pytest_cache/",
+        "target/",
+        ".gradle/"
+      ],
+      "include": [
+        "package.json",
+        "package-lock.json",
+        "yarn.lock",
+        "requirements.txt",
+        "pyproject.toml",
+        "Gemfile",
+        "Cargo.lock",
+        "go.mod",
+        "pom.xml",
+        "build.gradle"
+      ],
+      "rationale": "Dependency manifests are essential for dependency graph reasoning without including tree artifacts"
+    },
+    "buildArtifacts": {
+      "description": "Build output exclusion with descriptor preservation",
+      "exclude": [
+        "dist/",
+        "build/",
+        "out/",
+        ".next/",
+        ".nuxt/",
+        ".svelte-kit/",
+        "coverage/",
+        "*.tsbuildinfo",
+        ".eslintcache",
+        ".stylelintcache",
+        ".parcel-cache"
+      ],
+      "include": [
+        "tsconfig.json",
+        "tsconfig.*.json",
+        "next.config.js",
+        "nuxt.config.ts",
+        "vite.config.ts",
+        "webpack.config.js",
+        "rollup.config.js",
+        "jest.config.js",
+        "vitest.config.ts",
+        "babel.config.js"
+      ],
+      "rationale": "Build descriptors control routing, bundling, and compilation flows"
+    },
+    "secrets": {
+      "description": "Secret exclusion with schema and example preservation",
+      "exclude": [
+        ".env",
+        ".env.local",
+        ".env.*.local",
+        ".env.*.private",
+        "secrets/",
+        "*.pem",
+        "*.key",
+        "*.p8",
+        "*.p12",
+        "*.pfx",
+        "config/*.private.*",
+        "config/*.secret.*",
+        ".aws/",
+        ".gcloud/",
+        ".docker/config.json"
+      ],
+      "include": [
+        ".env.example",
+        ".env.sample",
+        "config/schema.json",
+        "config/routes.json",
+        "config/default.json",
+        ".env.*.example",
+        ".env.*.sample"
+      ],
+      "rationale": "Preserve structural blueprint (schema, routes) without exposing credentials"
+    },
+    "binary": {
+      "description": "Non-text payload exclusion with UI asset preservation",
+      "exclude": [
+        "*.mp4",
+        "*.mov",
+        "*.avi",
+        "*.mkv",
+        "*.zip",
+        "*.tar.gz",
+        "*.tar.bz2",
+        "*.rar",
+        "*.7z",
+        "*.sqlite",
+        "*.sqlite3",
+        "*.db",
+        "*.dbf",
+        "*.parquet",
+        "*.feather",
+        "*.pkl",
+        "*.pickle",
+        "*.joblib",
+        "*.h5",
+        "*.hdf5"
+      ],
+      "include": [
+        "assets/icons/*.svg",
+        "assets/logos/*.svg",
+        "public/favicon.ico",
+        "public/robots.txt"
+      ],
+      "rationale": "Block token bombs while preserving small UI assets critical for reasoning"
+    },
+    "modelArtifacts": {
+      "description": "ML model and training artifact exclusion",
+      "exclude": [
+        "checkpoints/",
+        "weights/",
+        "models/*.bin",
+        "models/*.safetensors",
+        "models/*.onnx",
+        "*.pt",
+        "*.pth",
+        "*.ckpt",
+        "wandb/",
+        "mlruns/",
+        "lightning_logs/"
+      ],
+      "include": [
+        "models/config.json",
+        "models/model_index.json",
+        "checkpoints/README.md"
+      ],
+      "rationale": "Exclude large binary weights while preserving model metadata"
+    },
+    "logsAndRuntime": {
+      "description": "Ephemeral files that cause re-indexing churn",
+      "exclude": [
+        "*.log",
+        "*.pid",
+        "logs/",
+        "tmp/",
+        "temp/",
+        "run/",
+        ".cache/",
+        ".run/"
+      ],
+      "include": [],
+      "rationale": "Log and runtime files cause constant re-indexing and CPU churn"
+    },
+    "structural": {
+      "description": "Structural safeguards against loops and noise",
+      "exclude": [
+        ".git/",
+        ".git/modules/",
+        ".gitmodules",
+        ".vscode/",
+        ".idea/",
+        "*.swp",
+        "*.swo",
+        "*~",
+        ".DS_Store",
+        "Thumbs.db",
+        "*.sublime-project",
+        "*.sublime-workspace",
+        ".emacs.d/",
+        ".vim/"
+      ],
+      "include": [],
+      "rationale": "Prevent recursive git traversal and exclude IDE/OS noise"
+    }
+  },
+  "fileSizeCaps": {
+    "enabled": true,
+    "defaultCapKB": 500,
+    "rationale": "Ignore files > 500 KB unless extension is explicitly whitelisted to prevent token bloat",
+    "whitelistedExtensions": [
+      "json",
+      "yaml",
+      "toml",
+      "ts",
+      "js",
+      "py",
+      "go",
+      "rs",
+      "md",
+      "txt",
+      "svg"
+    ]
+  },
+  "languageFiltering": {
+    "enabled": true,
+    "indexOnly": [
+      "ts",
+      "js",
+      "tsx",
+      "jsx",
+      "py",
+      "go",
+      "rs",
+      "java",
+      "json",
+      "yaml",
+      "yml",
+      "toml",
+      "md",
+      "txt",
+      "sh",
+      "bash",
+      "sql",
+      "graphql"
+    ],
+    "excludeByDefault": [
+      "pdf",
+      "doc",
+      "docx",
+      "xls",
+      "xlsx",
+      "ppt",
+      "pptx"
+    ],
+    "rationale": "Index only meaningful source and config formats; exclude document files as noise"
+  },
+  "profileVariants": {
+    "fullstack": {
+      "extends": "balanced",
+      "description": "Optimized for JS/TS fullstack: React, Next.js, Vue, Angular, Vite, Express",
+      "additionalExclude": [
+        ".eslintcache",
+        ".stylelintcache",
+        ".parcel-cache"
+      ],
+      "additionalLanguages": [
+        "vue",
+        "jsx",
+        "tsx"
+      ]
+    },
+    "python": {
+      "extends": "balanced",
+      "description": "Optimized for Python/data: FastAPI, Django, Jupyter, pandas, scikit-learn",
+      "additionalExclude": [
+        ".pytest_cache/",
+        "*.pyc",
+        ".ipynb_checkpoints/",
+        "site-packages/"
+      ],
+      "additionalLanguages": [
+        "py",
+        "ipynb",
+        "pyx"
+      ]
+    },
+    "monorepo": {
+      "extends": "balanced",
+      "description": "Optimized for monorepos: Turborepo, Lerna, Nx, pnpm workspaces",
+      "additionalExclude": [
+        ".turbo/",
+        ".nx/",
+        "packages/**/node_modules/",
+        "apps/**/node_modules/"
+      ]
+    },
+    "ml": {
+      "extends": "balanced",
+      "description": "Optimized for ML workspaces: PyTorch, TensorFlow, wandb, MLflow",
+      "additionalExclude": [
+        "checkpoints/",
+        "weights/",
+        "models/*.bin",
+        "*.pt",
+        "*.pth",
+        "wandb/",
+        "mlruns/"
+      ]
+    }
+  },
+  "ingestionPipeline": {
+    "enabled": true,
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Dependency Resolution",
+        "action": "Index manifests, trace dependency graphs",
+        "input": [
+          "package.json",
+          "requirements.txt",
+          "pyproject.toml",
+          "Cargo.toml"
+        ]
+      },
+      {
+        "phase": 2,
+        "name": "Configuration Analysis",
+        "action": "Parse build descriptors, routing config, schema",
+        "input": [
+          "tsconfig.json",
+          "next.config.js",
+          "config/schema.json",
+          "config/routes.json"
+        ]
+      },
+      {
+        "phase": 3,
+        "name": "Source Code Indexing",
+        "action": "Index source files per languageWhitelist",
+        "input": [
+          "src/**/*.ts",
+          "src/**/*.js",
+          "src/**/*.py"
+        ]
+      },
+      {
+        "phase": 4,
+        "name": "Semantic Analysis",
+        "action": "Extract APIs, types, function signatures",
+        "input": "All indexed source files"
+      }
+    ]
+  },
+  "automationRules": {
+    "reindexOnChange": [
+      "package.json",
+      "package-lock.json",
+      "tsconfig.json",
+      "next.config.js",
+      ".cicignore"
+    ],
+    "skipIfUnchanged": [
+      "node_modules/",
+      "dist/",
+      ".git/"
+    ]
+  },
+  "examples": {
+    "castironforge": {
+      "detected_profile": "fullstack",
+      "reasoning": "Presence of package.json, tsconfig.json, next.config.js indicates JS/TS fullstack",
+      "indexing_result": "Indexes chat-frontend/ React components, chat-agent/ Express server, config manifests, excludes node_modules and build artifacts"
+    }
+  }
+}

@@ -1,0 +1,204 @@
+# =========================================================================
+# Balanced Exclusion Profile for CIC Ingestion & Autonomous Agents
+# =========================================================================
+# Optimized for multi-agent indexing, workspace reasoning, and semantic
+# analysis. Excludes token bloat and secrets while preserving architectural
+# signals, build descriptors, and framework-critical metadata.
+# =========================================================================
+
+# -------------------------
+# 1. DEPENDENCY TREES
+# -------------------------
+# Exclude package trees but preserve manifests (essential for dependency graphs)
+node_modules/
+vendor/
+.venv/
+.pnpm-store/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+target/
+go.sum
+
+# Preserve dependency declarations
+!package.json
+!package-lock.json
+!yarn.lock
+!requirements.txt
+!pyproject.toml
+!Gemfile
+!Cargo.lock
+!go.mod
+
+# -------------------------
+# 2. BUILD ARTIFACTS
+# -------------------------
+# Exclude ephemeral output but keep build descriptors
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+coverage/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.parcel-cache
+
+# Preserve build configuration (essential for routing, bundling, compilation)
+!tsconfig.json
+!tsconfig.*.json
+!next.config.js
+!nuxt.config.ts
+!vite.config.ts
+!webpack.config.js
+!rollup.config.js
+!jest.config.js
+!vitest.config.ts
+!babel.config.js
+
+# -------------------------
+# 3. SECRETS & ENVIRONMENT
+# -------------------------
+# Exclude real secrets but preserve examples and schemas
+.env
+.env.local
+.env.*.local
+.env.*.private
+secrets/
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+config/*.private.*
+config/*.secret.*
+.aws/
+.gcloud/
+.docker/config.json
+
+# Preserve structural blueprints without exposing credentials
+!.env.example
+!.env.sample
+!config/schema.json
+!config/routes.json
+!config/default.json
+!.env.*.example
+!.env.*.sample
+
+# -------------------------
+# 4. BINARY & NON-TEXT PAYLOADS
+# -------------------------
+# Exclude large or non-tokenizable assets
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+*.sqlite
+*.sqlite3
+*.db
+*.dbf
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+
+# Allow small UI assets critical for reasoning
+!assets/icons/*.svg
+!assets/logos/*.svg
+!public/favicon.ico
+!public/robots.txt
+
+# -------------------------
+# 5. MODEL & TRAINING ARTIFACTS
+# -------------------------
+# Exclude large ML artifacts that cause token bloat
+checkpoints/
+weights/
+models/*.bin
+models/*.safetensors
+models/*.onnx
+*.pt
+*.pth
+*.ckpt
+wandb/
+mlruns/
+lightning_logs/
+__pycache__/
+
+# -------------------------
+# 6. LOGS & RUNTIME STATE
+# -------------------------
+# Exclude files that cause re-indexing churn
+*.log
+*.pid
+logs/
+tmp/
+temp/
+run/
+.cache/
+.run/
+
+# -------------------------
+# 7. STRUCTURAL SAFEGUARDS
+# -------------------------
+# Git loops and nested modules
+.git/
+.git/modules/
+.gitmodules
+.github/
+
+# IDE & editor noise
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.emacs.d/
+.vim/
+.netrwhist
+
+# OS-specific
+.AppleDouble
+.LSOverride
+ehthumbs.db
+
+# -------------------------
+# 8. FILE SIZE CAP
+# -------------------------
+# Handler enforces: ignore files > 500 KB unless extension is whitelisted
+# Extensions whitelisted: json, yaml, toml, ts, js, py, go, rs, md, txt, svg
+
+# -------------------------
+# 9. LANGUAGE-AWARE FILTERING
+# -------------------------
+# Index only meaningful source and config formats:
+# .ts, .js, .py, .go, .rs, .java
+# .json, .yaml, .toml, .md, .txt
+# Everything else is noise unless explicitly opted in
+
+# Exclude irrelevant documentation formats
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# Archive patterns to exclude
+**/.Archive/
+**/.Trash/
