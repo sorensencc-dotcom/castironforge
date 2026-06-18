@@ -31,3 +31,9 @@ workflows:
     trigger: composite
     runtime_profile: [cic_core, edge_node]
     description: Unified mesh spec composing all four sub-workflows and all 12 agents.
+
+  - id: auto_doc_sync
+    file: workflows/auto_doc_sync.yaml
+    trigger: push.main
+    runtime_profile: cic_core
+    description: Generate Markdown docs for changed source files on every push.

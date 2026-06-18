@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-stone-950 text-stone-100;
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-stone-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-stone-600;
+}
