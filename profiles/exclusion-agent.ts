@@ -49,6 +49,14 @@ export interface AgentHealth {
   lastError: string | null;
 }
 
+export interface TorqueQueryFilterDelta {
+  mode: "balanced";
+  added_filters?: string[];
+  removed_filters?: string[];
+  profile_changed?: boolean;
+  new_profile?: string;
+}
+
 export interface TorqueQueryConfig {
   mode: "balanced";
   profile: string;
@@ -67,6 +75,8 @@ export class ExclusionAgent extends EventEmitter {
   private lastError: string | null = null;
   private rootDir: string;
   private torqueQueryEndpoint: string;
+  private lastFilterSet: TorqueQueryFilterSet | null = null;
+  private lastProfile: string | null = null;
 
   constructor(
     rootDir: string = process.cwd(),
@@ -170,6 +180,9 @@ export class ExclusionAgent extends EventEmitter {
       // Generate filters
       const filters = this.buildFilterSet(adapter);
 
+      // Compute delta for efficient TorqueQuery sync
+      const delta = this.computeFilterDelta(profile, filters);
+
       // Create timeline entry
       const entry: IngestionTimelineEntry = {
         timestamp: Date.now(),
@@ -180,22 +193,30 @@ export class ExclusionAgent extends EventEmitter {
 
       this.timeline.push(entry);
 
-      // Emit event
-      this.emit("manifest_updated", {
-        profile,
-        timestamp: entry.timestamp,
-        filterCount: filters.exclude.length + filters.include.length,
-      });
-
-      // Log to stdout (for structured logging)
-      console.log(
-        JSON.stringify({
-          event: "exclusion.update",
-          timestamp: entry.timestamp,
+      // Only log/emit if there are actual changes
+      if (delta) {
+        // Emit event with delta info
+        this.emit("manifest_updated", {
           profile,
+          timestamp: entry.timestamp,
           filterCount: filters.exclude.length + filters.include.length,
-        })
-      );
+          delta: {
+            added: delta.added_filters?.length || 0,
+            removed: delta.removed_filters?.length || 0,
+          },
+        });
+
+        // Log to stdout (for structured logging)
+        console.log(
+          JSON.stringify({
+            event: "exclusion.update",
+            timestamp: entry.timestamp,
+            profile,
+            delta: delta,
+            filterCount: filters.exclude.length + filters.include.length,
+          })
+        );
+      }
     } catch (error) {
       this.lastError = (error as Error).message;
       throw error;
@@ -214,6 +235,50 @@ export class ExclusionAgent extends EventEmitter {
       include: ingestion.filters.include || [],
       sizeCap: ingestion.filters.size_cap_kb || 500,
       languageWhitelist: ingestion.filters.language_whitelist || [],
+    };
+  }
+
+  /**
+   * Compute delta between last filter set and current.
+   * Returns delta if significant changes, otherwise null to skip sync.
+   */
+  private computeFilterDelta(
+    profile: string,
+    filters: TorqueQueryFilterSet
+  ): TorqueQueryFilterDelta | null {
+    if (!this.lastFilterSet) {
+      // First time, send full config
+      this.lastFilterSet = filters;
+      this.lastProfile = profile;
+      return {
+        mode: "balanced",
+        added_filters: filters.exclude.concat(filters.include),
+        profile_changed: false,
+        new_profile: profile,
+      };
+    }
+
+    const excludeSet = new Set(filters.exclude);
+    const lastExcludeSet = new Set(this.lastFilterSet.exclude);
+    const addedExcludes = [...excludeSet].filter((x) => !lastExcludeSet.has(x));
+    const removedExcludes = [...lastExcludeSet].filter((x) => !excludeSet.has(x));
+
+    const profileChanged = this.lastProfile !== profile;
+
+    // Only sync if there are actual changes
+    if (addedExcludes.length === 0 && removedExcludes.length === 0 && !profileChanged) {
+      return null;
+    }
+
+    this.lastFilterSet = filters;
+    this.lastProfile = profile;
+
+    return {
+      mode: "balanced",
+      added_filters: addedExcludes.length > 0 ? addedExcludes : undefined,
+      removed_filters: removedExcludes.length > 0 ? removedExcludes : undefined,
+      profile_changed: profileChanged,
+      new_profile: profileChanged ? profile : undefined,
     };
   }
 

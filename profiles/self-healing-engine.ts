@@ -14,6 +14,7 @@
 import fs from "fs";
 import path from "path";
 import { EventEmitter } from "events";
+import type { FSWatcher } from "fs";
 import ExclusionProfileEngine, { ExclusionProfile } from "./exclusion-profile-engine";
 
 export interface WorkspaceSnapshot {
@@ -53,6 +54,11 @@ export class SelfHealingEngine extends EventEmitter {
   private scanTimer: NodeJS.Timeout | null = null;
   private profileEngine: ExclusionProfileEngine;
   private currentManifest: ExclusionProfile | null = null;
+  private fingerprintCache: WorkspaceSnapshot | null = null;
+  private fingerprintCacheTTL: number = 5 * 60 * 1000; // 5 minutes
+  private fingerprintCacheTime: number = 0;
+  private fsWatcher: fs.FSWatcher | null = null;
+  private fsChanged: boolean = false;
 
   constructor(rootDir: string = process.cwd(), scanIntervalMs: number = 5000) {
     super();
@@ -75,6 +81,19 @@ export class SelfHealingEngine extends EventEmitter {
     );
     this.emit("started");
 
+    // Set up filesystem watcher for invalidation
+    try {
+      this.fsWatcher = fs.watch(
+        this.rootDir,
+        { recursive: true, persistent: false },
+        () => {
+          this.fsChanged = true;
+        }
+      );
+    } catch {
+      console.warn("[SelfHealingEngine] fs.watch not available, using polling only");
+    }
+
     // Initial scan
     this.scan();
 
@@ -89,16 +108,22 @@ export class SelfHealingEngine extends EventEmitter {
     if (this.scanTimer) {
       clearInterval(this.scanTimer);
       this.scanTimer = null;
-      console.log("[SelfHealingEngine] Stopped");
-      this.emit("stopped");
     }
+
+    if (this.fsWatcher) {
+      this.fsWatcher.close();
+      this.fsWatcher = null;
+    }
+
+    console.log("[SelfHealingEngine] Stopped");
+    this.emit("stopped");
   }
 
   /**
    * Single scan cycle: fingerprint → drift detection → healing.
    */
   private scan(): void {
-    const currentSnapshot = this.computeFingerprint();
+    const currentSnapshot = this.getFingerprintCached();
 
     if (!this.lastSnapshot) {
       this.lastSnapshot = currentSnapshot;
@@ -135,6 +160,28 @@ export class SelfHealingEngine extends EventEmitter {
 
       this.lastSnapshot = currentSnapshot;
     }
+  }
+
+  /**
+   * Get fingerprint from cache if valid, otherwise compute.
+   */
+  private getFingerprintCached(): WorkspaceSnapshot {
+    const now = Date.now();
+    const cacheValid =
+      this.fingerprintCache &&
+      !this.fsChanged &&
+      now - this.fingerprintCacheTime < this.fingerprintCacheTTL;
+
+    if (cacheValid && this.fingerprintCache) {
+      return this.fingerprintCache;
+    }
+
+    // Cache miss or invalidated
+    this.fsChanged = false;
+    const snapshot = this.computeFingerprint();
+    this.fingerprintCache = snapshot;
+    this.fingerprintCacheTime = now;
+    return snapshot;
   }
 
   /**
