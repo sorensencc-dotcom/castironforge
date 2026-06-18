@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"systemMessage\": \"📋 Reminder: If this merged a phase PR, update MASTER_ROADMAP.md status (e.g., Phase 3 → ✅ Merged (PR #16))\"}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "defaultMode": "ask",
+    "allow": [
+      "Bash(git *)",
+      "Edit",
+      "Read"
+    ]
+  }
+}

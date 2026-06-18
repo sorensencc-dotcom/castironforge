@@ -1,3 +1,10 @@
+# Claude Code
+.claude/settings.local.json
+node_modules/
+dist/
+build/
+*.log
+.env
 node_modules/
 dist/
 .env

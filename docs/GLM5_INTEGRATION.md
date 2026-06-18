@@ -1,8 +1,8 @@
 # GLM-5 ↔ CIC Integration Specification
 
 **Date:** 2026-06-17  
-**Status:** Implementation Phase 1  
-**Semver:** 0.1.0
+**Status:** Complete (Phases 1-4)  
+**Semver:** 1.0.0
 
 ---
 
@@ -16,12 +16,31 @@ GLM-5 is explicitly designed for "agentic engineering," long-horizon reasoning, 
 
 ## Integration Goals
 
-GLM-5 serves four critical functions in CIC:
+GLM-5 serves five critical functions across three modes:
 
-1. **INGEST** — GLM-5's long-context fidelity (200k–1M tokens) powers TorqueQuery ingestion
-2. **ENRICH** — ARC-optimized reasoning + structured output for entity extraction and dependency graphs
-3. **ORCHESTRATE** — Multi-phase agent workflows via GLM-5.1 (fast agentic tasks)
-4. **SYNTHESIZE** — SOTA coding performance via GLM-5.2 for repo-scale refactors and edits
+1. **CHAT** — Real-time DOM/code editing (Phase 3)
+   - Interactive session management with undo/redo
+   - DOMPatchApplicator for element mutations
+   - CodeEditApplicator for unified diff application
+   - DesignVariantRenderer for design token rendering
+
+2. **CIC (Code Improvement)** — Multi-phase code improvement workflows (Phase 4)
+   - Discovery: Find improvement opportunities
+   - Harvest: Deep analysis and metrics
+   - Refactor: Generate code changes
+   - Audit: Measure impact and ROI
+
+3. **LABS (Redesign Business)** — Multi-phase redesign workflows (Phase 4)
+   - Discovery: Website quality assessment
+   - Harvest: Design and tech analysis
+   - Lead Score: Qualify redesign leads (0-100)
+   - Redesign: Generate improvements
+   - Outreach: Compose personalized pitches
+
+Plus foundational capabilities:
+
+4. **INGEST** — GLM-5's long-context fidelity (200k–1M tokens) powers TorqueQuery ingestion
+5. **TOOL REGISTRY** — Multi-source tool discovery and capability-based routing (Phase 2)
 
 ---
 
