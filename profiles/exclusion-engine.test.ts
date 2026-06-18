@@ -512,8 +512,8 @@ describe("Integration Tests", () => {
 
     for (const profile of Object.values(profiles)) {
       const adapter = new TorqueQueryAdapter(profile);
-      const config = adapter.generateConfig();
-      expect(config.valid !== false).toBe(true); // Should be valid
+      const validation = adapter.validate();
+      expect(validation.valid).toBe(true);
     }
   });
 

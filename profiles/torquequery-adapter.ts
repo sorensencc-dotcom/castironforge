@@ -286,13 +286,15 @@ export class TorqueQueryAdapter {
     });
 
     // Test language whitelist
-    const [firstExt] = this.profile.languageWhitelist;
-    testCases.push({
-      name: `Language whitelist: .${firstExt}`,
-      input: `src/file.${firstExt}`,
-      expectedResult: "include",
-      reason: `File extension .${firstExt} is whitelisted`,
-    });
+    if (this.profile.languageWhitelist.length > 0) {
+      const [firstExt] = this.profile.languageWhitelist;
+      testCases.push({
+        name: `Language whitelist: .${firstExt}`,
+        input: `src/file.${firstExt}`,
+        expectedResult: "include",
+        reason: `File extension .${firstExt} is whitelisted`,
+      });
+    }
 
     // Test non-whitelisted extension
     testCases.push({
