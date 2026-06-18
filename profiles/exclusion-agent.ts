@@ -99,14 +99,16 @@ export class ExclusionAgent extends EventEmitter {
         this.emit("drift_detected", drift);
       });
 
-      this.healingEngine.on("healed", (actions) => {
+      this.healingEngine.on("healed", async (actions) => {
         console.log(
           `[ExclusionAgent] Healing applied: ${actions.length} actions`
         );
-        this.updateManifest().catch((err) => {
-          this.lastError = err.message;
+        try {
+          await this.updateManifest();
+        } catch (err) {
+          this.lastError = (err as Error).message;
           this.emit("error", err);
-        });
+        }
       });
 
       // Start healing engine

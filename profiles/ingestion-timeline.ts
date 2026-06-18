@@ -110,6 +110,8 @@ export class IngestionTimeline {
     const exact = this.snapshots.find((s) => s.timestamp === timestamp);
     if (exact) return exact;
 
+    if (this.snapshots.length === 0) return null;
+
     // Find nearest within tolerance
     const nearest = this.snapshots.reduce((closest, snap) => {
       const diff = Math.abs(snap.timestamp - timestamp);
@@ -340,51 +342,41 @@ export class IngestionTimeline {
   }
 
   /**
+   * Helper: estimate items based on count delta.
+   */
+  private estimateDelta(delta: number, type: string): string[] {
+    if (delta <= 0) return [];
+    return Array(delta)
+      .fill(null)
+      .map((_, i) => `<${type}_${i + 1}>`);
+  }
+
+  /**
    * Helper: estimate added exclusions based on count delta.
    */
   private estimateAddedExclusions(from: TimelineSnapshot, to: TimelineSnapshot): string[] {
-    const delta = to.excludeCount - from.excludeCount;
-    if (delta <= 0) return [];
-
-    return Array(delta)
-      .fill(null)
-      .map((_, i) => `<exclusion_${i + 1}>`);
+    return this.estimateDelta(to.excludeCount - from.excludeCount, "exclusion");
   }
 
   /**
    * Helper: estimate removed exclusions based on count delta.
    */
   private estimateRemovedExclusions(from: TimelineSnapshot, to: TimelineSnapshot): string[] {
-    const delta = from.excludeCount - to.excludeCount;
-    if (delta <= 0) return [];
-
-    return Array(delta)
-      .fill(null)
-      .map((_, i) => `<removed_exclusion_${i + 1}>`);
+    return this.estimateDelta(from.excludeCount - to.excludeCount, "removed_exclusion");
   }
 
   /**
    * Helper: estimate added inclusions based on count delta.
    */
   private estimateAddedInclusions(from: TimelineSnapshot, to: TimelineSnapshot): string[] {
-    const delta = to.includeCount - from.includeCount;
-    if (delta <= 0) return [];
-
-    return Array(delta)
-      .fill(null)
-      .map((_, i) => `<inclusion_${i + 1}>`);
+    return this.estimateDelta(to.includeCount - from.includeCount, "inclusion");
   }
 
   /**
    * Helper: estimate removed inclusions based on count delta.
    */
   private estimateRemovedInclusions(from: TimelineSnapshot, to: TimelineSnapshot): string[] {
-    const delta = from.includeCount - to.includeCount;
-    if (delta <= 0) return [];
-
-    return Array(delta)
-      .fill(null)
-      .map((_, i) => `<removed_inclusion_${i + 1}>`);
+    return this.estimateDelta(from.includeCount - to.includeCount, "removed_inclusion");
   }
 }
 

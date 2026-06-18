@@ -106,9 +106,18 @@ export class SelfHealingEngine extends EventEmitter {
         `[SelfHealingEngine] Initial snapshot: profile=${currentSnapshot.profile}`
       );
       this.emit("initialized", currentSnapshot);
-      this.currentManifest = this.profileEngine.getProfileByName(
-        currentSnapshot.profile as any
-      );
+
+      const validProfiles = ["fullstack", "python", "monorepo", "ml", "balanced"];
+      if (validProfiles.includes(currentSnapshot.profile)) {
+        this.currentManifest = this.profileEngine.getProfileByName(
+          currentSnapshot.profile as "fullstack" | "python" | "monorepo" | "ml" | "balanced"
+        );
+      } else {
+        console.warn(
+          `[SelfHealingEngine] Invalid profile detected: ${currentSnapshot.profile}, defaulting to balanced`
+        );
+        this.currentManifest = this.profileEngine.getProfileByName("balanced");
+      }
       return;
     }
 
