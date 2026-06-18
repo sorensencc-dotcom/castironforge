@@ -6,6 +6,14 @@ import { ollamaAdapter } from '../runtimes/ollama';
 import { llamaCppAdapter } from '../runtimes/llamacpp';
 import { rag } from '../rag/rag';
 import { buildRagPrompt } from '../rag/promptBuilder';
+import {
+  getExclusionAgent,
+  getExclusionHealth,
+  getExclusionFilters,
+  getExclusionTimeline,
+  getExclusionDiagnostics,
+  isExclusionAgentReady
+} from '../exclusion/integration';
 
 export const chatAgentRouter = Router();
 
@@ -112,6 +120,41 @@ chatAgentRouter.post('/search', async (req, res) => {
   const { query, topK } = req.body as { query: string; topK: number };
   const results = await rag.search(query, topK ?? 5);
   res.json({ results });
+});
+
+// ExclusionAgent endpoints for Balanced Exclusion Profile System
+
+chatAgentRouter.get('/exclusion/health', (_req, res) => {
+  if (!isExclusionAgentReady()) {
+    return res.status(503).json({ error: 'ExclusionAgent not initialized' });
+  }
+  const health = getExclusionHealth();
+  res.json(health || { error: 'ExclusionAgent health unavailable' });
+});
+
+chatAgentRouter.get('/exclusion/filters', (_req, res) => {
+  if (!isExclusionAgentReady()) {
+    return res.status(503).json({ error: 'ExclusionAgent not initialized' });
+  }
+  const filters = getExclusionFilters();
+  res.json(filters || { error: 'No filters generated yet' });
+});
+
+chatAgentRouter.get('/exclusion/timeline', (req, res) => {
+  if (!isExclusionAgentReady()) {
+    return res.status(503).json({ error: 'ExclusionAgent not initialized' });
+  }
+  const limit = parseInt(req.query.limit as string) || 50;
+  const timeline = getExclusionTimeline(limit);
+  res.json({ entries: timeline, count: timeline.length });
+});
+
+chatAgentRouter.get('/exclusion/diagnostics', (_req, res) => {
+  if (!isExclusionAgentReady()) {
+    return res.status(503).json({ error: 'ExclusionAgent not initialized' });
+  }
+  const diagnostics = getExclusionDiagnostics();
+  res.json(diagnostics || { error: 'Diagnostics unavailable' });
 });
 
 function resolveRuntime(model: string): RuntimeAdapter {

@@ -4,11 +4,21 @@
     "module": "CommonJS",
     "lib": ["ES2020"],
     "outDir": "dist",
-    "rootDir": "src",
+    "baseUrl": ".",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noEmit": false
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*.ts",
+    "../profiles/exclusion-agent.ts",
+    "../profiles/exclusion-profile-engine.ts",
+    "../profiles/self-healing-engine.ts",
+    "../profiles/torquequery-adapter.ts",
+    "../profiles/ingestion-timeline.ts",
+    "../profiles/cic-exclusion-subsystem.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
 }

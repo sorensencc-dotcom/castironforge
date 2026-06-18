@@ -255,7 +255,12 @@ export class TorqueQueryAdapter {
     expectedResult: "include" | "exclude";
     reason: string;
   }> {
-    const testCases = [];
+    const testCases: Array<{
+      name: string;
+      input: string;
+      expectedResult: "include" | "exclude";
+      reason: string;
+    }> = [];
 
     // Test excludes
     for (const pattern of this.profile.exclude.slice(0, 3)) {

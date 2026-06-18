@@ -1,5 +1,6 @@
 import express from 'express';
 import { chatAgentRouter } from './router/chatAgentRouter';
+import { initializeExclusionAgent, shutdownExclusionAgent } from './exclusion/integration';
 
 const app = express();
 const PORT = process.env.PORT ?? 8000;
@@ -23,6 +24,33 @@ app.use((req, res, next) => {
 
 app.use('/', chatAgentRouter);
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, async () => {
   console.log(`CIC Chat Agent listening on http://localhost:${PORT}`);
+
+  // Initialize ExclusionAgent
+  try {
+    await initializeExclusionAgent();
+  } catch (err) {
+    console.error('Failed to initialize ExclusionAgent:', err);
+    console.warn('Chat agent is running but ExclusionAgent endpoints will return 503');
+  }
+});
+
+// Graceful shutdown
+process.on('SIGTERM', () => {
+  console.log('SIGTERM received, shutting down gracefully...');
+  shutdownExclusionAgent();
+  server.close(() => {
+    console.log('Server closed');
+    process.exit(0);
+  });
+});
+
+process.on('SIGINT', () => {
+  console.log('SIGINT received, shutting down gracefully...');
+  shutdownExclusionAgent();
+  server.close(() => {
+    console.log('Server closed');
+    process.exit(0);
+  });
 });
