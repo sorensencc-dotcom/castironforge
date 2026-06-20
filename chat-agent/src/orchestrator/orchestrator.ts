@@ -3,6 +3,7 @@ import { runtimeRegistry } from '../runtimes/registry';
 import { policyEnforcer } from '../middleware/policyGate';
 import { performanceTracker } from '../utils/performanceTracker';
 import { adaptiveRouter } from '../utils/agentSelector';
+import { getCostManager } from '../utils/costManager';
 import { estimateResponseTokens } from '../utils/tokenCounter';
 import type {
   AgentDefinition,
@@ -61,6 +62,22 @@ export class Orchestrator {
       const policyError = this.checkTaskPolicy(request.sessionId, agentDef.model);
       if (policyError) {
         return this.buildResult(request, 'rejected', undefined, policyError, startTime);
+      }
+
+      // 3.5. Check budget constraints
+      const costManager = getCostManager();
+      const budget = costManager.getSessionBudget(request.sessionId);
+      if (budget) {
+        // Estimate cost based on average cost per execution for this agent
+        const metrics = performanceTracker.getMetrics(request.agent);
+        const estimatedCost = metrics?.avgCost ?? 0.01;  // Default estimate
+
+        const budgetCheck = costManager.canProceed(request.sessionId, estimatedCost);
+        if (!budgetCheck.allowed) {
+          return this.buildResult(request, 'rejected', undefined, budgetCheck.reason, startTime);
+        }
+
+        costManager.checkBudgetHealth(request.sessionId);
       }
 
       // 4. Track active task
@@ -302,6 +319,15 @@ export class Orchestrator {
         status,
         error
       );
+
+      // Record cost if successful execution
+      if (status === 'success' && tokensUsed > 0) {
+        const costManager = getCostManager();
+        const metrics = performanceTracker.getMetrics(request.agent);
+        if (metrics) {
+          costManager.recordCost(request.sessionId, metrics.avgCost);
+        }
+      }
     }
 
     if (this.config.enableLogging) {

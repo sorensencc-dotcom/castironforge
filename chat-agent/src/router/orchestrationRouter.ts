@@ -6,6 +6,7 @@ import { adaptiveRouter } from '../utils/agentSelector';
 import { getAlertingSystem } from '../utils/alertingSystem';
 import { exportPrometheusMetrics, getGrafanaDashboard } from '../utils/prometheusExporter';
 import { getMetricsStore } from '../utils/metricsStore';
+import { getCostManager } from '../utils/costManager';
 import type { TaskRequest } from '../orchestrator/types';
 
 export const orchestrationRouter = Router();
@@ -328,4 +329,90 @@ orchestrationRouter.post('/metrics/snapshot', async (req: Request, res: Response
   } catch (err) {
     res.status(500).json({ error: (err as Error).message });
   }
+});
+
+/**
+ * Set budget for a session
+ */
+orchestrationRouter.post('/budgets', (req: Request, res: Response) => {
+  const { sessionId, totalBudget, strategy, warningThreshold } = req.body as {
+    sessionId: string;
+    totalBudget: number;
+    strategy?: 'hard-limit' | 'soft-limit' | 'alert-only';
+    warningThreshold?: number;
+  };
+
+  if (!sessionId || totalBudget === undefined) {
+    return res.status(400).json({ error: 'Missing required fields: sessionId, totalBudget' });
+  }
+
+  const costManager = getCostManager();
+  costManager.setBudget({
+    sessionId,
+    totalBudget,
+    strategy: strategy ?? 'soft-limit',
+    warningThreshold: warningThreshold ?? 80,
+    projectionEnabled: true
+  });
+
+  res.json({ message: `Budget of $${totalBudget} set for session '${sessionId}'` });
+});
+
+/**
+ * Get budget status for a session
+ */
+orchestrationRouter.get('/budgets/:sessionId', (req: Request, res: Response) => {
+  const costManager = getCostManager();
+  const budget = costManager.getSessionBudget(req.params.sessionId);
+
+  if (!budget) {
+    return res.status(404).json({ error: `No budget set for session '${req.params.sessionId}'` });
+  }
+
+  res.json({ budget });
+});
+
+/**
+ * Get all active budgets
+ */
+orchestrationRouter.get('/budgets', (req: Request, res: Response) => {
+  const costManager = getCostManager();
+  const budgets = costManager.getAllBudgets();
+  res.json({ budgets });
+});
+
+/**
+ * Get budget alerts
+ */
+orchestrationRouter.get('/budgets/alerts/active', (req: Request, res: Response) => {
+  const sessionId = req.query.sessionId as string | undefined;
+  const limit = req.query.limit ? parseInt(req.query.limit as string) : 100;
+
+  const costManager = getCostManager();
+  const alerts = costManager.getAlerts(sessionId, limit);
+
+  res.json({ alerts, count: alerts.length });
+});
+
+/**
+ * Project session cost
+ */
+orchestrationRouter.get('/budgets/:sessionId/projection', (req: Request, res: Response) => {
+  const costManager = getCostManager();
+  const projection = costManager.projectSessionCost(req.params.sessionId);
+
+  if (!projection) {
+    return res.status(404).json({ error: `No projection available for session '${req.params.sessionId}'` });
+  }
+
+  res.json({ projection });
+});
+
+/**
+ * Clear budget for session
+ */
+orchestrationRouter.delete('/budgets/:sessionId', (req: Request, res: Response) => {
+  const costManager = getCostManager();
+  costManager.clearBudget(req.params.sessionId);
+  res.json({ message: `Budget cleared for session '${req.params.sessionId}'` });
 });
