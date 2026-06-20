@@ -1,5 +1,6 @@
 import express from 'express';
 import { chatAgentRouter } from './router/chatAgentRouter';
+import { orchestrationRouter } from './router/orchestrationRouter';
 import { initializeRuntimes } from './runtimes/init';
 import { policyEnforcer, createPolicyEnforcer } from './middleware/policyGate';
 import { loadPolicyConfig } from './middleware/policyConfig';
@@ -29,13 +30,16 @@ const policyConfig = loadPolicyConfig();
 const policyMiddleware = createPolicyEnforcer(policyConfig).middleware();
 app.use(policyMiddleware);
 
+// Register routers
 app.use('/', chatAgentRouter);
+app.use('/orchestration', orchestrationRouter);
 
 async function start() {
   await initializeRuntimes();
   app.listen(PORT, () => {
     console.log(`CIC Chat Agent listening on http://localhost:${PORT}`);
     console.log(`Policy enforcement enabled:`, policyConfig);
+    console.log(`Orchestration endpoints available at http://localhost:${PORT}/orchestration`);
   });
 }
 
