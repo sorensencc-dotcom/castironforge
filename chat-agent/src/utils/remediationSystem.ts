@@ -174,14 +174,24 @@ export class RemediationSystem {
       return null;
     }
 
-    // Sort by success rate and return best
-    const sorted = healthy.sort((a, b) => {
-      const metricsA = performanceTracker.getMetrics(a);
-      const metricsB = performanceTracker.getMetrics(b);
-      return (metricsB?.successRate ?? 0) - (metricsA?.successRate ?? 0);
-    });
+    if (healthy.length === 1) {
+      return healthy[0];
+    }
 
-    return sorted[0];
+    // Find best by success rate without sorting (O(n) instead of O(n log n))
+    let best = healthy[0];
+    let bestRate = performanceTracker.getMetrics(best)?.successRate ?? 0;
+
+    for (let i = 1; i < healthy.length; i++) {
+      const agent = healthy[i];
+      const rate = performanceTracker.getMetrics(agent)?.successRate ?? 0;
+      if (rate > bestRate) {
+        bestRate = rate;
+        best = agent;
+      }
+    }
+
+    return best;
   }
 
   /**

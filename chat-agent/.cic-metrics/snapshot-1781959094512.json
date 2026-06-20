@@ -1,0 +1,51 @@
+{
+  "timestamp": 1781959094512,
+  "version": "1.0.0",
+  "metrics": [
+    {
+      "agentRole": "harvester",
+      "totalExecutions": 2,
+      "successCount": 0,
+      "failureCount": 2,
+      "timeoutCount": 0,
+      "rejectionCount": 0,
+      "totalDuration": 9,
+      "totalTokens": 0,
+      "totalCost": 0,
+      "avgDuration": 4.5,
+      "avgTokens": 0,
+      "avgCost": 0,
+      "successRate": 0,
+      "failureRate": 100,
+      "timeoutRate": 0,
+      "rejectionRate": 0,
+      "lastExecution": 1781959094396,
+      "lastStatus": "failed",
+      "lastError": "fetch failed"
+    }
+  ],
+  "history": [
+    {
+      "taskId": "83d6f2f5-12bf-46b6-8cf9-6ef6ba883fab",
+      "agentRole": "harvester",
+      "model": "local:default",
+      "timestamp": 1781959094396,
+      "duration": 4,
+      "tokensUsed": 0,
+      "status": "failed",
+      "error": "fetch failed",
+      "estimatedCost": 0
+    },
+    {
+      "taskId": "a34134e1-5ae5-41a9-9f9d-113feb6ebf27",
+      "agentRole": "harvester",
+      "model": "local:default",
+      "timestamp": 1781959084457,
+      "duration": 5,
+      "tokensUsed": 0,
+      "status": "failed",
+      "error": "fetch failed",
+      "estimatedCost": 0
+    }
+  ]
+}

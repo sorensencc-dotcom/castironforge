@@ -140,9 +140,18 @@ export class AdaptiveRouter {
       return null;
     }
 
-    // Sort by score (lower = better) and pick best
-    scores.sort((a, b) => a.score - b.score);
-    return scores[0].agentRole;
+    if (scores.length === 1) {
+      return scores[0].agentRole;
+    }
+
+    // Find best without sorting (O(n) instead of O(n log n))
+    let best = scores[0];
+    for (let i = 1; i < scores.length; i++) {
+      if (scores[i].score < best.score) {
+        best = scores[i];
+      }
+    }
+    return best.agentRole;
   }
 
   /**
