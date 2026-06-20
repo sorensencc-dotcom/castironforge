@@ -1,6 +1,8 @@
 import express from 'express';
 import { chatAgentRouter } from './router/chatAgentRouter';
 import { initializeRuntimes } from './runtimes/init';
+import { policyEnforcer, createPolicyEnforcer } from './middleware/policyGate';
+import { loadPolicyConfig } from './middleware/policyConfig';
 
 const app = express();
 const PORT = process.env.PORT ?? 8000;
@@ -22,12 +24,18 @@ app.use((req, res, next) => {
   next();
 });
 
+// Load policy config from environment
+const policyConfig = loadPolicyConfig();
+const policyMiddleware = createPolicyEnforcer(policyConfig).middleware();
+app.use(policyMiddleware);
+
 app.use('/', chatAgentRouter);
 
 async function start() {
   await initializeRuntimes();
   app.listen(PORT, () => {
     console.log(`CIC Chat Agent listening on http://localhost:${PORT}`);
+    console.log(`Policy enforcement enabled:`, policyConfig);
   });
 }
 

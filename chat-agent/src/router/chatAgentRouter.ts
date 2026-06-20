@@ -2,8 +2,10 @@ import { Router } from 'express';
 import { randomUUID } from 'crypto';
 import type { RuntimeAdapter } from '../runtimes/types';
 import { runtimeRegistry } from '../runtimes/registry';
+import { policyEnforcer } from '../middleware/policyGate';
 import { rag } from '../rag/rag';
 import { buildRagPrompt } from '../rag/promptBuilder';
+import { estimateResponseTokens } from '../utils/tokenCounter';
 
 export const chatAgentRouter = Router();
 
@@ -44,7 +46,16 @@ chatAgentRouter.post('/chat', async (req, res) => {
     const chunks = await rag.search(message).catch(() => []);
     const prompt = buildRagPrompt(message, chunks);
     const response = await runtime.complete({ sessionId, model, message: prompt });
-    res.json({ id: randomUUID(), message: response });
+
+    // Track token usage
+    const tokensUsed = estimateResponseTokens(response);
+    policyEnforcer.recordTokens(sessionId, tokensUsed);
+
+    res.json({
+      id: randomUUID(),
+      message: response,
+      tokensUsed
+    });
   } catch {
     res.status(500).json({ error: 'Inference failed' });
   }
@@ -68,13 +79,20 @@ chatAgentRouter.get('/chat/stream', async (req, res) => {
   res.setHeader('Cache-Control', 'no-cache');
   res.setHeader('Connection', 'keep-alive');
 
+  let totalTokens = 0;
+
   try {
     await runtime.stream({
       sessionId,
       model,
       message: prompt,
-      onToken: token => { res.write(`data: ${token}\n\n`); },
+      onToken: token => {
+        totalTokens += estimateResponseTokens(token);
+        res.write(`data: ${token}\n\n`);
+      },
       onDone: () => {
+        // Record total tokens for session
+        policyEnforcer.recordTokens(sessionId, totalTokens);
         res.write('data: [DONE]\n\n');
         res.end();
       }
