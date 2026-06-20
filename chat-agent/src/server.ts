@@ -1,5 +1,6 @@
 import express from 'express';
 import { chatAgentRouter } from './router/chatAgentRouter';
+import { initializeRuntimes } from './runtimes/init';
 
 const app = express();
 const PORT = process.env.PORT ?? 8000;
@@ -23,6 +24,14 @@ app.use((req, res, next) => {
 
 app.use('/', chatAgentRouter);
 
-app.listen(PORT, () => {
-  console.log(`CIC Chat Agent listening on http://localhost:${PORT}`);
+async function start() {
+  await initializeRuntimes();
+  app.listen(PORT, () => {
+    console.log(`CIC Chat Agent listening on http://localhost:${PORT}`);
+  });
+}
+
+start().catch(err => {
+  console.error('Failed to start server:', err);
+  process.exit(1);
 });

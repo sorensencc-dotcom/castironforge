@@ -1,9 +1,7 @@
 import { Router } from 'express';
 import { randomUUID } from 'crypto';
 import type { RuntimeAdapter } from '../runtimes/types';
-import { torqueAdapter } from '../runtimes/torque';
-import { ollamaAdapter } from '../runtimes/ollama';
-import { llamaCppAdapter } from '../runtimes/llamacpp';
+import { runtimeRegistry } from '../runtimes/registry';
 import { rag } from '../rag/rag';
 import { buildRagPrompt } from '../rag/promptBuilder';
 
@@ -11,28 +9,20 @@ export const chatAgentRouter = Router();
 
 chatAgentRouter.get('/health', async (_req, res) => {
   try {
-    const [torque, ollama, llamacpp] = await Promise.all([
-      torqueAdapter.health(),
-      ollamaAdapter.health(),
-      llamaCppAdapter.health()
-    ]);
-    res.json({ torque, ollama, llamacpp });
-  } catch {
-    res.json({ torque: 'error', ollama: 'error', llamacpp: 'error' });
+    const health = await runtimeRegistry.getHealth();
+    res.json(health);
+  } catch (err) {
+    res.status(500).json({ error: 'Health check failed' });
   }
 });
 
 chatAgentRouter.get('/models', async (_req, res) => {
-  const models = [];
   try {
-    const ollamaModels = await ollamaAdapter.models().catch(() => []);
-    models.push(...ollamaModels);
-  } catch {}
-  try {
-    const llamaModels = await llamaCppAdapter.models().catch(() => []);
-    models.push(...llamaModels);
-  } catch {}
-  res.json({ models });
+    const models = await runtimeRegistry.getModels();
+    res.json({ models });
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch models' });
+  }
 });
 
 chatAgentRouter.post('/chat', async (req, res) => {
@@ -115,8 +105,5 @@ chatAgentRouter.post('/search', async (req, res) => {
 });
 
 function resolveRuntime(model: string): RuntimeAdapter {
-  if (model.startsWith('local:')) return ollamaAdapter;
-  if (model.startsWith('cpu:')) return llamaCppAdapter;
-  if (model.startsWith('torque:')) return torqueAdapter;
-  throw new Error(`Unknown runtime prefix for model: ${model}`);
+  return runtimeRegistry.resolve(model);
 }
