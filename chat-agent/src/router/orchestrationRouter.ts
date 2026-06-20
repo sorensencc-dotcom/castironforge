@@ -2,6 +2,7 @@ import { Router, Request, Response } from 'express';
 import { randomUUID } from 'crypto';
 import { orchestrator } from '../orchestrator/orchestrator';
 import { performanceTracker } from '../utils/performanceTracker';
+import { adaptiveRouter } from '../utils/agentSelector';
 import type { TaskRequest } from '../orchestrator/types';
 
 export const orchestrationRouter = Router();
@@ -23,6 +24,46 @@ orchestrationRouter.get('/agents/:role', (req: Request, res: Response) => {
     return res.status(404).json({ error: `Agent '${req.params.role}' not found` });
   }
   res.json({ agent });
+});
+
+/**
+ * Select best agent for a task (adaptive routing)
+ */
+orchestrationRouter.post('/agents/select', (req: Request, res: Response) => {
+  const { candidates, minSuccessRate, strategy } = req.body as {
+    candidates: string[];
+    minSuccessRate?: number;
+    strategy?: 'cost-optimized' | 'reliability-optimized';
+  };
+
+  if (!candidates || candidates.length === 0) {
+    return res.status(400).json({ error: 'Missing required field: candidates (array of agent roles)' });
+  }
+
+  const best = adaptiveRouter.selectAgent(candidates as any, { minSuccessRate, strategy });
+  if (!best) {
+    return res.status(404).json({ error: 'No suitable agent found matching criteria' });
+  }
+
+  res.json({ agent: best });
+});
+
+/**
+ * Rank agents by performance (adaptive routing)
+ */
+orchestrationRouter.post('/agents/rank', (req: Request, res: Response) => {
+  const { candidates, minSuccessRate, strategy } = req.body as {
+    candidates: string[];
+    minSuccessRate?: number;
+    strategy?: 'cost-optimized' | 'reliability-optimized';
+  };
+
+  if (!candidates || candidates.length === 0) {
+    return res.status(400).json({ error: 'Missing required field: candidates (array of agent roles)' });
+  }
+
+  const ranked = adaptiveRouter.rankAgents(candidates as any, { minSuccessRate, strategy });
+  res.json({ agents: ranked });
 });
 
 /**

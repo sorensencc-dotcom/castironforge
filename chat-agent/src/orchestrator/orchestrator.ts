@@ -2,6 +2,7 @@ import { randomUUID } from 'crypto';
 import { runtimeRegistry } from '../runtimes/registry';
 import { policyEnforcer } from '../middleware/policyGate';
 import { performanceTracker } from '../utils/performanceTracker';
+import { adaptiveRouter } from '../utils/agentSelector';
 import { estimateResponseTokens } from '../utils/tokenCounter';
 import type {
   AgentDefinition,
@@ -142,6 +143,14 @@ export class Orchestrator {
    */
   listAgents(): AgentDefinition[] {
     return Array.from(this.config.agents.values());
+  }
+
+  /**
+   * Select best agent for a task using adaptive routing
+   * Chooses agent with highest success rate and lowest cost
+   */
+  selectBestAgent(candidates: AgentRole[], minSuccessRate?: number): AgentRole | null {
+    return adaptiveRouter.selectAgent(candidates, { minSuccessRate });
   }
 
   /**
