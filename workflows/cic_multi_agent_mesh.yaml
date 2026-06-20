@@ -194,6 +194,9 @@ workflows:
     hitl:
       - step: synthesize_roadmap_from_pr
         action: approve
+        autonomy_level: CONFIRMATIONAL
+        auto_promote_threshold: 25
+        confidence_history_window: 30d
         description: Approve roadmap changes derived from this PR before version bump.
 
   - id: cic_failure_diagnosis
@@ -255,9 +258,15 @@ workflows:
       - step: execute_repair
         condition: ${{ steps.plan_repair.output.requires_hitl == true }}
         action: approve
+        autonomy_level: CONFIRMATIONAL
+        auto_promote_threshold: 25
+        confidence_history_window: 30d
         description: Approve medium/high-risk CIC repair actions before execution.
       - step: synthesize_roadmap_from_failure
         action: approve
+        autonomy_level: CONFIRMATIONAL
+        auto_promote_threshold: 25
+        confidence_history_window: 30d
         description: Approve roadmap changes derived from this failure before version bump.
 
   - id: edge_node_nightly_eval

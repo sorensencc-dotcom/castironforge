@@ -116,6 +116,9 @@ workflow:
   hitl:
     - step: synthesize
       action: approve
+      autonomy_level: CONFIRMATIONAL
+      auto_promote_threshold: 25
+      confidence_history_window: 30d
       description: Human must approve roadmap_draft.md before version is bumped and roadmap is updated.
 
 outputs:

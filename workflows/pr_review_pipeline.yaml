@@ -100,6 +100,9 @@ workflow:
   hitl:
     - step: summary
       action: approve
+      autonomy_level: CONFIRMATIONAL
+      auto_promote_threshold: 25
+      confidence_history_window: 30d
       description: Human must approve summary before merge is unblocked.
 
 outputs:

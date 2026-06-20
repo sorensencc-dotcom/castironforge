@@ -2,6 +2,8 @@ version: 1
 id: roadmap_feeder
 model: claude-opus-4-8
 tools: []
+generator_model_tier: large
+reviewer_model_tier: small
 instructions: |
   Convert eval regressions and index anomalies into structured roadmap ideas
   consumable by the roadmap_harvester agent.

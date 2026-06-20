@@ -1,0 +1,135 @@
+version: 1
+name: a2a-gateway
+description: >
+  A2A Gateway — translation adapter between the CIC Mesh internal Event Bus
+  and the Google Agent-to-Agent (A2A) Protocol v0.3.
+  Implements Gap I-2 from the CIC Mesh v1.1 Architecture Gap Analysis.
+  Does NOT replace the internal Event Bus; provides an interoperability
+  layer for cross-boundary agent calls with external A2A-compatible systems.
+
+spec_ref: docs/MESH_v1.1_GAP_ANALYSIS.md#gap-i-2-event-bus-handoff--a2a--cross-team-agent-isolation
+
+endpoints:
+  health: /health
+  metrics: /metrics
+  a2a_inbound: /a2a/v1/tasks
+  well_known: /.well-known/agent.json
+
+event_mappings:
+  outbound:
+    - event_type: TASK_ASSIGNED
+      a2a_transition:
+        from: submitted
+        to: working
+      notes: >
+        CIC Mesh TASK_ASSIGNED event maps to A2A Task lifecycle transition.
+        workflow_id → Task.id; agent_id → Task.agentId.
+
+    - event_type: AGENT_RESULT
+      a2a_object: Artifact
+      notes: >
+        Agent result payloads are wrapped as typed A2A Artifacts with
+        MIME type derived from the agent's output_types declaration.
+        Artifact.id is set to workflow_id + step_id.
+
+    - event_type: HITL_GATE_OPEN
+      a2a_status: input-required
+      notes: >
+        HITL_GATE_OPEN maps directly to A2A input-required task status.
+        The gate's description becomes the A2A InputRequest.prompt.
+        Inbound InputProvided message resumes the workflow.
+
+    - event_type: HITL_GATE_RESOLVED
+      a2a_message: InputProvided
+      notes: >
+        A2A InputProvided from an external client resumes the blocked
+        CIC Mesh workflow. Gateway publishes HITL_GATE_RESOLVED to the
+        internal Event Bus with the InputProvided payload attached.
+
+    - event_type: WORKFLOW_COMPLETE
+      a2a_status: completed
+      notes: >
+        Final workflow outputs are wrapped as A2A Artifacts and
+        attached to the completed Task. Task.result references the
+        primary output Artifact by ID.
+
+    - event_type: AGENT_HEARTBEAT
+      a2a_mechanism: SSE push notification
+      notes: >
+        Heartbeat events are forwarded as A2A Server-Sent Events to
+        subscribed external clients, replacing the need for polling.
+        SSE stream URL: /a2a/v1/tasks/{task_id}/stream
+
+  inbound:
+    - a2a_object: Task
+      a2a_status: submitted
+      event_type: TASK_ASSIGNED
+      notes: >
+        Inbound A2A Task submissions are translated to TASK_ASSIGNED
+        events on the CIC Mesh Event Bus. Task.id becomes workflow_id.
+        External agent_id is preserved in the event payload.
+
+    - a2a_message: InputProvided
+      event_type: HITL_GATE_RESOLVED
+      notes: >
+        External A2A clients can resolve CIC Mesh HITL gates by sending
+        InputProvided messages to the gateway. Gateway validates the
+        task_id and publishes HITL_GATE_RESOLVED to the internal bus.
+
+  dlq_mapping:
+    cic_event: dead-letter queue entry
+    a2a_status: failed
+    a2a_artifact: error Artifact
+    notes: >
+      DLQ entries are translated to A2A failed task status. Error
+      details, stack traces, and retry counts become a typed error
+      Artifact (MIME type: application/vnd.cicmesh.error+json).
+
+agent_card:
+  agent_id: a2a-gateway
+  display_name: CIC Mesh A2A Gateway
+  description: >
+    Interoperability gateway exposing CIC Mesh workflows to external
+    A2A-compatible agents and accepting inbound A2A Tasks for routing
+    to the internal mesh.
+  version: 1.1.0
+  layer: orchestrator
+  capabilities:
+    input_types:
+      - application/json
+      - application/vnd.a2a.task+json
+    output_types:
+      - application/json
+      - application/vnd.a2a.artifact+json
+    runtime_profiles:
+      - FAST
+      - BALANCED
+      - THOROUGH
+      - SCHEDULED
+      - SAFE
+  endpoints:
+    health: /health
+    metrics: /metrics
+    a2a: /a2a/v1
+  well_known_url: /.well-known/agent.json
+
+deployment:
+  kubernetes:
+    replicas: 2
+    service_type: ClusterIP
+    port: 8080
+    readiness_probe: /health
+    liveness_probe: /health
+  environment_variables:
+    EVENT_BUS_URL:
+      description: Internal Event Bus connection string (Redis Streams or Kafka)
+      required: true
+    A2A_VERSION:
+      description: A2A protocol version to advertise
+      default: "0.3"
+    GATEWAY_LOG_LEVEL:
+      description: Structured log level
+      default: info
+    MAX_TASK_DURATION_SECONDS:
+      description: Maximum A2A Task duration before timeout and failed status
+      default: "86400"

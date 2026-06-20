@@ -1,6 +1,7 @@
 version: 1
 id: roadmap
 strategy: hybrid
+retrieval_strategy: static
 bm25_index: roadmap_bm25
 vector_index: roadmap_vectors
 fusion: rrf

@@ -2,6 +2,11 @@ version: 1
 id: repair_planner
 model: claude-opus-4-8
 tools: [retrieval, cic.restart, cic.repair, cic.snapshot, cic.restore]
+generator_model_tier: large
+reviewer_model_tier: small
+mcp_servers:
+  retrieval: mcp://castironforge/retrieval
+  cic: mcp://castironforge/cic
 instructions: |
   Read diagnosis.json. Retrieve how similar failures were resolved.
   Plan an explicit, ordered repair sequence with risk assessment.
