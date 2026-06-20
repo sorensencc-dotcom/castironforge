@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { randomUUID } from 'crypto';
 import { orchestrator } from '../orchestrator/orchestrator';
+import { performanceTracker } from '../utils/performanceTracker';
 import type { TaskRequest } from '../orchestrator/types';
 
 export const orchestrationRouter = Router();
@@ -107,4 +108,51 @@ orchestrationRouter.get('/workflows/:executionId', (req: Request, res: Response)
     return res.status(404).json({ error: 'Workflow execution not found' });
   }
   res.json({ execution });
+});
+
+/**
+ * Get performance metrics for an agent
+ */
+orchestrationRouter.get('/metrics/:agentRole', (req: Request, res: Response) => {
+  const metrics = performanceTracker.getMetrics(req.params.agentRole as any);
+  if (!metrics) {
+    return res.status(404).json({ error: `No metrics for agent '${req.params.agentRole}'` });
+  }
+  res.json({ metrics });
+});
+
+/**
+ * Get performance metrics for all agents
+ */
+orchestrationRouter.get('/metrics', (req: Request, res: Response) => {
+  const allMetrics = performanceTracker.getAllMetrics();
+  const summary = performanceTracker.getSummaryStats();
+  res.json({ metrics: allMetrics, summary });
+});
+
+/**
+ * Get execution history (with optional filtering)
+ */
+orchestrationRouter.get('/history', (req: Request, res: Response) => {
+  const agentRole = req.query.agent as string | undefined;
+  const status = req.query.status as any;
+  const limit = parseInt(req.query.limit as string) || 100;
+
+  const history = performanceTracker.getHistory(agentRole as any, limit, status);
+  res.json({ history });
+});
+
+/**
+ * Reset metrics
+ */
+orchestrationRouter.post('/metrics/reset', (req: Request, res: Response) => {
+  const { agentRole } = req.body as { agentRole?: string };
+
+  if (agentRole) {
+    performanceTracker.resetMetrics(agentRole as any);
+    res.json({ message: `Metrics reset for agent '${agentRole}'` });
+  } else {
+    performanceTracker.resetAll();
+    res.json({ message: 'All metrics reset' });
+  }
 });

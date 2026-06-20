@@ -1,6 +1,7 @@
 import { randomUUID } from 'crypto';
 import { runtimeRegistry } from '../runtimes/registry';
 import { policyEnforcer } from '../middleware/policyGate';
+import { performanceTracker } from '../utils/performanceTracker';
 import { estimateResponseTokens } from '../utils/tokenCounter';
 import type {
   AgentDefinition,
@@ -279,6 +280,20 @@ export class Orchestrator {
     };
 
     this.completedTasks.set(request.taskId, result);
+
+    // Record performance metrics
+    const agentDef = this.config.agents.get(request.agent);
+    if (agentDef) {
+      performanceTracker.recordExecution(
+        request.taskId,
+        request.agent,
+        agentDef.model,
+        result.duration,
+        tokensUsed,
+        status,
+        error
+      );
+    }
 
     if (this.config.enableLogging) {
       console.log(`[Orchestrator] Task ${request.taskId} (${request.agent}) ${status} [${result.duration}ms, ${tokensUsed} tokens]`);
