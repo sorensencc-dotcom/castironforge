@@ -88,6 +88,55 @@ export class SessionAnalytics {
     cost: number;
   }> = [];
   private maxTaskLogSize: number = 100000;
+  private cleanupInterval?: NodeJS.Timeout;
+  private sessionRetentionMs: number = 7 * 24 * 60 * 60 * 1000;  // 7 days
+
+  /**
+   * Start background cleanup of expired sessions
+   */
+  start(): void {
+    if (this.cleanupInterval) return;
+
+    this.cleanupInterval = setInterval(() => {
+      this.cleanupExpiredSessions();
+    }, 60 * 60 * 1000);  // Check every hour
+
+    console.log('[SessionAnalytics] Started with automatic cleanup');
+  }
+
+  /**
+   * Stop background cleanup
+   */
+  stop(): void {
+    if (this.cleanupInterval) {
+      clearInterval(this.cleanupInterval);
+      this.cleanupInterval = undefined;
+      console.log('[SessionAnalytics] Stopped');
+    }
+  }
+
+  /**
+   * Cleanup sessions older than retention period
+   */
+  private cleanupExpiredSessions(): void {
+    const now = Date.now();
+    let deletedCount = 0;
+
+    for (const [sessionId, metrics] of this.sessions.entries()) {
+      // Check if session is closed and older than retention period
+      if (!metrics.isActive && metrics.endTime) {
+        const age = now - metrics.endTime;
+        if (age > this.sessionRetentionMs) {
+          this.sessions.delete(sessionId);
+          deletedCount++;
+        }
+      }
+    }
+
+    if (deletedCount > 0) {
+      console.log(`[SessionAnalytics] Cleaned up ${deletedCount} expired sessions`);
+    }
+  }
 
   /**
    * Initialize session

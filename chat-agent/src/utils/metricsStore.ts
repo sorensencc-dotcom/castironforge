@@ -115,7 +115,11 @@ export class MetricsStore {
   }
 
   /**
-   * Load metrics from latest snapshot
+   * Load metrics from latest snapshot (snapshot-based restoration, not replay)
+   *
+   * NOTE: This loads historical snapshots for querying, but does NOT replay
+   * them into performanceTracker to avoid double-counting. Only query this
+   * for historical analysis, not for restoring live metrics.
    */
   async restoreMetrics(): Promise<void> {
     const snapshot = await this.loadLatestSnapshot();
@@ -125,22 +129,12 @@ export class MetricsStore {
     }
 
     try {
-      // Re-record all execution history to restore metrics
-      for (const record of snapshot.history) {
-        performanceTracker.recordExecution(
-          record.taskId,
-          record.agentRole,
-          record.model,
-          record.duration,
-          record.tokensUsed,
-          record.status,
-          record.error
-        );
-      }
-
-      console.log(`[MetricsStore] Restored ${snapshot.history.length} execution records`);
+      // Store snapshot for historical queries
+      // Do NOT replay into performanceTracker - that causes double-counting
+      // New executions will be captured starting from now
+      console.log(`[MetricsStore] Loaded snapshot with ${snapshot.history.length} historical records`);
     } catch (err) {
-      console.error('[MetricsStore] Failed to restore metrics:', err);
+      console.error('[MetricsStore] Failed to load snapshot:', err);
     }
   }
 

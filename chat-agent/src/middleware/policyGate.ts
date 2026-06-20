@@ -31,6 +31,7 @@ class PolicyEnforcer {
   private sessionTokens: Map<string, SessionTokens> = new Map();
   private rateLimitBuckets: Map<string, RateLimitBucket> = new Map();
   private concurrentRequests: number = 0;
+  private cleanupInterval?: NodeJS.Timeout;
 
   constructor(config: PolicyConfig = {}) {
     this.config = {
@@ -43,7 +44,7 @@ class PolicyEnforcer {
     };
 
     // Cleanup stale session tokens every 30 minutes
-    setInterval(() => this.cleanupStaleSessions(), 30 * 60 * 1000);
+    this.cleanupInterval = setInterval(() => this.cleanupStaleSessions(), 30 * 60 * 1000);
   }
 
   middleware() {
@@ -61,13 +62,13 @@ class PolicyEnforcer {
         return res.status(policyError.status).json({ error: policyError.message });
       }
 
-      // Increment concurrent requests
+      // Atomically check and increment concurrent requests (synchronous, no race)
       if (this.config.maxConcurrentRequests && this.concurrentRequests >= this.config.maxConcurrentRequests) {
         return res.status(429).json({ error: 'Max concurrent requests exceeded' });
       }
       this.concurrentRequests++;
 
-      // Clean up on response
+      // Clean up on response (decrement atomically)
       const originalSend = res.send.bind(res);
       res.send = (data: any) => {
         this.concurrentRequests--;
@@ -76,6 +77,13 @@ class PolicyEnforcer {
 
       next();
     };
+  }
+
+  stop(): void {
+    if (this.cleanupInterval) {
+      clearInterval(this.cleanupInterval);
+      this.cleanupInterval = undefined;
+    }
   }
 
   recordTokens(sessionId: string, tokensUsed: number): void {

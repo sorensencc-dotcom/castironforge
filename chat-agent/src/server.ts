@@ -3,9 +3,10 @@ import { chatAgentRouter } from './router/chatAgentRouter';
 import { orchestrationRouter } from './router/orchestrationRouter';
 import { initializeRuntimes } from './runtimes/init';
 import { initializeCredentialManager } from './runtimes/credentialManager';
-import { initializeAlertingSystem } from './utils/alertingSystem';
+import { initializeAlertingSystem, getAlertingSystem } from './utils/alertingSystem';
 import { initializeMetricsStore, startMetricsSnapshot } from './utils/metricsStore';
-import { initializeRemediationSystem } from './utils/remediationSystem';
+import { initializeRemediationSystem, getRemediationSystem } from './utils/remediationSystem';
+import { getSessionAnalytics } from './utils/sessionAnalytics';
 import { policyEnforcer, createPolicyEnforcer } from './middleware/policyGate';
 import { loadPolicyConfig } from './middleware/policyConfig';
 import { OPENSHARING_URL, OPENSHARING_PRINCIPAL_ID } from './runtimes/config';
@@ -63,6 +64,10 @@ async function start() {
     minExecutionsForDecision: 5
   });
 
+  // Initialize session analytics cleanup
+  getSessionAnalytics().start();
+  console.log('[SessionAnalytics] Initialized with automatic cleanup');
+
   // Initialize credential manager for OpenSharing (if configured)
   if (OPENSHARING_URL && OPENSHARING_PRINCIPAL_ID) {
     try {
@@ -74,7 +79,7 @@ async function start() {
   }
 
   await initializeRuntimes();
-  app.listen(PORT, () => {
+  const server = app.listen(PORT, () => {
     console.log(`CIC Chat Agent listening on http://localhost:${PORT}`);
     console.log(`Policy enforcement enabled:`, policyConfig);
     console.log(`Orchestration endpoints available at http://localhost:${PORT}/orchestration`);
@@ -82,6 +87,34 @@ async function start() {
     console.log(`Alerts available at http://localhost:${PORT}/orchestration/alerts`);
     console.log(`Historical metrics available at http://localhost:${PORT}/orchestration/metrics/history`);
   });
+
+  // Graceful shutdown
+  const gracefulShutdown = async (signal: string) => {
+    console.log(`\n[Server] Received ${signal}, shutting down gracefully...`);
+
+    // Stop accepting new requests
+    server.close(async () => {
+      console.log('[Server] HTTP server closed');
+
+      // Stop background processes
+      policyEnforcer.stop?.();
+      getAlertingSystem().stop?.();
+      getRemediationSystem().stop?.();
+      getSessionAnalytics().stop?.();
+
+      console.log('[Server] Background processes stopped');
+      process.exit(0);
+    });
+
+    // Force exit after timeout
+    setTimeout(() => {
+      console.error('[Server] Graceful shutdown timeout, forcing exit');
+      process.exit(1);
+    }, 10000);
+  };
+
+  process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
+  process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 }
 
 start().catch(err => {
