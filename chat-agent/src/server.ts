@@ -4,6 +4,7 @@ import { orchestrationRouter } from './router/orchestrationRouter';
 import { initializeRuntimes } from './runtimes/init';
 import { initializeCredentialManager } from './runtimes/credentialManager';
 import { initializeAlertingSystem } from './utils/alertingSystem';
+import { initializeMetricsStore, startMetricsSnapshot } from './utils/metricsStore';
 import { policyEnforcer, createPolicyEnforcer } from './middleware/policyGate';
 import { loadPolicyConfig } from './middleware/policyConfig';
 import { OPENSHARING_URL, OPENSHARING_PRINCIPAL_ID } from './runtimes/config';
@@ -38,6 +39,11 @@ app.use('/', chatAgentRouter);
 app.use('/orchestration', orchestrationRouter);
 
 async function start() {
+  // Initialize metrics store and restore previous metrics
+  await initializeMetricsStore('.cic-metrics');
+  startMetricsSnapshot(15 * 60 * 1000);  // Save snapshot every 15 minutes
+  console.log('[MetricsStore] Initialized with periodic snapshots');
+
   // Initialize alerting system
   initializeAlertingSystem({
     lowSuccessRateThreshold: 70,
@@ -64,6 +70,7 @@ async function start() {
     console.log(`Orchestration endpoints available at http://localhost:${PORT}/orchestration`);
     console.log(`Prometheus metrics available at http://localhost:${PORT}/orchestration/metrics/prometheus`);
     console.log(`Alerts available at http://localhost:${PORT}/orchestration/alerts`);
+    console.log(`Historical metrics available at http://localhost:${PORT}/orchestration/metrics/history`);
   });
 }
 

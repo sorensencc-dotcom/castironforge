@@ -5,6 +5,7 @@ import { performanceTracker } from '../utils/performanceTracker';
 import { adaptiveRouter } from '../utils/agentSelector';
 import { getAlertingSystem } from '../utils/alertingSystem';
 import { exportPrometheusMetrics, getGrafanaDashboard } from '../utils/prometheusExporter';
+import { getMetricsStore } from '../utils/metricsStore';
 import type { TaskRequest } from '../orchestrator/types';
 
 export const orchestrationRouter = Router();
@@ -229,4 +230,102 @@ orchestrationRouter.get('/metrics/prometheus', (req: Request, res: Response) => 
 orchestrationRouter.get('/dashboards/grafana', (req: Request, res: Response) => {
   const dashboard = getGrafanaDashboard();
   res.json(dashboard);
+});
+
+/**
+ * Get historical metrics (with time range filtering)
+ */
+orchestrationRouter.get('/metrics/history', async (req: Request, res: Response) => {
+  try {
+    const store = getMetricsStore();
+    const startTime = req.query.startTime ? parseInt(req.query.startTime as string) : undefined;
+    const endTime = req.query.endTime ? parseInt(req.query.endTime as string) : undefined;
+    const agent = req.query.agent as string | undefined;
+    const limit = req.query.limit ? parseInt(req.query.limit as string) : 1000;
+
+    const records = await store.queryHistory({
+      startTime,
+      endTime,
+      agentRole: agent as any,
+      limit
+    });
+
+    res.json({ records, count: records.length });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Get historical statistics for a time period
+ */
+orchestrationRouter.get('/metrics/stats-historical', async (req: Request, res: Response) => {
+  try {
+    const store = getMetricsStore();
+    const startTime = req.query.startTime ? parseInt(req.query.startTime as string) : undefined;
+    const endTime = req.query.endTime ? parseInt(req.query.endTime as string) : undefined;
+    const agent = req.query.agent as string | undefined;
+
+    const stats = await store.getHistoricalStats({
+      startTime,
+      endTime,
+      agentRole: agent as any
+    });
+
+    res.json({ stats });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Analyze agent performance trend
+ */
+orchestrationRouter.get('/metrics/trend/:agentRole', async (req: Request, res: Response) => {
+  try {
+    const store = getMetricsStore();
+    const windowMs = req.query.window ? parseInt(req.query.window as string) : 60 * 60 * 1000;  // 1h default
+
+    const trend = await store.analyzeTrend(req.params.agentRole as any, windowMs);
+    res.json({ trend });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Export metrics to CSV
+ */
+orchestrationRouter.get('/metrics/export/csv', async (req: Request, res: Response) => {
+  try {
+    const store = getMetricsStore();
+    const startTime = req.query.startTime ? parseInt(req.query.startTime as string) : undefined;
+    const endTime = req.query.endTime ? parseInt(req.query.endTime as string) : undefined;
+    const agent = req.query.agent as string | undefined;
+
+    const csv = await store.exportToCSV({
+      startTime,
+      endTime,
+      agentRole: agent as any
+    });
+
+    res.setHeader('Content-Type', 'text/csv; charset=utf-8');
+    res.setHeader('Content-Disposition', 'attachment; filename=metrics.csv');
+    res.send(csv);
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Save current metrics snapshot
+ */
+orchestrationRouter.post('/metrics/snapshot', async (req: Request, res: Response) => {
+  try {
+    const store = getMetricsStore();
+    await store.saveSnapshot();
+    res.json({ message: 'Metrics snapshot saved' });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
 });
