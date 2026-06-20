@@ -5,6 +5,7 @@ import { performanceTracker } from '../utils/performanceTracker';
 import { adaptiveRouter } from '../utils/agentSelector';
 import { getCostManager } from '../utils/costManager';
 import { getRemediationSystem } from '../utils/remediationSystem';
+import { getSessionAnalytics } from '../utils/sessionAnalytics';
 import { estimateResponseTokens } from '../utils/tokenCounter';
 import type {
   AgentDefinition,
@@ -339,14 +340,32 @@ export class Orchestrator {
         error
       );
 
+      // Estimate cost for this execution
+      let cost = 0;
+      const metrics = performanceTracker.getMetrics(request.agent);
+      if (metrics && tokensUsed > 0) {
+        cost = metrics.avgCost;
+      }
+
       // Record cost if successful execution
       if (status === 'success' && tokensUsed > 0) {
         const costManager = getCostManager();
-        const metrics = performanceTracker.getMetrics(request.agent);
         if (metrics) {
-          costManager.recordCost(request.sessionId, metrics.avgCost);
+          costManager.recordCost(request.sessionId, cost);
         }
       }
+
+      // Record for session analytics
+      const sessionAnalytics = getSessionAnalytics();
+      sessionAnalytics.recordTask(
+        request.sessionId,
+        request.agent,
+        result.duration,
+        tokensUsed,
+        status,
+        cost,
+        error
+      );
 
       // Record for remediation system (circuit breaker)
       const remediationSystem = getRemediationSystem();

@@ -8,6 +8,7 @@ import { exportPrometheusMetrics, getGrafanaDashboard } from '../utils/prometheu
 import { getMetricsStore } from '../utils/metricsStore';
 import { getCostManager } from '../utils/costManager';
 import { getRemediationSystem } from '../utils/remediationSystem';
+import { getSessionAnalytics } from '../utils/sessionAnalytics';
 import type { TaskRequest } from '../orchestrator/types';
 
 export const orchestrationRouter = Router();
@@ -478,4 +479,125 @@ orchestrationRouter.get('/health/actions', (req: Request, res: Response) => {
   const remediationSystem = getRemediationSystem();
   const actions = remediationSystem.getActions(limit);
   res.json({ actions, count: actions.length });
+});
+
+/**
+ * Get session metrics
+ */
+orchestrationRouter.get('/sessions/:sessionId', (req: Request, res: Response) => {
+  const sessionAnalytics = getSessionAnalytics();
+  const metrics = sessionAnalytics.getSessionMetrics(req.params.sessionId);
+
+  if (!metrics) {
+    return res.status(404).json({ error: `No session found: '${req.params.sessionId}'` });
+  }
+
+  res.json({ metrics });
+});
+
+/**
+ * Get all sessions (active and closed)
+ */
+orchestrationRouter.get('/sessions', (req: Request, res: Response) => {
+  const sessionAnalytics = getSessionAnalytics();
+  const sessions = sessionAnalytics.getAllSessions();
+  res.json({ sessions, count: sessions.length });
+});
+
+/**
+ * Get active sessions only
+ */
+orchestrationRouter.get('/sessions/active/list', (req: Request, res: Response) => {
+  const sessionAnalytics = getSessionAnalytics();
+  const sessions = sessionAnalytics.getActiveSessions();
+  res.json({ sessions, count: sessions.length });
+});
+
+/**
+ * Get session summary
+ */
+orchestrationRouter.get('/sessions/:sessionId/summary', (req: Request, res: Response) => {
+  const sessionAnalytics = getSessionAnalytics();
+  const summary = sessionAnalytics.getSessionSummary(req.params.sessionId);
+
+  if (!summary) {
+    return res.status(404).json({ error: `No session found: '${req.params.sessionId}'` });
+  }
+
+  res.json({ summary });
+});
+
+/**
+ * Close session and finalize metrics
+ */
+orchestrationRouter.post('/sessions/:sessionId/close', (req: Request, res: Response) => {
+  const sessionAnalytics = getSessionAnalytics();
+  const metrics = sessionAnalytics.closeSession(req.params.sessionId);
+
+  if (!metrics) {
+    return res.status(404).json({ error: `No session found: '${req.params.sessionId}'` });
+  }
+
+  res.json({ message: `Session '${req.params.sessionId}' closed`, metrics });
+});
+
+/**
+ * Get top errors in session
+ */
+orchestrationRouter.get('/sessions/:sessionId/errors', (req: Request, res: Response) => {
+  const limit = req.query.limit ? parseInt(req.query.limit as string) : 10;
+  const sessionAnalytics = getSessionAnalytics();
+  const errors = sessionAnalytics.getTopErrors(req.params.sessionId, limit);
+
+  res.json({ errors, count: errors.length });
+});
+
+/**
+ * Get session task log
+ */
+orchestrationRouter.get('/sessions/:sessionId/tasks', (req: Request, res: Response) => {
+  const sessionAnalytics = getSessionAnalytics();
+  const tasks = sessionAnalytics.getSessionTaskLog(req.params.sessionId);
+
+  res.json({ tasks, count: tasks.length });
+});
+
+/**
+ * Compare two sessions
+ */
+orchestrationRouter.post('/sessions/compare', (req: Request, res: Response) => {
+  const { sessionId1, sessionId2 } = req.body as {
+    sessionId1: string;
+    sessionId2: string;
+  };
+
+  if (!sessionId1 || !sessionId2) {
+    return res.status(400).json({ error: 'Missing required fields: sessionId1, sessionId2' });
+  }
+
+  const sessionAnalytics = getSessionAnalytics();
+  const comparison = sessionAnalytics.compareSessions(sessionId1, sessionId2);
+
+  res.json({ comparison });
+});
+
+/**
+ * Export session as JSON
+ */
+orchestrationRouter.get('/sessions/:sessionId/export', (req: Request, res: Response) => {
+  const sessionAnalytics = getSessionAnalytics();
+  const exported = sessionAnalytics.exportSession(req.params.sessionId);
+
+  if (!exported) {
+    return res.status(404).json({ error: `No session found: '${req.params.sessionId}'` });
+  }
+
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Disposition', `attachment; filename=session-${req.params.sessionId}.json`);
+  res.send(JSON.stringify(exported, (key, value) => {
+    if (value instanceof Map) {
+      return Object.fromEntries(value);
+    }
+    return value;
+  }, 2));
 });
