@@ -3,6 +3,7 @@ import { chatAgentRouter } from './router/chatAgentRouter';
 import { orchestrationRouter } from './router/orchestrationRouter';
 import { initializeRuntimes } from './runtimes/init';
 import { initializeCredentialManager } from './runtimes/credentialManager';
+import { initializeAlertingSystem } from './utils/alertingSystem';
 import { policyEnforcer, createPolicyEnforcer } from './middleware/policyGate';
 import { loadPolicyConfig } from './middleware/policyConfig';
 import { OPENSHARING_URL, OPENSHARING_PRINCIPAL_ID } from './runtimes/config';
@@ -37,6 +38,15 @@ app.use('/', chatAgentRouter);
 app.use('/orchestration', orchestrationRouter);
 
 async function start() {
+  // Initialize alerting system
+  initializeAlertingSystem({
+    lowSuccessRateThreshold: 70,
+    highFailureRateThreshold: 30,
+    highLatencyThreshold: 5000,
+    highCostThreshold: 1.0,
+    checkIntervalMs: 30000
+  });
+
   // Initialize credential manager for OpenSharing (if configured)
   if (OPENSHARING_URL && OPENSHARING_PRINCIPAL_ID) {
     try {
@@ -52,6 +62,8 @@ async function start() {
     console.log(`CIC Chat Agent listening on http://localhost:${PORT}`);
     console.log(`Policy enforcement enabled:`, policyConfig);
     console.log(`Orchestration endpoints available at http://localhost:${PORT}/orchestration`);
+    console.log(`Prometheus metrics available at http://localhost:${PORT}/orchestration/metrics/prometheus`);
+    console.log(`Alerts available at http://localhost:${PORT}/orchestration/alerts`);
   });
 }
 

@@ -3,6 +3,8 @@ import { randomUUID } from 'crypto';
 import { orchestrator } from '../orchestrator/orchestrator';
 import { performanceTracker } from '../utils/performanceTracker';
 import { adaptiveRouter } from '../utils/agentSelector';
+import { getAlertingSystem } from '../utils/alertingSystem';
+import { exportPrometheusMetrics, getGrafanaDashboard } from '../utils/prometheusExporter';
 import type { TaskRequest } from '../orchestrator/types';
 
 export const orchestrationRouter = Router();
@@ -196,4 +198,35 @@ orchestrationRouter.post('/metrics/reset', (req: Request, res: Response) => {
     performanceTracker.resetAll();
     res.json({ message: 'All metrics reset' });
   }
+});
+
+/**
+ * Get active alerts
+ */
+orchestrationRouter.get('/alerts', (req: Request, res: Response) => {
+  const limit = parseInt(req.query.limit as string) || 100;
+  const severity = req.query.severity as any;
+
+  const alerting = getAlertingSystem();
+  const alerts = alerting.getAlerts(limit, severity);
+  const stats = alerting.getStats();
+
+  res.json({ alerts, stats });
+});
+
+/**
+ * Prometheus metrics export
+ */
+orchestrationRouter.get('/metrics/prometheus', (req: Request, res: Response) => {
+  const metrics = exportPrometheusMetrics();
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.send(metrics);
+});
+
+/**
+ * Grafana dashboard definition
+ */
+orchestrationRouter.get('/dashboards/grafana', (req: Request, res: Response) => {
+  const dashboard = getGrafanaDashboard();
+  res.json(dashboard);
 });
