@@ -14,7 +14,7 @@ export interface StreamParams extends CompleteParams {
 export interface RuntimeModel {
   id: string;
   name: string;
-  runtime: 'ollama' | 'llamacpp' | 'torque';
+  runtime: 'ollama' | 'llamacpp' | 'torque' | 'opensharing' | 'databricks';
   size?: string;
 }
 
