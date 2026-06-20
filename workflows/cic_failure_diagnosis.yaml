@@ -129,6 +129,9 @@ workflow:
     - step: execute_repair
       condition: ${{ steps.plan_repair.output.requires_hitl == true }}
       action: approve
+      autonomy_level: CONFIRMATIONAL
+      auto_promote_threshold: 25
+      confidence_history_window: 30d
       description: Human must approve medium/high-risk repair actions before execution.
 
 outputs:

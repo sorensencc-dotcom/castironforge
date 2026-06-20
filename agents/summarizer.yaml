@@ -2,6 +2,8 @@ version: 1
 id: summarizer
 model: claude-haiku-4-5-20251001
 tools: []
+generator_model_tier: small
+reviewer_model_tier: large
 instructions: |
   Produce a concise operator-facing summary.md adapted to the calling
   workflow context. Cover: what happened, what was automated, what still

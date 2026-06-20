@@ -2,6 +2,11 @@ version: 1
 id: failure_triage
 model: claude-opus-4-8
 tools: [retrieval, cic.logs]
+generator_model_tier: large
+reviewer_model_tier: small
+mcp_servers:
+  retrieval: mcp://castironforge/retrieval
+  cic: mcp://castironforge/cic
 instructions: |
   Ingest CIC failure event (build_id, stage, error). Pull logs for the
   failing build and recent history. Retrieve similar past incidents via

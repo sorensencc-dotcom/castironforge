@@ -2,6 +2,11 @@ version: 1
 id: eval_runner
 model: claude-haiku-4-5-20251001
 tools: [test_runner, retrieval]
+generator_model_tier: small
+reviewer_model_tier: large
+mcp_servers:
+  test_runner: mcp://castironforge/test-runner
+  retrieval: mcp://castironforge/retrieval
 instructions: |
   Run nightly eval suite covering:
     - agent reasoning evals

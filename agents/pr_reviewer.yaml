@@ -2,6 +2,11 @@ version: 1
 id: pr_reviewer
 model: claude-opus-4-8
 tools: [retrieval, git]
+generator_model_tier: large
+reviewer_model_tier: small
+mcp_servers:
+  retrieval: mcp://castironforge/retrieval
+  git: mcp://castironforge/git
 instructions: |
   Perform deep PR review against CIC coding standards:
     - deterministic, operator-grade code

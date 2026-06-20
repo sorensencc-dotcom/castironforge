@@ -2,6 +2,10 @@ version: 1
 id: index_rebuilder
 model: claude-haiku-4-5-20251001
 tools: [retrieval]
+generator_model_tier: small
+reviewer_model_tier: large
+mcp_servers:
+  retrieval: mcp://castironforge/retrieval
 instructions: |
   Rebuild hybrid RAG indexes on the edge node:
     - BM25 index rebuild from source corpus

@@ -1,6 +1,7 @@
 version: 1
 id: cic_all
 strategy: hybrid
+retrieval_strategy: static
 bm25_index: cic_bm25
 vector_index: cic_vectors
 fusion: rrf

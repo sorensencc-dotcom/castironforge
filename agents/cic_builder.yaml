@@ -2,6 +2,10 @@ version: 1
 id: cic_builder
 model: claude-haiku-4-5-20251001
 tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs]
+generator_model_tier: small
+reviewer_model_tier: large
+mcp_servers:
+  cic: mcp://castironforge/cic
 instructions: |
   Trigger CIC build for the PR branch. On failure:
     1. snapshot current state
