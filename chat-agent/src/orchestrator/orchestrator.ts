@@ -4,6 +4,7 @@ import { policyEnforcer } from '../middleware/policyGate';
 import { performanceTracker } from '../utils/performanceTracker';
 import { adaptiveRouter } from '../utils/agentSelector';
 import { getCostManager } from '../utils/costManager';
+import { getRemediationSystem } from '../utils/remediationSystem';
 import { estimateResponseTokens } from '../utils/tokenCounter';
 import type {
   AgentDefinition,
@@ -78,6 +79,24 @@ export class Orchestrator {
         }
 
         costManager.checkBudgetHealth(request.sessionId);
+      }
+
+      // 3.7. Check circuit breaker / remediation
+      const remediationSystem = getRemediationSystem();
+      const healthCheck = remediationSystem.canProceed(request.agent);
+      if (!healthCheck.allowed) {
+        // Agent circuit is open; suggest fallback
+        const allAgents = Array.from(this.config.agents.keys());
+        const fallback = remediationSystem.suggestFallback(request.agent, allAgents);
+
+        if (fallback) {
+          // Silently retry with fallback agent
+          const fallbackRequest: TaskRequest = { ...request, agent: fallback };
+          return this.executeTask(fallbackRequest);
+        } else {
+          // No healthy fallback available
+          return this.buildResult(request, 'rejected', undefined, healthCheck.reason, startTime);
+        }
       }
 
       // 4. Track active task
@@ -328,6 +347,10 @@ export class Orchestrator {
           costManager.recordCost(request.sessionId, metrics.avgCost);
         }
       }
+
+      // Record for remediation system (circuit breaker)
+      const remediationSystem = getRemediationSystem();
+      remediationSystem.recordResult(request.agent, status);
     }
 
     if (this.config.enableLogging) {

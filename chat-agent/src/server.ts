@@ -5,6 +5,7 @@ import { initializeRuntimes } from './runtimes/init';
 import { initializeCredentialManager } from './runtimes/credentialManager';
 import { initializeAlertingSystem } from './utils/alertingSystem';
 import { initializeMetricsStore, startMetricsSnapshot } from './utils/metricsStore';
+import { initializeRemediationSystem } from './utils/remediationSystem';
 import { policyEnforcer, createPolicyEnforcer } from './middleware/policyGate';
 import { loadPolicyConfig } from './middleware/policyConfig';
 import { OPENSHARING_URL, OPENSHARING_PRINCIPAL_ID } from './runtimes/config';
@@ -51,6 +52,15 @@ async function start() {
     highLatencyThreshold: 5000,
     highCostThreshold: 1.0,
     checkIntervalMs: 30000
+  });
+
+  // Initialize remediation system
+  initializeRemediationSystem({
+    failureThreshold: 5,
+    successThreshold: 3,
+    circuitOpenTimeoutMs: 60000,
+    rateLimit: 10,
+    minExecutionsForDecision: 5
   });
 
   // Initialize credential manager for OpenSharing (if configured)

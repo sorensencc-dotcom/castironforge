@@ -7,6 +7,7 @@ import { getAlertingSystem } from '../utils/alertingSystem';
 import { exportPrometheusMetrics, getGrafanaDashboard } from '../utils/prometheusExporter';
 import { getMetricsStore } from '../utils/metricsStore';
 import { getCostManager } from '../utils/costManager';
+import { getRemediationSystem } from '../utils/remediationSystem';
 import type { TaskRequest } from '../orchestrator/types';
 
 export const orchestrationRouter = Router();
@@ -415,4 +416,66 @@ orchestrationRouter.delete('/budgets/:sessionId', (req: Request, res: Response) 
   const costManager = getCostManager();
   costManager.clearBudget(req.params.sessionId);
   res.json({ message: `Budget cleared for session '${req.params.sessionId}'` });
+});
+
+/**
+ * Get circuit breaker status for agent
+ */
+orchestrationRouter.get('/health/circuits/:agentRole', (req: Request, res: Response) => {
+  const remediationSystem = getRemediationSystem();
+  const circuit = remediationSystem.getCircuitStatus(req.params.agentRole as any);
+
+  if (!circuit) {
+    return res.status(404).json({ error: `No circuit breaker for agent '${req.params.agentRole}'` });
+  }
+
+  res.json({ circuit });
+});
+
+/**
+ * Get all circuit breakers
+ */
+orchestrationRouter.get('/health/circuits', (req: Request, res: Response) => {
+  const remediationSystem = getRemediationSystem();
+  const circuits = remediationSystem.getAllCircuits();
+  res.json({ circuits });
+});
+
+/**
+ * Get health report
+ */
+orchestrationRouter.get('/health/report', (req: Request, res: Response) => {
+  const remediationSystem = getRemediationSystem();
+  const report = remediationSystem.getHealthReport();
+  res.json({ report });
+});
+
+/**
+ * Manually open circuit (operator action)
+ */
+orchestrationRouter.post('/health/circuits/:agentRole/open', (req: Request, res: Response) => {
+  const { reason } = req.body as { reason?: string };
+  const remediationSystem = getRemediationSystem();
+
+  remediationSystem.manuallyOpenCircuit(req.params.agentRole as any, reason ?? 'Manual operator action');
+  res.json({ message: `Circuit opened for agent '${req.params.agentRole}'` });
+});
+
+/**
+ * Manually close circuit (operator action)
+ */
+orchestrationRouter.post('/health/circuits/:agentRole/close', (req: Request, res: Response) => {
+  const remediationSystem = getRemediationSystem();
+  remediationSystem.manuallyCloseCircuit(req.params.agentRole as any);
+  res.json({ message: `Circuit closed for agent '${req.params.agentRole}'` });
+});
+
+/**
+ * Get remediation actions
+ */
+orchestrationRouter.get('/health/actions', (req: Request, res: Response) => {
+  const limit = req.query.limit ? parseInt(req.query.limit as string) : 100;
+  const remediationSystem = getRemediationSystem();
+  const actions = remediationSystem.getActions(limit);
+  res.json({ actions, count: actions.length });
 });
