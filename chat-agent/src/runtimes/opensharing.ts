@@ -1,5 +1,6 @@
 import type { RuntimeAdapter, HealthStatus, RuntimeModel, CompleteParams, StreamParams } from './types';
 import { OPENSHARING_URL, OPENSHARING_PRINCIPAL_ID, OPENSHARING_NAMESPACE } from './config';
+import { getCredentialManager } from './credentialManager';
 
 // OpenSharing API types
 interface OpenSharingModel {
@@ -143,25 +144,24 @@ async function getCredentials(
   modelName: string,
   modelVersion: string
 ): Promise<OpenSharingCredentials> {
-  const res = await fetch(`${OPENSHARING_URL}/credentials`, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${OPENSHARING_PRINCIPAL_ID}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
+  try {
+    const manager = getCredentialManager();
+    const creds = await manager.getCredentials({
       shareNamespace: OPENSHARING_NAMESPACE,
       assetName: modelName,
       assetVersion: modelVersion,
       accessType: 'read'
-    })
-  });
+    });
 
-  if (!res.ok) {
-    throw new Error(`Failed to get OpenSharing credentials: HTTP ${res.status}`);
+    return {
+      accessToken: creds.token,
+      expiryTime: creds.expiryTime,
+      storageUrl: creds.storageUrl,
+      storageType: creds.storageType
+    };
+  } catch (err) {
+    throw new Error(`Failed to get OpenSharing credentials: ${err instanceof Error ? err.message : String(err)}`);
   }
-
-  return (await res.json()) as OpenSharingCredentials;
 }
 
 async function getModelServingUrl(modelName: string, modelVersion: string): Promise<string | null> {

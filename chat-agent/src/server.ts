@@ -2,8 +2,10 @@ import express from 'express';
 import { chatAgentRouter } from './router/chatAgentRouter';
 import { orchestrationRouter } from './router/orchestrationRouter';
 import { initializeRuntimes } from './runtimes/init';
+import { initializeCredentialManager } from './runtimes/credentialManager';
 import { policyEnforcer, createPolicyEnforcer } from './middleware/policyGate';
 import { loadPolicyConfig } from './middleware/policyConfig';
+import { OPENSHARING_URL, OPENSHARING_PRINCIPAL_ID } from './runtimes/config';
 
 const app = express();
 const PORT = process.env.PORT ?? 8000;
@@ -35,6 +37,16 @@ app.use('/', chatAgentRouter);
 app.use('/orchestration', orchestrationRouter);
 
 async function start() {
+  // Initialize credential manager for OpenSharing (if configured)
+  if (OPENSHARING_URL && OPENSHARING_PRINCIPAL_ID) {
+    try {
+      await initializeCredentialManager(OPENSHARING_URL, OPENSHARING_PRINCIPAL_ID);
+      console.log('[CredentialManager] Initialized for OpenSharing');
+    } catch (err) {
+      console.warn('[CredentialManager] Failed to initialize:', err instanceof Error ? err.message : String(err));
+    }
+  }
+
   await initializeRuntimes();
   app.listen(PORT, () => {
     console.log(`CIC Chat Agent listening on http://localhost:${PORT}`);
