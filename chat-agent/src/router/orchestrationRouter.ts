@@ -601,3 +601,39 @@ orchestrationRouter.get('/sessions/:sessionId/export', (req: Request, res: Respo
     return value;
   }, 2));
 });
+
+/**
+ * MinIO health status
+ */
+orchestrationRouter.get('/health/minio', async (_req: Request, res: Response) => {
+  try {
+    const { getLastHealthStatus } = await import('../storage/minioHealth');
+    const status = getLastHealthStatus();
+
+    if (!status) {
+      return res.status(503).json({ error: 'MinIO health check has not run yet' });
+    }
+
+    res.status(status.status === 'healthy' ? 200 : 503).json(status);
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      message: error instanceof Error ? error.message : 'Failed to check MinIO health',
+    });
+  }
+});
+
+/**
+ * MinIO metrics
+ */
+orchestrationRouter.get('/metrics/minio', (_req: Request, res: Response) => {
+  try {
+    const { minioMetricsCollector } = require('../storage/minioMetrics');
+    const metrics = minioMetricsCollector.getAggregateMetrics();
+    res.json({ metrics });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to retrieve MinIO metrics',
+    });
+  }
+});
