@@ -637,3 +637,155 @@ orchestrationRouter.get('/metrics/minio', (_req: Request, res: Response) => {
     });
   }
 });
+
+/**
+ * TorqueQuery raw corpus metrics
+ */
+orchestrationRouter.get('/storage/torquequery/info', (_req: Request, res: Response) => {
+  try {
+    const { minioMetricsCollector } = require('../storage/minioMetrics');
+    const metrics = minioMetricsCollector.getAggregateMetrics();
+    const torqueMetrics = metrics.bucketCounts['cic-torquequery-raw'] || 0;
+
+    res.json({
+      bucket: 'cic-torquequery-raw',
+      documentsStored: torqueMetrics,
+      totalBytesStored: metrics.totalBytesIngested,
+      averageLatencyMs: metrics.avgPutLatencyMs,
+      description: 'Raw documents before TorqueQuery indexing',
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to retrieve TorqueQuery storage info',
+    });
+  }
+});
+
+/**
+ * Agent artifacts metrics
+ */
+orchestrationRouter.get('/storage/agents/info', (_req: Request, res: Response) => {
+  try {
+    const { minioMetricsCollector } = require('../storage/minioMetrics');
+    const metrics = minioMetricsCollector.getAggregateMetrics();
+    const agentMetrics = metrics.bucketCounts['cic-agent-artifacts'] || 0;
+
+    res.json({
+      bucket: 'cic-agent-artifacts',
+      artifactsStored: agentMetrics,
+      totalBytesStored: metrics.totalBytesRetrieved,
+      averageLatencyMs: metrics.avgGetLatencyMs,
+      description: 'Agent reasoning traces, execution bundles, and outputs',
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to retrieve agent storage info',
+    });
+  }
+});
+
+/**
+ * Memory storage metrics
+ */
+orchestrationRouter.get('/storage/memory/info', (_req: Request, res: Response) => {
+  try {
+    const { minioMetricsCollector } = require('../storage/minioMetrics');
+    const metrics = minioMetricsCollector.getAggregateMetrics();
+    const memoryMetrics = metrics.bucketCounts['cic-memory'] || 0;
+
+    res.json({
+      bucket: 'cic-memory',
+      itemsStored: memoryMetrics,
+      totalBytesStored: metrics.totalBytesRetrieved,
+      averageLatencyMs: metrics.avgGetLatencyMs,
+      description: 'Embeddings, memory snapshots, and semantic clusters',
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to retrieve memory storage info',
+    });
+  }
+});
+
+/**
+ * Lifecycle configuration info
+ */
+orchestrationRouter.get('/storage/lifecycle/config', (_req: Request, res: Response) => {
+  try {
+    const { lifecycleManager } = require('../storage/lifecycleManager');
+    const policies = lifecycleManager.getAllPolicies();
+
+    res.json({
+      policies: policies.map((p: any) => ({
+        bucket: p.bucket,
+        rulesCount: p.rules.length,
+        rules: p.rules.map((r: any) => ({
+          id: r.id,
+          enabled: r.enabled,
+          expiration: r.expiration,
+          versionRetention: r.versionExpiration,
+        })),
+      })),
+      description: 'Retention and archival policies for all CIC buckets',
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to retrieve lifecycle config',
+    });
+  }
+});
+
+/**
+ * All storage buckets overview
+ */
+orchestrationRouter.get('/storage/overview', (_req: Request, res: Response) => {
+  try {
+    const { minioMetricsCollector } = require('../storage/minioMetrics');
+    const metrics = minioMetricsCollector.getAggregateMetrics();
+
+    res.json({
+      buckets: [
+        {
+          name: 'cic-ingestion',
+          description: 'Raw ingestion artifacts',
+          itemsStored: metrics.bucketCounts['cic-ingestion'] || 0,
+        },
+        {
+          name: 'cic-world-corpus',
+          description: 'World model documents',
+          itemsStored: metrics.bucketCounts['cic-world-corpus'] || 0,
+        },
+        {
+          name: 'cic-agent-artifacts',
+          description: 'Agent artifacts (traces, bundles)',
+          itemsStored: metrics.bucketCounts['cic-agent-artifacts'] || 0,
+        },
+        {
+          name: 'cic-memory',
+          description: 'Embeddings and memory snapshots',
+          itemsStored: metrics.bucketCounts['cic-memory'] || 0,
+        },
+        {
+          name: 'cic-torquequery-raw',
+          description: 'Raw documents before indexing',
+          itemsStored: metrics.bucketCounts['cic-torquequery-raw'] || 0,
+        },
+        {
+          name: 'cic-logs',
+          description: 'Structured logs and traces',
+          itemsStored: metrics.bucketCounts['cic-logs'] || 0,
+        },
+      ],
+      aggregated: {
+        totalBytesIngested: metrics.totalBytesIngested,
+        totalBytesRetrieved: metrics.totalBytesRetrieved,
+        totalOperations: metrics.successCount + metrics.errorCount,
+        errorRate: metrics.errorCount > 0 ? (metrics.errorCount / (metrics.successCount + metrics.errorCount)) * 100 : 0,
+      },
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to retrieve storage overview',
+    });
+  }
+});

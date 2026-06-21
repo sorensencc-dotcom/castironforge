@@ -12,6 +12,7 @@ import { loadPolicyConfig } from './middleware/policyConfig';
 import { OPENSHARING_URL, OPENSHARING_PRINCIPAL_ID } from './runtimes/config';
 import { initializeMinIO, ensureAllBuckets } from './storage/MinioClient';
 import { startMinIOHealthMonitoring, stopMinIOHealthMonitoring } from './storage/minioHealth';
+import { lifecycleManager } from './storage/lifecycleManager';
 
 const app = express();
 const PORT = process.env.PORT ?? 8000;
@@ -48,7 +49,13 @@ async function start() {
     initializeMinIO();
     await ensureAllBuckets();
     startMinIOHealthMonitoring(30000);  // Health check every 30 seconds
+
+    // Initialize lifecycle management
+    await lifecycleManager.initialize();
+    await lifecycleManager.applyPolicies();
+
     console.log('[MinIO] Initialized with all buckets and health monitoring');
+    console.log('[MinIO] Lifecycle policies applied');
   } catch (err) {
     console.warn('[MinIO] Initialization failed:', err instanceof Error ? err.message : String(err));
     console.warn('[MinIO] Continuing without MinIO. Some features may be unavailable.');
