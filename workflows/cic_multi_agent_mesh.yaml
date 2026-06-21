@@ -19,6 +19,11 @@ agents:
   pr_reviewer:
     model: claude-opus-4-8
     tools: [retrieval, git]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
+      git: mcp://castironforge/git
     instructions: |
       Deep PR review against CIC coding standards:
         - deterministic, operator-grade code
@@ -31,6 +36,11 @@ agents:
   pr_tester:
     model: claude-haiku-4-5-20251001
     tools: [test_runner, retrieval]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      test_runner: mcp://castironforge/test-runner
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       Run tests for PR branch. Detect flaky tests. Summarize failures.
       Output: pr_tests.json (pass, fail, coverage, flakiness)
@@ -38,6 +48,10 @@ agents:
   cic_builder:
     model: claude-haiku-4-5-20251001
     tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      cic: mcp://castironforge/cic
     instructions: |
       Trigger CIC build. On failure: snapshot, retrieve similar incidents,
       propose fix, attempt auto-repair.
@@ -46,6 +60,11 @@ agents:
   failure_triage:
     model: claude-opus-4-8
     tools: [retrieval, cic.logs]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
+      cic: mcp://castironforge/cic
     instructions: |
       Diagnose CIC failure. Classify type (config|infra|code|data|queue_dlq|extractor|unknown).
       Retrieve similar past incidents. Produce structured diagnosis.
@@ -55,6 +74,11 @@ agents:
   repair_planner:
     model: claude-opus-4-8
     tools: [retrieval, cic.restart, cic.repair, cic.snapshot, cic.restore]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
+      cic: mcp://castironforge/cic
     instructions: |
       Plan ordered repair sequence with explicit risk assessment.
       Never schedule high-risk actions without requires_hitl: true.
@@ -63,6 +87,10 @@ agents:
   repair_executor:
     model: claude-haiku-4-5-20251001
     tools: [cic.restart, cic.repair, cic.snapshot, cic.restore]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      cic: mcp://castironforge/cic
     instructions: |
       Execute only safe actions (risk_level=low, requires_hitl=false).
       Halt and annotate on medium/high risk or requires_hitl=true.
@@ -71,6 +99,10 @@ agents:
   roadmap_harvester:
     model: claude-opus-4-8
     tools: [retrieval]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       Convert failures, PR feedback, and eval regressions into canonical
       roadmap items. Score by impact, urgency, and CIC health relevance.
@@ -81,6 +113,10 @@ agents:
   roadmap_synthesizer:
     model: claude-opus-4-8
     tools: [retrieval]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       Retrieve current roadmap version. Merge delta preserving lane structure
       and version integrity. Increment version header on every non-empty delta.
@@ -89,6 +125,11 @@ agents:
   eval_runner:
     model: claude-haiku-4-5-20251001
     tools: [test_runner, retrieval]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      test_runner: mcp://castironforge/test-runner
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       Run nightly eval suite: agent reasoning, extractor evals, queue/DLQ
       stress tests, RAG accuracy, performance benchmarks.
@@ -98,6 +139,10 @@ agents:
   index_rebuilder:
     model: claude-haiku-4-5-20251001
     tools: [retrieval]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       Rebuild BM25 + vector embeddings + RRF calibration on edge node.
       Output: index_report.json (bm25_status, vector_status, rrf_status,
@@ -106,6 +151,8 @@ agents:
   roadmap_feeder:
     model: claude-opus-4-8
     tools: []
+    generator_model_tier: large
+    reviewer_model_tier: small
     instructions: |
       Convert eval regressions and index anomalies into structured roadmap ideas
       consumable by the roadmap_harvester agent.
@@ -114,12 +161,15 @@ agents:
   summarizer:
     model: claude-haiku-4-5-20251001
     tools: []
+    generator_model_tier: small
+    reviewer_model_tier: large
     instructions: |
       Produce concise operator-facing summary.md for the calling workflow context.
       Cover: what happened, what was automated, what needs human attention.
 
 retrieval:
   strategy: hybrid
+  retrieval_strategy: static
   bm25_index: cic_bm25
   vector_index: cic_vectors
   fusion: rrf

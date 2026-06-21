@@ -8,6 +8,11 @@ agents:
   reviewer:
     model: claude-opus-4-8
     tools: [retrieval, git]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
+      git: mcp://castironforge/git
     instructions: |
       Perform deep PR review. Enforce CIC coding standards:
       - deterministic, operator-grade code
@@ -22,6 +27,11 @@ agents:
   tester:
     model: claude-haiku-4-5-20251001
     tools: [test_runner, retrieval]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      test_runner: mcp://castironforge/test-runner
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       Run full test suite. Detect flaky tests. Summarize failures.
       Output: tests.json (pass, fail, coverage, flakiness).
@@ -29,6 +39,10 @@ agents:
   cic_builder:
     model: claude-haiku-4-5-20251001
     tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      cic: mcp://castironforge/cic
     instructions: |
       Trigger CIC build. On failure:
         1. snapshot current state
@@ -40,6 +54,8 @@ agents:
   summarizer:
     model: claude-haiku-4-5-20251001
     tools: []
+    generator_model_tier: small
+    reviewer_model_tier: large
     instructions: |
       Produce final summary for human review.
       Include: PR review findings, test results, CIC build status,
@@ -48,6 +64,7 @@ agents:
 
 retrieval:
   strategy: hybrid
+  retrieval_strategy: static
   bm25_index: cic_docs_bm25
   vector_index: cic_vectors
   fusion: rrf

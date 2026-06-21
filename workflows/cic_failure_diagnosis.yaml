@@ -8,6 +8,11 @@ agents:
   failure_triage:
     model: claude-opus-4-8
     tools: [retrieval, cic.logs]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
+      cic: mcp://castironforge/cic
     instructions: |
       You are the CIC Failure Triage Agent.
       Tasks:
@@ -25,6 +30,11 @@ agents:
   repair_planner:
     model: claude-opus-4-8
     tools: [retrieval, cic.restart, cic.repair, cic.snapshot, cic.restore]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
+      cic: mcp://castironforge/cic
     instructions: |
       You are the CIC Repair Planner Agent.
       Tasks:
@@ -46,6 +56,10 @@ agents:
   repair_executor:
     model: claude-haiku-4-5-20251001
     tools: [cic.restart, cic.repair, cic.snapshot, cic.restore]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      cic: mcp://castironforge/cic
     instructions: |
       You are the CIC Repair Executor Agent.
       Tasks:
@@ -62,6 +76,8 @@ agents:
   summarizer:
     model: claude-haiku-4-5-20251001
     tools: []
+    generator_model_tier: small
+    reviewer_model_tier: large
     instructions: |
       You are the CIC Failure Summary Agent.
       Produce a concise operator-facing summary covering:
@@ -73,6 +89,7 @@ agents:
 
 retrieval:
   strategy: hybrid
+  retrieval_strategy: static
   bm25_index: cic_failure_bm25
   vector_index: cic_failure_vectors
   fusion: rrf
