@@ -789,3 +789,169 @@ orchestrationRouter.get('/storage/overview', (_req: Request, res: Response) => {
     });
   }
 });
+
+/**
+ * List artifacts in bucket
+ */
+orchestrationRouter.get('/storage/list/:bucket', async (req: Request, res: Response) => {
+  try {
+    const { listBucketObjects } = await import('../storage/listOperations');
+    const bucket = req.params.bucket;
+    const limit = req.query.limit ? parseInt(req.query.limit as string) : 100;
+    const prefix = req.query.prefix as string | undefined;
+
+    const result = await listBucketObjects(bucket, { prefix, limit });
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to list artifacts',
+    });
+  }
+});
+
+/**
+ * Search artifacts by metadata
+ */
+orchestrationRouter.post('/storage/search', async (req: Request, res: Response) => {
+  try {
+    const { searchByMetadata } = await import('../storage/searchOperations');
+    const query = req.body;
+
+    if (!query.bucket) {
+      return res.status(400).json({ error: 'bucket is required' });
+    }
+
+    const results = await searchByMetadata(query);
+    res.json({ results, count: results.length });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to search artifacts',
+    });
+  }
+});
+
+/**
+ * Find artifacts by agent and session
+ */
+orchestrationRouter.get('/storage/agent/:agentId/session/:sessionId', async (req: Request, res: Response) => {
+  try {
+    const { findAgentSession } = await import('../storage/searchOperations');
+    const results = await findAgentSession(req.params.agentId, req.params.sessionId);
+
+    res.json({ results, count: results.length });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to find session artifacts',
+    });
+  }
+});
+
+/**
+ * Find recent artifacts
+ */
+orchestrationRouter.get('/storage/recent/:bucket', async (req: Request, res: Response) => {
+  try {
+    const { findRecent } = await import('../storage/searchOperations');
+    const hoursAgo = req.query.hours ? parseInt(req.query.hours as string) : 24;
+    const limit = req.query.limit ? parseInt(req.query.limit as string) : 100;
+
+    const results = await findRecent(req.params.bucket, hoursAgo, { limit });
+    res.json({ results, count: results.length, hoursAgo });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to find recent artifacts',
+    });
+  }
+});
+
+/**
+ * Create full backup
+ */
+orchestrationRouter.post('/storage/backup/full', async (req: Request, res: Response) => {
+  try {
+    const { createFullBackup } = await import('../storage/backupRecovery');
+    const backupId = req.body.backupId;
+
+    const manifest = await createFullBackup(backupId);
+    res.json(manifest);
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to create backup',
+    });
+  }
+});
+
+/**
+ * Create incremental backup
+ */
+orchestrationRouter.post('/storage/backup/incremental', async (req: Request, res: Response) => {
+  try {
+    const { createIncrementalBackup } = await import('../storage/backupRecovery');
+    const backupId = req.body.backupId;
+
+    const manifest = await createIncrementalBackup(backupId);
+    res.json(manifest);
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to create backup',
+    });
+  }
+});
+
+/**
+ * List all backups
+ */
+orchestrationRouter.get('/storage/backups', (_req: Request, res: Response) => {
+  try {
+    const { listBackups, getRecoveryPoints } = require('../storage/backupRecovery');
+
+    res.json({
+      backups: listBackups(),
+      recoveryPoints: getRecoveryPoints(),
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to list backups',
+    });
+  }
+});
+
+/**
+ * Verify backup integrity
+ */
+orchestrationRouter.get('/storage/backups/:backupId/verify', (req: Request, res: Response) => {
+  try {
+    const { verifyBackup, getBackupManifest } = require('../storage/backupRecovery');
+
+    const manifest = getBackupManifest(req.params.backupId);
+    if (!manifest) {
+      return res.status(404).json({ error: 'Backup not found' });
+    }
+
+    const isValid = verifyBackup(req.params.backupId);
+    res.json({
+      backupId: req.params.backupId,
+      isValid,
+      manifest,
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to verify backup',
+    });
+  }
+});
+
+/**
+ * Prometheus metrics
+ */
+orchestrationRouter.get('/metrics/prometheus', async (_req: Request, res: Response) => {
+  try {
+    const { metricsHandler } = await import('../storage/prometheusMetrics');
+    const metrics = await metricsHandler();
+
+    res.setHeader('Content-Type', 'text/plain');
+    res.send(metrics);
+  } catch (error) {
+    res.status(500).send(`# ERROR: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
+});
