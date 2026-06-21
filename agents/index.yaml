@@ -6,6 +6,11 @@ agents:
     file: agents/pr_reviewer.yaml
     model: claude-opus-4-8
     tools: [retrieval, git]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
+      git: mcp://castironforge/git
     role: PR review and CIC standards enforcement
     used_in: [pr_review_pipeline, cic_multi_agent_mesh]
 
@@ -13,13 +18,23 @@ agents:
     file: agents/pr_tester.yaml
     model: claude-haiku-4-5-20251001
     tools: [test_runner, retrieval]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      test_runner: mcp://castironforge/test-runner
+      retrieval: mcp://castironforge/retrieval
     role: Test execution and failure analysis
     used_in: [pr_review_pipeline, cic_multi_agent_mesh]
 
   - id: cic_builder
     file: agents/cic_builder.yaml
     model: claude-haiku-4-5-20251001
-    tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs]
+    tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs, retrieval]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      cic: mcp://castironforge/cic
+      retrieval: mcp://castironforge/retrieval
     role: CIC build trigger and basic self-healing
     used_in: [pr_review_pipeline, cic_multi_agent_mesh]
 
@@ -27,6 +42,11 @@ agents:
     file: agents/failure_triage.yaml
     model: claude-opus-4-8
     tools: [retrieval, cic.logs]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
+      cic: mcp://castironforge/cic
     role: CIC failure classification and incident correlation
     used_in: [cic_failure_diagnosis, cic_multi_agent_mesh]
 
@@ -34,6 +54,11 @@ agents:
     file: agents/repair_planner.yaml
     model: claude-opus-4-8
     tools: [retrieval, cic.restart, cic.repair, cic.snapshot, cic.restore]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
+      cic: mcp://castironforge/cic
     role: Ordered repair sequence planning with risk assessment
     used_in: [cic_failure_diagnosis, cic_multi_agent_mesh]
 
@@ -41,6 +66,10 @@ agents:
     file: agents/repair_executor.yaml
     model: claude-haiku-4-5-20251001
     tools: [cic.restart, cic.repair, cic.snapshot, cic.restore]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      cic: mcp://castironforge/cic
     role: Safe execution of low-risk repair actions
     used_in: [cic_failure_diagnosis, cic_multi_agent_mesh]
 
@@ -48,6 +77,10 @@ agents:
     file: agents/roadmap_harvester.yaml
     model: claude-opus-4-8
     tools: [retrieval]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
     role: Normalize and score raw ideas into canonical roadmap deltas
     used_in: [roadmap_harvester, pr_review_pipeline, cic_failure_diagnosis, cic_multi_agent_mesh]
 
@@ -55,6 +88,10 @@ agents:
     file: agents/roadmap_synthesizer.yaml
     model: claude-opus-4-8
     tools: [retrieval]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
     role: Merge roadmap deltas into versioned roadmap draft
     used_in: [roadmap_harvester, pr_review_pipeline, cic_failure_diagnosis, cic_multi_agent_mesh]
 
@@ -62,6 +99,11 @@ agents:
     file: agents/eval_runner.yaml
     model: claude-haiku-4-5-20251001
     tools: [test_runner, retrieval]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      test_runner: mcp://castironforge/test-runner
+      retrieval: mcp://castironforge/retrieval
     role: Nightly agent, extractor, and retrieval evals
     used_in: [edge_node_nightly_eval, cic_multi_agent_mesh]
 
@@ -69,6 +111,10 @@ agents:
     file: agents/index_rebuilder.yaml
     model: claude-haiku-4-5-20251001
     tools: [retrieval]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
     role: BM25 + vector + RRF index rebuild on edge node
     used_in: [edge_node_nightly_eval, cic_multi_agent_mesh]
 
@@ -76,6 +122,8 @@ agents:
     file: agents/roadmap_feeder.yaml
     model: claude-opus-4-8
     tools: []
+    generator_model_tier: large
+    reviewer_model_tier: small
     role: Convert eval regressions into structured roadmap ideas
     used_in: [edge_node_nightly_eval, cic_multi_agent_mesh]
 
@@ -83,6 +131,8 @@ agents:
     file: agents/summarizer.yaml
     model: claude-haiku-4-5-20251001
     tools: []
+    generator_model_tier: small
+    reviewer_model_tier: large
     role: Operator-facing summary generation for any workflow context
     used_in: [pr_review_pipeline, cic_failure_diagnosis, roadmap_harvester, edge_node_nightly_eval, cic_multi_agent_mesh]
 
@@ -90,5 +140,9 @@ agents:
     file: agents/doc_writer.yaml
     model: claude-haiku-4-5-20251001
     tools: [git]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      git: mcp://castironforge/git
     role: Generate Markdown documentation for changed source files
     used_in: [auto_doc_sync]

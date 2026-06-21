@@ -47,11 +47,12 @@ agents:
 
   cic_builder:
     model: claude-haiku-4-5-20251001
-    tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs]
+    tools: [cic.restart, cic.repair, cic.snapshot, cic.restore, cic.logs, retrieval]
     generator_model_tier: small
     reviewer_model_tier: large
     mcp_servers:
       cic: mcp://castironforge/cic
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       Trigger CIC build. On failure: snapshot, retrieve similar incidents,
       propose fix, attempt auto-repair.
