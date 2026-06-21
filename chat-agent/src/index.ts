@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import express, { Express, Request, Response, NextFunction } from 'express'
-import { v4 as uuidv4 } from 'crypto'
+import { v4 as uuidv4 } from 'uuid'
 import { getDatabase, closeDatabase } from './config/database.js'
 import { authMiddleware } from './middleware/auth.middleware.js'
 import { errorHandlerMiddleware } from './middleware/errorHandler.middleware.js'

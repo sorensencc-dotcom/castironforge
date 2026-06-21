@@ -1,4 +1,4 @@
-import { ApiResponse, ApiError, isApiError } from '@castironforge/shared-types'
+import { ApiResponse } from '@castironforge/shared-types'
 
 export interface ApiClientConfig {
   baseUrl: string
@@ -42,20 +42,14 @@ export class ApiClient {
         signal: controller.signal,
       })
 
-      const data = (await response.json()) as ApiResponse<T> | ApiError
+      const data = (await response.json()) as ApiResponse<T>
 
-      if (!response.ok) {
-        if (isApiError(data)) {
-          throw new Error(`${data.error.code}: ${data.error.message}`)
-        }
-        throw new Error(`HTTP ${response.status}`)
+      if (!data.success) {
+        const errorMsg = data.error ? `${data.error.code}: ${data.error.message}` : 'Unknown error'
+        throw new Error(errorMsg)
       }
 
-      if (isApiError(data)) {
-        throw new Error(`${data.error.code}: ${data.error.message}`)
-      }
-
-      return (data as ApiResponse<T>).data as T
+      return data.data as T
     } finally {
       clearTimeout(timeout)
     }

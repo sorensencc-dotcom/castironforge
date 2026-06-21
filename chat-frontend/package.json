@@ -10,6 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@castironforge/shared-types": "file:../shared-types",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

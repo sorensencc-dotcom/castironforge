@@ -1,5 +1,5 @@
 import { Pool } from 'pg'
-import { v4 as uuidv4 } from 'crypto'
+import { v4 as uuidv4 } from 'uuid'
 
 export interface SendMessageRequest {
   lead: {
@@ -10,7 +10,7 @@ export interface SendMessageRequest {
   }
   template_id: string
   variant_id?: string
-  engine: 'page-agent' | 'backend-batch'
+  engine?: 'page-agent' | 'backend-batch'
   metadata?: Record<string, any>
 }
 
@@ -74,6 +74,7 @@ export class OutreachService {
     // 4. Create message record
     const messageId = uuidv4()
     const now = new Date().toISOString()
+    const engine = request.engine || 'backend-batch'
 
     await this.db.query(
       `INSERT INTO outreach_messages
@@ -84,7 +85,7 @@ export class OutreachService {
         leadId,
         request.template_id,
         request.variant_id || null,
-        request.engine,
+        engine,
         'sent', // For MVP, mark as sent immediately
         renderedContent,
         now,

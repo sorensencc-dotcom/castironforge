@@ -1,7 +1,7 @@
 export interface OutreachAutomationEngine {
   init(): Promise<void>
   runWorkflow(script: AutomationScript): Promise<WorkflowResult>
-  isAvailable(): boolean
+  isAvailable(): Promise<boolean>
   getHealth(): Promise<EngineHealth>
   cleanup(): Promise<void>
 }

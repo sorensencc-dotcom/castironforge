@@ -200,7 +200,7 @@ export interface SendMessageRequest {
   }
   template_id: string
   variant_id?: string
-  engine: 'page-agent' | 'backend-batch'
+  engine?: 'page-agent' | 'backend-batch'
   metadata?: {
     source?: string
     user_context?: string

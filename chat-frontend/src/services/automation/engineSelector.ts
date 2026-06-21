@@ -28,6 +28,9 @@ export async function getAutomationEngine(config: EngineConfig): Promise<Outreac
   }
 
   currentConfig = config
+  if (!engineInstance) {
+    throw new Error('Failed to create engine instance')
+  }
   await engineInstance.init()
   return engineInstance
 }
