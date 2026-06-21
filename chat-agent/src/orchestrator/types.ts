@@ -12,6 +12,9 @@ export interface AgentDefinition {
   capabilities?: string[];
   maxConcurrency?: number;
   timeout?: number;
+  // RL-1: Independent Critic Model Spec (v1.1)
+  generator_model_tier?: 'small' | 'medium' | 'large' | 'frontier';
+  reviewer_model_tier?: 'small' | 'medium' | 'large' | 'frontier';
 }
 
 export interface TaskRequest {
