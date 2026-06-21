@@ -91,17 +91,29 @@ const handlers: Record<string, (args: Record<string, unknown>) => Promise<Retrie
 
   async searchDocuments(args: Record<string, unknown>): Promise<RetrievalResult> {
     try {
-      const { query, topK = 10, repo } = args as {
+      const {
+        query,
+        topK = 10,
+        repo,
+        phase,
+        adapter,
+        alpha = 0.4,
+        beta = 0.6
+      } = args as {
         query: string;
         topK?: number;
         repo?: string;
+        phase?: string;
+        adapter?: string;
+        alpha?: number;
+        beta?: number;
       };
 
       if (!query) {
         return { success: false, error: 'Missing required parameter: query' };
       }
 
-      const results = await docSearch(query, { topK, repo });
+      const results = await docSearch(query, { topK, repo, phase, adapter, alpha, beta });
 
       return {
         success: true,
@@ -109,7 +121,9 @@ const handlers: Record<string, (args: Record<string, unknown>) => Promise<Retrie
           query,
           topK,
           results,
-          total: results.length
+          total: results.length,
+          note: 'Hybrid keyword + semantic search, fusion weights: alpha (keyword) = ' +
+            alpha + ', beta (semantic) = ' + beta
         }
       };
     } catch (error) {
@@ -161,13 +175,25 @@ const definitions = [
   },
   {
     name: 'retrieval.searchDocuments',
-    description: 'Search extracted documents (PDFs, text files, etc.) using TorqueQuery',
+    description: 'Search extracted documents using hybrid keyword + semantic search (TorqueQuery)',
     inputSchema: {
       type: 'object',
       properties: {
         query: { type: 'string', description: 'Search query' },
         topK: { type: 'number', description: 'Maximum results to return', default: 10 },
-        repo: { type: 'string', description: 'Optional repository filter' }
+        repo: { type: 'string', description: 'Optional repository filter' },
+        phase: { type: 'string', description: 'Optional phase filter (e.g., "27", "28")' },
+        adapter: { type: 'string', description: 'Optional adapter filter (e.g., "WarmPool", "LlamaPool")' },
+        alpha: {
+          type: 'number',
+          description: 'Keyword score weight (0-1)',
+          default: 0.4
+        },
+        beta: {
+          type: 'number',
+          description: 'Semantic score weight (0-1)',
+          default: 0.6
+        }
       },
       required: ['query']
     }
