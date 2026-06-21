@@ -85,12 +85,18 @@ services:
       OLLAMA_URL: http://ollama:11434
       LLAMACPP_URL: http://llamacpp:8080
       TIKA_URL: http://tika:9998
+      MINIO_ENDPOINT: minio
+      MINIO_PORT: "9000"
+      MINIO_ACCESS_KEY: cic
+      MINIO_SECRET_KEY: cic-secret
     depends_on:
       torquequery:
         condition: service_healthy
       ollama:
         condition: service_healthy
       tika:
+        condition: service_healthy
+      minio:
         condition: service_healthy
     volumes:
       - ./chat-agent/src:/app/src
@@ -119,8 +125,28 @@ services:
       - ./chat-frontend/node_modules:/app/node_modules
     command: npm run dev -- --host 0.0.0.0
 
+  # MinIO: S3-compatible object storage
+  minio:
+    image: minio/minio:latest
+    container_name: cic-minio
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: cic
+      MINIO_ROOT_PASSWORD: cic-secret
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
 volumes:
   ollama_data:
+  minio-data:
 
 networks:
   default:
