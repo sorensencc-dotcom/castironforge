@@ -9,6 +9,10 @@ agents:
   harvester:
     model: claude-opus-4-8
     tools: [retrieval]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       You are the Roadmap Harvester Agent.
       Convert raw ideas into structured roadmap deltas.
@@ -49,6 +53,10 @@ agents:
   synthesizer:
     model: claude-opus-4-8
     tools: [retrieval]
+    generator_model_tier: large
+    reviewer_model_tier: small
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       You are the Roadmap Synthesizer Agent.
       Tasks:
@@ -61,6 +69,8 @@ agents:
   summarizer:
     model: claude-haiku-4-5-20251001
     tools: []
+    generator_model_tier: small
+    reviewer_model_tier: large
     instructions: |
       Produce a concise operator-facing summary.md covering:
         - new roadmap items added
