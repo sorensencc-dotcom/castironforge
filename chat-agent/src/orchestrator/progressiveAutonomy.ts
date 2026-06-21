@@ -64,7 +64,7 @@ export interface PromotionCriteria {
   maxRejectionRate: number; // Default: 0 (zero rejections allowed)
 }
 
-const DEFAULT_PROMOTION_CRITERIA: PromotionCriteria = {
+export const DEFAULT_PROMOTION_CRITERIA: PromotionCriteria = {
   minConsecutiveApprovals: 25,
   minDaysAtCurrentLevel: 30,
   maxModificationRate: 0.05,
@@ -196,7 +196,7 @@ export function recordDecision(
   let demotionTriggered: DemotionTrigger | undefined;
 
   // Check demotion triggers
-  if ((decision as string) === 'modification') {
+  if ((decision as string) === 'modified') {
     demotionTriggered = {
       type: 'modification',
       description: 'Operator modified gate output',
@@ -204,7 +204,7 @@ export function recordDecision(
     };
     config.consecutive_approvals = 0;
     config.last_modification_timestamp = new Date().toISOString();
-  } else if ((decision as string) === 'rejection') {
+  } else if ((decision as string) === 'rejected') {
     demotionTriggered = {
       type: 'rejection',
       description: 'Operator rejected gate output',

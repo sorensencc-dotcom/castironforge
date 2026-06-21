@@ -19,7 +19,7 @@ export interface AgentModelConfig {
  * Model tier hierarchy for validation
  * A reviewer must be DIFFERENT from the generator
  */
-const MODEL_TIER_RANK: Record<ModelTier, number> = {
+export const MODEL_TIER_RANK: Record<ModelTier, number> = {
   small: 1,
   medium: 2,
   large: 3,
