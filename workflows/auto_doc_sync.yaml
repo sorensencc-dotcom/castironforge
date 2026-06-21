@@ -9,6 +9,10 @@ agents:
   doc_writer:
     model: claude-haiku-4-5-20251001
     tools: [git]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      git: mcp://castironforge/git
     instructions: |
       For each changed source file, produce a concise Markdown doc page.
       Sections: Purpose, Exports/API, Key behaviours, Dependencies, Usage example.
@@ -21,6 +25,8 @@ agents:
   summarizer:
     model: claude-haiku-4-5-20251001
     tools: []
+    generator_model_tier: small
+    reviewer_model_tier: large
     instructions: |
       Summarize what was documented in this run.
       Output summary.md: list of files documented, any errors, suggested next steps.

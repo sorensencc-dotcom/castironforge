@@ -76,6 +76,13 @@ event_mappings:
         InputProvided messages to the gateway. Gateway validates the
         task_id and publishes HITL_GATE_RESOLVED to the internal bus.
 
+    - a2a_status: cancelled
+      event_type: WORKFLOW_CANCELLED
+      notes: >
+        A2A Task cancellation requests are translated to WORKFLOW_CANCELLED
+        events on the internal Event Bus. The orchestrator halts the workflow
+        and publishes final status to all subscribed SSE clients.
+
   dlq_mapping:
     cic_event: dead-letter queue entry
     a2a_status: failed

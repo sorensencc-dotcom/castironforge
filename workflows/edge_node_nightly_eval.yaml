@@ -16,6 +16,11 @@ agents:
   eval_runner:
     model: claude-haiku-4-5-20251001
     tools: [test_runner, retrieval]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      test_runner: mcp://castironforge/test-runner
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       Run nightly eval suite covering:
         - agent reasoning evals
@@ -33,6 +38,10 @@ agents:
   index_rebuilder:
     model: claude-haiku-4-5-20251001
     tools: [retrieval]
+    generator_model_tier: small
+    reviewer_model_tier: large
+    mcp_servers:
+      retrieval: mcp://castironforge/retrieval
     instructions: |
       Rebuild the hybrid RAG indexes on the edge node:
         - BM25 index rebuild from source corpus
@@ -49,6 +58,8 @@ agents:
   roadmap_feeder:
     model: claude-opus-4-8
     tools: []
+    generator_model_tier: large
+    reviewer_model_tier: small
     instructions: |
       Convert eval regressions and improvements into structured roadmap ideas
       that can be consumed by the Roadmap Harvester workflow.
@@ -60,6 +71,8 @@ agents:
   summarizer:
     model: claude-haiku-4-5-20251001
     tools: []
+    generator_model_tier: small
+    reviewer_model_tier: large
     instructions: |
       Produce a concise operator-facing summary.md covering:
         - nightly eval pass/fail by component
@@ -70,6 +83,7 @@ agents:
 
 retrieval:
   strategy: hybrid
+  retrieval_strategy: static
   bm25_index: cic_bm25
   vector_index: cic_vectors
   fusion: rrf
