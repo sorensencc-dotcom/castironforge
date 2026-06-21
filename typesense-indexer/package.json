@@ -1,0 +1,21 @@
+{
+  "name": "typesense-indexer",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/main.ts",
+    "start": "node dist/main.js",
+    "type-check": "./node_modules/.bin/tsc --noEmit"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "typesense": "^1.7.0",
+    "@babel/parser": "^7.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.0.0"
+  }
+}

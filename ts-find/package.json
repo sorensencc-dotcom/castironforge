@@ -1,0 +1,23 @@
+{
+  "name": "ts-find",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "ts-find": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli.ts",
+    "type-check": "./node_modules/.bin/tsc --noEmit"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.0.0",
+    "@types/minimist": "^1.2.5"
+  }
+}
