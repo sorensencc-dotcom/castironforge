@@ -955,3 +955,71 @@ orchestrationRouter.get('/metrics/prometheus', async (_req: Request, res: Respon
     res.status(500).send(`# ERROR: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 });
+
+/**
+ * Index document(s) through TorqueQuery + MinIO pipeline
+ */
+orchestrationRouter.post('/corpus/index', async (req: Request, res: Response) => {
+  try {
+    const { processDocument, processBatch } = await import('../rag/torquequeryPipeline');
+    const { documents } = req.body as { documents: any[] };
+
+    if (!documents || !Array.isArray(documents)) {
+      return res.status(400).json({ error: 'documents array is required' });
+    }
+
+    if (documents.length === 1) {
+      const result = await processDocument(documents[0]);
+      return res.json(result);
+    } else {
+      const { results, stats } = await processBatch(documents);
+      return res.json({ results, stats });
+    }
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to index documents',
+    });
+  }
+});
+
+/**
+ * Verify corpus integrity (MinIO ↔ TorqueQuery)
+ */
+orchestrationRouter.get('/corpus/integrity', async (_req: Request, res: Response) => {
+  try {
+    const { verifyCorpusIntegrity } = await import('../rag/torquequeryPipeline');
+    const integrity = await verifyCorpusIntegrity();
+
+    res.json({
+      ...integrity,
+      status: integrity.mismatch ? 'warning' : 'healthy',
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: error instanceof Error ? error.message : 'Failed to verify corpus',
+    });
+  }
+});
+
+/**
+ * TorqueQuery + MinIO pipeline health
+ */
+orchestrationRouter.get('/corpus/health', async (_req: Request, res: Response) => {
+  try {
+    const { getPipelineHealth } = await import('../rag/torquequeryPipeline');
+    const health = await getPipelineHealth();
+
+    const status = health.minioHealthy && health.torqueHealthy ? 'healthy' : 'unhealthy';
+    const statusCode = status === 'healthy' ? 200 : 503;
+
+    res.status(statusCode).json({
+      status,
+      ...health,
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      error: error instanceof Error ? error.message : 'Failed to check pipeline health',
+    });
+  }
+});
