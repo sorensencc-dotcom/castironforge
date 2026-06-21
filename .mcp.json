@@ -10,6 +10,15 @@
       "env": {
         "MEMORY_SPINE_DATA_DIR": "${workspaceFolder}/services/memory-spine/data"
       }
+    },
+    "castironforge-mcp": {
+      "command": "node",
+      "args": [
+        "--loader", "ts-node/esm",
+        "src/mcp/server.ts"
+      ],
+      "cwd": "chat-agent",
+      "env": {}
     }
   }
 }
