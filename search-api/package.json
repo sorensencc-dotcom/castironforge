@@ -1,0 +1,23 @@
+{
+  "name": "search-api",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/main.ts",
+    "start": "node dist/main.js",
+    "type-check": "./node_modules/.bin/tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "typesense": "^1.7.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.0.0",
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17"
+  }
+}
