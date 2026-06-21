@@ -5,6 +5,8 @@
  * Designed to interface with TorqueQuery or similar vector search backends.
  */
 
+import { docSearch } from '../../tools/documentSearch';
+
 type RetrievalResult = {
   success: boolean;
   data?: unknown;
@@ -85,6 +87,37 @@ const handlers: Record<string, (args: Record<string, unknown>) => Promise<Retrie
         total: 0
       }
     };
+  },
+
+  async searchDocuments(args: Record<string, unknown>): Promise<RetrievalResult> {
+    try {
+      const { query, topK = 10, repo } = args as {
+        query: string;
+        topK?: number;
+        repo?: string;
+      };
+
+      if (!query) {
+        return { success: false, error: 'Missing required parameter: query' };
+      }
+
+      const results = await docSearch(query, { topK, repo });
+
+      return {
+        success: true,
+        data: {
+          query,
+          topK,
+          results,
+          total: results.length
+        }
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : 'Document search failed'
+      };
+    }
   }
 };
 
@@ -124,6 +157,19 @@ const definitions = [
         limit: { type: 'number', description: 'Maximum results to return', default: 20 },
         offset: { type: 'number', description: 'Result offset for pagination', default: 0 }
       }
+    }
+  },
+  {
+    name: 'retrieval.searchDocuments',
+    description: 'Search extracted documents (PDFs, text files, etc.) using TorqueQuery',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        query: { type: 'string', description: 'Search query' },
+        topK: { type: 'number', description: 'Maximum results to return', default: 10 },
+        repo: { type: 'string', description: 'Optional repository filter' }
+      },
+      required: ['query']
     }
   }
 ];

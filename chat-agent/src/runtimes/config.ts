@@ -6,6 +6,7 @@ const getEnv = (key: string, fallback: string): string => {
 export const OLLAMA_URL = getEnv('OLLAMA_URL', 'http://localhost:11434');
 export const LLAMACPP_URL = getEnv('LLAMACPP_URL', 'http://localhost:8080');
 export const TORQUE_URL = getEnv('TORQUE_URL', 'http://localhost:9000');
+export const TIKA_URL = getEnv('TIKA_URL', 'http://localhost:9998');
 
 // OpenSharing configuration
 export const OPENSHARING_URL = getEnv('OPENSHARING_URL', 'http://localhost:8090');
