@@ -1,0 +1,157 @@
+version: '3.8'
+
+# Phase 28: Distributed MinIO with Cross-Datacenter Sync
+# This compose file demonstrates a 2-datacenter setup with 3-node clusters per DC
+
+services:
+  # ============ DATACENTER 1 (US-EAST) ============
+
+  minio-dc1-node1:
+    image: minio/minio:latest
+    container_name: cic-minio-dc1-node1
+    command: server http://minio-dc1-node{1,2,3}/data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: cic
+      MINIO_ROOT_PASSWORD: cic-secret
+      MINIO_REGION_NAME: us-east-1
+    volumes:
+      - minio-dc1-node1-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-dc1
+      - cic-sync
+
+  minio-dc1-node2:
+    image: minio/minio:latest
+    container_name: cic-minio-dc1-node2
+    command: server http://minio-dc1-node{1,2,3}/data --console-address ":9001"
+    ports:
+      - "9010:9000"
+      - "9011:9001"
+    environment:
+      MINIO_ROOT_USER: cic
+      MINIO_ROOT_PASSWORD: cic-secret
+      MINIO_REGION_NAME: us-east-1
+    volumes:
+      - minio-dc1-node2-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-dc1
+      - cic-sync
+
+  minio-dc1-node3:
+    image: minio/minio:latest
+    container_name: cic-minio-dc1-node3
+    command: server http://minio-dc1-node{1,2,3}/data --console-address ":9001"
+    ports:
+      - "9020:9000"
+      - "9021:9001"
+    environment:
+      MINIO_ROOT_USER: cic
+      MINIO_ROOT_PASSWORD: cic-secret
+      MINIO_REGION_NAME: us-east-1
+    volumes:
+      - minio-dc1-node3-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-dc1
+      - cic-sync
+
+  # ============ DATACENTER 2 (US-WEST) ============
+
+  minio-dc2-node1:
+    image: minio/minio:latest
+    container_name: cic-minio-dc2-node1
+    command: server http://minio-dc2-node{1,2,3}/data --console-address ":9001"
+    ports:
+      - "9030:9000"
+      - "9031:9001"
+    environment:
+      MINIO_ROOT_USER: cic
+      MINIO_ROOT_PASSWORD: cic-secret
+      MINIO_REGION_NAME: us-west-1
+    volumes:
+      - minio-dc2-node1-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-dc2
+      - cic-sync
+
+  minio-dc2-node2:
+    image: minio/minio:latest
+    container_name: cic-minio-dc2-node2
+    command: server http://minio-dc2-node{1,2,3}/data --console-address ":9001"
+    ports:
+      - "9040:9000"
+      - "9041:9001"
+    environment:
+      MINIO_ROOT_USER: cic
+      MINIO_ROOT_PASSWORD: cic-secret
+      MINIO_REGION_NAME: us-west-1
+    volumes:
+      - minio-dc2-node2-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-dc2
+      - cic-sync
+
+  minio-dc2-node3:
+    image: minio/minio:latest
+    container_name: cic-minio-dc2-node3
+    command: server http://minio-dc2-node{1,2,3}/data --console-address ":9001"
+    ports:
+      - "9050:9000"
+      - "9051:9001"
+    environment:
+      MINIO_ROOT_USER: cic
+      MINIO_ROOT_PASSWORD: cic-secret
+      MINIO_REGION_NAME: us-west-1
+    volumes:
+      - minio-dc2-node3-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-dc2
+      - cic-sync
+
+volumes:
+  minio-dc1-node1-data:
+  minio-dc1-node2-data:
+  minio-dc1-node3-data:
+  minio-dc2-node1-data:
+  minio-dc2-node2-data:
+  minio-dc2-node3-data:
+
+networks:
+  cic-dc1:
+    driver: bridge
+  cic-dc2:
+    driver: bridge
+  cic-sync:
+    driver: bridge
