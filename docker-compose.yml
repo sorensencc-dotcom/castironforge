@@ -45,6 +45,18 @@ services:
       timeout: 5s
       retries: 3
 
+  # Apache Tika: Document extraction service
+  tika:
+    image: apache/tika:2.9.0
+    container_name: cic-tika
+    ports:
+      - "9998:9998"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9998/tika"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
   # llama.cpp: Alternative LLM inference
   # Note: Requires pre-built binary or source. Run on host if simpler.
   # llamacpp:
@@ -72,10 +84,13 @@ services:
       TORQUE_URL: http://torquequery:9000
       OLLAMA_URL: http://ollama:11434
       LLAMACPP_URL: http://llamacpp:8080
+      TIKA_URL: http://tika:9998
     depends_on:
       torquequery:
         condition: service_healthy
       ollama:
+        condition: service_healthy
+      tika:
         condition: service_healthy
     volumes:
       - ./chat-agent/src:/app/src

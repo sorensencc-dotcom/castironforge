@@ -6,13 +6,18 @@ import { policyEnforcer } from '../middleware/policyGate';
 import { rag } from '../rag/rag';
 import { buildRagPrompt } from '../rag/promptBuilder';
 import { estimateResponseTokens } from '../utils/tokenCounter';
+import { tikaHealthCheck } from '../services/TikaHealthCheck';
 
 export const chatAgentRouter = Router();
 
 chatAgentRouter.get('/health', async (_req, res) => {
   try {
-    const health = await runtimeRegistry.getHealth();
-    res.json(health);
+    const runtimeHealth = await runtimeRegistry.getHealth();
+    const tikaStatus = await tikaHealthCheck.check();
+    res.json({
+      ...runtimeHealth,
+      tika: tikaStatus
+    });
   } catch (err) {
     res.status(500).json({ error: 'Health check failed' });
   }
