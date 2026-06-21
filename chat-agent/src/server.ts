@@ -10,6 +10,8 @@ import { getSessionAnalytics } from './utils/sessionAnalytics';
 import { policyEnforcer, createPolicyEnforcer } from './middleware/policyGate';
 import { loadPolicyConfig } from './middleware/policyConfig';
 import { OPENSHARING_URL, OPENSHARING_PRINCIPAL_ID } from './runtimes/config';
+import { initializeMinIO, ensureAllBuckets } from './storage/MinioClient';
+import { startMinIOHealthMonitoring, stopMinIOHealthMonitoring } from './storage/minioHealth';
 
 const app = express();
 const PORT = process.env.PORT ?? 8000;
@@ -41,6 +43,17 @@ app.use('/', chatAgentRouter);
 app.use('/orchestration', orchestrationRouter);
 
 async function start() {
+  // Initialize MinIO storage
+  try {
+    initializeMinIO();
+    await ensureAllBuckets();
+    startMinIOHealthMonitoring(30000);  // Health check every 30 seconds
+    console.log('[MinIO] Initialized with all buckets and health monitoring');
+  } catch (err) {
+    console.warn('[MinIO] Initialization failed:', err instanceof Error ? err.message : String(err));
+    console.warn('[MinIO] Continuing without MinIO. Some features may be unavailable.');
+  }
+
   // Initialize metrics store and restore previous metrics
   await initializeMetricsStore('.cic-metrics');
   startMetricsSnapshot(15 * 60 * 1000);  // Save snapshot every 15 minutes
@@ -101,6 +114,7 @@ async function start() {
       getAlertingSystem().stop?.();
       getRemediationSystem().stop?.();
       getSessionAnalytics().stop?.();
+      stopMinIOHealthMonitoring();
 
       console.log('[Server] Background processes stopped');
       process.exit(0);
