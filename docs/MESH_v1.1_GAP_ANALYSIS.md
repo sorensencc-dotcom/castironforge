@@ -742,6 +742,7 @@ The AutonomyReviewBoard convenes quarterly (or on-demand for urgent promotion re
 ```yaml
 hitl:
   - step: <step_name>
+    condition: <optional jinja expression — gate fires only when true>
     action: approve
     autonomy_level: CONFIRMATIONAL      # enum per AutonomyLevel
     auto_promote_threshold: 25          # consecutive unmodified approvals required
