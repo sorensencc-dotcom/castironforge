@@ -10,6 +10,7 @@ import { getSessionAnalytics } from './utils/sessionAnalytics';
 import { policyEnforcer, createPolicyEnforcer } from './middleware/policyGate';
 import { loadPolicyConfig } from './middleware/policyConfig';
 import { OPENSHARING_URL, OPENSHARING_PRINCIPAL_ID } from './runtimes/config';
+import { initializeEmbeddingService } from './services/EmbeddingService';
 
 const app = express();
 const PORT = process.env.PORT ?? 8000;
@@ -41,6 +42,14 @@ app.use('/', chatAgentRouter);
 app.use('/orchestration', orchestrationRouter);
 
 async function start() {
+  // Initialize embedding service (OpenAI or local)
+  try {
+    initializeEmbeddingService();
+    console.log('[EmbeddingService] Initialized');
+  } catch (err) {
+    console.warn('[EmbeddingService] Failed to initialize:', err instanceof Error ? err.message : String(err));
+  }
+
   // Initialize metrics store and restore previous metrics
   await initializeMetricsStore('.cic-metrics');
   startMetricsSnapshot(15 * 60 * 1000);  // Save snapshot every 15 minutes

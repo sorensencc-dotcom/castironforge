@@ -1,56 +1,67 @@
-import { TORQUE_URL } from '../runtimes/config';
+import { searchDocuments as searchTypesense } from '../services/TypesenseClient';
+import { searchVectors as searchQdrant } from '../services/QdrantClient';
+import { embed } from '../services/EmbeddingService';
+import { hybridFuse } from '../services/HybridFusion';
 import { metricsCollector } from '../utils/metricsCollector';
+import type { FusedResult } from '../services/HybridFusion';
 
-export interface DocumentSearchResult {
-  id: string;
-  path: string;
+export interface DocumentSearchOptions {
+  topK?: number;
   repo?: string;
-  content: string;
-  mime: string;
-  title?: string;
-  author?: string;
-  score: number;
-  ingestedAt: string;
+  phase?: string;
+  adapter?: string;
+  alpha?: number;
+  beta?: number;
 }
 
 export async function docSearch(
   query: string,
-  options?: {
-    topK?: number;
-    repo?: string;
-    mimeType?: string;
-  }
-): Promise<DocumentSearchResult[]> {
+  options?: DocumentSearchOptions
+): Promise<FusedResult[]> {
   const timer = metricsCollector.start('document_search');
 
   try {
     const topK = options?.topK ?? 10;
+    const alpha = options?.alpha ?? 0.4;
+    const beta = options?.beta ?? 0.6;
 
-    const searchPayload: Record<string, unknown> = {
-      query,
-      topK,
-      collection: 'docs_files'
-    };
+    // Build Typesense filter
+    const filters: string[] = [];
+    if (options?.repo) filters.push(`repo:${options.repo}`);
+    if (options?.phase) filters.push(`phase:${options.phase}`);
+    if (options?.adapter) filters.push(`adapter:${options.adapter}`);
+    const filterBy = filters.length > 0 ? filters.join(' && ') : undefined;
 
-    if (options?.repo) {
-      searchPayload.filters = { repo: options.repo };
-    }
+    // Parallel: keyword search + semantic search
+    const [tsResults, embedding] = await Promise.all([
+      searchTypesense(query, {
+        queryBy: 'content,title,author',
+        filterBy,
+        perPage: topK
+      }),
+      embed(query)
+    ]);
 
-    const res = await fetch(`${TORQUE_URL}/query`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(searchPayload)
-    });
+    const qdantFilter = options?.repo || options?.phase || options?.adapter
+      ? {
+          must: [
+            options?.repo ? { key: 'repo', match: { value: options.repo } } : null,
+            options?.phase ? { key: 'phase', match: { value: options.phase } } : null,
+            options?.adapter ? { key: 'adapter', match: { value: options.adapter } } : null
+          ].filter(Boolean) as any[]
+        }
+      : undefined;
 
-    if (!res.ok) {
-      throw new Error(`Document search failed: ${res.status}`);
-    }
+    const qdResults = await searchQdrant('docs_files_vectors', embedding, topK, qdantFilter);
 
-    const data = (await res.json()) as {
-      results?: DocumentSearchResult[];
-    };
+    // Hybrid fusion
+    const results = hybridFuse(
+      tsResults.hits ?? [],
+      qdResults ?? [],
+      alpha,
+      beta
+    );
 
-    const results = data.results ?? [];
     timer.end();
     metricsCollector.increment('document_search_total');
 
