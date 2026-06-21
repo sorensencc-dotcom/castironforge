@@ -1,0 +1,17 @@
+{
+  "name": "torquequery-metrics",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "type-check": "./node_modules/.bin/tsc --noEmit"
+  },
+  "dependencies": {
+    "prom-client": "^15.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  }
+}

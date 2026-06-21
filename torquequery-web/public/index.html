@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TorqueQuery — Hybrid Code Search</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Courier New", monospace;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #00ff88;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    .subtitle {
+      color: #888;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .search-box {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      flex: 1;
+      padding: 12px;
+      background: #1a1a1a;
+      border: 2px solid #00ff88;
+      color: #00ff88;
+      font-family: monospace;
+      font-size: 14px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #00ffff;
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    }
+
+    button {
+      padding: 12px 24px;
+      background: #00ff88;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: monospace;
+    }
+
+    button:hover {
+      background: #00ffff;
+    }
+
+    .results {
+      margin-top: 20px;
+    }
+
+    .result {
+      padding: 12px;
+      margin-bottom: 8px;
+      background: #111;
+      border-left: 3px solid #00ff88;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .result:hover {
+      background: #1a1a1a;
+      border-left-color: #00ffff;
+      transform: translateX(5px);
+    }
+
+    .result-score {
+      display: inline-block;
+      color: #00ff88;
+      font-weight: bold;
+      min-width: 50px;
+    }
+
+    .result-path {
+      display: inline-block;
+      margin: 0 10px;
+      flex: 1;
+    }
+
+    .result-repo {
+      color: #888;
+      font-size: 12px;
+    }
+
+    .result-strategy {
+      display: inline-block;
+      margin-right: 5px;
+      font-size: 16px;
+    }
+
+    .no-results {
+      color: #888;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .loading {
+      color: #888;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .error {
+      color: #ff4444;
+      padding: 12px;
+      background: #1a0a0a;
+      border-left: 3px solid #ff4444;
+      margin-bottom: 10px;
+    }
+
+    .stats {
+      color: #888;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>⚡ TorqueQuery</h1>
+    <div class="subtitle">Hybrid code search (keyword + semantic)</div>
+
+    <div class="search-box">
+      <input
+        id="q"
+        type="text"
+        placeholder="Search code… (WarmPoolManager, Phase 27, how does hydration work, etc.)"
+        autocomplete="off"
+      />
+      <button onclick="search()">Search</button>
+    </div>
+
+    <div id="error"></div>
+    <div id="results"></div>
+  </div>
+
+  <script>
+    const input = document.getElementById("q");
+    const results = document.getElementById("results");
+    const error = document.getElementById("error");
+
+    async function search() {
+      const q = input.value.trim();
+      if (!q) return;
+
+      error.innerHTML = "";
+      results.innerHTML = '<div class="loading">Searching…</div>';
+
+      try {
+        const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
+        const data = await res.json();
+
+        if (!data.results || data.results.length === 0) {
+          results.innerHTML = '<div class="no-results">No results found.</div>';
+          return;
+        }
+
+        const html = data.results
+          .slice(0, 50)
+          .map(
+            r =>
+              `<div class="result" onclick="copyPath('${r.path}')">
+            <span class="result-strategy">${getStrategy(
+              r.keywordScore,
+              r.vectorScore
+            )}</span>
+            <span class="result-score">${(r.hybridScore || 0).toFixed(3)}</span>
+            <span class="result-path">${r.path}</span>
+            <span class="result-repo">${r.repo || "unknown"}</span>
+          </div>`
+          )
+          .join("");
+
+        results.innerHTML = html;
+
+        const strategy = getStrategyLabel();
+        results.innerHTML += `<div class="stats">
+          Total: ${data.results.length} result(s) | Strategy: keyword (📝) | semantic (🧠) | hybrid (🔄)
+        </div>`;
+      } catch (err) {
+        error.innerHTML = `<div class="error">Error: ${err.message}</div>`;
+      }
+    }
+
+    function getStrategy(keywordScore, vectorScore) {
+      if (keywordScore > 0 && vectorScore > 0) return "🔄";
+      if (keywordScore > 0) return "📝";
+      if (vectorScore > 0) return "🧠";
+      return "?";
+    }
+
+    function getStrategyLabel() {
+      return "keyword (📝) | semantic (🧠) | hybrid (🔄)";
+    }
+
+    function copyPath(path) {
+      navigator.clipboard.writeText(path);
+      alert(`Copied: ${path}`);
+    }
+
+    input.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") search();
+    });
+
+    input.addEventListener("input", () => {
+      if (input.value.trim()) {
+        const debounce = setTimeout(search, 300);
+        input.dataset.debounce = debounce;
+      }
+    });
+  </script>
+</body>
+</html>

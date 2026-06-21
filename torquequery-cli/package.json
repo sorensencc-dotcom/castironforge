@@ -1,0 +1,21 @@
+{
+  "name": "torquequery-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "tq": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli.ts",
+    "type-check": "./node_modules/.bin/tsc --noEmit"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.0.0"
+  }
+}
