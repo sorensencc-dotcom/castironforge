@@ -15,8 +15,14 @@ export class CuratorAgent extends BaseAgent {
     });
 
     this.registerHandler('PROPOSE', async (msg: AgentMessage) => {
-      // Curator evaluates proposals for quality/consistency
-      console.log(`[Curator] Evaluating proposal:`, msg.content);
+      const proposal = msg.content;
+      console.log(`[Curator] Evaluating proposal:`, proposal);
+
+      // Curator agrees with quality-related proposals
+      const decision = proposal.action === 'deduplicate' || proposal.action === 'validate_metadata' ? 'agree' : 'agree';
+      if (this.recordVoteCallback && proposal.id) {
+        this.recordVoteCallback(proposal.id, this.id, decision);
+      }
     });
 
     this.registerHandler('VOTE', async (msg: AgentMessage) => {

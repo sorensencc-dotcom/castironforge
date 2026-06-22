@@ -11,6 +11,9 @@ export class CoordinationBus {
    * Register an agent on the bus
    */
   async registerAgent(agent: BaseAgent): Promise<void> {
+    agent.setVoteCallback((proposalId, agentId, decision) => {
+      this.recordVote(proposalId, agentId, decision);
+    });
     await agent.initialize();
     this.agents.set(agent.id, agent);
     console.log(`[CoordinationBus] Registered ${agent.role}:${agent.name}`);
@@ -100,10 +103,49 @@ export class CoordinationBus {
   }
 
   /**
-   * Wait for votes to be collected (simplified - in production use proper async)
+   * Wait for votes to be collected from all agents
    */
   private async collectVotes(proposal: ActionProposal, timeoutMs: number = 5000): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, timeoutMs));
+    const totalAgents = this.agents.size;
+    const startTime = Date.now();
+
+    // Request each agent to vote on the proposal
+    for (const agent of this.agents.values()) {
+      try {
+        await agent.handleMessage({
+          id: `vote-req-${proposal.id}-${agent.id}`,
+          from: 'orchestrator',
+          type: 'PROPOSE',
+          timestamp: Date.now(),
+          content: proposal,
+          priority: proposal.priority
+        });
+      } catch (error) {
+        console.error(`[CoordinationBus] Error requesting vote from ${agent.id}:`, error);
+      }
+    }
+
+    // Wait for votes to come in or timeout
+    while (Date.now() - startTime < timeoutMs) {
+      if (proposal.votes && proposal.votes.size >= totalAgents) {
+        return; // All votes received
+      }
+      await this.sleep(100);
+    }
+
+    // Timeout: auto-vote any agents that didn't respond
+    if (!proposal.votes) {
+      proposal.votes = new Map();
+    }
+    for (const agent of this.agents.values()) {
+      if (!proposal.votes.has(agent.id)) {
+        proposal.votes.set(agent.id, 'agree'); // Default to agree on timeout
+      }
+    }
+  }
+
+  private sleep(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   /**

@@ -79,17 +79,23 @@ export class WorkflowManager {
 
     switch (task.action) {
       case 'REINDEX':
+        if (!task.documentId) {
+          throw new Error('REINDEX requires documentId');
+        }
         await this.reindexer.reindex(context);
         break;
 
       case 'REEMBED':
-        if (task.documentId) {
-          await this.reembedder.reembed(context);
+        if (!task.documentId) {
+          throw new Error('REEMBED requires documentId');
         }
+        await this.reembedder.reembed(context);
         break;
 
       case 'FIX_METADATA':
-        // FIX_METADATA is similar to REINDEX
+        if (!task.documentId) {
+          throw new Error('FIX_METADATA requires documentId');
+        }
         await this.reindexer.reindex(context);
         break;
 

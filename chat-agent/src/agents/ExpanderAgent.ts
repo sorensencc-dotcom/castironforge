@@ -19,8 +19,14 @@ export class ExpanderAgent extends BaseAgent {
     });
 
     this.registerHandler('PROPOSE', async (msg: AgentMessage) => {
-      // Expander evaluates proposals for expansion opportunities
-      console.log(`[Expander] Evaluating proposal:`, msg.content);
+      const proposal = msg.content;
+      console.log(`[Expander] Evaluating proposal:`, proposal);
+
+      // Expander agrees with expansion-related proposals
+      const decision = proposal.action === 'identify_gaps' || proposal.action === 'expand_phase' ? 'agree' : 'agree';
+      if (this.recordVoteCallback && proposal.id) {
+        this.recordVoteCallback(proposal.id, this.id, decision);
+      }
     });
 
     this.registerHandler('EXECUTE', async (msg: AgentMessage) => {

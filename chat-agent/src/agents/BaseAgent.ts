@@ -1,4 +1,4 @@
-import { Agent, AgentMessage, MessageType, AgentRole } from './types';
+import { Agent, AgentMessage, MessageType, AgentRole, VoteDecision } from './types';
 
 export abstract class BaseAgent implements Agent {
   id: string;
@@ -7,11 +7,16 @@ export abstract class BaseAgent implements Agent {
   healthy: boolean = true;
   lastHeartbeat: number = Date.now();
   private messageHandlers: Map<MessageType, (msg: AgentMessage) => Promise<void>> = new Map();
+  protected recordVoteCallback?: (proposalId: string, agentId: string, decision: VoteDecision) => void;
 
   constructor(id: string, role: AgentRole, name: string) {
     this.id = id;
     this.role = role;
     this.name = name;
+  }
+
+  setVoteCallback(callback: (proposalId: string, agentId: string, decision: VoteDecision) => void): void {
+    this.recordVoteCallback = callback;
   }
 
   /**

@@ -27,7 +27,6 @@ export class IntegrityChecker {
           tsDoc = await typesenseAdapter.getDocument("docs_files", id);
         } catch {
           issues.push({ id, type: "MISSING_INDEX" });
-          continue;
         }
 
         // 3. Check Qdrant vector
@@ -36,22 +35,22 @@ export class IntegrityChecker {
           if (!qd || qd.length === 0) {
             issues.push({ id, type: "MISSING_VECTOR" });
           }
-
-          // 4. Hash mismatch
-          if (sha256 && tsDoc.sha256 !== sha256) {
-            issues.push({
-              id,
-              type: "HASH_MISMATCH",
-              details: { raw: sha256, indexed: tsDoc.sha256 }
-            });
-          }
-
-          // 5. Missing metadata
-          if (!tsDoc.phase || !tsDoc.adapter) {
-            issues.push({ id, type: "MISSING_METADATA" });
-          }
         } catch {
           issues.push({ id, type: "MISSING_VECTOR" });
+        }
+
+        // 4. Hash mismatch (check if tsDoc exists)
+        if (tsDoc && sha256 && tsDoc.sha256 !== sha256) {
+          issues.push({
+            id,
+            type: "HASH_MISMATCH",
+            details: { raw: sha256, indexed: tsDoc.sha256 }
+          });
+        }
+
+        // 5. Missing metadata (check if tsDoc exists)
+        if (tsDoc && (!tsDoc.phase || !tsDoc.adapter)) {
+          issues.push({ id, type: "MISSING_METADATA" });
         }
       }
     } catch (error) {

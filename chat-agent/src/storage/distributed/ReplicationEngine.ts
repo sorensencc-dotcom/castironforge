@@ -62,14 +62,18 @@ export class ReplicationEngine {
 
       const dcId = queueKey.replace('-sync', '');
       const startTime = Date.now();
+      const sourceDCs = new Set<string>();
 
       try {
         for (const event of queue.events) {
+          sourceDCs.add(event.sourceDC);
           await this.replicateEvent(dcId, event);
         }
 
         queue.events = [];
-        this.updateSyncStatus(event.sourceDC, dcId, startTime);
+        for (const sourceDC of sourceDCs) {
+          this.updateSyncStatus(sourceDC, dcId, startTime);
+        }
       } catch (error) {
         console.error(`Sync failed for DC ${dcId}:`, error);
       }
@@ -99,12 +103,22 @@ export class ReplicationEngine {
   }
 
   private async copyObject(sourceClient: any, targetClient: any, bucket: string, key: string): Promise<void> {
+    const MAX_BUFFER_SIZE = 500 * 1024 * 1024; // 500MB limit
     const stream = await sourceClient.getObject(bucket, key);
 
     return new Promise((resolve, reject) => {
       const chunks: Buffer[] = [];
+      let totalSize = 0;
 
-      stream.on('data', (chunk: Buffer) => chunks.push(chunk));
+      stream.on('data', (chunk: Buffer) => {
+        totalSize += chunk.length;
+        if (totalSize > MAX_BUFFER_SIZE) {
+          stream.destroy();
+          reject(new Error(`Object too large to buffer (max ${MAX_BUFFER_SIZE / 1024 / 1024}MB)`));
+          return;
+        }
+        chunks.push(chunk);
+      });
       stream.on('end', async () => {
         try {
           const buffer = Buffer.concat(chunks);
@@ -120,13 +134,22 @@ export class ReplicationEngine {
 
   private async updateMetadata(client: any, event: ReplicationEvent): Promise<void> {
     if (!event.metadata) return;
-    // Metadata update logic - typically copy with new metadata
+    const MAX_BUFFER_SIZE = 500 * 1024 * 1024; // 500MB limit
     const stream = await client.getObject(event.bucket, event.key);
 
     return new Promise((resolve, reject) => {
       const chunks: Buffer[] = [];
+      let totalSize = 0;
 
-      stream.on('data', (chunk: Buffer) => chunks.push(chunk));
+      stream.on('data', (chunk: Buffer) => {
+        totalSize += chunk.length;
+        if (totalSize > MAX_BUFFER_SIZE) {
+          stream.destroy();
+          reject(new Error(`Object too large to buffer (max ${MAX_BUFFER_SIZE / 1024 / 1024}MB)`));
+          return;
+        }
+        chunks.push(chunk);
+      });
       stream.on('end', async () => {
         try {
           const buffer = Buffer.concat(chunks);

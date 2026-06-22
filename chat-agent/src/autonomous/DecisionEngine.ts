@@ -90,12 +90,16 @@ export class DecisionEngine {
   }
 
   private createWorkflowTask(rec: CorpusRecommendation): WorkflowTask {
+    const targetParts = rec.target?.split('-');
+    const prefix = targetParts?.[0];
+    const value = targetParts?.[1];
+
     return {
       id: `${rec.action}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       action: rec.action as WorkflowAction,
       documentId: rec.id,
-      targetPhase: rec.target?.split('-')[1],
-      targetAdapter: rec.target?.split('-')[1],
+      targetPhase: prefix === 'phase' ? value : undefined,
+      targetAdapter: prefix === 'adapter' ? value : undefined,
       priority: rec.priority,
       state: 'pending',
       createdAt: Date.now(),

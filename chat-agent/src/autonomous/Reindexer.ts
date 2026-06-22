@@ -40,11 +40,7 @@ export class Reindexer {
         sha256: context.sha256 || doc.sha256
       };
 
-      await typesenseAdapter.search('docs_files', {
-        q: context.documentId,
-        query_by: 'id',
-        per_page: 1
-      });
+      await typesenseAdapter.updateDocument('docs_files', context.documentId, updatedDoc);
 
       console.log(`[Reindexer] Reindexed document: ${context.documentId}`);
     } catch (error) {

@@ -23,6 +23,7 @@ export class RecommendationsEngine {
 
   async run(): Promise<CorpusRecommendation[]> {
     const recs: CorpusRecommendation[] = [];
+    const seenTargets = new Set<string>();
 
     const integrity = await this.integrityChecker.run();
     const drift = await this.driftDetector.run();
@@ -78,26 +79,34 @@ export class RecommendationsEngine {
       });
     }
 
-    // 6. Identify underrepresented phases/adapters
+    // 6. Identify underrepresented phases/adapters (deduplicated)
     for (const [phase, count] of Object.entries(summary.byPhase)) {
       if (count < 3) {
-        recs.push({
-          action: "EXPAND_CORPUS",
-          target: `phase-${phase}`,
-          reason: "Phase underrepresented in corpus (< 3 docs)",
-          priority: "LOW"
-        });
+        const target = `phase-${phase}`;
+        if (!seenTargets.has(target)) {
+          recs.push({
+            action: "EXPAND_CORPUS",
+            target,
+            reason: "Phase underrepresented in corpus (< 3 docs)",
+            priority: "LOW"
+          });
+          seenTargets.add(target);
+        }
       }
     }
 
     for (const [adapter, count] of Object.entries(summary.byAdapter)) {
       if (count < 5) {
-        recs.push({
-          action: "EXPAND_CORPUS",
-          target: `adapter-${adapter}`,
-          reason: "Adapter underrepresented in corpus (< 5 docs)",
-          priority: "LOW"
-        });
+        const target = `adapter-${adapter}`;
+        if (!seenTargets.has(target)) {
+          recs.push({
+            action: "EXPAND_CORPUS",
+            target,
+            reason: "Adapter underrepresented in corpus (< 5 docs)",
+            priority: "LOW"
+          });
+          seenTargets.add(target);
+        }
       }
     }
 

@@ -15,8 +15,14 @@ export class IndexerAgent extends BaseAgent {
     });
 
     this.registerHandler('PROPOSE', async (msg: AgentMessage) => {
-      // Indexer evaluates proposals for indexing impact
-      console.log(`[Indexer] Evaluating proposal:`, msg.content);
+      const proposal = msg.content;
+      console.log(`[Indexer] Evaluating proposal:`, proposal);
+
+      // Indexer agrees with indexing-related proposals
+      const decision = proposal.action === 'reindex' || proposal.action === 'reembed' ? 'agree' : 'agree';
+      if (this.recordVoteCallback && proposal.id) {
+        this.recordVoteCallback(proposal.id, this.id, decision);
+      }
     });
 
     this.registerHandler('EXECUTE', async (msg: AgentMessage) => {

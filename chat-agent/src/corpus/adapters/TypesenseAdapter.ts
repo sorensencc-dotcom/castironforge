@@ -9,6 +9,14 @@ export class TypesenseAdapter {
     }
   }
 
+  async updateDocument(collection: string, id: string, doc: any): Promise<any> {
+    try {
+      return await typesenseClient.collections(collection).documents(id).update(doc);
+    } catch (error) {
+      throw new Error(`Failed to update document ${id} in ${collection}: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
+
   async search(collection: string, options: any): Promise<any> {
     try {
       return await typesenseClient.collections(collection).documents().search(options);
