@@ -49,6 +49,74 @@ services:
     networks:
       - cic-network
 
+  # Phase 2: TorqueQuery Services
+  search-api:
+    build:
+      context: ./search-api
+      dockerfile: Dockerfile
+    container_name: cic-search-api
+    ports:
+      - "5050:5050"
+    environment:
+      NODE_ENV: development
+      TYPESENSE_HOST: typesense
+      TYPESENSE_PORT: "8108"
+      TYPESENSE_API_KEY: dev-key
+      SERVER_PORT: "5050"
+    depends_on:
+      typesense:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5050/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-network
+
+  torquequery-embeddings:
+    build:
+      context: ./torquequery-embeddings
+      dockerfile: Dockerfile
+    container_name: cic-embeddings
+    ports:
+      - "5053:5053"
+    environment:
+      NODE_ENV: development
+      PORT: "5053"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5053/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-network
+
+  torquequery-gateway:
+    build:
+      context: ./torquequery-gateway
+      dockerfile: Dockerfile
+    container_name: cic-gateway
+    ports:
+      - "5051:5051"
+    environment:
+      NODE_ENV: development
+      SEARCH_API_URL: http://search-api:5050
+      EMBEDDING_ENGINE_URL: http://torquequery-embeddings:5053
+      PORT: "5051"
+    depends_on:
+      search-api:
+        condition: service_healthy
+      torquequery-embeddings:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5051/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-network
+
   # TorqueQuery: RAG search service (FastAPI)
   torquequery:
     build:
