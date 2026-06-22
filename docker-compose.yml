@@ -1,6 +1,54 @@
 version: '3.8'
 
 services:
+  # Typesense: Code search index (Phase 26)
+  typesense:
+    image: typesense/typesense:latest
+    container_name: cic-typesense
+    ports:
+      - "8108:8108"
+    environment:
+      TYPESENSE_API_KEY: dev-key
+    volumes:
+      - typesense_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8108/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-network
+
+  # Typesense Indexer: Watch files, extract metadata, index code (Phase 26)
+  typesense-indexer:
+    build:
+      context: ./typesense-indexer
+      dockerfile: Dockerfile
+    container_name: cic-indexer
+    environment:
+      NODE_ENV: development
+      CIC_INDEXER_ENABLED: "true"
+      CIC_INDEXER_REPOS_0_PATH: /code
+      CIC_INDEXER_REPOS_0_NAME: castironforge
+      CIC_INDEXER_REPOS_0_PHASE: "26"
+      CIC_INDEXER_TYPESENSE_HOST: typesense
+      CIC_INDEXER_TYPESENSE_PORT: "8108"
+      CIC_INDEXER_TYPESENSE_API_KEY: dev-key
+      CIC_INDEXER_LOGGING_LEVEL: info
+    depends_on:
+      typesense:
+        condition: service_healthy
+    volumes:
+      - /code:/code:ro
+      - indexer_cache:/app/cache
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    networks:
+      - cic-network
+
   # TorqueQuery: RAG search service (FastAPI)
   torquequery:
     build:
@@ -106,6 +154,8 @@ services:
 
 volumes:
   ollama_data:
+  typesense_data:
+  indexer_cache:
 
 networks:
   default:
