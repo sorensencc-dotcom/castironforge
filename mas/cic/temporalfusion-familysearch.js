@@ -1,22 +1,31 @@
 // temporalfusion-familysearch.js — 2026-06-22 — v1.0.0
 
-export function fuseFamilySearchTemporal({ fsTemporal, otherTemporal }) {
-  const combined = [...(otherTemporal ?? []), ...(fsTemporal.events ?? [])];
+export function fuseFamilySearchTemporal({ fsEvents, providerEvents }) {
+  const fused = [...fsEvents];
 
-  // Sort chronologically
-  combined.sort((a, b) => (a.date > b.date ? 1 : -1));
-
-  // Remove duplicates by (type + date)
-  const seen = new Set();
-  const deduped = [];
-
-  for (const e of combined) {
-    const key = `${e.type}:${e.date}`;
-    if (!seen.has(key)) {
-      seen.add(key);
-      deduped.push(e);
+  for (const provider of Object.keys(providerEvents)) {
+    for (const e of providerEvents[provider]) {
+      fused.push({
+        ...e,
+        provider
+      });
     }
   }
 
-  return deduped;
+  // Sort by normalized date
+  fused.sort((a, b) => (a.normalizedDate > b.normalizedDate ? 1 : -1));
+
+  // Deduplicate by (type + normalizedDate)
+  const seen = new Set();
+  const result = [];
+
+  for (const e of fused) {
+    const key = `${e.type}:${e.normalizedDate}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      result.push(e);
+    }
+  }
+
+  return result;
 }
