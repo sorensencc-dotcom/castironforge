@@ -36,13 +36,13 @@ class CodeReviewAgent {
     }
 
     try {
-      execSync(`cd ${serviceRoot} && ./node_modules/.bin/tsc --noEmit 2>&1`, {
-        stdio: 'pipe',
+      execSync(`cd ${serviceRoot} && ./node_modules/.bin/tsc --noEmit`, {
+        stdio: 'ignore',
       });
       this.compiledServices.add(serviceRoot);
     } catch (e) {
       this.errors.push(
-        `TypeScript compilation failed in ${path.basename(serviceRoot)}:\n${e.stdout || e.message}`
+        `TypeScript compilation failed in ${path.basename(serviceRoot)}. Run 'npm run dev' to see details.`
       );
       this.compiledServices.add(serviceRoot);
     }
