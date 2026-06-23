@@ -1,0 +1,64 @@
+# Enforce Unix line endings (LF) for all tracked files
+* text=auto eol=lf
+
+# Source code
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.bash text eol=lf
+*.sql text eol=lf
+
+# Markup
+*.md text eol=lf
+*.html text eol=lf
+*.xml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Config files
+.editorconfig text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.pre-commit-config.yaml text eol=lf
+Dockerfile text eol=lf
+Makefile text eol=lf
+
+# Documentation
+*.txt text eol=lf
+*.csv text eol=lf
+*.tsv text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# Lock files - preserve as-is
+package-lock.json merge=union
+yarn.lock merge=union
+
+# Denormalize line endings for Windows batch files
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.exe binary
+
+# Git diff helpers
+*.sql diff=pgsql
+*.java diff=java
+*.rb diff=ruby
