@@ -9,6 +9,9 @@ on:
       - "services/**/*.py"
       - "workflows/**/*.yaml"
       - "agents/**/*.yaml"
+      - "!services/**/__tests__/**"
+      - "!services/**/*.spec.ts"
+      - "!services/**/*.test.ts"
   workflow_dispatch:
 
 jobs:
