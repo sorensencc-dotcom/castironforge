@@ -1,47 +1,36 @@
 // kgtemporalrebuilder-familysearch.js — 2026-06-22 — v1.0.0
 
-export function rebuildFamilySearchKGTemporal({ lineage, records }) {
-  const timeline = [];
+export function rebuildFamilySearchTemporalKG({ payload }) {
+  const events = [];
 
-  // Births
-  for (const p of lineage) {
-    if (p.birth) {
-      timeline.push({
-        date: p.birth,
-        type: "BIRTH",
-        personId: p.id,
-        source: "familysearch"
-      });
-    }
+  const p = payload.person;
+
+  if (p?.display?.birthDate) {
+    events.push({
+      type: "BIRTH",
+      date: p.display.birthDate,
+      source: "familysearch"
+    });
   }
 
-  // Deaths
-  for (const p of lineage) {
-    if (p.death) {
-      timeline.push({
-        date: p.death,
-        type: "DEATH",
-        personId: p.id,
-        source: "familysearch"
-      });
-    }
+  if (p?.display?.deathDate) {
+    events.push({
+      type: "DEATH",
+      date: p.display.deathDate,
+      source: "familysearch"
+    });
   }
 
-  // Records
-  for (const r of records) {
+  for (const r of payload.records ?? []) {
     if (r.date) {
-      timeline.push({
-        date: r.date,
+      events.push({
         type: "RECORD",
-        recordId: r.id,
-        title: r.title,
-        source: "familysearch"
+        date: r.date,
+        source: "familysearch",
+        recordId: r.id
       });
     }
   }
 
-  // Sort chronologically
-  timeline.sort((a, b) => (a.date > b.date ? 1 : -1));
-
-  return timeline;
+  return events.sort((a, b) => (a.date > b.date ? 1 : -1));
 }
