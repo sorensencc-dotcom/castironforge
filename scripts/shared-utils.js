@@ -37,14 +37,10 @@ function getStagedFiles(extensions = ['.ts'], excludePatterns = ['__tests__', '.
  * @returns {string|null} Service root directory or null if not found
  */
 function findServiceRoot(filePath) {
-  let current = path.dirname(filePath);
-  while (current !== '/' && !current.includes('/services/')) {
-    current = path.dirname(current);
-  }
+  const parts = filePath.split('/');
+  const servicesIdx = parts.indexOf('services');
 
-  if (current.includes('/services/')) {
-    const parts = current.split('/');
-    const servicesIdx = parts.indexOf('services');
+  if (servicesIdx !== -1 && servicesIdx + 1 < parts.length) {
     return parts.slice(0, servicesIdx + 2).join('/');
   }
 
