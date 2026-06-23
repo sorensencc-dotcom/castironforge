@@ -8,6 +8,14 @@ export type { DbConfig } from './db/client';
 // Write path
 export { writeLedgerEntry } from './write/writeLedgerEntry';
 
+// Read path
+export {
+  readLatestEntry,
+  readRollingWindow,
+  readCumulative,
+  readByQuery,
+} from './read/readLedgerEntry';
+
 // Governance
 export { onGovernanceEvent, offGovernanceEvent, emitGovernanceEvent } from './governance/governanceEvents';
 
