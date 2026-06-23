@@ -1,0 +1,17 @@
+{
+  "name": "castironforge",
+  "version": "1.0.0",
+  "description": "Cast Iron Forge - Multi-service platform",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "review": "node scripts/code-review.js",
+    "generate-docs": "node scripts/generate-docs.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "husky": "^8.0.3",
+    "typedoc": "^0.25.0",
+    "typescript": "^5.0.0"
+  }
+}

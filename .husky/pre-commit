@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Pre-commit hook: Code Review + Documentation Generation
+# Blocks on serious issues only
+# Auto-generates documentation and commits it
+
+echo ""
+echo "🔍 Pre-commit checks running..."
+echo ""
+
+# Run code review (blocks if errors)
+node scripts/code-review.js
+if [ $? -ne 0 ]; then
+  exit 1
+fi
+
+# Generate documentation (non-blocking, auto-stages)
+node scripts/generate-docs.js
+
+echo "✅ Pre-commit checks passed - ready to commit!"
+echo ""
