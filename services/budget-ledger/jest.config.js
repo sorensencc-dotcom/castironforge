@@ -2,13 +2,17 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   roots: ['<rootDir>/src'],
-  testMatch: ['**/__tests__/**/*.test.ts', '**/?(*.)+(spec|test).ts'],
+  testMatch: ['**/__tests__/**/*.test.ts', '**/?(*.)+(spec|test).ts', '**/__tests__/**/*.spec.ts'],
   moduleFileExtensions: ['ts', 'js', 'json'],
   transform: {
-    '^.+\\.ts$': ['ts-jest', {
+    '^.+\\.tsx?$': ['ts-jest', {
       tsconfig: {
         ...require('./tsconfig.json').compilerOptions,
         module: 'commonjs',
+        esModuleInterop: true,
+        allowSyntheticDefaultImports: true,
+        noUnusedLocals: false,
+        noUnusedParameters: false,
       },
     }],
   },
