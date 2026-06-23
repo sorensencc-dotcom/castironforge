@@ -26,11 +26,11 @@ export function initializeDb(config: DbConfig): void {
   });
 }
 
-export async function query<T = any>(text: string, values?: any[]): Promise<QueryResult<T>> {
+export async function query<T = any>(text: string, values?: any[]): Promise<QueryResult> {
   if (!pool) {
     throw new Error('Database pool not initialized. Call initializeDb() first.');
   }
-  return pool.query<T>(text, values);
+  return pool.query(text, values) as any;
 }
 
 export async function transaction<T>(
