@@ -186,6 +186,157 @@ function testHandleNullPreviousSnapshot() {
   console.log("✓ testHandleNullPreviousSnapshot passed");
 }
 
+// Test 7: Ancestry provider integration
+function testAncestryProviderIntegration() {
+  const input = {
+    previousFs: null,
+    currentFs: {
+      person: { display: { birthDate: "1822-06-15", deathDate: "1886-03-20" } },
+      records: []
+    },
+    providerPayloads: {
+      ancestry: {
+        person: {
+          display: {
+            birthDate: "1822",
+            deathDate: "1886"
+          }
+        },
+        records: [
+          { id: "anc-1", type: "CENSUS", date: "1850" },
+          { id: "anc-2", type: "CENSUS", date: "1860" }
+        ]
+      }
+    },
+    providerStats: {
+      ancestry: { reliability: 0.82 }
+    }
+  };
+
+  const result = runCicFamilySearchTemporalPipeline(input);
+
+  assert(result.providers.ancestry, "Should process Ancestry provider");
+  assert(result.providers.ancestry.length >= 2, "Should extract Ancestry events");
+
+  const ancestryBirth = result.providers.ancestry.find(e => e.type === "BIRTH");
+  assert(ancestryBirth, "Should extract Ancestry birth event");
+  assert(ancestryBirth.source === "ancestry", "Source should be ancestry");
+
+  console.log("✓ testAncestryProviderIntegration passed");
+}
+
+// Test 8: WikiData provider integration
+function testWikiDataProviderIntegration() {
+  const input = {
+    previousFs: null,
+    currentFs: {
+      person: { display: { birthDate: "1822-06-15", deathDate: "1886-03-20" } },
+      records: []
+    },
+    providerPayloads: {
+      wikidata: {
+        person: {
+          birthDate: { value: "1822-06-15", precision: 8 },
+          deathDate: { value: "1886-03-20", precision: 8 }
+        },
+        events: []
+      }
+    },
+    providerStats: {
+      wikidata: { reliability: 0.88 }
+    }
+  };
+
+  const result = runCicFamilySearchTemporalPipeline(input);
+
+  assert(result.providers.wikidata, "Should process WikiData provider");
+  assert(result.providers.wikidata.length >= 2, "Should extract WikiData events");
+
+  const wikiDataBirth = result.providers.wikidata.find(e => e.type === "BIRTH");
+  assert(wikiDataBirth, "Should extract WikiData birth event");
+  assert(wikiDataBirth.source === "wikidata", "Source should be wikidata");
+
+  console.log("✓ testWikiDataProviderIntegration passed");
+}
+
+// Test 9: All three providers together
+function testMultiProviderWithAncestryAndWikiData() {
+  const input = {
+    previousFs: null,
+    currentFs: {
+      person: { display: { birthDate: "1822-06-15", deathDate: "1886-03-20" } },
+      records: []
+    },
+    providerPayloads: {
+      ancestry: {
+        person: { display: { birthDate: "1822", deathDate: "1886" } },
+        records: []
+      },
+      wikidata: {
+        person: {
+          birthDate: { value: "1822-06-15", precision: 8 },
+          deathDate: { value: "1886-03-20", precision: 8 }
+        },
+        events: []
+      }
+    },
+    providerStats: {
+      ancestry: { reliability: 0.82 },
+      wikidata: { reliability: 0.88 }
+    }
+  };
+
+  const result = runCicFamilySearchTemporalPipeline(input);
+
+  assert(result.providers.ancestry, "Should process Ancestry");
+  assert(result.providers.wikidata, "Should process WikiData");
+  assert(result.arbitration, "Should perform arbitration across all 3 providers");
+
+  const providerCount = Object.keys(result.providers).length;
+  assert(providerCount === 2, "Should have 2 providers");
+
+  console.log("✓ testMultiProviderWithAncestryAndWikiData passed");
+}
+
+// Test 10: Arbitration with conflicting dates across Ancestry and WikiData
+function testArbitrationWithAncestryAndWikiData() {
+  const input = {
+    previousFs: null,
+    currentFs: {
+      person: { display: { birthDate: "1822-06-15", deathDate: "1886-03-20" } },
+      records: []
+    },
+    providerPayloads: {
+      ancestry: {
+        person: { display: { birthDate: "1821", deathDate: "1886" } },
+        records: []
+      },
+      wikidata: {
+        person: {
+          birthDate: { value: "1823", precision: 6 },
+          deathDate: { value: "1886", precision: 6 }
+        },
+        events: []
+      }
+    },
+    providerStats: {
+      ancestry: { reliability: 0.82 },
+      wikidata: { reliability: 0.88 }
+    }
+  };
+
+  const result = runCicFamilySearchTemporalPipeline(input);
+
+  assert(result.arbitration, "Should perform arbitration");
+  assert(result.arbitration.decisions, "Should have arbitration decisions");
+
+  // Verify that FamilySearch event was normalized and compared
+  assert(result.current.enhanced, "Should have current enhanced events");
+  assert(result.current.enhanced.some(e => e.type === "BIRTH"), "Should have birth event");
+
+  console.log("✓ testArbitrationWithAncestryAndWikiData passed");
+}
+
 // Run all tests
 export function runMasterPipelineTests() {
   testCompletePipelineExecution();
@@ -194,5 +345,9 @@ export function runMasterPipelineTests() {
   testStabilityScoring();
   testReconstructionOfMissingDates();
   testHandleNullPreviousSnapshot();
+  testAncestryProviderIntegration();
+  testWikiDataProviderIntegration();
+  testMultiProviderWithAncestryAndWikiData();
+  testArbitrationWithAncestryAndWikiData();
   console.log("All master pipeline tests passed!\n");
 }

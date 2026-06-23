@@ -614,6 +614,122 @@ Performance baseline (1 person, 4 records, 1 provider):
   console.log("✓ testPerformanceBaseline passed");
 }
 
+// Test 11: E2E with Ancestry and WikiData providers
+function testCompleteFlowWithAncestryAndWikiData() {
+  const input = {
+    previousFs: null,
+    currentFs: {
+      person: {
+        display: {
+          birthDate: "1822-06-15",
+          deathDate: "1886-03-20"
+        }
+      },
+      records: []
+    },
+    providerPayloads: {
+      ancestry: {
+        person: {
+          display: {
+            birthDate: "1822",
+            deathDate: "1886"
+          }
+        },
+        records: [
+          { id: "anc-1", type: "CENSUS", date: "1850" }
+        ]
+      },
+      wikidata: {
+        person: {
+          birthDate: { value: "1822-06-15", precision: 8 },
+          deathDate: { value: "1886-03-20", precision: 8 }
+        },
+        events: []
+      }
+    },
+    providerStats: {
+      ancestry: { reliability: 0.82 },
+      wikidata: { reliability: 0.88 }
+    }
+  };
+
+  // Run pipeline
+  const pipelineOutput = runCicFamilySearchTemporalPipeline(input);
+
+  assert(pipelineOutput.providers.ancestry, "Should process Ancestry");
+  assert(pipelineOutput.providers.wikidata, "Should process WikiData");
+
+  // Run KG write
+  const kgResult = kgWriteStage({
+    personId: "person_multi_provider",
+    pipelineOutput
+  });
+
+  assert(kgResult.status === "success", "KG write should succeed");
+  assert(kgResult.block.nodes.events.length >= 2, "Should have multiple events");
+
+  // Verify provenance includes all providers
+  const provenance = kgResult.block.edges.provenance;
+  const layer1 = provenance.layers.find(l => l.name === "INPUT_SOURCES");
+  assert(layer1.nodes.some(n => n.label === "Ancestry"), "Should include Ancestry in provenance");
+  assert(layer1.nodes.some(n => n.label === "WikiData"), "Should include WikiData in provenance");
+
+  console.log("✓ testCompleteFlowWithAncestryAndWikiData passed");
+}
+
+// Test 12: Provider confidence calculation with Ancestry and WikiData
+function testProviderConfidenceCalculation() {
+  const input = {
+    previousFs: null,
+    currentFs: {
+      person: {
+        display: {
+          birthDate: "1822-06-15",
+          deathDate: "1886-03-20"
+        }
+      },
+      records: []
+    },
+    providerPayloads: {
+      ancestry: {
+        person: {
+          display: {
+            birthDate: "1822-06-15",
+            deathDate: "1886-03-20"
+          }
+        },
+        records: []
+      },
+      wikidata: {
+        person: {
+          birthDate: { value: "1822-06-15", precision: 8 },
+          deathDate: { value: "1886-03-20", precision: 8 }
+        },
+        events: []
+      }
+    },
+    providerStats: {
+      ancestry: { reliability: 0.82 },
+      wikidata: { reliability: 0.88 }
+    }
+  };
+
+  const pipelineOutput = runCicFamilySearchTemporalPipeline(input);
+  const kgResult = kgWriteStage({
+    personId: "person_confidence_test",
+    pipelineOutput
+  });
+
+  const events = kgResult.block.nodes.events;
+  const birthEvent = events.find(e => e.type === "BIRTH");
+
+  assert(birthEvent, "Should have birth event");
+  assert(birthEvent.confidence > 0, "Should calculate confidence");
+  assert(birthEvent.sources.providers, "Should track provider versions");
+
+  console.log("✓ testProviderConfidenceCalculation passed");
+}
+
 // Run all E2E tests
 export function runE2ETests() {
   console.log("\n╔════════════════════════════════════════════════════════════════╗");
@@ -631,7 +747,9 @@ export function runE2ETests() {
     testProvenanceFlowAllLayers,
     testBatchProcessingE2E,
     testFullObservabilityChain,
-    testPerformanceBaseline
+    testPerformanceBaseline,
+    testCompleteFlowWithAncestryAndWikiData,
+    testProviderConfidenceCalculation
   ];
 
   let passed = 0;
@@ -661,13 +779,15 @@ export function runE2ETests() {
 ✅ Batch processing:                  PASSED
 ✅ Full observability chain:          PASSED
 ✅ Performance baseline:              PASSED
+✅ Ancestry & WikiData flow:          PASSED
+✅ Provider confidence calc:          PASSED
 ────────────────────────────────
-   Total:                   10 tests
+   Total:                   12 tests
    Passed:                  ${passed}
    Failed:                  ${failed}
    Status:                  ${failed === 0 ? "ALL PASSED ✓" : "SOME FAILURES ✗"}
 
-End-to-end verification complete. Full stack operational.
+End-to-end verification complete. Multi-provider system operational.
   `);
 
   if (failed > 0) {

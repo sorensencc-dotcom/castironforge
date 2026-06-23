@@ -3,6 +3,7 @@
 // Orchestrates all 8 temporal engines in deterministic order
 
 import { extractFamilySearchTemporal } from "./fs-temporal-extract.js";
+import { dispatchTemporalExtraction } from "./temporal-extractor-dispatcher.js";
 import { normalizeFamilySearchTemporal } from "./kgtemporalnormalize-familysearch.js";
 import { enhanceFamilySearchTemporalPrecision } from "./kgtemporalprecision-familysearch.js";
 import { checkFamilySearchTemporalConsistency } from "./kgtemporalconsistency-familysearch.js";
@@ -46,7 +47,7 @@ export function runCicFamilySearchTemporalPipeline({
   // 3. Providers through same deterministic pipeline
   const providerEvents = {};
   for (const provider of Object.keys(providerPayloads ?? {})) {
-    const raw = extractFamilySearchTemporal(providerPayloads[provider]);
+    const raw = dispatchTemporalExtraction(provider, providerPayloads[provider]);
     const norm = normalizeFamilySearchTemporal({ events: raw });
     const enhanced = enhanceFamilySearchTemporalPrecision({ events: norm });
     providerEvents[provider] = enhanced;
