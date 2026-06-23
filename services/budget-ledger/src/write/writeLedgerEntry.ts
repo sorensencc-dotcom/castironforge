@@ -270,7 +270,7 @@ async function performWrite(
 
 async function checkGovernanceConditions(
   entry: LedgerEntry,
-  client: PoolClient,
+  _client: PoolClient,
   config?: GovernanceConfig
 ): Promise<GovernanceEvent[]> {
   const events: GovernanceEvent[] = [];
