@@ -18,6 +18,16 @@ export {
 
 // Governance
 export { onGovernanceEvent, offGovernanceEvent, emitGovernanceEvent } from './governance/governanceEvents';
+export {
+  registerGovernanceHook,
+  onSloControllerEvent,
+  onCanaryGateEvent,
+  checkGovernanceState,
+  checkBudgetExhaustion,
+  checkThresholdWarnings,
+  checkSloViolation,
+} from './governance/hooks';
+export type { GovernanceConfig, GovernanceDecision } from './governance/hooks';
 
 // Metrics
 export {
