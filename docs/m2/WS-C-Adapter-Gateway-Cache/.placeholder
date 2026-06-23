@@ -1,0 +1,9 @@
+# WS-C: Adapter Gateway Cache (Coming Soon)
+
+Files to be populated:
+- overview.md
+- caching-strategy.md
+- invalidation.md
+- metrics.md
+- load-behavior.md
+- tests.md
