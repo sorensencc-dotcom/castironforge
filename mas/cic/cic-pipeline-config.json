@@ -1,0 +1,39 @@
+{
+  "id": "familysearch-temporal",
+  "version": "1.0.0",
+  "description": "FamilySearch Temporal Processing Pipeline for CIC",
+  "stages": [
+    {
+      "id": "fs.ingest",
+      "type": "source",
+      "module": "fsIngestAdapter",
+      "description": "Ingest FamilySearch payload (previous snapshot, current snapshot, provider payloads, provider stats)",
+      "outputs": ["previousFs", "currentFs", "providerPayloads", "providerStats"]
+    },
+    {
+      "id": "fs.temporal",
+      "type": "transform",
+      "module": "cicFamilySearchTemporalStage",
+      "description": "Run all 8 temporal engines (extract, normalize, enhance, consistency, drift, arbitration, stability, reconstruction)",
+      "inputs": ["previousFs", "currentFs", "providerPayloads", "providerStats"],
+      "outputs": ["temporal"]
+    },
+    {
+      "id": "kg.write",
+      "type": "sink",
+      "module": "kgWriteAdapter",
+      "description": "Write temporal block to CIC Knowledge Graph",
+      "inputs": ["temporal"]
+    }
+  ],
+  "engines": [
+    "ExtractFamilySearchTemporal",
+    "NormalizeFamilySearchTemporal",
+    "EnhanceFamilySearchTemporalPrecision",
+    "CheckFamilySearchTemporalConsistency",
+    "DetectFamilySearchTemporalDrift",
+    "ArbitrateFamilySearchTemporalV2",
+    "ComputeFamilySearchTemporalStability",
+    "ReconstructFamilySearchTemporal"
+  ]
+}
