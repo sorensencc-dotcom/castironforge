@@ -9,6 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { getStagedFiles, findServiceRoot, findTsConfig } = require('./shared-utils');
 
 const RED = '\x1b[31m';
 const YELLOW = '\x1b[33m';
@@ -19,41 +20,31 @@ class CodeReviewAgent {
   constructor() {
     this.errors = [];
     this.warnings = [];
-    this.stagedFiles = this.getStagedFiles();
-  }
-
-  getStagedFiles() {
-    try {
-      const output = execSync('git diff --cached --name-only', { encoding: 'utf-8' });
-      return output
-        .split('\n')
-        .filter(f => f && (f.endsWith('.ts') || f.endsWith('.js')))
-        .filter(f => !f.includes('__tests__') && !f.includes('.spec.') && !f.includes('.test.'));
-    } catch (e) {
-      return [];
-    }
+    this.stagedFiles = getStagedFiles(['.ts', '.js']);
+    this.compiledServices = new Set();
   }
 
   /**
    * Check TypeScript compilation
+   * Runs once per service, not per file (optimization)
    * This is a BLOCKER if it fails
    */
   checkTypeScript(file) {
-    const dir = path.dirname(file);
-    const tsconfigPath = this.findTsConfig(dir);
-
-    if (!tsconfigPath) return;
+    const serviceRoot = findServiceRoot(file);
+    if (!serviceRoot || this.compiledServices.has(serviceRoot)) {
+      return;
+    }
 
     try {
-      // Find the service root
-      const serviceRoot = this.findServiceRoot(dir);
-      if (!serviceRoot) return;
-
-      execSync(`cd ${serviceRoot} && ./node_modules/.bin/tsc --noEmit`, {
-        stdio: 'ignore',
+      execSync(`cd ${serviceRoot} && ./node_modules/.bin/tsc --noEmit 2>&1`, {
+        stdio: 'pipe',
       });
+      this.compiledServices.add(serviceRoot);
     } catch (e) {
-      this.errors.push(`TypeScript compilation failed in ${path.basename(dir)}`);
+      this.errors.push(
+        `TypeScript compilation failed in ${path.basename(serviceRoot)}:\n${e.stdout || e.message}`
+      );
+      this.compiledServices.add(serviceRoot);
     }
   }
 
@@ -151,28 +142,6 @@ class CodeReviewAgent {
     }
   }
 
-  findTsConfig(dir) {
-    let current = dir;
-    while (current !== '/') {
-      const tsconfigPath = path.join(current, 'tsconfig.json');
-      if (fs.existsSync(tsconfigPath)) {
-        return tsconfigPath;
-      }
-      current = path.dirname(current);
-    }
-    return null;
-  }
-
-  findServiceRoot(dir) {
-    let current = dir;
-    while (current !== '/' && !current.endsWith('services')) {
-      if (fs.existsSync(path.join(current, 'package.json'))) {
-        return current;
-      }
-      current = path.dirname(current);
-    }
-    return current.endsWith('services') ? path.dirname(current) : null;
-  }
 
   run() {
     console.log('\n📋 Code Review Agent\n');

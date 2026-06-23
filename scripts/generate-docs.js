@@ -9,6 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { getStagedFiles, findServiceRoot } = require('./shared-utils');
 
 const GREEN = '\x1b[32m';
 const BLUE = '\x1b[34m';
@@ -16,37 +17,8 @@ const RESET = '\x1b[0m';
 
 class DocsGeneratorAgent {
   constructor() {
-    this.stagedFiles = this.getStagedFiles();
+    this.stagedFiles = getStagedFiles(['.ts']);
     this.generatedDocs = [];
-  }
-
-  getStagedFiles() {
-    try {
-      const output = execSync('git diff --cached --name-only', { encoding: 'utf-8' });
-      return output
-        .split('\n')
-        .filter(f => f && f.endsWith('.ts') && !f.includes('__tests__') && !f.includes('.spec.'));
-    } catch (e) {
-      return [];
-    }
-  }
-
-  /**
-   * Find the service root for a file
-   */
-  findServiceRoot(filePath) {
-    let current = path.dirname(filePath);
-    while (current !== '/' && !current.includes('/services/')) {
-      current = path.dirname(current);
-    }
-
-    if (current.includes('/services/')) {
-      const parts = current.split('/');
-      const servicesIdx = parts.indexOf('services');
-      return parts.slice(0, servicesIdx + 2).join('/');
-    }
-
-    return null;
   }
 
   /**
@@ -208,7 +180,7 @@ Generated automatically. Last updated: ${new Date().toISOString()}
     // Find unique services
     const services = new Set();
     this.stagedFiles.forEach(file => {
-      const service = this.findServiceRoot(file);
+      const service = findServiceRoot(file);
       if (service) {
         services.add(service);
       }

@@ -6,7 +6,7 @@ export interface GovernanceConfig {
   maxTokens?: number;
   maxCostUsd?: number;
   warningThresholdPercent?: number;
-  caustionThresholdPercent?: number;
+  cautionThresholdPercent?: number;
   burstLimitTokensPer1m?: number;
 }
 
@@ -161,7 +161,7 @@ export async function checkThresholdWarnings(
   try {
     const cumulative = await readCumulative(agentId, sessionId);
     const warningThreshold = config.warningThresholdPercent ?? 0.8;
-    const caustionThreshold = config.caustionThresholdPercent ?? 0.7;
+    const caustionThreshold = config.cautionThresholdPercent ?? 0.7;
 
     if (config.maxCostUsd) {
       const warningThresholdCost = config.maxCostUsd * warningThreshold;

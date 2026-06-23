@@ -284,7 +284,7 @@ describe('Governance Hooks', () => {
 
       const config: GovernanceConfig = {
         maxCostUsd: 100,
-        caustionThresholdPercent: 0.7,
+        cautionThresholdPercent: 0.7,
       };
       await checkThresholdWarnings('agent-1', 'session-1', config);
 
