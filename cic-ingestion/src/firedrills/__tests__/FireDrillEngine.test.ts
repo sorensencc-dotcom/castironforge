@@ -113,7 +113,7 @@ describe('FireDrillEngine', () => {
             type: FireDrillAssertionType.ADAPTER_HEALTH_UPDATED,
             condition: (ctx: FireDrillContext) => {
               const health = ctx.adapterHealthStatus['test-adapter'];
-              return health?.failureCount ?? 0 > 0;
+              return (health?.failureCount ?? 0) > 0;
             },
             description: 'Adapter health updated',
           },
@@ -433,12 +433,12 @@ describe('FireDrillEngine', () => {
         name: 'Test Concurrent',
         description: 'Test concurrent limit',
         tags: ['test'],
-        expectedDuration: 5000,
+        expectedDuration: 1000,
         faults: [
           {
             type: FireDrillFaultType.ADAPTER_FAILURE,
             targetAdapter: 'test',
-            durationMs: 4000,
+            durationMs: 500,
             severity: 1,
           },
         ],
@@ -447,11 +447,17 @@ describe('FireDrillEngine', () => {
 
       const promise1 = limitedEngine.runScenario(scenario);
 
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise(resolve => setTimeout(resolve, 50));
 
-      expect(() => {
-        limitedEngine.runScenario(scenario);
-      }).toThrow();
+      // Second call should throw since limit is 1 and one drill is active
+      let threwError = false;
+      try {
+        await limitedEngine.runScenario(scenario);
+      } catch (err) {
+        threwError = true;
+      }
+
+      expect(threwError).toBe(true);
 
       await promise1;
     });

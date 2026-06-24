@@ -38,7 +38,7 @@ export class FireDrillScenarios {
         type: FireDrillAssertionType.ADAPTER_HEALTH_UPDATED,
         condition: (ctx: FireDrillContext) => {
           const health = ctx.adapterHealthStatus['adapter1'];
-          return health?.failureCount ?? 0 > 0;
+          return (health?.failureCount ?? 0) > 0;
         },
         description: 'Adapter failure count increased',
       },
