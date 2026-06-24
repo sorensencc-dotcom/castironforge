@@ -7,6 +7,7 @@ import { rag } from '../rag/rag';
 import { buildRagPrompt } from '../rag/promptBuilder';
 import { estimateResponseTokens } from '../utils/tokenCounter';
 import { tikaHealthCheck } from '../services/TikaHealthCheck';
+import { getCICIntegration } from '../cic/CICIntegration';
 
 export const chatAgentRouter = Router();
 
@@ -14,9 +15,13 @@ chatAgentRouter.get('/health', async (_req, res) => {
   try {
     const runtimeHealth = await runtimeRegistry.getHealth();
     const tikaStatus = await tikaHealthCheck.check();
+    const cicIntegration = getCICIntegration();
+    const cicHealth = cicIntegration.isAvailable() ? cicIntegration.getHealthStatus() : { cicAvailable: false };
+
     res.json({
       ...runtimeHealth,
-      tika: tikaStatus
+      tika: tikaStatus,
+      cic: cicHealth
     });
   } catch (err) {
     res.status(500).json({ error: 'Health check failed' });
