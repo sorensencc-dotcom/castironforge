@@ -7,9 +7,22 @@
  * Features:
  * - SLO monitoring for chat-agent operations
  * - Adapter gateway for external service orchestration
+ * - Adapter integration service with response caching
+ * - SLO violation webhook alerting
  * - Health status reporting
  * - Metrics export to Prometheus
  */
+
+interface WebhookConfigInput {
+  id: string;
+  url: string;
+  name: string;
+  enabled?: boolean;
+  retryCount?: number;
+  retryDelayMs?: number;
+  timeout?: number;
+  headers?: Record<string, string>;
+}
 
 interface CICIntegrationConfig {
   enabled: boolean;
@@ -18,6 +31,7 @@ interface CICIntegrationConfig {
     errorRatePercent?: number;
     saturationPercent?: number;
   };
+  webhooks?: WebhookConfigInput[];
 }
 
 interface CICHealthStatus {
@@ -36,6 +50,8 @@ class CICIntegration {
   private config: CICIntegrationConfig;
   private sloController: any;
   private adapterGateway: any;
+  private adapterIntegrationService: any;
+  private sloWebhook: any;
   private isInitialized = false;
 
   constructor(config: CICIntegrationConfig = { enabled: false }) {
@@ -52,6 +68,8 @@ class CICIntegration {
       // Dynamically import CIC modules
       const { SLOController } = await import('../../../cic-ingestion/dist/src/slo/SLOController');
       const { AdapterGateway } = await import('../../../cic-ingestion/dist/src/adapter/AdapterGateway');
+      const { AdapterIntegrationService, initializeAdapterIntegration } = await import('../adapters/AdapterIntegrationService');
+      const { SLOViolationWebhook, initializeSLOWebhook } = await import('./SLOViolationWebhook');
 
       // Initialize SLO Controller
       this.sloController = new SLOController({
@@ -71,12 +89,70 @@ class CICIntegration {
         ttlMs: 300000, // 5 minutes
       });
 
+      // Initialize Adapter Integration Service
+      this.adapterIntegrationService = initializeAdapterIntegration({
+        maxSize: 1024 * 1024 * 10,
+        maxEntries: 5000,
+        ttlMs: 300000,
+      });
+      console.log('[CIC] Adapter Integration Service initialized');
+
+      // Initialize SLO Violation Webhook
+      this.sloWebhook = initializeSLOWebhook();
+
+      // Register configured webhooks
+      if (this.config.webhooks && this.config.webhooks.length > 0) {
+        for (const webhookConfig of this.config.webhooks) {
+          this.sloWebhook.registerWebhook({
+            ...webhookConfig,
+            enabled: webhookConfig.enabled ?? true,
+          });
+        }
+        console.log(`[CIC] Registered ${this.config.webhooks.length} SLO violation webhooks`);
+      }
+
       this.isInitialized = true;
       console.log('[CIC] Integration initialized successfully');
     } catch (err) {
       console.warn('[CIC] Failed to initialize integration:', err instanceof Error ? err.message : String(err));
       console.warn('[CIC] Chat-agent will continue without CIC monitoring');
       this.isInitialized = false;
+    }
+  }
+
+  /**
+   * Get Adapter Integration Service for cache-aware adapter operations
+   */
+  getAdapterIntegration(): any {
+    return this.adapterIntegrationService;
+  }
+
+  /**
+   * Get SLO Violation Webhook service for alerting
+   */
+  getSLOWebhook(): any {
+    return this.sloWebhook;
+  }
+
+  /**
+   * Publish SLO violation to webhooks
+   */
+  publishViolation(violation: any): void {
+    if (!this.isInitialized || !this.sloWebhook) {
+      return;
+    }
+
+    try {
+      this.sloWebhook.publishViolation({
+        domain: violation.domain,
+        severity: violation.severity,
+        message: violation.message,
+        metrics: violation.metrics,
+        affectedAdapters: violation.affectedAdapters,
+        enforementAction: violation.enforementAction,
+      });
+    } catch (err) {
+      console.warn('[CIC] Failed to publish SLO violation to webhooks:', err instanceof Error ? err.message : String(err));
     }
   }
 

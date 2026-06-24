@@ -25,6 +25,7 @@ export class SLOPrometheusExporter {
     } else {
       lines.push(`slo_last_violation_timestamp 0`);
       lines.push(`slo_last_violation_severity 0`);
+      lines.push(`slo_last_violation_domain{domain="none"} 0`);
     }
 
     if (action) {

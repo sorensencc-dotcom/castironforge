@@ -1,5 +1,5 @@
 import { SLOState } from "../SLOState";
-import { SLOThresholds, BurnRateWindow } from "../SLOTypes";
+import { SLOThresholds, BurnRateWindow, SLODomain, SLOViolation } from "../SLOTypes";
 
 describe("SLOState", () => {
   let state: SLOState;
@@ -193,8 +193,8 @@ describe("SLOState", () => {
 
   describe("violation and enforcement state", () => {
     it("stores lastViolation", () => {
-      const violation = {
-        domain: "error_rate" as const,
+      const violation: SLOViolation = {
+        domain: SLODomain.ErrorRate,
         severity: 2,
         message: "test",
         timestamp: Date.now(),
@@ -209,8 +209,8 @@ describe("SLOState", () => {
     });
 
     it("clears lastViolation when set to null", () => {
-      const violation = {
-        domain: "error_rate" as const,
+      const violation: SLOViolation = {
+        domain: SLODomain.ErrorRate,
         severity: 2,
         message: "test",
         timestamp: Date.now(),

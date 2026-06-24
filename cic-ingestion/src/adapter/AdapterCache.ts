@@ -160,7 +160,7 @@ export class AdapterCache {
       case CacheEvictionPolicy.TTL:
         return this.selectTTL();
       default:
-        return this.cache.keys().next().value;
+        return this.cache.keys().next().value ?? null;
     }
   }
 
