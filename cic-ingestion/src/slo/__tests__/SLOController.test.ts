@@ -217,7 +217,7 @@ describe("SLOController", () => {
       controller = new SLOController(state);
 
       state.addSaturationSample({
-        value: 1.2,
+        value: 1.3,
         timestamp: now,
       });
       const violation2 = controller.evaluateSaturation(now);

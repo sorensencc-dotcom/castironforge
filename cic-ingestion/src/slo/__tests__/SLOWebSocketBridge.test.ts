@@ -20,7 +20,7 @@ describe("SLOWebSocketBridge", () => {
       const mockSubscriber = { onHealth: jest.fn() };
       bridge = new SLOWebSocketBridge({
         publisher: mockPublisher,
-        subscriber: mockSubscriber,
+        healthSubscriber: mockSubscriber,
       });
       expect(bridge).toBeDefined();
     });
