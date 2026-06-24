@@ -7,7 +7,11 @@
  * - repair: attempt to repair a component with config
  * - snapshot: save component state snapshot
  * - restore: restore from snapshot
+ * - health: get CIC health status
+ * - metrics: get CIC metrics
  */
+
+import { getCICIntegration } from '../../cic/CICIntegration';
 
 type CicResult = {
   success: boolean;
@@ -41,6 +45,62 @@ type RestoreParams = {
 };
 
 const handlers: Record<string, (args: Record<string, unknown>) => Promise<CicResult>> = {
+  async health(args: Record<string, unknown>): Promise<CicResult> {
+    try {
+      const cicIntegration = getCICIntegration();
+      if (!cicIntegration.isAvailable()) {
+        return {
+          success: true,
+          data: {
+            available: false,
+            message: 'CIC integration not initialized'
+          }
+        };
+      }
+
+      const health = cicIntegration.getHealthStatus();
+      return {
+        success: true,
+        data: health
+      };
+    } catch (err) {
+      return {
+        success: false,
+        error: err instanceof Error ? err.message : String(err)
+      };
+    }
+  },
+
+  async metrics(args: Record<string, unknown>): Promise<CicResult> {
+    try {
+      const cicIntegration = getCICIntegration();
+      if (!cicIntegration.isAvailable()) {
+        return {
+          success: true,
+          data: {
+            available: false,
+            message: 'CIC integration not initialized'
+          }
+        };
+      }
+
+      const metricsOutput = cicIntegration.exportMetrics();
+      return {
+        success: true,
+        data: {
+          metrics: metricsOutput,
+          format: 'prometheus',
+          timestamp: new Date().toISOString()
+        }
+      };
+    } catch (err) {
+      return {
+        success: false,
+        error: err instanceof Error ? err.message : String(err)
+      };
+    }
+  },
+
   async logs(args: Record<string, unknown>): Promise<CicResult> {
     const { build_id, limit = 100, component } = args as LogsParams;
 
@@ -147,6 +207,24 @@ const handlers: Record<string, (args: Record<string, unknown>) => Promise<CicRes
 };
 
 const definitions = [
+  {
+    name: 'cic.health',
+    description: 'Get CIC (Chat Iron Ingestion) health status including SLO Controller and Adapter Gateway',
+    inputSchema: {
+      type: 'object',
+      properties: {},
+      required: []
+    }
+  },
+  {
+    name: 'cic.metrics',
+    description: 'Export CIC metrics in Prometheus format',
+    inputSchema: {
+      type: 'object',
+      properties: {},
+      required: []
+    }
+  },
   {
     name: 'cic.logs',
     description: 'Retrieve build or component logs',

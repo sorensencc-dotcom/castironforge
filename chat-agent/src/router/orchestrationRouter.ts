@@ -9,6 +9,7 @@ import { getMetricsStore } from '../utils/metricsStore';
 import { getCostManager } from '../utils/costManager';
 import { getRemediationSystem } from '../utils/remediationSystem';
 import { getSessionAnalytics } from '../utils/sessionAnalytics';
+import { getCICIntegration } from '../cic/CICIntegration';
 import type { TaskRequest } from '../orchestrator/types';
 
 export const orchestrationRouter = Router();
@@ -222,7 +223,21 @@ orchestrationRouter.get('/alerts', (req: Request, res: Response) => {
  * Prometheus metrics export
  */
 orchestrationRouter.get('/metrics/prometheus', (req: Request, res: Response) => {
-  const metrics = exportPrometheusMetrics();
+  let metrics = exportPrometheusMetrics();
+
+  // Append CIC metrics if available
+  try {
+    const cicIntegration = getCICIntegration();
+    if (cicIntegration.isAvailable()) {
+      const cicMetrics = cicIntegration.exportMetrics();
+      if (cicMetrics) {
+        metrics += '\n\n# CIC (Chat Iron Ingestion) Metrics\n' + cicMetrics;
+      }
+    }
+  } catch (err) {
+    console.warn('[Prometheus] Failed to export CIC metrics:', err instanceof Error ? err.message : String(err));
+  }
+
   res.setHeader('Content-Type', 'text/plain; charset=utf-8');
   res.send(metrics);
 });

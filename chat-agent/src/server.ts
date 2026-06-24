@@ -14,6 +14,7 @@ import { initializeEmbeddingService } from './services/EmbeddingService';
 import { initializeMinIO, ensureAllBuckets } from './storage/MinioClient';
 import { startMinIOHealthMonitoring, stopMinIOHealthMonitoring } from './storage/minioHealth';
 import { lifecycleManager } from './storage/lifecycleManager';
+import { initializeCIC } from './cic/CICIntegration';
 
 const app = express();
 const PORT = process.env.PORT ?? 8000;
@@ -45,6 +46,22 @@ app.use('/', chatAgentRouter);
 app.use('/orchestration', orchestrationRouter);
 
 async function start() {
+  // Initialize CIC integration (optional, non-blocking)
+  try {
+    const cicIntegration = initializeCIC({
+      enabled: true,
+      sloThresholds: {
+        latencyP99Ms: 5000,
+        errorRatePercent: 5,
+        saturationPercent: 80,
+      }
+    });
+    await cicIntegration.initialize();
+    console.log('[CIC] Integration initialized');
+  } catch (err) {
+    console.warn('[CIC] Integration failed, continuing without CIC:', err instanceof Error ? err.message : String(err));
+  }
+
   // Initialize embedding service (OpenAI or local)
   try {
     initializeEmbeddingService();
