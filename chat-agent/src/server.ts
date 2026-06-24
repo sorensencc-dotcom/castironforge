@@ -48,16 +48,22 @@ app.use('/orchestration', orchestrationRouter);
 async function start() {
   // Initialize CIC integration (optional, non-blocking)
   try {
+    const webhooks = process.env.CIC_WEBHOOKS ? JSON.parse(process.env.CIC_WEBHOOKS) : [];
+
     const cicIntegration = initializeCIC({
       enabled: true,
       sloThresholds: {
-        latencyP99Ms: 5000,
-        errorRatePercent: 5,
-        saturationPercent: 80,
-      }
+        latencyP99Ms: parseInt(process.env.CIC_LATENCY_P99_MS ?? '5000'),
+        errorRatePercent: parseInt(process.env.CIC_ERROR_RATE_PERCENT ?? '5'),
+        saturationPercent: parseInt(process.env.CIC_SATURATION_PERCENT ?? '80'),
+      },
+      webhooks: Array.isArray(webhooks) ? webhooks : []
     });
     await cicIntegration.initialize();
     console.log('[CIC] Integration initialized');
+    if (Array.isArray(webhooks) && webhooks.length > 0) {
+      console.log(`[CIC] ${webhooks.length} SLO violation webhooks configured`);
+    }
   } catch (err) {
     console.warn('[CIC] Integration failed, continuing without CIC:', err instanceof Error ? err.message : String(err));
   }

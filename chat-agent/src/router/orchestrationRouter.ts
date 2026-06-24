@@ -1038,3 +1038,238 @@ orchestrationRouter.get('/corpus/health', async (_req: Request, res: Response) =
     });
   }
 });
+
+/**
+ * Register SLO violation webhook
+ */
+orchestrationRouter.post('/cic/webhooks', (req: Request, res: Response) => {
+  const { id, url, name, enabled, retryCount, retryDelayMs, timeout, headers } = req.body as {
+    id: string;
+    url: string;
+    name: string;
+    enabled?: boolean;
+    retryCount?: number;
+    retryDelayMs?: number;
+    timeout?: number;
+    headers?: Record<string, string>;
+  };
+
+  if (!id || !url || !name) {
+    return res.status(400).json({ error: 'Missing required fields: id, url, name' });
+  }
+
+  try {
+    const cicIntegration = getCICIntegration();
+    const webhook = cicIntegration.getSLOWebhook();
+
+    if (!webhook) {
+      return res.status(503).json({ error: 'SLO Webhook service not available' });
+    }
+
+    webhook.registerWebhook({
+      id,
+      url,
+      name,
+      enabled: enabled ?? true,
+      retryCount: retryCount ?? 3,
+      retryDelayMs: retryDelayMs ?? 5000,
+      timeout: timeout ?? 10000,
+      headers,
+    });
+
+    res.json({ message: `Webhook '${name}' registered successfully`, webhookId: id });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * List registered webhooks
+ */
+orchestrationRouter.get('/cic/webhooks', (req: Request, res: Response) => {
+  try {
+    const cicIntegration = getCICIntegration();
+    const webhook = cicIntegration.getSLOWebhook();
+
+    if (!webhook) {
+      return res.status(503).json({ error: 'SLO Webhook service not available' });
+    }
+
+    const webhooks = webhook.getWebhooks();
+    res.json({ webhooks, count: webhooks.length });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Get webhook delivery history
+ */
+orchestrationRouter.get('/cic/webhooks/:webhookId/history', (req: Request, res: Response) => {
+  const limit = req.query.limit ? parseInt(req.query.limit as string) : 100;
+
+  try {
+    const cicIntegration = getCICIntegration();
+    const webhook = cicIntegration.getSLOWebhook();
+
+    if (!webhook) {
+      return res.status(503).json({ error: 'SLO Webhook service not available' });
+    }
+
+    const history = webhook.getDeliveryHistory(req.params.webhookId, limit);
+    res.json({ history, count: history.length });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Get dead-letter queue (failed webhook deliveries)
+ */
+orchestrationRouter.get('/cic/webhooks/dead-letter/queue', (req: Request, res: Response) => {
+  const limit = req.query.limit ? parseInt(req.query.limit as string) : 100;
+
+  try {
+    const cicIntegration = getCICIntegration();
+    const webhook = cicIntegration.getSLOWebhook();
+
+    if (!webhook) {
+      return res.status(503).json({ error: 'SLO Webhook service not available' });
+    }
+
+    const deadLetters = webhook.getDeadLetterQueue(limit);
+    res.json({ deadLetters, count: deadLetters.length });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Retry failed webhook deliveries
+ */
+orchestrationRouter.post('/cic/webhooks/dead-letter/retry', async (req: Request, res: Response) => {
+  const { webhookId } = req.body as { webhookId?: string };
+
+  try {
+    const cicIntegration = getCICIntegration();
+    const webhook = cicIntegration.getSLOWebhook();
+
+    if (!webhook) {
+      return res.status(503).json({ error: 'SLO Webhook service not available' });
+    }
+
+    const retryCount = await webhook.retryDeadLetters(webhookId);
+    res.json({ message: `Retried ${retryCount} failed webhook deliveries`, retried: retryCount });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Get webhook statistics
+ */
+orchestrationRouter.get('/cic/webhooks/stats', (req: Request, res: Response) => {
+  const webhookId = req.query.webhookId as string | undefined;
+
+  try {
+    const cicIntegration = getCICIntegration();
+    const webhook = cicIntegration.getSLOWebhook();
+
+    if (!webhook) {
+      return res.status(503).json({ error: 'SLO Webhook service not available' });
+    }
+
+    const stats = webhook.getStatistics(webhookId);
+    res.json({ stats });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Unregister webhook
+ */
+orchestrationRouter.delete('/cic/webhooks/:webhookId', (req: Request, res: Response) => {
+  try {
+    const cicIntegration = getCICIntegration();
+    const webhook = cicIntegration.getSLOWebhook();
+
+    if (!webhook) {
+      return res.status(503).json({ error: 'SLO Webhook service not available' });
+    }
+
+    const removed = webhook.unregisterWebhook(req.params.webhookId);
+    if (!removed) {
+      return res.status(404).json({ error: `Webhook '${req.params.webhookId}' not found` });
+    }
+
+    res.json({ message: `Webhook '${req.params.webhookId}' unregistered successfully` });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Get adapter integration cache metrics
+ */
+orchestrationRouter.get('/cic/adapters/cache/metrics', (req: Request, res: Response) => {
+  try {
+    const cicIntegration = getCICIntegration();
+    const adapterService = cicIntegration.getAdapterIntegration();
+
+    if (!adapterService) {
+      return res.status(503).json({ error: 'Adapter Integration Service not available' });
+    }
+
+    const metrics = adapterService.getCacheMetrics();
+    res.json({ metrics });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Get adapter integration statistics
+ */
+orchestrationRouter.get('/cic/adapters/stats', (req: Request, res: Response) => {
+  const adapterId = req.query.adapterId as string | undefined;
+
+  try {
+    const cicIntegration = getCICIntegration();
+    const adapterService = cicIntegration.getAdapterIntegration();
+
+    if (!adapterService) {
+      return res.status(503).json({ error: 'Adapter Integration Service not available' });
+    }
+
+    const stats = adapterService.getStatistics(adapterId);
+    res.json({ stats });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+/**
+ * Invalidate adapter cache
+ */
+orchestrationRouter.post('/cic/adapters/cache/invalidate', (req: Request, res: Response) => {
+  const { adapterId } = req.body as { adapterId?: string };
+
+  try {
+    const cicIntegration = getCICIntegration();
+    const adapterService = cicIntegration.getAdapterIntegration();
+
+    if (!adapterService) {
+      return res.status(503).json({ error: 'Adapter Integration Service not available' });
+    }
+
+    if (!adapterId) {
+      return res.status(400).json({ error: 'adapterId is required' });
+    }
+
+    const invalidatedCount = adapterService.invalidateAdapterCache(adapterId);
+    res.json({ message: `Invalidated ${invalidatedCount} cache entries for adapter '${adapterId}'`, count: invalidatedCount });
+  } catch (err) {
+    res.status(500).json({ error: (err as Error).message });
+  }
+});
